@@ -68,8 +68,6 @@
         | [Rumkin.com](http://rumkin.com/tools/cipher/ubchi.php)
 - Consonants/Vowels Rank cipher
     | [dCode](http://www.dcode.fr/consonants-vowels-rank-cipher)
-- Cryptogram Assistant
-    | [Rumkin.com](http://rumkin.com/tools/cipher/cryptogram.php)
 - Deranged Alphabet cipher
     | [dCode](http://www.dcode.fr/deranged-alphabet-generator)
 - Enigma cipher
@@ -157,7 +155,7 @@
             | [dCode](http://www.dcode.fr/caesar-cipher)
             | [Practical Cryptography](http://www.practicalcryptography.com/ciphers/classical-era/caesar/)
             | [Rumkin.com](http://rumkin.com/tools/cipher/caesar.php)
-        - Keyed caesar
+        - Keyed caesar cipher
             | [Rumkin.com](http://rumkin.com/tools/cipher/caesar-keyed.php)
         - ROT-5
             | [dCode](http://www.dcode.fr/rot5-cipher)
@@ -208,9 +206,17 @@
 - ASCII85
     | [dCode](http://www.dcode.fr/ascii-85-encoding)
     | [Web Utils](http://www.webutils.pl/Ascii85)
+    | [Wikipedia](https://en.wikipedia.org/wiki/Ascii85)
+- Base16
+    | [Wikipedia](https://en.wikipedia.org/wiki/Base64)
+- Base32
+    | [Wikipedia](https://en.wikipedia.org/wiki/Base32)
+- Base58
+    | [Wikipedia](https://en.wikipedia.org/wiki/Base58)
 - Base64
     | [dCode](http://www.dcode.fr/base-64-coding)
     | [Rumkin.com](http://rumkin.com/tools/cipher/base64.php)
+    | [Wikibooks](https://en.wikibooks.org/wiki/Algorithm_Implementation/Miscellaneous/Base64)
 - Crypt
     | [Web Utils](http://www.webutils.pl/Crypt-Hash-Calculator)
 - HAVAL
@@ -225,8 +231,8 @@
     | [Web Utils](http://www.webutils.pl/SHA1_Calculator)
 - Tiger
     | [Web Utils](http://www.webutils.pl/Tiger-Hash-Calculator)
-- URL Encode
-    | [Web Utils](http://www.webutils.pl/Crypt-Hash-Calculator)
+- URL encode
+    | [Web Utils](http://www.webutils.pl/URLencode)
 - UUEncode
     | [dCode](http://www.dcode.fr/uu-encoding)
     | [Web Utils](http://www.webutils.pl/UUencode)
@@ -282,6 +288,8 @@
     | [Web Utils](http://www.webutils.pl/Charset-Converter)
 - Crypto Solver
     | [Rumkin.com](http://rumkin.com/tools/cipher/cryptogram-solver.php)
+- Cryptogram Assistant
+    | [Rumkin.com](http://rumkin.com/tools/cipher/cryptogram.php)
 - Isogram Generator
     | [dCode](http://www.dcode.fr/isogram)
 - Text Manipulator
@@ -295,7 +303,9 @@
 - [Practical Cryptography](http://www.practicalcryptography.com/ciphers/)
 - [Rumkin.com](http://rumkin.com/tools/cipher/)
 - [Web Utils](http://www.webutils.pl/)
+- [Binary-to-text encoding on Wikipedia](https://en.wikipedia.org/wiki/Binary-to-text_encoding)
 
 ## Libraries
 
 - [Caesar Salad (JS)](https://github.com/schnittstabil/caesar-salad)
+- [CryptoJS](https://code.google.com/archive/p/crypto-js/)
