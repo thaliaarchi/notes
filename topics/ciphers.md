@@ -157,17 +157,17 @@
             | [dCode](http://www.dcode.fr/caesar-cipher)
             | [Practical Cryptography](http://www.practicalcryptography.com/ciphers/classical-era/caesar/)
             | [Rumkin.com](http://rumkin.com/tools/cipher/caesar.php)
-            - Keyed Caesar
-                | [Rumkin.com](http://rumkin.com/tools/cipher/caesar-keyed.php)
-            - ROT-13
-                | [dCode](http://www.dcode.fr/rot-13-cipher)
-                | [Practical Cryptography](http://www.practicalcryptography.com/ciphers/classical-era/rot13/)
-                | [Rumkin.com](http://rumkin.com/tools/cipher/rot13.php)
-                | [Web Utils](http://www.webutils.pl/ROTencode)
-            - ROT-18
-                | [Web Utils](http://www.webutils.pl/ROTencode)
+        - Keyed Caesar
+            | [Rumkin.com](http://rumkin.com/tools/cipher/caesar-keyed.php)
         - ROT-5
             | [dCode](http://www.dcode.fr/rot5-cipher)
+            | [Web Utils](http://www.webutils.pl/ROTencode)
+        - ROT-13
+            | [dCode](http://www.dcode.fr/rot-13-cipher)
+            | [Practical Cryptography](http://www.practicalcryptography.com/ciphers/classical-era/rot13/)
+            | [Rumkin.com](http://rumkin.com/tools/cipher/rot13.php)
+            | [Web Utils](http://www.webutils.pl/ROTencode)
+        - ROT-18
             | [Web Utils](http://www.webutils.pl/ROTencode)
         - ROT-47
             | [dCode](http://www.dcode.fr/rot-47-cipher)
