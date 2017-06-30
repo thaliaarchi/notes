@@ -42,7 +42,7 @@
     - Letter-to-number
         | [dCode](http://www.dcode.fr/letter-number-cipher)
         | [Rumkin.com](http://rumkin.com/tools/cipher/numbers.php)
-    - Morse Code
+    - [Morse Code](https://en.wikipedia.org/wiki/Morse_code)
         | [dCode](http://www.dcode.fr/morse-code)
         | [Rumkin.com](http://rumkin.com/tools/cipher/morse.php)
         - Wabun Code
@@ -239,6 +239,10 @@
 
 - [RC2](https://en.wikipedia.org/wiki/RC2)
 - [RC4](https://en.wikipedia.org/wiki/RC4)
+    - [RC4A](https://en.wikipedia.org/wiki/RC4#RC4A)
+    - [VMPC (Variably Modified Permutation Composition)](https://en.wikipedia.org/wiki/Variably_Modified_Permutation_Composition)
+    - [RC4+](https://en.wikipedia.org/wiki/RC4#RC4.2B)
+    - [Spritz](https://en.wikipedia.org/wiki/RC4#Spritz)
 - [RC5](https://en.wikipedia.org/wiki/RC5)
 - [RC6](https://en.wikipedia.org/wiki/RC6)
 
