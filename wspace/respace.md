@@ -19,10 +19,16 @@ A compiler, interpreter, and assembler for the Whitespace language written in C+
 
 - Features
   - Floating point (2 arg) language extension
-  - Flags for specifying alternate `[Space]`/`[Tab]`/`[LF]` chars
+  - Flags
+    - Specify alternate `[Space]`/`[Tab]`/`[LF]` chars
+    - Empty number parsed as error or 0
+    - Disable stack underflow checks
   - Optimizer
     - Identical consecutive pushes replaced with dup
     - Superfluous dup instructions removed
+    - Consolidate stack underflow checks
+    - Replace `call` and subsequent `ret` with `jmp` and no `ret`
+    - Optimize tail recursion (replace `call` before `ret` with `jmp`) and convert other recursion to tail recursion
   - Transpiler
     - Apollo Guidance Computer compiler/transpiler
 - Whitespace Programs
