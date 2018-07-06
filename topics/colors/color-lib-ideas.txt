@@ -26,3 +26,6 @@ Unlike HTML, CSS will completely ignore unknown keywords.
 The color keywords all represent plain, solid colors, without transparency.
 Several keywords are aliases for each other:
 Though many keywords have been adapted from X11, their RGB values may differ from the corresponding color on X11 systems since manufacturers sometimes tailor X11 colors to their specific hardware.
+Also has:
+  Mozilla System Color Extensions
+  Mozilla Color Preference Extensions
