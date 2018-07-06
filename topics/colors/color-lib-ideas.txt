@@ -19,3 +19,10 @@ Functions:
 WebKit CSS color keywords
 https://github.com/WebKit/webkit/blob/master/Source/WebCore/css/makevalues.pl#L152
 https://github.com/WebKit/webkit/blob/master/Source/WebCore/css/CSSValueKeywords.in#L173
+
+https://developer.mozilla.org/en-US/docs/Web/CSS/color_value
+HTML only recognizes the 16 basic color keywords found in CSS1, using a specific algorithm to convert unrecognized values (often to completely different colors). The other color keywords should only be used in CSS and SVG.
+Unlike HTML, CSS will completely ignore unknown keywords.
+The color keywords all represent plain, solid colors, without transparency.
+Several keywords are aliases for each other:
+Though many keywords have been adapted from X11, their RGB values may differ from the corresponding color on X11 systems since manufacturers sometimes tailor X11 colors to their specific hardware.
