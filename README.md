@@ -4,6 +4,7 @@
 
 - Colors
   - [Color libraries and color spaces](topics/colors/color-libraries.md)
+  - [Color library ideas](topics/colors/color-lib-ideas.txt)
 - [List of ciphers](topics/ciphers.md)
 
 ## Whitespace

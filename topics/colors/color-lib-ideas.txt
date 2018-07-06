@@ -1,0 +1,21 @@
+Object.prototype.valueOf
+Maintain registry of CSS2 system colors, currentColor, and color variables to use when comparing. When not set, they aren't comparable. A variable is always equivalent to itself.
+Allow loading of CSS2 system colors from browser colors
+
+https://github.com/WebKit/webkit/tree/master/Source/WebCore/css
+Functions:
+  red
+  green
+  blue
+  alpha
+
+https://github.com/WebKit/webkit/blob/master/Source/WebCore/css/StyleColor.cpp
+Functions:
+  isCurrentColor
+  colorFromKeyword
+  isColorKeyword
+  isSystemColor
+
+WebKit CSS color keywords
+https://github.com/WebKit/webkit/blob/master/Source/WebCore/css/makevalues.pl#L152
+https://github.com/WebKit/webkit/blob/master/Source/WebCore/css/CSSValueKeywords.in#L173
