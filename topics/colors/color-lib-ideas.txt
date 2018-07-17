@@ -29,3 +29,7 @@ Though many keywords have been adapted from X11, their RGB values may differ fro
 Also has:
   Mozilla System Color Extensions
   Mozilla Color Preference Extensions
+
+Consider default color value: https://github.com/w3c/csswg-drafts/issues/1851
+Inheritance of currentColor: https://github.com/w3c/csswg-drafts/issues/1510
+https://github.com/w3c/csswg-drafts/issues/883
