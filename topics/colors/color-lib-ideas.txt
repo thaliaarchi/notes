@@ -33,3 +33,7 @@ Also has:
 Consider default color value: https://github.com/w3c/csswg-drafts/issues/1851
 Inheritance of currentColor: https://github.com/w3c/csswg-drafts/issues/1510
 https://github.com/w3c/csswg-drafts/issues/883
+
+Chrome uses "Quick Color Management System" (chrome://credits/)
+https://github.com/jrmuizel/qcms/tree/v4
+https://hg.mozilla.org/mozilla-central/file/tip/gfx/qcms
