@@ -46,3 +46,6 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/color_value
 Chrome uses [Quick Color Management System](chrome://credits/)
 - https://github.com/jrmuizel/qcms/tree/v4
 - https://hg.mozilla.org/mozilla-central/file/tip/gfx/qcms
+
+Blink
+- [`WebColorName.cpp`](https://chromium.googlesource.com/chromium/blink/+/master/Source/web/WebColorName.cpp)
