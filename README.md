@@ -6,6 +6,7 @@
   - [Color libraries and color spaces](topics/colors/color-libraries.md)
   - [Color library ideas](topics/colors/color-lib-ideas.md)
 - [List of ciphers](topics/ciphers.md)
+- [Paper notes](topics/papers.md)
 - [Programming language rankings](topics/language_rankings.md)
 
 ## Whitespace
