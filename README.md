@@ -1,5 +1,12 @@
 # Notes
 
+A notebook on compilers, programming languages, and other topics.
+
+## Compilers
+
+- LLVM
+  - [2020 LLVM Virtual Developers' Meeting](compilers/llvm/devmtg_2020-10)
+
 ## Topics
 
 - Colors
