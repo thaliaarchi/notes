@@ -1,6 +1,6 @@
 # Undef and Poison: Present and Future
 
-Juneyoung Lee
+Juneyoung Lee (Seoul National University)
 
 - https://www.youtube.com/watch?v=_APJ4PtF0sk
 - https://whova.com/portal/webapp/llvm_202010/Agenda/1162345
