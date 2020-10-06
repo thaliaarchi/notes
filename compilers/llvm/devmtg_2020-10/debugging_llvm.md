@@ -5,6 +5,21 @@ Nick Desaulniers (Google)
 - https://www.youtube.com/watch?v=5vmJuLfIpY4
 - https://whova.com/portal/webapp/llvm_202010/Agenda/1162347
 
+## Description
+
+This is a refinement of a presentation on the overall architecture of
+LLVM, and how to debug certain pieces of it. From this talk, beginners
+should learn how to think through where a bug in the compilation
+pipeline may be, how to find it, and how to start debugging it. There
+are some intermediate tips, too. There's no in-depth focus on any one
+particular pass, more so general advice that's widely applicable to most
+of the code base. No UML diagrams, but high quality SVG diagrams of the
+high level view and corresponding source files in the tree for certain
+concepts. Demos include opt, llc, and test case reduction.
+
+The previous version (to be refined) can be viewed:
+https://clangbuiltlinux.github.io/CBL-meetup-2020-slides/nick/debugging_llvm.html
+
 ## Architecture and structure of LLVM
 
 ## Building LLVM (12:10)
@@ -25,13 +40,20 @@ $ cmake .. \
 $ ninja
 ```
 
-- `-DCMAKE_BUILD_TYPE=Release` - Release builds run faster than debug. Debug needed for debug symbols and some debugging features.
+- `-DCMAKE_BUILD_TYPE=Release` - Release builds run faster than debug.
+  Debug needed for debug symbols and some debugging features.
 - `-G Ninja` - Ninja builds faster than GNU Make.
-- `-DCMAKE_C_COMPILER=` / `-DCMAKE_CXX_COMPILER=` - Build Clang with Clang.
-- `-DLLVM_ENABLE_LLD=ON` - Linking Clang with LLD is way faster than BFD.
+- `-DCMAKE_C_COMPILER=` / `-DCMAKE_CXX_COMPILER=` - Build Clang with
+  Clang.
+- `-DLLVM_ENABLE_LLD=ON` - Linking Clang with LLD is way faster than
+  BFD.
 - `-DLLVM_ENABLE_PROJECTS="clang;lld;compiler-rt`
-- `-DLLVM_TARGETS_TO_BUILD="AArch64;ARM;X86` - Anti-pattern; Clang is distributed with all non-experimental backends enabled. I turn off backends I don't need to speed up builds of Clang. `llc --version` shows backends it was configured with.
-- `-DLLVM_ENABLE_ASSERTIONS=OFF` - LLVM is full of assertions. Turning off assertions is general faster than a debug build.
+- `-DLLVM_TARGETS_TO_BUILD="AArch64;ARM;X86` - Anti-pattern; Clang is
+  distributed with all non-experimental backends enabled. I turn off
+  backends I don't need to speed up builds of Clang. `llc --version`
+  shows backends it was configured with.
+- `-DLLVM_ENABLE_ASSERTIONS=OFF` - LLVM is full of assertions. Turning
+  off assertions is general faster than a debug build.
 - `ninja clang` can rebuild just Clang.
 
 ## Important compiler-generic flags (16:50)
@@ -83,7 +105,8 @@ LLVM_DEBUG(llvm::dbgs() << object);
 
 ## llvm-extract (55:40)
 
-Recursively pull out function definition and function definitions that it depends on.
+Recursively pull out function definition and function definitions that
+it depends on.
 
 ```sh
 $ llvm-extract --func=a -o a.ll quarantine.ll

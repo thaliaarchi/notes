@@ -5,6 +5,28 @@ Juneyoung Lee (Seoul National University)
 - https://www.youtube.com/watch?v=_APJ4PtF0sk
 - https://whova.com/portal/webapp/llvm_202010/Agenda/1162345
 
+## Description
+
+Recently, there has been several updates in LLVM to make optimizations
+correct with respect to the undef and poison values. This involves
+updating the semantics of several instructions in LLVM Language
+Reference, such as branch and shufflevector, and fixing optimizations
+that are incorrect when the undef or poison value is involved. The
+optimizations are fixed by either disallowing the transformation in an
+unsafe condition or introducing freeze to exclude undefined inputs. Both
+solutions can affect performance of the generated code, so a careful
+study is needed to minimize the impact.
+
+In this talk, the recent changes about undef and poison in LLVM as well
+as the remaining issues are described in detail. First, the updates in
+Language Reference about undef and poison value are revisited. Second, a
+few important optimizations that are still incorrect or have been
+incorrect but fixed are introduced, and their solutions are explained.
+Third, recent efforts in making existing optimizations and analyses
+understand freeze are described, and the remaining issues are depicted.
+Finally, the experimental result of a prototype that fixes known
+incorrect optimizations is shown.
+
 ## Undefined behavior (3:30)
 
 ```c
