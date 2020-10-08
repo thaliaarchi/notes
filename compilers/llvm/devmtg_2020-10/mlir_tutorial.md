@@ -1,5 +1,10 @@
 # MLIR Tutorial
 
+Mehdi Amini and River Riddle (Google)
+
+- https://www.youtube.com/watch?v=uhXT4RXjzLI
+- https://whova.com/portal/webapp/llvm_202010/Agenda/1162355/
+
 `affine.for` is a loop of a linear equation.
 
 Basic blocks in MLIR take arguments like Swift instead of Phi nodes like
@@ -20,4 +25,4 @@ of abstraction.
 ### My question
 
 Q: Are there bindings for using MLIR in languages other than C++? For
-example, Go?
+example, Go? (me)
