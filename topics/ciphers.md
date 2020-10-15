@@ -164,7 +164,7 @@
     | [Rumkin.com](http://rumkin.com/tools/cipher/skip.php)
 - [URL encode](https://en.wikipedia.org/wiki/Percent-encoding)
     | [Web Utils](http://www.webutils.pl/URLencode)
-- Vigenére cipher
+- Vigenère cipher
     | [dCode](http://www.dcode.fr/vigenere-cipher)
     | [Practical Cryptography](http://www.practicalcryptography.com/ciphers/classical-era/vigenere-gronsfeld-and-autokey/)
     | [Rumkin.com](http://rumkin.com/tools/cipher/vigenere.php)
@@ -177,15 +177,15 @@
         | [dCode](http://www.dcode.fr/gronsfeld-cipher)
         | [Practical Cryptograhy](http://www.practicalcryptography.com/ciphers/classical-era/vigenere-gronsfeld-and-autokey/)
         | [Rumkin.com](http://rumkin.com/tools/cipher/gronsfeld.php)
-    - Keyed Vigenére cipher
+    - Keyed Vigenère cipher
         | [Rumkin.com](http://rumkin.com/tools/cipher/vigenere-keyed.php)
-    - Multiplication Vigenére cipher
+    - Multiplication Vigenère cipher
         | [dCode](http://www.dcode.fr/multiplication-vigenere-cipher)
     - [Trithemius cipher](https://en.wikipedia.org/wiki/Tabula_recta#Trithemius_cipher)
         | [dCode](http://www.dcode.fr/trithemius-cipher)
     - Vernam cipher
         | [dCode](http://www.dcode.fr/vernam-cipher)
-    - [Vigenére autokey cipher (autoclave cipher)](https://en.wikipedia.org/wiki/Autokey_cipher)
+    - [Vigenère autokey cipher (autoclave cipher)](https://en.wikipedia.org/wiki/Autokey_cipher)
         | [dCode](http://www.dcode.fr/autoclave-cipher)
         | [Rumkin.com](http://rumkin.com/tools/cipher/vigenere-autokey.php)
 - XOR cipher
