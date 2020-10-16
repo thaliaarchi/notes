@@ -47,3 +47,11 @@ space, so I don't think it would be recursive.
 ## Improving Flow analysis via GammaCFA
 
 http://matt.might.net/papers/might2006gcfa.pdf
+
+## Understanding Real-World Concurrency Bugs in Go
+
+Only two publicly available Go concurrency bug detectors
+
+Two orthogonal dimensions measured:
+- cause: bugs categorized by misuse of shared memory or message passing
+- behavior: blocking or non-blocking bugs
