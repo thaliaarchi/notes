@@ -13,6 +13,7 @@ A notebook on compilers, programming languages, and other topics.
   - [Color libraries and color spaces](topics/colors/color-libraries.md)
   - [Color library ideas](topics/colors/color-lib-ideas.md)
 - [List of ciphers](topics/ciphers.md)
+- [Programming language alphabet challenge](topics/language_alphabet.md)
 - [Programming language rankings](topics/language_rankings.md)
 
 ## Whitespace
