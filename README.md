@@ -19,6 +19,7 @@ A notebook on compilers, programming languages, and other topics.
 
 ## Whitespace
 
+- [My Whitespace projects](wspace/projects.md)
 - [Respace](wspace/respace.md)
 
 ## License
