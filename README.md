@@ -20,6 +20,7 @@ A notebook on compilers, programming languages, and other topics.
 
 ## Whitespace
 
+- [Implementation differences](wspace/differences.md)
 - [My Whitespace projects](wspace/projects.md)
 - [Respace](wspace/respace.md)
 
