@@ -15,6 +15,16 @@
 
 - empty allowed
 
+## Duplicate labels
+
+- disallowed
+- use first
+- use last
+- use next
+- use previous
+- use arbitrary
+- leading zeros distinguishing
+
 ## Integer bounds
 
 - arbitrary precision
