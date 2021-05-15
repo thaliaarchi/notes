@@ -15,7 +15,7 @@ line_comment ::= /#[^\r\n]*([\r\n]|$)/
 
 ## Expressions
 
-expr ::= expr_binary5
+expr ::= expr_bin5
 expr_val ::=
     | integer
     | char
@@ -24,22 +24,14 @@ expr_val ::=
     | "(" expr ")"
     | "&" ident
 expr_unary ::=
-    | "-" expr_unary
-    | "!" expr_unary
-    | "*" expr_unary
+    | ("-" | "!" | "*") expr_unary
     | expr_val
-expr_index ::=
-    | expr_unary ("[" expr "]")?
-expr_binary1 ::=
-    | expr_index (("*" | "/" | "%") expr_binary1)?
-expr_binary2 ::=
-    | expr_binary1 (("+" | "-") expr_binary2)?
-expr_binary3 ::=
-    | expr_binary2 (("==" | "!=" | "<" | "<=" | ">" | ">=") expr_binary3)?
-expr_binary4 ::=
-    | expr_binary3 (("&&" || "||") expr_binary4)?
-expr_binary5 ::=
-    | expr_binary4 (("=" | "+=" | "-=" | "*=" | "/=" | "%=") expr_binary5)?
+expr_index ::= expr_unary ("[" expr "]")?
+expr_bin1 ::= expr_index (("*" | "/" | "%") expr_bin1)?
+expr_bin2 ::= expr_bin1 (("+" | "-") expr_bin2)?
+expr_bin3 ::= expr_bin2 (("==" | "!=" | "<" | "<=" | ">" | ">=") expr_bin3)?
+expr_bin4 ::= expr_bin3 (("&&" || "||") expr_bin4)?
+expr_bin5 ::= expr_bin4 (("=" | "+=" | "-=" | "*=" | "/=" | "%=") expr_bin5)?
 
 ## Statements
 
