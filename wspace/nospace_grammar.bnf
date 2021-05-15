@@ -1,0 +1,60 @@
+# Nospace grammar
+
+program ::= (func | let)*
+
+## Tokens
+
+integer ::= /[0-9]+/
+char ::= /'([^\\']|\\[\\tns'])*'/
+ident ::= /[A-Za-z_][A-Za-z0-9_]*/
+
+## Whitespace (allowed between every token)
+
+space ::= /[ \t\n\v\f\r]/
+line_comment ::= /#[^\r\n]*([\r\n]|$)/
+
+## Expressions
+
+expr ::= expr_binary5
+expr_val ::=
+    | integer
+    | char
+    | ident
+    | ident "(" (expr ("," expr)*)? ")"
+    | "(" expr ")"
+    | "&" ident
+expr_unary ::=
+    | "-" expr_unary
+    | "!" expr_unary
+    | "*" expr_unary
+    | expr_val
+expr_index ::=
+    | expr_unary ("[" expr "]")?
+expr_binary1 ::=
+    | expr_index (("*" | "/" | "%") expr_binary1)?
+expr_binary2 ::=
+    | expr_binary1 (("+" | "-") expr_binary2)?
+expr_binary3 ::=
+    | expr_binary2 (("==" | "!=" | "<" | "<=" | ">" | ">=") expr_binary3)?
+expr_binary4 ::=
+    | expr_binary3 (("&&" || "||") expr_binary4)?
+expr_binary5 ::=
+    | expr_binary4 (("=" | "+=" | "-=" | "*=" | "/=" | "%=") expr_binary5)?
+
+## Statements
+
+func ::=
+    | "func" ":" ident "(" (ident ("," ident)*)? ")"
+        "{" (stmt | let)* "}"
+let ::=
+    | "let" ":" let_decl ("," let_decl)* ";"
+let_decl ::=
+    | ident ("[" expr "]")? ("(" (expr ("," expr)*)? ")")?
+stmt ::=
+    | "if" "(" expr ")" block
+        ("elsif" "(" expr ")" block)*
+        ("else" block)?
+    | "while" "(" expr ")" block
+    | "return" (":" expr)? ";"
+    | expr ";"
+block ::= "{" stmt* "}"
