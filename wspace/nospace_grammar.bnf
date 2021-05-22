@@ -11,7 +11,7 @@ ident ::= /[A-Za-z_][A-Za-z0-9_]*/
 ## Whitespace (allowed between every token)
 
 space ::= /[ \t\n\v\f\r]/
-line_comment ::= /#[^\r\n]*([\r\n]|$)/
+comment ::= /#[^#]*#/
 
 ## Expressions
 
