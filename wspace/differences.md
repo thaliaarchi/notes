@@ -79,6 +79,10 @@
 
 - pushs appends NUL or not
 
+## Laziness
+
+- parsing
+
 ## Other
 
 wspace 0.3 quirks as explained in
