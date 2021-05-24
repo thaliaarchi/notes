@@ -1,0 +1,59 @@
+interpret/compile:
+    -h, --help
+    -f, --format
+        Override guessed syntax format
+            ws
+            wsa
+            wsx
+    -H, --haskell-compat
+        equivalent to
+            --eof=error
+            --error-style=haskell
+            --lazy-parse
+            --divmod=floor
+    --eof=<eof>
+        where <eof> is a number or "error"
+    --error-style=<error>
+        options:
+            default
+            dump
+            haskell
+            none (useful for code golf)
+    --lazy-parse
+    --divmod <mode>
+        mode:
+            floor
+            trunc
+            euclid
+            round (maybe)
+            ceil (probably not)
+    --no-big
+        Use 64-bit integers instead of arbitrary-precision
+    --negative-heap
+        Equivalent to --heap-min=-inf
+    --heap-min=<min>
+        Default 0
+    --heap-max=<max>
+        Default inf
+    --stack-cap=<cap>
+        Default inf
+    --call-stack-cap=<cap>
+        Default inf
+    --char=<encoding>
+        byte, ASCII
+        UTF-8
+        UTF-16
+    --checked-heap
+    --no-implicit-exit
+
+interpret:
+    -i <file>, --in=<file>
+    -o <file>, --out<file>
+
+fmt:
+    $0 fmt ws [--STL] [-f <format> | --format=<format>] <program>
+    $0 fmt wsx [-f <format> | --format=<format>] <program>
+    $0 fmt wsa [-f <format> | --format=<format>] <program>
+
+[--]
+<program>

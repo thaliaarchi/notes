@@ -20,6 +20,7 @@ A notebook on compilers, programming languages, and other topics.
 
 ## Whitespace
 
+- [CLI draft](wspace/cli_draft.txt)
 - [Implementation differences](wspace/differences.md)
 - [Laziness](wspace/laziness.md)
 - [My Whitespace projects](wspace/projects.md)
