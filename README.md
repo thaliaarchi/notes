@@ -21,6 +21,7 @@ A notebook on compilers, programming languages, and other topics.
 ## Whitespace
 
 - [CLI draft](wspace/cli_draft.txt)
+- [Division and modulo rounding](wspace/divmod.txt)
 - [Implementation differences](wspace/differences.md)
 - [Laziness](wspace/laziness.md)
 - [My Whitespace projects](wspace/projects.md)
