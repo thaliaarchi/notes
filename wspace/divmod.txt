@@ -1,0 +1,61 @@
+a mod n
+r = a - nq
+
+         Quotient        Sign             Quotient rounding
+floor    q = ⌊a/n⌋       divisor  (n)     down
+trunc    q = trunc(a/n)  dividend (a)     towards zero
+euclid                   positive         ?
+  n>0 => q = ⌊a/n⌋
+  n<0 => q = ⌈a/n⌉
+round    q = round(a/n)  nearest to zero  nearest integer
+ceil     q = ⌈a/n⌉       -divisor (-n)    up
+
+trunc:
+  Haskell rem
+  GMP mpz_tdiv
+  Go / % big.Int.QuoRem
+  C/C++ %
+  LLVM sdiv srem
+  jq %
+floor:
+  Haskell mod
+  GMP mpz_fdiv
+euclid:
+  Go big.Int.DivMod
+ceil:
+  GMP mpz_cdiv
+non-negative:
+  mpz_mod (The sign of the divisor is ignored; the result is always non-negative)
+
+https://en.wikipedia.org/wiki/Modulo_operation
+https://golang.org/ref/spec#Integer_operators
+https://golang.org/pkg/math/big/#Int.DivMod
+https://llvm.org/docs/LangRef.html#sdiv-instruction
+https://llvm.org/docs/LangRef.html#srem-instruction
+https://gmplib.org/manual/Integer-Division
+
++----+----+-----------+---------+-----------+-----------+---------+-----------+
+| x mod y |           quotient 'q'          |          remainder 'r'          |
+| x  | y  | truncated | floored | Euclidean | truncated | floored | Euclidean |
++----+----+-----------+---------+-----------+-----------+---------+-----------+
+|  5 |  3 |         1 |       1 |         1 |         2 |       2 |         2 |
+| -5 |  3 |        -1 |      -2 |        -2 |        -2 |       1 |         1 |
+|  5 | -3 |        -1 |      -2 |        -1 |         2 |      -1 |         2 |
+| -5 | -3 |         1 |       1 |         2 |        -2 |      -2 |         1 |
++----+----+-----------+---------+-----------+-----------+---------+-----------+
+https://stackoverflow.com/questions/14769943/java-is-there-a-method-for-euclidean-or-floored-modulo
+
+Go:
+>  x     y     x / y     x % y
+>  5     3       1         2
+> -5     3      -1        -2
+>  5    -3      -1         2
+> -5    -3       1        -2
+>
+> The one exception to this rule is that if the dividend x is the most negative value for the int type of x, the quotient q = x / -1 is equal to x (and r = 0) due to two's-complement integer overflow:
+>
+> 			 x, q
+> int8                     -128
+> int16                  -32768
+> int32             -2147483648
+> int64    -9223372036854775808
