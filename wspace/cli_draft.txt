@@ -1,4 +1,4 @@
-interpret/compile:
+interpret/compile/opt:
     -h, --help
     -f, --format
         Override guessed syntax format
@@ -10,7 +10,7 @@ interpret/compile:
             --eof=error
             --error-style=haskell
             --lazy-parse
-            --divmod=floor
+            --div=floor
     --eof=<eof>
         where <eof> is a number or "error"
     --error-style=<error>
@@ -20,7 +20,7 @@ interpret/compile:
             haskell
             none (useful for code golf)
     --lazy-parse
-    --divmod <mode>
+    --div=<mode>
         mode:
             floor
             trunc
@@ -45,6 +45,19 @@ interpret/compile:
         UTF-16
     --checked-heap
     --no-implicit-exit
+    -Os
+        Optimize for Whitespace program size
+            Avoid duplicating functions while inlining
+            Deduplicate identical regions
+            Argument associativity:
+            - `add ^1 ^1` -> `add ^ ^2`
+            - `mul ^1 ^1` -> `mul ^ ^2`
+    -O0
+        Disable optimizations
+    -g
+        Debug mode:
+            Enable assertions for wsa precondition comments
+
 
 interpret:
     -i <file>, --in=<file>
