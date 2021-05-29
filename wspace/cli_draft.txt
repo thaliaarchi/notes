@@ -46,7 +46,7 @@ interpret/compile/opt:
     --checked-heap
     --no-implicit-exit
     -Os
-        Optimize for Whitespace program size
+        Optimize for Whitespace program byte size
             Avoid duplicating functions while inlining
             Deduplicate identical regions
             Minify labels
@@ -63,21 +63,92 @@ interpret/compile/opt:
             - `a: ... jmp c b: ... jmp a` -> `b: ... a: ... jmp c`
             - Function drops args at end, but those args are copied to
               be used again afterwards => remove drops and copies:
-              ```
-              call 0 3 3 print_matrix
-              call 0 3 3 transpose
-              call 0 3 3 print_matrix
-              ```
+                ```
+                call 0 3 3 print_matrix
+                call 0 3 3 transpose
+                call 0 3 3 print_matrix
+                ```
+            - switches that drop value:
+                ```
+                    sub ^ 2 jz .x
+                    sub ^ 8 jz .y
+                    sub ^ 16 jz .z
+                    drop ret
+                .x: .y: .z: drop ret
+                ```
+                to
+                ```
+                    sub 2 jz ^ .x
+                    sub 6 jz ^ .y
+                    sub 8 jz ^ .z
+                    drop ret
+                .x: .y: .z: drop ret
+                ```
+              for example:
+                ```
+                .print_base_prefix:
+                    sub ^ 2 jz .print_base_2_prefix
+                    sub ^ 8 jz .print_base_8_prefix
+                    sub ^ 16 jz .print_base_16_prefix
+                    drop
+                    ret
+                .print_base_2_prefix:
+                    jmp 'b' .print_base_prefix_ret
+                .print_base_8_prefix:
+                    jmp 'o' .print_base_prefix_ret
+                .print_base_16_prefix:
+                    push 'x' # fallthrough
+                .print_base_prefix_ret:
+                    printc '0' printc
+                    drop
+                    ret
+                ```
+            - Factor out shared instructions
+                ```
+                a: drop push 'a' jmp d
+                b: drop push 'b' jmp d
+                c: drop push 'c' jmp d
+                d: printc
+                ```
+                to (save 6 bytes)
+                ```
+                a: push 'a' jmp d
+                b: push 'b' jmp d
+                c: push 'c' jmp d
+                d: printc drop
+                ```
+
+                ```
+                a: drop push 'a' jmp d
+                b: drop push 'b' jmp d
+                c: drop push 'c' jmp d
+                d: add printc
+                ```
+                to (save 3 bytes)
+                ```
+                a: push 'a' jmp d
+                b: push 'b' jmp d
+                c: push 'c' jmp d
+                d: slide 1 add printc
+                ```
+    --optimize-count
+        Optimize for Whitespace program instruction count
+            - `swap drop` -> `slide 1`
+            - `drop drop drop` -> `slide 2 drop`
     -O0
         Disable optimizations
     -g, --debug
         equivalent to:
             --with-assertions
             --minify-labels=false
+            --coalesce-asserts=false
     --with-assertions
         Enable assertions for wsa precondition comments
     --minify-labels
         Enable label minification
+    --coalesce-asserts
+        Coalesce asserts. This results in less precise error location
+        reporting
     --spec=<version>
         0.2 (disable or replace 0.3 features, if possible)
         0.3
@@ -86,6 +157,11 @@ interpret/compile/opt:
             debug_printheap
             trace
             shuffle
+    --remove-dead
+        Perform dead code elimination
+        - Remove dead branches in switches that will never be taken,
+          i.e. if printf is never called with the %#nb verb, that case
+          can be removed
 
 
 interpret:
