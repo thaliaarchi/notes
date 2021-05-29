@@ -14,6 +14,8 @@
 ## Label arguments
 
 - empty allowed
+- leading zeros are unique
+- allowed character set for ASCII label translation
 
 ## Duplicate labels
 
