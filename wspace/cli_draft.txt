@@ -49,14 +49,43 @@ interpret/compile/opt:
         Optimize for Whitespace program size
             Avoid duplicating functions while inlining
             Deduplicate identical regions
-            Argument associativity:
+            Minify labels
+            For example:
             - `add ^1 ^1` -> `add ^ ^2`
             - `mul ^1 ^1` -> `mul ^ ^2`
+            - `sub ^1 ^1 jz lbl` -> `sub ^ ^2 jz lbl`
+            - `slide 1 drop` -> `drop drop`
+            - `slide 2 drop` -> `drop drop drop`
+            - `drop drop drop drop` -> `slide 3 drop`
+            - `drop drop drop drop drop` -> `slide 4 drop`
+            - `mul ^2 ^2 add ^4 ^2 add` -> `add ^3 ^2 mul ^3 ^2 add`
+            - `mul ^2 ^1 add ^4 ^3 add` -> `add ^3 ^1 mul ^3 ^3 add`
+            - `a: ... jmp c b: ... jmp a` -> `b: ... a: ... jmp c`
+            - Function drops args at end, but those args are copied to
+              be used again afterwards => remove drops and copies:
+              ```
+              call 0 3 3 print_matrix
+              call 0 3 3 transpose
+              call 0 3 3 print_matrix
+              ```
     -O0
         Disable optimizations
-    -g
-        Debug mode:
-            Enable assertions for wsa precondition comments
+    -g, --debug
+        equivalent to:
+            --with-assertions
+            --minify-labels=false
+    --with-assertions
+        Enable assertions for wsa precondition comments
+    --minify-labels
+        Enable label minification
+    --spec=<version>
+        0.2 (disable or replace 0.3 features, if possible)
+        0.3
+        Extensions?
+            debug_printstack
+            debug_printheap
+            trace
+            shuffle
 
 
 interpret:
