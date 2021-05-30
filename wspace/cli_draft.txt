@@ -131,6 +131,18 @@ interpret/compile/opt:
                 c: push 'c' jmp d
                 d: slide 1 add printc
                 ```
+            - Swap params
+                ```
+                a: jmp ^ ^2 .c
+                b: jmp ^1 ^3 .c
+                c: swap
+                ```
+                to
+                ```
+                a: jmp ^1 ^1 .c
+                b: jmp ^2 ^2 .c
+                c:
+                ```
     --optimize-count
         Optimize for Whitespace program instruction count
             - `swap drop` -> `slide 1`

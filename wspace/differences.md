@@ -60,6 +60,10 @@
 - floating point
 - panic on bad format
 
+## Number printing
+
+- Sign printed for -0
+
 ## Flushing
 
 - Flush each char (pi.ws)
