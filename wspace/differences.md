@@ -14,7 +14,6 @@
 ## Label arguments
 
 - empty allowed
-- leading zeros are unique
 - allowed character set for ASCII label translation
 
 ## Duplicate labels
@@ -63,6 +62,7 @@
 ## Number printing
 
 - Sign printed for -0
+- Scientific notation used for large numbers
 
 ## Flushing
 
@@ -84,6 +84,12 @@
 ## Extended instructions
 
 - pushs appends NUL or not
+
+## Lexing
+
+- LF is LF
+- LF and CRLF are interchangeable for LF
+- LF, CRLF, and CR are interchangeable for LF
 
 ## Laziness
 
