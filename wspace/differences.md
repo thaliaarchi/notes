@@ -48,6 +48,10 @@
 - UTF-8
 - UTF-16
 
+## Character reading
+
+- CRLF is collapsed to LF (wsjq)
+
 ## Number reading
 
 - leading/trailing spaces allowed
