@@ -5,19 +5,24 @@ interpret/compile/opt:
             ws
             wsa
             wsx
-    -H, --haskell-compat
-        equivalent to
+    --compat=<implementation>
+        wspace:
             --eof=error
-            --error-style=haskell
+            --error-style=wspace
             --lazy-parse
             --div=floor
+        burghard
+        ...
     --eof=<eof>
-        where <eof> is a number or "error"
+        0   => `jz`, emit 0
+        neg => `jn`, emit -1
+        <n> => `sub n jz`, emit n
+        error => panic on EOF
     --error-style=<error>
         options:
             default
             dump
-            haskell
+            wspace
             none (useful for code golf)
     --lazy-parse
     --div=<mode>
