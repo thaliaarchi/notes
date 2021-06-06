@@ -27,6 +27,7 @@ A notebook on compilers, programming languages, and other topics.
 - [My Whitespace projects](wspace/projects.md)
 - [Nospace grammar](wspace/nospace_grammar.bnf)
 - [Respace](wspace/respace.md)
+- [Whitespace language specification](wspace/whitespace_spec.md)
 
 ## License
 
