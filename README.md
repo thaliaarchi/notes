@@ -25,6 +25,7 @@ A notebook on compilers, programming languages, and other topics.
 - [Laziness](wspace/laziness.md)
 - [My Whitespace projects](wspace/projects.md)
 - [Nospace grammar](wspace/nospace_grammar.bnf)
+- [Optimizations](wspace/optimizations.md)
 - [Respace](wspace/respace.md)
 - [Whitespace language specification](wspace/whitespace_spec.md)
 
