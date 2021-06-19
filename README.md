@@ -13,6 +13,7 @@ A notebook on compilers, programming languages, and other topics.
   - [Color libraries and color spaces](topics/colors/color-libraries.md)
   - [Color library ideas](topics/colors/color-lib-ideas.md)
 - [Compiler optimization patterns](topics/compiler_optimizations.md)
+- [E-graphs](topics/e-graphs.md)
 - [List of ciphers](topics/ciphers.md)
 - [Paper notes](topics/papers.md)
 - [Programming language alphabet challenge](topics/language_alphabet.md)
