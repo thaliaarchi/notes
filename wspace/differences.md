@@ -72,22 +72,26 @@
 
 - Flush each char (pi.ws)
 - Flush before print (calc.ws):
-  - wspace-0.3: yes
+  - wspace 0.3: yes
   - LOLCODE: no
 
-## Division
+## Zero divisor
 
-- divide by zero panic or continue
+- panic
+- undefined behavior
 
-## Modulo
+## Division rounding
 
-- sign of dividend
-- sign of divisor
-- modulo by zero panic or continue
+- Truncated
+- Floored
+- Euclidean
+- Ceiling
+- Rounding
+- Non-negative
 
 ## Extended instructions
 
-- pushs appends NUL or not
+- `pushs` appends NUL or not
 
 ## Lexing
 
