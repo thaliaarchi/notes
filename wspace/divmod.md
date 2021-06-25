@@ -6,7 +6,7 @@ reference Whitespace interpreter uses floored division. Definitions and
 additional languages can be found on the [Modulo operation](https://en.wikipedia.org/wiki/Modulo_operation)
 Wikipedia article.
 
-**Truncated:**
+Truncated:
 
 - Haskell [`quot`](https://hackage.haskell.org/package/base/docs/Prelude.html#v:quot)
   [`rem`](https://hackage.haskell.org/package/base/docs/Prelude.html#v:rem)
@@ -22,14 +22,14 @@ Wikipedia article.
   [`srem`](https://llvm.org/docs/LangRef.html#srem-instruction)
 - jq [`%`](https://github.com/stedolan/jq/blob/master/src/builtin.c#L396)
 
-**Floored:**
+Floored:
 
 - Haskell [`div`](https://hackage.haskell.org/package/base/docs/Prelude.html#v:div)
   [`mod`](https://hackage.haskell.org/package/base/docs/Prelude.html#v:mod)
   [`divMod`](https://hackage.haskell.org/package/base/docs/Prelude.html#v:divMod)
 - GMP [`mpz_fdiv`](https://gmplib.org/manual/Integer-Division)
 
-**Euclidean:**
+Euclidean:
 
 - Go [`big.Int.Div`](https://golang.org/pkg/math/big/#Int.Div)
   [`big.Int.Mod`](https://golang.org/pkg/math/big/#Int.Mod)
@@ -37,12 +37,12 @@ Wikipedia article.
 - Rust [`div_euclid`](https://doc.rust-lang.org/std/primitive.i32.html#method.div_euclid)
   [`rem_euclid`](https://doc.rust-lang.org/std/primitive.i32.html#method.rem_euclid)
 
-**Ceiling:**
+Ceiling:
 
 - GMP [`mpz_cdiv`](https://gmplib.org/manual/Integer-Division)
 
-**Rounding:**
+Rounding:
 
-**Non-negative:**
+Non-negative:
 
 - GMP [`mpz_mod`](https://gmplib.org/manual/Integer-Division)
