@@ -6,17 +6,30 @@ interpret/compile/opt:
             wsa
             wsx
     --compat=<implementation>
-        wspace:
-            --eof=error
-            --error-style=wspace
-            --lazy-parse
-            --div=floor
-        burghard
-        ...
+        Set the compatibility mode
+        options:
+            wspace:
+                --lazy-parse
+                --dupe-labels=first
+                --eof=error
+                --error-style=wspace
+                --div=floor
+            burghard
+            ...
+    --mapping=<mapping>
+    --lazy-parse
+        Parse lazily. No syntax errors are reported after the
+        last-executed instruction. The first occurrence of a label is
+        used for branch destinations.
+    --dupe-labels=<mode>
+        options:
+            error
+            first
+            last
     --eof=<eof>
         0   => `jz`, emit 0
         neg => `jn`, emit -1
-        <n> => `sub n jz`, emit n
+        <n> => `n sub jz`, emit n
         error => panic on EOF
     --error-style=<error>
         options:
@@ -24,7 +37,6 @@ interpret/compile/opt:
             dump
             wspace
             none (useful for code golf)
-    --lazy-parse
     --div=<mode>
         mode:
             floor
@@ -51,107 +63,9 @@ interpret/compile/opt:
     --checked-heap
     --no-implicit-exit
     -Os
-        Optimize for Whitespace program byte size
-            Avoid duplicating functions while inlining
-            Deduplicate identical regions
-            Minify labels
-            For example:
-            - `add ^1 ^1` -> `add ^ ^2`
-            - `mul ^1 ^1` -> `mul ^ ^2`
-            - `sub ^1 ^1 jz lbl` -> `sub ^ ^2 jz lbl`
-            - `slide 1 drop` -> `drop drop`
-            - `slide 2 drop` -> `drop drop drop`
-            - `drop drop drop drop` -> `slide 3 drop`
-            - `drop drop drop drop drop` -> `slide 4 drop`
-            - `mul ^2 ^2 add ^4 ^2 add` -> `add ^3 ^2 mul ^3 ^2 add`
-            - `mul ^2 ^1 add ^4 ^3 add` -> `add ^3 ^1 mul ^3 ^3 add`
-            - `a: ... jmp c b: ... jmp a` -> `b: ... a: ... jmp c`
-            - Function drops args at end, but those args are copied to
-              be used again afterwards => remove drops and copies:
-                ```
-                call 0 3 3 print_matrix
-                call 0 3 3 transpose
-                call 0 3 3 print_matrix
-                ```
-            - switches that drop value:
-                ```
-                    sub ^ 2 jz .x
-                    sub ^ 8 jz .y
-                    sub ^ 16 jz .z
-                    drop ret
-                .x: .y: .z: drop ret
-                ```
-                to
-                ```
-                    sub 2 jz ^ .x
-                    sub 6 jz ^ .y
-                    sub 8 jz ^ .z
-                    drop ret
-                .x: .y: .z: drop ret
-                ```
-              for example:
-                ```
-                .print_base_prefix:
-                    sub ^ 2 jz .print_base_2_prefix
-                    sub ^ 8 jz .print_base_8_prefix
-                    sub ^ 16 jz .print_base_16_prefix
-                    drop
-                    ret
-                .print_base_2_prefix:
-                    jmp 'b' .print_base_prefix_ret
-                .print_base_8_prefix:
-                    jmp 'o' .print_base_prefix_ret
-                .print_base_16_prefix:
-                    push 'x' # fallthrough
-                .print_base_prefix_ret:
-                    printc '0' printc
-                    drop
-                    ret
-                ```
-            - Factor out shared instructions
-                ```
-                a: drop push 'a' jmp d
-                b: drop push 'b' jmp d
-                c: drop push 'c' jmp d
-                d: printc
-                ```
-                to (save 6 bytes)
-                ```
-                a: push 'a' jmp d
-                b: push 'b' jmp d
-                c: push 'c' jmp d
-                d: printc drop
-                ```
-
-                ```
-                a: drop push 'a' jmp d
-                b: drop push 'b' jmp d
-                c: drop push 'c' jmp d
-                d: add printc
-                ```
-                to (save 3 bytes)
-                ```
-                a: push 'a' jmp d
-                b: push 'b' jmp d
-                c: push 'c' jmp d
-                d: slide 1 add printc
-                ```
-            - Swap params
-                ```
-                a: jmp ^ ^2 .c
-                b: jmp ^1 ^3 .c
-                c: swap
-                ```
-                to
-                ```
-                a: jmp ^1 ^1 .c
-                b: jmp ^2 ^2 .c
-                c:
-                ```
+        Optimize for minimal Whitespace program byte size
     --optimize-count
-        Optimize for Whitespace program instruction count
-            - `swap drop` -> `slide 1`
-            - `drop drop drop` -> `slide 2 drop`
+        Optimize for minimal Whitespace program instruction count
     -O0
         Disable optimizations
     -g, --debug

@@ -15,6 +15,7 @@
 
 - empty allowed
 - allowed character set for ASCII label translation
+- leading zeros distinguishing
 
 ## Duplicate labels
 
@@ -24,7 +25,6 @@
 - use next
 - use previous
 - use arbitrary
-- leading zeros distinguishing
 
 ## Integer bounds
 

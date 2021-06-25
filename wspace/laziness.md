@@ -1,12 +1,15 @@
 # Laziness
 
-Make a compatibility mode in my Rust project that mimics the Haskell
-interpreter, even down to the exception messages. When replicating lazy
-parsing, can make a Parser and LazyParser, both implementing the same
-traits: iterator, with a method for retrieving a label. The eager parser
-would parse the entire file at once and construct a full label map. The
-lazy parser would parse instructions as needed: when advancing pc to the
-next or when jumping to a label that needs to seek forwards.
+The Haskell reference interpreter parses Whitespace programs lazily, so
+syntax errors after the last-executed instruction are not reported and
+the first occurrence of a label is used for branch destinations.
+
+When replicating lazy parsing in Rust, I'll make a Parser and
+LazyParser, both implementing the same traits: iterator, with a method
+for retrieving a label. The eager parser would parse the entire file at
+once and construct a full label map. The lazy parser would parse
+instructions as needed: when advancing pc to the next or when jumping to
+a label that needs to seek forwards.
 
 ## AOT emulation
 
