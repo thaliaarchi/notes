@@ -61,41 +61,53 @@ I/O:
 
 - Leading space
   - allowed (wspace)
+  - disallowed
 - Trailing space
   - allowed (wspace)
+  - disallowed
 - Space between sign and number
   - allowed (wspace)
+  - disallowed (BlueSpace)
 - Positive `+` sign
   - allowed (BlueSpace)
   - disallowed (wspace)
-- Number delimiter
-  - line break (TODO: LF/CRLF/CR) (wspace)
-  - whitespace
 - Hex `0x` format
   - allowed (wspace)
+  - disallowed
 - Octal `0o` prefix
   - allowed (wspace)
+  - disallowed
 - Binary `0b` prefix
+  - allowed
   - disallowed (wspace)
 - `0` prefix
   - decimal (wspace)
   - octal
 - Thousands `,` separator
+  - allowed
   - disallowed (wspace)
 - `_` separator
+  - allowed
   - disallowed (wspace)
 - Exponents
+  - allowed
   - disallowed (wspace)
 - Floating point
+  - allowed
   - disallowed (wspace)
 - On bad format
   - error (wspace)
   - 0
+- Number delimiter
+  - line break (TODO: LF/CRLF/CR) (wspace)
+  - whitespace
 
 `printi` number format:
 
-- Exponential notation for large numbers
-  - yes (wsjq)
+- Large numbers
+  - exact (wspace)
+  - exponential notation (wsjq)
+  - rounded
 - Signed zero
   - positive zero
   - positive zero and negative zero
