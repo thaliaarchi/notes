@@ -134,7 +134,11 @@ Optimize for minimal Whitespace program instruction count.
 - `swap drop` -> `slide 1`
 - `drop drop drop` -> `slide 2 drop`
 
-## Loop idioms
+## Idioms
+
+### Division and modulo
+
+Recognize wslib/io/divmod.wsf division and modulo idioms.
 
 ### Popcount
 
@@ -154,3 +158,18 @@ for (cnt = init; x != 0; x >>= 1) {
   cnt += x & 1;
 }
 ```
+
+## Division and modulo lowering
+
+1. Lower `/` to `tdiv`, `fdiv`, `ediv`, `rdiv`, or `cdiv` and `%` to
+   `tmod`, `fmod`, `emod`, `rmod`, or `cmod`, according to the execution
+   division mode (`--div`).
+2. Replace div and mod of constant non-zero divisor with `_unchecked`
+   variants and zero divisor with error.
+3. Replace division mode conversion idioms.
+4. Strength reduce constant divisor.
+5. Lower to target division mode.
+6. Replace with `_unchecked` variants and add explicit divisor checks
+   when divisor may be zero.
+7. Annotate zero divisor branches as unlikely like Rust's `unlikely!`
+   macro in [`checked_div`](https://doc.rust-lang.org/src/core/num/int_macros.rs.html#519).
