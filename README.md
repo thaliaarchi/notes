@@ -23,8 +23,8 @@ A notebook on compilers, programming languages, and other topics.
 
 - [CLI draft](wspace/cli_draft.txt)
 - [Division and modulo rounding](wspace/divmod.md)
+- [Haskell reference interpreter](wspace/haskell_reference.md)
 - [Implementation differences](wspace/differences.md)
-- [Laziness](wspace/laziness.md)
 - [My Whitespace projects](wspace/projects.md)
 - [Nospace grammar](wspace/nospace_grammar.bnf)
 - [Optimizations](wspace/optimizations.md)
