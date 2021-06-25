@@ -7,13 +7,15 @@ Syntax:
   - LF, CRLF
   - LF, CRLF, CR
 - Number `0`
-  - requires sign and bits
+  - requires sign and bits (conrad)
   - requires sign (wspace)
   - may omit sign (Nebula)
 - Label `0`
-  - empty allowed
-- Labels
-  - leading zeros distinguishing
+  - requires bits (conrad)
+  - empty allowed (wspace)
+- Label leading zeros
+  - leading zeros are unique (wspace)
+  - leading zeros are ignored (Nebula)
 - Label character set
   - `[A-Za-z_][A-Za-z0-9_]*` (rdebath)
 - Laziness
@@ -44,8 +46,8 @@ I/O:
 
 - Character set
   - ASCII
-  - UTF-8
-  - UTF-16
+  - UTF-8, error on invalid (wspace)
+  - UTF-16, error on invalid
 - Reading line breaks
   - CRLF is collapsed to LF (wsjq on Windows)
 - EOF behavior
@@ -71,13 +73,13 @@ I/O:
 - Positive `+` sign
   - allowed (BlueSpace)
   - disallowed (wspace)
-- Hex `0x` format
+- Hex with `0x` prefix
   - allowed (wspace)
   - disallowed
-- Octal `0o` prefix
+- Octal with `0o` prefix
   - allowed (wspace)
   - disallowed
-- Binary `0b` prefix
+- Binary with `0b` prefix
   - allowed
   - disallowed (wspace)
 - `0` prefix
