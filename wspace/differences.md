@@ -1,128 +1,113 @@
 # Implementation differences
 
-## EOF
+Syntax:
 
-- 0
-- -1
-- error
+- LF
+  - LF (wspace)
+  - LF, CRLF
+  - LF, CRLF, CR
+- Number `0`
+  - requires sign and bits
+  - requires sign (wspace)
+  - may omit sign (Nebula)
+- Label `0`
+  - empty allowed
+- Labels
+  - leading zeros distinguishing
+- Label character set
+  - `[A-Za-z_][A-Za-z0-9_]*` (rdebath)
+- Laziness
+  - lazy (wspace)
+  - eager (Nebula, BlueSpace)
+- Duplicate labels
+  - error (Nebula)
+  - use first (wspace)
+  - use last (BlueSpace)
+  - use next
+  - use previous
+  - use arbitrary
 
-## Number arguments
+Bounds:
 
-- empty allowed
-- sign-only allowed
+- Number bounds
+  - arbitrary precision (wspace)
+  - 64-bit int (Nebula)
+  - 32-bit int
+  - 64-bit float (wsjq)
+- Heap bounds
+  - (-inf, inf)
+  - [0, inf)
+  - [0, max]
+  - [min, max]
 
-## Label arguments
+I/O:
 
-- empty allowed
-- allowed character set for ASCII label translation
-- leading zeros distinguishing
+- Character set
+  - ASCII
+  - UTF-8
+  - UTF-16
+- Reading line breaks
+  - CRLF is collapsed to LF (wsjq on Windows)
+- EOF behavior
+  - error (wspace)
+  - 0
+  - -1
+- Flushing
+  - flush after print, e.g. pi.ws (wspace)
+  - flush before read, e.g. calc.ws
+  - buffered (LOLCODE)
 
-## Duplicate labels
+`readi` number format:
 
-- disallowed
-- use first
-- use last
-- use next
-- use previous
-- use arbitrary
+- Leading space
+  - allowed (wspace)
+- Trailing space
+  - allowed (wspace)
+- Space between sign and number
+  - allowed (wspace)
+- Positive `+` sign
+  - allowed (BlueSpace)
+  - disallowed (wspace)
+- Number delimiter
+  - line break (TODO: LF/CRLF/CR) (wspace)
+  - whitespace
+- Hex `0x` format
+  - allowed (wspace)
+- Octal `0o` prefix
+  - allowed (wspace)
+- Binary `0b` prefix
+  - disallowed (wspace)
+- `0` prefix
+  - decimal (wspace)
+  - octal
+- Thousands `,` separator
+  - disallowed (wspace)
+- `_` separator
+  - disallowed (wspace)
+- Exponents
+  - disallowed (wspace)
+- Floating point
+  - disallowed (wspace)
+- On bad format
+  - error (wspace)
+  - 0
 
-## Integer bounds
+`printi` number format:
 
-- arbitrary precision
-- 64-bit int
-- 32-bit int
-- 16-bit int
-- 8-bit int
-- 53-bit float
+- Exponential notation for large numbers
+  - yes (wsjq)
+- Signed zero
+  - positive zero
+  - positive zero and negative zero
 
-## Heap bounds
+Division and modulo:
 
-- (-inf, inf)
-- [0, inf)
-- [0, bound]
-- [-bound, bound]
-
-## Characters
-
-- ASCII (byte)
-- UTF-8
-- UTF-16
-
-## Character reading
-
-- CRLF is collapsed to LF (wsjq)
-
-## Number reading
-
-- leading/trailing spaces allowed
-- one per line or multiple allowed
-- thousands separators
-- exponents
-- hex
-- binary
-- floating point
-- panic on bad format
-
-## Number printing
-
-- Sign printed for -0
-- Scientific notation used for large numbers
-
-## Flushing
-
-- Flush each char (pi.ws)
-- Flush before print (calc.ws):
-  - wspace 0.3: yes
-  - LOLCODE: no
-
-## Zero divisor
-
-- panic
-- undefined behavior
-
-## Division rounding
-
-- Truncated
-- Floored
-- Euclidean
-- Ceiling
-- Rounding
-- Non-negative
-
-## Extended instructions
-
-- `pushs` appends NUL or not
-
-## Lexing
-
-- LF is LF
-- LF and CRLF are interchangeable for LF
-- LF, CRLF, and CR are interchangeable for LF
-
-## Laziness
-
-- parsing
-
-## Other
-
-wspace 0.3 quirks as explained in
-[BlueSpace docs](https://cpjsmith.uk/whitespace):
-
-> Known incompatibilities between BlueSpace 1.1 and WSpace 0.3:
->
-> - The ReadNumber instruction (tab-linefeed-tab-tab): WSpace accepts
->   spaces between the negative sign and the number (e.g. - 123 is
->   accepted as equivalent to -123) which BlueSpace does not.
->   Conversely, BlueSpace accepts a leading plus. (e.g. +12 is
->   equivalent to 12) which is rejected by WSpace.
-> - WSpace ignores all trailling characters after the last point in the
->   code that is visited; BlueSpace requires the entire input to be a
->   valid Whitespace program. For example, the program consisting of
->   four linefeeds is the null program according to WSpace, but
->   BlueSpace reports a syntax error since the fourth linefeed does not
->   constitute a valid command. This is due to WSpace's lazy parsing
->   semantics.
-> - If a program defines the same label more than once, WSpace jumps to
->   the first instance, while BlueSpace jumps to the last. I consider
->   such a program to be erroneous and later versions of BlueSpace may
->   report this as such.
+- Zero divisor
+  - error (wspace)
+  - undefined behavior
+- Division rounding
+  - truncated
+  - floored
+  - Euclidean
+  - ceiling
+  - rounding
