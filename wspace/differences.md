@@ -3,7 +3,7 @@
 Syntax:
 
 - Encoding
-  - UTF-8 with optional BOM (wspace)
+  - UTF-8 (wspace)
 - LF
   - LF (wspace)
   - LF, CRLF
