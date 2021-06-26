@@ -30,5 +30,8 @@ and may panic.
 
 The latest GHC releases at the time:
 
-- wspace 0.2, GHC [5.04.3](https://www.haskell.org/ghc/download_ghc_5043.html)
-- wspace 0.3, GHC [6.2.1](https://www.haskell.org/ghc/download_ghc_621.html)
+- wspace 0.2, [GHC 5.04.3](https://www.haskell.org/ghc/download_ghc_5043.html)
+- wspace 0.3, [GHC 6.2.1](https://www.haskell.org/ghc/download_ghc_621.html)
+
+wspace is [tested](https://web.archive.org/web/20150717140342/http://compsoc.dur.ac.uk/whitespace/download.php)
+with [GHC 5.02](https://www.haskell.org/ghc/download_ghc_502.html).

@@ -2,8 +2,8 @@
 
 Programming languages implement division and modulo with various
 rounding modes. Most languages use truncated division, though the
-reference Whitespace interpreter uses floored division. Definitions and
-additional languages can be found on the [Modulo operation](https://en.wikipedia.org/wiki/Modulo_operation)
+reference Whitespace interpreter uses floored division. More information
+and additional languages can be found on the [Modulo operation](https://en.wikipedia.org/wiki/Modulo_operation)
 Wikipedia article.
 
 Truncated:

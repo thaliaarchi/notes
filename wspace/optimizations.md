@@ -6,7 +6,7 @@ Optimize for minimal Whitespace program byte size.
 
 Instruction sizes:
 
-- 2: `push`
+- 2+: `push`
 - 3: `dup` `swap` `drop` `store` `retrieve` `ret` `end`
 - 4: `add` `sub` `mul` `div` `mod` `printc` `printi` `readc` `readi`
 - 3+: `copy` `slide` `label` `call` `jmp` `jz` `jn`

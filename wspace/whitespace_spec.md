@@ -1,6 +1,10 @@
 # Whitespace language specification
 
-https://web.archive.org/web/20150618184706/http://compsoc.dur.ac.uk/whitespace/tutorial.php
+Whitespace is formally specified by its [implementation](https://web.archive.org/web/20150717140342/http://compsoc.dur.ac.uk/whitespace/download.php),
+not by a language reference. This document attempts to fill in gaps from
+the [tutorial](https://web.archive.org/web/20150618184706/http://compsoc.dur.ac.uk/whitespace/tutorial.php)
+with details from [testing](../tests) the reference interpreter and to
+compare [various implementations](https://github.com/wspace/corpus).
 
 ## Tokens
 
@@ -22,6 +26,9 @@ ignored.
 All values in Whitespace are arbitrary-precision integers.
 
 ## Instructions
+
+Instructions are grouped with a shared prefix, called the "instruction
+modification parameter" in the tutorial.
 
 | Prefix | Group              |
 | ------ | ------------------ |
@@ -72,9 +79,32 @@ and the syntax is conflicting.
 | ---------------- | ------ | --- | ----- | ---- | ----------- | -------------- |
 | shuffle          | STTS  |   | a0 .. an -- s0 .. sn | | Randomly permute the order of all values on the stack | [whitespace-0.4](https://github.com/haroldl/whitespace-nd) by Harold Lee |
 | shell            | TLL   | s | ?       | | Execute shell command (unimplemented) | [Spitewaste](https://github.com/collidedscope/spitewaste) by Collided Scope |
-| jp               | LSL   | l | cond -- | | Jump to a label if the top of the stack is positive | [R interpreter](https://github.com/bmazoure/whitespace) by Bogdan Mazoure |
 | pyfn             | LLS   | l | a1 .. an -- a1 .. an retval | | Call the Python function registered as *l* with *n* arguments | [PYWS](https://github.com/EizoAssik/pyws) by Eizo Assik |
 | debug_printstack | LLSSS |   | --      | | Dump stack | [wsintercpp](https://web.archive.org/web/20110911114338/http://www.burghard.info/Code/Whitespace/) by Oliver Burghard |
 | debug_printheap  | LLSST |   | --      | | Dump heap | [wsintercpp](https://web.archive.org/web/20110911114338/http://www.burghard.info/Code/Whitespace/) by Oliver Burghard |
 | trace            | LLT   |   | --      | | Dump program state | [pywhitespace](https://github.com/wspace/phlip-pywhitespace) by Phillip Bradbury |
 | eval             | LLT   | s | ?       | | (unimplemented) | [Spitewaste](https://github.com/collidedscope/spitewaste) by Collided Scope |
+
+## Evaluation
+
+The reference interpreter, which is written in Haskell, has a mixture of
+lazy and eager evaluation strategies, so some instruction effects are
+interleaved. This makes erroneous programs more difficult to reason
+about. Most implementations use eager evaluation.
+
+### Eager underflow assertions
+
+All instructions eagerly assert stack lengths, throwing a user error if
+there is an underflow. Note that `copy` does not assert any length and
+`slide` only asserts a length of 1, even though both have positional
+arguments.
+
+- no assertions: `push` `copy` `label` `call` `jmp` `end`
+- 1 value on the stack: `dup` `drop` `slide` `retrieve` `jz` `jn`
+  `printc` `printi` `readc` `readi`
+- 2 values on the stack: `swap` `add` `sub` `mul` `div` `mod` `store`
+- 1 value on the call stack: `ret`
+
+### Lazy effects
+
+- zero divisor: `div` `mod`
