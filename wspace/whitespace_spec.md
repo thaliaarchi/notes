@@ -38,9 +38,6 @@ modification parameter" in the tutorial.
 | L      | Control flow       |
 | TL     | I/O                |
 
-The listed mnemonics follow the [Whitelips](https://vii5ard.github.io/whitespace/)
-convention and are non-normative.
-
 | Mnemonic | Syntax | Arg | Stack | Heap | Description |
 | -------- | ------ | --- | ----- | ---- | ----------- |
 | push     | SS   | n | -- n           | | Push the number onto the stack |
@@ -68,6 +65,10 @@ convention and are non-normative.
 | readc    | TLTS |   | addr --        | addr <- char | Read a character and place it in the location given by the top of the stack |
 | readi    | TLTT |   | addr --        | addr <- int  | Read a number and place it in the location given by the top of the stack |
 
+The mnemonics here follow the [Whitelips](https://vii5ard.github.io/whitespace/)
+convention and are non-normative. Whitespace assembly dialects vary
+widely between implementations and are out of scope of this document.
+
 ### Non-standard instructions
 
 The instruction prefix tree is not full, so extended instructions may be
@@ -92,6 +93,13 @@ lazy and eager evaluation strategies, so some instruction effects are
 interleaved. This makes erroneous programs more difficult to reason
 about. Most implementations use eager evaluation.
 
+### Eager effects
+
+`slide` parses its argument before checking the stack length and throws
+when zero has no sign.
+
+- empty argument error: `slide`
+
 ### Eager underflow assertions
 
 All instructions eagerly assert stack lengths, throwing a user error if
@@ -107,4 +115,5 @@ arguments.
 
 ### Lazy effects
 
+- empty argument error: `push` `copy`
 - zero divisor: `div` `mod`
