@@ -31,8 +31,8 @@ All values in Whitespace are arbitrary-precision integers.
 | L      | Control flow       |
 | TL     | I/O                |
 
-The mnemonics listed below are defined by [Whitelips](https://vii5ard.github.io/whitespace/)
-and are non-normative.
+The listed mnemonics follow the [Whitelips](https://vii5ard.github.io/whitespace/)
+convention and are non-normative.
 
 | Mnemonic | Syntax | Arg | Stack | Heap | Description |
 | -------- | ------ | --- | ----- | ---- | ----------- |
@@ -61,15 +61,20 @@ and are non-normative.
 | readc    | TLTS |   | addr --        | addr <- char | Read a character and place it in the location given by the top of the stack |
 | readi    | TLTT |   | addr --        | addr <- int  | Read a number and place it in the location given by the top of the stack |
 
-### Non-standard extensions
+### Non-standard instructions
 
-STT, TSTL, TSL, TTL, TLSL, TLTL, TLL, LLS, and LLT
+The instruction prefix tree is not full, so extended instructions may be
+defined that are prefixed with STT, TSTL, TSL, TTL, TLSL, TLTL, TLL,
+LLS, or LLT. As these are non-standard, few implementations support them
+and the syntax is conflicting.
 
-| Mnemonic | Syntax | Arg | Stack | Heap | Description | Implementation | Author |
-| -------- | ------ | --- | ----- | ---- | ----------- | -------------- | ------ |
-| shuffle  | STTS |   | a0 .. an -- s0 .. sn | | Randomly permute the order of all values on the stack | [whitespace-0.4](https://github.com/haroldl/whitespace-nd) | Harold Lee |
-| shell    | TLL  | s | ?              | | Execute shell command (unimplemented) | [Spitewaste](https://github.com/collidedscope/spitewaste) | Collided Scope |
-| jp       | LSL  | l | cond --        | | Jump to a label if the top of the stack is positive | [R interpreter](https://github.com/bmazoure/whitespace) | Bogdan Mazoure |
-| pyfn     | LLS  | l | a1 .. an -- a1 .. an retval | | Call the Python function registered as *l* with *n* arguments | [PYWS](https://github.com/EizoAssik/pyws) | Eizo Assik |
-| trace    | LLT  |   | --             | | Dump program trace | [pywhitespace](https://github.com/wspace/phlip-pywhitespace) | Phillip Bradbury |
-| eval     | LLT  | s | ?              | | (unimplemented) | [Spitewaste](https://github.com/collidedscope/spitewaste) | Collided Scope |
+| Mnemonic         | Syntax | Arg | Stack | Heap | Description | Implementation |
+| ---------------- | ------ | --- | ----- | ---- | ----------- | -------------- |
+| shuffle          | STTS  |   | a0 .. an -- s0 .. sn | | Randomly permute the order of all values on the stack | [whitespace-0.4](https://github.com/haroldl/whitespace-nd) by Harold Lee |
+| shell            | TLL   | s | ?       | | Execute shell command (unimplemented) | [Spitewaste](https://github.com/collidedscope/spitewaste) by Collided Scope |
+| jp               | LSL   | l | cond -- | | Jump to a label if the top of the stack is positive | [R interpreter](https://github.com/bmazoure/whitespace) by Bogdan Mazoure |
+| pyfn             | LLS   | l | a1 .. an -- a1 .. an retval | | Call the Python function registered as *l* with *n* arguments | [PYWS](https://github.com/EizoAssik/pyws) by Eizo Assik |
+| debug_printstack | LLSSS |   | --      | | Dump stack | [wsintercpp](https://web.archive.org/web/20110911114338/http://www.burghard.info/Code/Whitespace/) by Oliver Burghard |
+| debug_printheap  | LLSST |   | --      | | Dump heap | [wsintercpp](https://web.archive.org/web/20110911114338/http://www.burghard.info/Code/Whitespace/) by Oliver Burghard |
+| trace            | LLT   |   | --      | | Dump program state | [pywhitespace](https://github.com/wspace/phlip-pywhitespace) by Phillip Bradbury |
+| eval             | LLT   | s | ?       | | (unimplemented) | [Spitewaste](https://github.com/collidedscope/spitewaste) by Collided Scope |
