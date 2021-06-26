@@ -2,6 +2,8 @@
 
 Syntax:
 
+- Encoding
+  - UTF-8 with optional BOM (wspace)
 - LF
   - LF (wspace)
   - LF, CRLF
