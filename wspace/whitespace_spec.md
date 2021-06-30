@@ -65,7 +65,9 @@ modification parameter" in the tutorial.
 | readc    | TLTS |   | addr --        | addr <- char | Read a character and place it in the location given by the top of the stack |
 | readi    | TLTT |   | addr --        | addr <- int  | Read a number and place it in the location given by the top of the stack |
 
-The mnemonics here follow the [Whitelips](https://vii5ard.github.io/whitespace/)
+The instruction prefix encoding is not [self-synchronizing](https://en.wikipedia.org/wiki/Self-synchronizing_code).
+
+The mnemonics used here follow the [Whitelips](https://vii5ard.github.io/whitespace/)/[Nebula](https://github.com/andrewarchi/nebula)
 convention and are non-normative. Whitespace assembly dialects vary
 widely between implementations and are out of scope of this document.
 
