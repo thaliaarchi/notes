@@ -23,6 +23,7 @@ A notebook on compilers, programming languages, and other topics.
 
 ## Whitespace
 
+- [Analysis errors draft](wspace/errors_draft.md)
 - [CLI draft](wspace/cli_draft.txt)
 - [Division and modulo rounding](wspace/divmod.md)
 - [Haskell reference interpreter](wspace/haskell_reference.md)
