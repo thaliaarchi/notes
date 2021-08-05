@@ -1,9 +1,11 @@
 interpret/compile/opt:
     -h, --help
-    -f, --format
+    -f <format>, --format=<format>
         Override guessed syntax format
+        options:
             ws
             wsa
+            wsf
             wsx
     --compat=<implementation>
         Set the compatibility mode
@@ -26,11 +28,18 @@ interpret/compile/opt:
             error
             first
             last
+    --string-style=<style>
+        options:
+            0   - terminated with 0
+            neg - terminated with -1
+            len - prefixed with length
+            raw - no prefix or suffix
     --eof=<eof>
-        0   => `jz`, emit 0
-        neg => `jn`, emit -1
-        <n> => `n sub jz`, emit n
-        error => panic on EOF
+        options:
+            0     - `jz`, emit 0
+            neg   - `jn`, emit -1
+            <n>   - `n sub jz`, emit n
+            error - panic on EOF
     --error-style=<error>
         options:
             default
@@ -38,7 +47,7 @@ interpret/compile/opt:
             wspace
             none (useful for code golf)
     --div=<mode>
-        mode:
+        options:
             floor
             trunc
             euclid
@@ -49,15 +58,15 @@ interpret/compile/opt:
     --negative-heap
         Equivalent to --heap-min=-inf
     --heap-min=<min>
-        Default 0
+        default: 0
     --heap-max=<max>
-        Default inf
+        default: inf
     --stack-cap=<cap>
-        Default inf
+        default: inf
     --call-stack-cap=<cap>
-        Default inf
-    --char=<encoding>
-        byte, ASCII
+        default: inf
+    --read-encoding=<encoding>
+        ASCII
         UTF-8
         UTF-16
     --checked-heap
