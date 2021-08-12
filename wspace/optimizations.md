@@ -13,7 +13,19 @@ Instruction sizes:
 
 Optimizations:
 
-- Minify labels, considering usage
+- Simplify arguments:
+
+  - Remove leading zeros for `push`, `copy`, and `slide`
+  - `push -0` -> `push 0`
+  - For `copy n` with stack size s:
+    - n==0 -> `dup`
+    - n<0 -> `copy -1`
+    - n>s -> `copy -1`
+  - For `slide n` with stack size s:
+    - n<=0 -> `slide 0`
+    - n>=s -> `slide s-1`
+
+- Minify labels, considering usage frequency
 
 - Inline only if shorter
 
@@ -70,53 +82,55 @@ Optimizations:
 
 - Factor out shared instructions:
 
-  - ```wsa
-    a: drop 'a' jmp d
-    b: drop 'b' jmp d
-    c: drop 'c' jmp d
-    d: printc
-    ```
+  ```wsa
+  a: drop 'a' jmp d
+  b: drop 'b' jmp d
+  c: drop 'c' jmp d
+  d: printc
+  ```
 
-    -> (-6 bytes)
+  -> (-6 bytes)
 
-    ```wsa
-    a: 'a' jmp d
-    b: 'b' jmp d
-    c: 'c' jmp d
-    d: printc drop
-    ```
+  ```wsa
+  a: 'a' jmp d
+  b: 'b' jmp d
+  c: 'c' jmp d
+  d: printc drop
+  ```
 
-  - ```wsa
-    a: drop 'a' jmp d
-    b: drop 'b' jmp d
-    c: drop 'c' jmp d
-    d: add printc
-    ```
+  or
 
-    -> (-3 bytes)
+  ```wsa
+  a: drop 'a' jmp d
+  b: drop 'b' jmp d
+  c: drop 'c' jmp d
+  d: add printc
+  ```
 
-    ```wsa
-    a: 'a' jmp d
-    b: 'b' jmp d
-    c: 'c' jmp d
-    d: slide 1 add printc
-    ```
+  -> (-3 bytes)
+
+  ```wsa
+  a: 'a' jmp d
+  b: 'b' jmp d
+  c: 'c' jmp d
+  d: slide 1 add printc
+  ```
 
 - Swap params:
 
-    ```wsa
-    a: ^1 ^1 jmp c
-    b: ^2 ^2 jmp c
-    c: swap
-    ```
+  ```wsa
+  a: ^1 ^1 jmp c
+  b: ^2 ^2 jmp c
+  c: swap
+  ```
 
-    -> (-6 bytes)
+  -> (-6 bytes)
 
-    ```wsa
-    a: ^ ^2 jmp c
-    b: ^1 ^3 jmp c
-    c:
-    ```
+  ```wsa
+  a: ^ ^2 jmp c
+  b: ^1 ^3 jmp c
+  c:
+  ```
 
 - Remove drops and copies when procedure drops args, but args are used
   again afterwards:
