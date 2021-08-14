@@ -109,9 +109,9 @@ I/O:
 - `_` separator
   - allowed
   - disallowed (wspace)
-- Exponents
-  - allowed
-  - disallowed (wspace)
+- Exponential notation with `e`
+  - allowed ([wspace 0.3 binary](https://web.archive.org/web/20150717140342/http://compsoc.dur.ac.uk:80/whitespace/downloads/wspace))
+  - disallowed (wspace with modern GHC)
 - Floating point
   - allowed
   - disallowed (wspace)
