@@ -1,5 +1,17 @@
 # Optimizations
 
+## Control flow
+
+- Tail-call optimization for recursive `call`
+- Replace non-recursive single-entry `call` and `ret` with `jmp`
+- Replace `call` with `jmp` when `end` or error always reached before
+  corresponding `ret`
+
+## Duplication
+
+- Global value numbering
+- Common subexpression elimination
+
 ## Byte size
 
 Optimize for minimal Whitespace program byte size.
@@ -41,7 +53,7 @@ Optimizations:
 
 - Successive drops:
 
-  - Remove `slide 0` (-4 bytes)
+  - Remove `slide 0` if stack always non-empty (-4 bytes)
   - `slide 1 drop` -> `drop drop` (-3 bytes)
   - `slide 2 drop` -> `drop drop drop` (-1 bytes)
   - `drop drop drop drop` -> `slide 3 drop` (-2 bytes)
@@ -145,14 +157,16 @@ Optimizations:
 
 Optimize for minimal Whitespace program instruction count.
 
-- `swap drop` -> `slide 1`
-- `drop drop drop` -> `slide 2 drop`
+- Drops:
+
+  - `swap drop` -> `slide 1` (-0 bytes, -1 instruction)
+  - `drop drop drop` -> `slide 2 drop` (+1 byte, -1 instruction)
 
 ## Idioms
 
 ### Division and modulo
 
-Recognize wslib/io/divmod.wsf division and modulo idioms.
+Recognize wslib/math/divmod.wsf division and modulo idioms.
 
 ### Popcount
 
