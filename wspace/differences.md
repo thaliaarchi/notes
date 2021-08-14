@@ -1,6 +1,6 @@
 # Implementation differences
 
-Syntax:
+Lexing:
 
 - Encoding
   - UTF-8 (wspace)
@@ -8,6 +8,12 @@ Syntax:
   - LF (wspace)
   - LF, CRLF
   - LF, CRLF, CR
+- Encoding error laziness
+  - lazy (wspace)
+  - eager (Nebula, BlueSpace)
+
+Parsing:
+
 - Number `0`
   - requires sign and bits (conrad)
   - requires sign (wspace)
@@ -18,9 +24,7 @@ Syntax:
 - Label leading zeros
   - leading zeros are unique (wspace)
   - leading zeros are ignored (Nebula)
-- Label character set
-  - `[A-Za-z_][A-Za-z0-9_]*` (rdebath)
-- Laziness
+- Syntax error laziness
   - lazy (wspace)
   - eager (Nebula, BlueSpace)
 - Duplicate labels
@@ -31,12 +35,17 @@ Syntax:
   - use previous
   - use arbitrary
 
+Assembly:
+
+- Label character set
+  - `\.?[A-Za-z_$][A-Za-z0-9_$]*|[0-9]+` (rdebath)
+
 Bounds:
 
 - Number bounds
   - arbitrary precision (wspace)
-  - 64-bit int (Nebula)
-  - 32-bit int
+  - 64-bit integer (Nebula)
+  - 32-bit integer
   - 64-bit float (wsjq)
 - Heap bounds
   - (-inf, inf)
