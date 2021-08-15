@@ -11,6 +11,8 @@ Truncated:
 - Haskell [`quot`](https://hackage.haskell.org/package/base/docs/Prelude.html#v:quot)
   [`rem`](https://hackage.haskell.org/package/base/docs/Prelude.html#v:rem)
   [`quotRem`](https://hackage.haskell.org/package/base/docs/Prelude.html#v:quotRem)
+  (Haskell [98](https://www.haskell.org/onlinereport/basic.html#sect6.4.2)
+  and [2010](https://www.haskell.org/onlinereport/haskell2010/haskellch6.html#x13-1370006.4.2))
 - GMP [`mpz_tdiv`](https://gmplib.org/manual/Integer-Division)
 - C/C++ `/` `%`
 - Go [`/` `%`](https://golang.org/ref/spec#Integer_operators)
@@ -27,6 +29,8 @@ Floored:
 - Haskell [`div`](https://hackage.haskell.org/package/base/docs/Prelude.html#v:div)
   [`mod`](https://hackage.haskell.org/package/base/docs/Prelude.html#v:mod)
   [`divMod`](https://hackage.haskell.org/package/base/docs/Prelude.html#v:divMod)
+  (Haskell [98](https://www.haskell.org/onlinereport/basic.html#sect6.4.2)
+  and [2010](https://www.haskell.org/onlinereport/haskell2010/haskellch6.html#x13-1370006.4.2))
 - GMP [`mpz_fdiv`](https://gmplib.org/manual/Integer-Division)
 
 Euclidean:
