@@ -55,19 +55,6 @@ Bounds:
 
 I/O:
 
-- `readc` encoding
-  - ASCII
-  - UTF-8, error on invalid (wspace)
-  - UTF-8, U+FFFD replacement char for invalid
-  - UTF-8, -1 for invalid
-- `printc` encoding
-  - ASCII
-  - UTF-8, error on invalid (wspace)
-  - UTF-8, U+FFFD replacement char for invalid
-- `printc` invalid codepoints
-  - negative, U+D800 to U+DFFF surrogates, and over U+10FFFF (wspace)
-- Reading line breaks
-  - CRLF is collapsed to LF (wsjq on Windows)
 - EOF behavior
   - error (wspace)
   - 0
@@ -76,6 +63,27 @@ I/O:
   - unbuffered, e.g. pi.ws (wspace)
   - flush before read, e.g. calc.ws
   - buffered (LOLCODE)
+
+`readc`:
+
+- Encoding
+  - raw bytes ([wspace 0.3 binary])
+  - UTF-8, error on invalid (wspace with modern GHC)
+  - UTF-8, U+FFFD replacement char for invalid
+  - UTF-8, -1 for invalid
+- Line breaks
+  - CRLF is collapsed to LF (wsjq on Windows)
+
+`printc`:
+
+- Encoding:
+  - raw bytes ([wspace 0.3 binary])
+  - UTF-8, error on invalid (wspace with modern GHC)
+  - UTF-8, U+FFFD replacement char for invalid
+- Valid ranges:
+  - 0 to 255 ([wspace 0.3 binary])
+  - 0 to U+D7FF and U+E000 to U+10FFFF (wspace with modern GHC)
+  - 0 to U+10FFFF
 
 `readi` number format:
 
@@ -110,7 +118,7 @@ I/O:
   - allowed
   - disallowed (wspace)
 - Exponential notation with `e`
-  - allowed ([wspace 0.3 binary](https://web.archive.org/web/20150717140342/http://compsoc.dur.ac.uk:80/whitespace/downloads/wspace))
+  - allowed ([wspace 0.3 binary])
   - disallowed (wspace with modern GHC)
 - Floating point
   - allowed
@@ -143,3 +151,5 @@ Division and modulo:
   - Euclidean
   - ceiling
   - rounding
+
+[wspace 0.3 binary]: https://web.archive.org/web/20150717140342/http://compsoc.dur.ac.uk:80/whitespace/downloads/wspace
