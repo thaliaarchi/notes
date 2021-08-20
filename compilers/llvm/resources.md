@@ -102,3 +102,10 @@ Oh man there's so many papers that I want to read!!! Writing this has
 got me more excited. Are you going to be taking 601R from Kimball in the
 winter? Kimball says it'll be “reading, summarizing, implementing, and
 discussing an academic paper each week”. Or are you graduated?
+
+Just today cproc, a C11 compiler written in C11 using QBE as its
+backend, was featured on Hacker News:
+https://github.com/michaelforney/cproc
+
+Maybe I ought to make my own compiler bibliography with this stuff in it
+and papers I've read/want to read
