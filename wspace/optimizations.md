@@ -6,6 +6,24 @@
 - Replace non-recursive single-entry `call` and `ret` with `jmp`
 - Replace `call` with `jmp` when `end` or error always reached before
   corresponding `ret`
+- Reorder mutually-exclusive branches
+
+  ```wsa
+  let v = 0
+  if a: v = 1
+  if b: v = 2
+  if c: v = 3
+  ```
+
+  ->
+
+  ```wsa
+  let v
+  if      c: v = 3
+  else if b: v = 2
+  else if a: v = 1
+  else:      v = 0
+  ```
 
 ## Duplication
 
