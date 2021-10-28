@@ -37,6 +37,12 @@ Parsing:
 
 Assembly:
 
+- Label value assignment
+  - ASCII big-endian (wspace examples)
+  - UTF-8 big-endian
+  - Definition order
+  - Usage order (tetris.ws)
+  - Frequency order
 - Label character set
   - `\.?[A-Za-z_$][A-Za-z0-9_$]*|[0-9]+` (rdebath)
 
