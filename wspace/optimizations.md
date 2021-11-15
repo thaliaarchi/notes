@@ -36,6 +36,64 @@
 - Global value numbering
 - Common subexpression elimination
 
+## Peephole
+
+- Bitwise expressions where `y = 2 ** s`:
+  - `x y *` -> `x << s`
+  - `x y /` -> `x >> s`
+  - `x y %` -> `x & (y - 1)` (fdiv for `y > 0`, tdiv for `x > 0`)
+  - `x 2 %` -> `x & 1` (fdiv, tdiv for `x > 0`)
+- Logical expressions where `a = x % 2 = x & 1` and `b = y % 2 = y & 1`
+  (fdiv, tdiv for `x > 0`)
+  - NOT `^a`:
+    - `1 a -`
+  - AND `a & b`:
+    - `a b *`
+    - `a b + 2 /`
+  - OR `a | b`:
+    - `a b + a b -`
+    - `1 1 a - 1 b - * -`
+  - XOR `a ^ b`:
+    - `a b + 2 %`
+    - `a b + 1 a b * - *`
+  - ANDNOT `a &^ b`:
+    - `a 1 b - *`
+  - NAND `^(a & b)`:
+    - `1 a b * -`
+    - `1 a b + 2 / -`
+  - NOR `^(a | b)`:
+    - `1 a - 1 b - *`
+    - `1 a b + a b * - -`
+  - XNOR `^(a ^ b)`:
+    - `1 a b + 2 % -`
+    - `1 a b * 1 a b * - * -`
+  - NANDNOT `^(a &^ b)`:
+    - `1 a 1 b - * -`
+- `jz` conditionals:
+  - `x jz l` -> `x == 0`
+  - `x y + jz l` -> `x == -y`
+  - `x y - jz l` -> `x == y`
+  - `x y * jz l` -> `x & y == 0`
+  - `x y / jz l` for `y > 0`:
+    - -> `0 <= x && x < y` (fdiv)
+    - -> `-y < x && x < y` (tdiv)
+  - `x y / jz l` for `y < 0`:
+    - -> `y < x && x <= 0` (fdiv)
+    - -> `y < x && x < -y` (tdiv)
+  - `x y % jz l` -> `x % y == 0` (fdiv, tdiv)
+- `jn` conditionals:
+  - `x jn l` -> `x < 0`
+  - `x y + jn l` -> `x < -y`
+  - `x 1 - jn l` -> `x <= 0`
+  - `x y - jn l` -> `x < y`
+  - `x y * jn l` -> `(x < 0) ^ (y < 0)`
+  - `x y / jn l` for `y > 0`:
+    - -> `x < 0` (fdiv)
+    - -> `x <= -y` (tdiv)
+  - `x y / jn l` for `y < 0`:
+    - -> `x > 0` (fdiv)
+    - -> `x >= -y` (tdiv)
+
 ## Byte size
 
 Optimize for minimal Whitespace program byte size.
@@ -53,13 +111,13 @@ Optimizations:
 
   - Remove leading zeros for `push`, `copy`, and `slide`
   - `push -0` -> `push 0`
-  - For `copy n` with stack size s:
-    - n==0 -> `dup`
-    - n<0 -> `copy -1`
-    - n>s -> `copy -1`
-  - For `slide n` with stack size s:
-    - n<=0 -> `slide 0`
-    - n>=s -> `slide s-1`
+  - `copy n` with stack size s
+    - -> `dup` (when `n == 0`)
+    - -> `copy -1` (when `n < 0`)
+    - -> `copy -1` (when `n > s`)
+  - `slide n` with stack size s
+    - -> `slide 0` (when `n <= 0`)
+    - -> `slide s-1` (when `n >= s`)
 
 - Minify labels, considering usage frequency
 
