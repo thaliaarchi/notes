@@ -53,11 +53,26 @@ Bounds:
   - 64-bit integer (Nebula)
   - 32-bit integer
   - 64-bit float (wsjq)
-- Heap bounds
-  - (-inf, inf)
-  - [0, inf)
-  - [0, max]
-  - [min, max]
+- Label bounds
+  - arbitrary length (wspace, Nebula)
+  - 64-bit integer
+  - 32-bit integer
+  - 64-bit float
+
+Heap:
+
+- `store` at negative address
+  - allowed
+  - error
+  - non-terminating (Nebula)
+- `retrieve` at negative address
+  - allowed
+  - error
+  - lazy error (wspace)
+- `retrieve` at unset address
+  - 0 (Nebula, wsjq)
+  - 0 if under highest-set address; lazy error otherwise (wspace)
+  - error
 
 I/O:
 
