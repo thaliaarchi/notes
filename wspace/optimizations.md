@@ -142,6 +142,10 @@ Optimizations:
   - `drop drop drop drop drop` -> `slide 4 drop` (-4 bytes)
   - etc.
 
+- Slide reordering:
+
+  - `slide n drop push x` -> `push x slide n+1` (-2 or -3 bytes)
+
 - Label reordering:
 
   ```wsa
