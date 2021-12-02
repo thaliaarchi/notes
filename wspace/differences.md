@@ -43,6 +43,9 @@ Assembly:
   - Definition order
   - Usage order (tetris.ws)
   - Frequency order
+- Label assignment includes leading zeros
+  - yes
+  - no
 - Label character set
   - `\.?[A-Za-z_$][A-Za-z0-9_$]*|[0-9]+` (rdebath)
 
@@ -168,7 +171,7 @@ Division and modulo:
   - undefined behavior
 - Division rounding
   - truncated
-  - floored
+  - floored (wspace)
   - Euclidean
   - ceiling
   - rounding

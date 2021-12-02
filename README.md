@@ -35,6 +35,7 @@ A notebook on compilers, programming languages, and other topics.
 - [Nospace grammar](wspace/nospace_grammar.bnf)
 - [Optimizations](wspace/optimizations.md)
 - [Respace](wspace/respace.md)
+- [Syntax error recovery](wspace/syntax_recovery.md)
 - [Whitespace assembly syntax](wspace/wsa_draft.md)
 - [Whitespace language specification](wspace/whitespace_spec.md)
 
