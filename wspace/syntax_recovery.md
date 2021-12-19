@@ -52,6 +52,16 @@ Otherwise, the line likely ends with a `push`. There may be zero or more
 the push. Since the start of the `push` cannot be determined by scanning
 backwards, skip this line and resume parsing on the next line.
 
+## Disconnected labels
+
+Collect all labels defined up until the syntax error and attempt to
+resume parsing at any position that would be a valid `call`, `jmp`,
+`jz`, or `jn` to that label.
+
+Collect all call and jump targets for which a label has not been defined
+up until the syntax error and attempt to resume parsing at any position
+that would be a valid label.
+
 ## Undefined instructions
 
 Since the Whitespace instruction prefix tree is not full, there are some
