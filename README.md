@@ -10,6 +10,7 @@ A notebook on compilers, programming languages, and other topics.
 - GraalVM
   - [Graal IR: An Extensible Declarative Intermediate Representation](compilers/graalvm/graalvm_paper_notes.txt)
   - [21.2 release highlights](compilers/graalvm/release_highlights_21.2.md)
+- Mesa [NIR](compilers/mesa_nir.md)
 
 ## Topics
 
