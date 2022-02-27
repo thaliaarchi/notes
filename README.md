@@ -10,6 +10,10 @@ A notebook on compilers, programming languages, and other topics.
 - GraalVM
   - [Graal IR: An Extensible Declarative Intermediate Representation](compilers/graalvm/graalvm_paper_notes.txt)
   - [21.2 release highlights](compilers/graalvm/release_highlights_21.2.md)
+- WebAssembly
+  - [Bringing the Web up to Speed with WebAssembly](compilers/webassembly/pldi17_haas.md)
+  - [Not So Fast: Analyzing the Performance of WebAssembly vs. Native Code](compilers/webassembly/atc19_jangda.md)
+  - [Multi-Value All the Wasm!](compilers/webassembly/multi_value.md)
 - [CompCert](compilers/compcert.md)
 - Mesa [NIR](compilers/mesa_nir.md)
 
