@@ -6,6 +6,7 @@ A notebook on compilers, programming languages, and other topics.
 
 - LLVM
   - [2020 LLVM Virtual Developers' Meeting](compilers/llvm/devmtg_2020-10)
+  - [LLVM architecture presentation](compilers/llvm/presentation_outline.md)
   - [Resources](compilers/llvm/resources.md)
 - GraalVM
   - [Graal IR: An Extensible Declarative Intermediate Representation](compilers/graalvm/graalvm_paper_notes.txt)
