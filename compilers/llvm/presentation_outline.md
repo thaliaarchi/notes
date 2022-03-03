@@ -31,3 +31,13 @@
     - QBE: https://c9x.me/compile/
     - PyPy (is it extensible?)
   - Tradeoffs vs LLVM
+
+Day 1:
+- Motivate existence
+- LLVM architecture
+- Tutorial
+
+Day 2:
+- Tutorial
+- Motivate design decisions
+- Alternatives
