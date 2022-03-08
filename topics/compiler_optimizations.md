@@ -1,5 +1,7 @@
 # Compiler optimization patterns
 
+## Loop counter
+
 ```go
 n := 255
 for i := 0; i < 255; i++ {
@@ -19,5 +21,18 @@ for i := 0; i < 255; i++ {
 ```go
 for i := 0; i < 255; i++ {
   f(i)
+}
+```
+
+## [Sum as bitwise operations](https://www.reddit.com/r/programminghorror/comments/t8spag/what_in_the_sum/)
+
+```go
+func sum(a, b int) {
+  for b != 0 {
+    c := a & b
+    a = a ^ b
+    b = c << 1
+  }
+  return a
 }
 ```
