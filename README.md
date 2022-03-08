@@ -5,6 +5,7 @@ A notebook on compilers, programming languages, and other topics.
 ## Compilers
 
 - LLVM
+  - [LLVM: A Compilation Framework for Lifelong Program Analysis & Transformation](compilers/llvm/cgo04_lattner.md)
   - [2020 LLVM Virtual Developers' Meeting](compilers/llvm/devmtg_2020-10)
   - [LLVM architecture presentation](compilers/llvm/presentation_outline.md)
   - [Resources](compilers/llvm/resources.md)
