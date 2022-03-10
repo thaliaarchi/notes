@@ -48,3 +48,54 @@
   - Static single-assignment form
   - Instructions
   - Type information
+
+## Day 2: 2022-03-10
+
+- Compiler for Kaleidoscope
+  - Kaleidoscope syntax: fib, mandelbrot
+  - Lexing, parsing
+    - Algebraic data types: Rust/Ocaml vs C++
+      - C++ virtual classes: https://releases.llvm.org/13.0.1/docs/tutorial/MyFirstLanguageFrontend/LangImpl03.html
+    - Parser combinators: nom's JSON example
+  - Lowering
+    - Builder API
+      - Simple example with Go: https://blog.gopheracademy.com/advent-2018/llvm-ir-and-go/#output-example-producing-llvm-ir
+    - Mapping constructs to LLVM IR:
+      - Control flow and SSA: https://mapping-high-level-constructs-to-llvm-ir.readthedocs.io/en/latest/control-structures/if-then-else.html
+      - More? https://mapping-high-level-constructs-to-llvm-ir.readthedocs.io/en/latest/README.html
+        - Object-oriented
+          - Classes
+          - Virtual methods
+          - Single inheritance
+          - Virtual inheritance
+          - Interfaces
+          - Boxing and unboxing
+          - Class equivalence test
+          - Class inheritance test
+          - The new operator
+        - Exception handling: covered on Tuesday
+        - Advanced/functional
+          - Lambda functions
+          - Generators
+  - Inkwell JIT example
+- LLVM API
+  - Safety
+    - e.g., Value: https://llvm.org/doxygen/classllvm_1_1Value.html
+- API bindings
+  - Built-in
+    - C++
+    - C wrapper of C++: stable
+    - Go, OCaml, Python bindings
+      - https://github.com/llvm/llvm-project/tree/main/llvm/bindings
+  - Inkwell (Rust)
+    - FFI, safe
+    - https://github.com/TheDan64/inkwell
+  - LLIR (Go)
+    - Parse/serialize, safe
+    - https://github.com/llir/llvm
+    - https://blog.gopheracademy.com/advent-2018/llvm-ir-and-go/
+  - llvm-hs (Haskell)
+    - FFI and/or just Haskell structures
+    - https://github.com/llvm-hs/llvm-hs
+    - https://hackage.haskell.org/package/llvm-hs-9.0.1/docs/LLVM.html
+  - etc
