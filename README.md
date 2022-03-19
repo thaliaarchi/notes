@@ -9,6 +9,7 @@ A notebook on compilers, programming languages, and other topics.
   - [2020 LLVM Virtual Developers' Meeting](compilers/llvm/devmtg_2020-10)
   - [LLVM architecture presentation](compilers/llvm/presentation_outline.md)
   - [Resources](compilers/llvm/resources.md)
+  - [Libraries](compilers/llvm/libraries.md)
   - [Language reference](compilers/llvm/langref.md)
   - [Version history](compilers/llvm/version_history.md)
 - GraalVM
@@ -31,6 +32,7 @@ A notebook on compilers, programming languages, and other topics.
 - [E-graphs](topics/e-graphs.md)
 - [List of ciphers](topics/ciphers.md)
 - [Paper notes](topics/papers.md)
+- [Parsing](topics/parsing.md)
 - [Programming language alphabet challenge](topics/language_alphabet.md)
 - [Programming language rankings](topics/language_rankings.md)
 

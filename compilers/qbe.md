@@ -26,8 +26,8 @@ Related projects:
 
 Libraries:
 - QBE IL (textual):
-  - [qbe-rs](https://github.com/garritfra/qbe-rs): Rust; generate [[1]]
-  - [qbe-sml](https://github.com/pauloue/qbe-sml): Standard ML;
+  - [qbe-rs](https://github.com/garritfra/qbe-rs) (Rust): generate [[1]]
+  - [qbe-sml](https://github.com/pauloue/qbe-sml) (Standard ML):
     generate/parse [[2]]
 - Library interface: not being actively worked on [[3]]
 
