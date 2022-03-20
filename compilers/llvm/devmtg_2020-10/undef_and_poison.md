@@ -2,8 +2,10 @@
 
 Juneyoung Lee (Seoul National University)
 
-- https://www.youtube.com/watch?v=_APJ4PtF0sk
-- https://whova.com/portal/webapp/llvm_202010/Agenda/1162345
+[Video](https://www.youtube.com/watch?v=ZMaZH3YYJqY),
+[Video (raw)](https://www.youtube.com/watch?v=_APJ4PtF0sk),
+[PDF Slides](https://llvm.org/devmtg/2020-09/slides/Lee-UndefPoison.pdf),
+[PPT Slides](https://llvm.org/devmtg/2020-09/slides/Lee-UndefPoison.pptx)
 
 ## Description
 

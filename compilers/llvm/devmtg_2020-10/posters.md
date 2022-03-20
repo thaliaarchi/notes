@@ -4,22 +4,20 @@
 
 Luís Marques (lowRISC)
 
-- https://whova.com/portal/webapp/llvm_202010/Exhibitors/105336
-- https://d1keuthy5s86c8.cloudfront.net/static/ems/upload/files/poster.pdf
-- https://github.com/lowRISC/longfruit
+[Poster](https://d1keuthy5s86c8.cloudfront.net/static/ems/upload/files/poster.pdf),
+[Source](https://github.com/lowRISC/longfruit)
 
 RISC-V still has cases of bad code generation, so LongFruit is a tool
 that performs differential analysis of code generated with gcc and
 Clang. Codegen is scored simply by the types of instructions used,
 weighted by complexity. It finds candidate issues and reduces them.
 
-## llvm-diva - Debug Information Visual Analyzer
+## llvm-diva: Debug Information Visual Analyzer
 
 Phillip Power (Sony)
 
-- https://whova.com/portal/webapp/llvm_202010/Exhibitors/105335
-- https://d1keuthy5s86c8.cloudfront.net/static/ems/upload/files/llvm_diva_Poster.pdf
-- https://d1keuthy5s86c8.cloudfront.net/static/ems/upload/files/llvm_diva_RFC_DebugInformationVisualAnalyzer.pdf
+[Poster](https://d1keuthy5s86c8.cloudfront.net/static/ems/upload/files/llvm_diva_Poster.pdf),
+[RFC](https://d1keuthy5s86c8.cloudfront.net/static/ems/upload/files/llvm_diva_RFC_DebugInformationVisualAnalyzer.pdf)
 
 llvm-diva processes various formats of debugging information contained
 in binary files and presents a high-level logical view of the
@@ -38,9 +36,7 @@ With llvm-diva, we aim to address the following points:
 
 William Moses, Valentin Churavy (MIT)
 
-- https://whova.com/portal/webapp/llvm_202010/Exhibitors/110943
-- https://whova.com/portal/webapp/llvm_202010/Agenda/1199394
-- https://d1keuthy5s86c8.cloudfront.net/static/ems/upload/files/Enzyme_llvmdev.pdf
+[Poster](https://d1keuthy5s86c8.cloudfront.net/static/ems/upload/files/Enzyme_llvmdev.pdf)
 
 Applying differentiable programming techniques and machine learning
 algorithms to foreign programs requires developers to either rewrite
