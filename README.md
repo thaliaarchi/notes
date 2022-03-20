@@ -17,6 +17,7 @@ A notebook on compilers, programming languages, and other topics.
     - [MLIR Tutorial](compilers/llvm/devmtg_2020-10/mlir_tutorial.md)
     - [CIL: Common MLIR Dialect for C/C++ and Fortran](compilers/llvm/devmtg_2020-10/cil_mlir_dialect.md)
   - [LLVM architecture presentation](compilers/llvm/presentation_outline.md)
+  - [Tutorials](compilers/llvm/tutorials.md)
   - [Resources](compilers/llvm/resources.md)
   - [Libraries](compilers/llvm/libraries.md)
   - [Language reference](compilers/llvm/langref.md)
