@@ -2,8 +2,9 @@
 
 Nick Desaulniers (Google)
 
-- https://www.youtube.com/watch?v=5vmJuLfIpY4
-- https://whova.com/portal/webapp/llvm_202010/Agenda/1162347
+[Video](https://www.youtube.com/watch?v=y4b-sgp6VYA),
+[Video (raw)](https://www.youtube.com/watch?v=5vmJuLfIpY4),
+[Slides](https://clangbuiltlinux.github.io/llvm-dev-conf-2020/nick/debugging_llvm.html)
 
 ## Description
 

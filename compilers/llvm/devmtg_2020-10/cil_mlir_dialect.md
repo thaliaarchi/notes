@@ -3,8 +3,9 @@
 Prashantha NR, Vinay Madhusudan, and Ranjith Kumar
 (Compiler Tree Technologies)
 
-- https://www.youtube.com/watch?v=mNA5bwsKepQ
-- https://whova.com/portal/webapp/llvm_202010/Agenda/1162333
+[Video](https://www.youtube.com/watch?v=3gcw-8C9UbA),
+[Video (raw)](https://www.youtube.com/watch?v=mNA5bwsKepQ),
+[Slides](https://llvm.org/devmtg/2020-09/slides/CIL_Common_MLIR_Abstraction.pdf)
 
 CIL, pronounced "seal".
 
