@@ -13,7 +13,7 @@
 - LLVM architecture
   - Opcodes
   - Tiered architecture
-    - Frontends
+    - Front-ends
       - ASTs: Clang
       - Language IRs: Rust HIR and MIR, Swift SIL, Flang FIR,
         Whitespace, etc.
