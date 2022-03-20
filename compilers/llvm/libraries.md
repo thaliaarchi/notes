@@ -35,6 +35,10 @@
   - Safe types
   - Generate/parse (textual LLVM IR)
   - [Blog post](https://blog.gopheracademy.com/advent-2018/llvm-ir-and-go/)
+- TinyGo [go-llvm](https://github.com/tinygo-org/go-llvm) (Go)
+  - Fork of in-tree Go bindings
+  - Uses system-installed LLVM
+  - Backports features from C++ API
 
 ## Tools
 
