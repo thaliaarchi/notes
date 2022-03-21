@@ -2,8 +2,8 @@
 
 Mandeep Singh Grang, Katherine Kjeer (Microsoft)
 
-[Video](https://www.youtube.com/watch?v=EuxAzvtX9CI),
-[Slides](https://llvm.org/devmtg/2020-09/slides/Checked_C_Adding_Memory_Safety_to_LLVM.pdf)
+[[video](https://www.youtube.com/watch?v=EuxAzvtX9CI)],
+[[slides](https://llvm.org/devmtg/2020-09/slides/Checked_C_Adding_Memory_Safety_to_LLVM.pdf)]
 
 ## Description
 

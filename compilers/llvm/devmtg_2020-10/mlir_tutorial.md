@@ -2,9 +2,9 @@
 
 Mehdi Amini and River Riddle (Google)
 
-[Video](https://www.youtube.com/watch?v=Y4SvqTtOIDk),
-[Video (raw)](https://www.youtube.com/watch?v=uhXT4RXjzLI),
-[Slides](https://llvm.org/devmtg/2020-09/slides/MLIR_Tutorial.pdf)
+[[video](https://www.youtube.com/watch?v=Y4SvqTtOIDk)],
+[[video (raw)](https://www.youtube.com/watch?v=uhXT4RXjzLI)],
+[[slides](https://llvm.org/devmtg/2020-09/slides/MLIR_Tutorial.pdf)]
 
 `affine.for` is a loop of a linear equation.
 
