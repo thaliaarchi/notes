@@ -23,7 +23,8 @@ so many years.
 
 ## Questions
 
-Q: Are STL types like std::vector or std::map represented with dedicated operations in the CIL dialect? (me)
+Q: Are STL types like `std::vector` or `std::map` represented with
+dedicated operations in the CIL dialect? (me)
 
 A: Currently those are still represented as classes in CIL, but it is
 planned. (Vinay)
