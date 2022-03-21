@@ -22,6 +22,8 @@ A notebook on compilers, programming languages, and other topics.
   - [Libraries](compilers/llvm/libraries.md)
   - [Language reference](compilers/llvm/langref.md)
   - [Version history](compilers/llvm/version_history.md)
+- MLIR
+  - [Libraries](compilers/mlir/libraries.md)
 - GraalVM
   - [Graal IR: An Extensible Declarative Intermediate Representation](compilers/graalvm/graalvm_paper_notes.txt)
   - [21.2 release highlights](compilers/graalvm/release_highlights_21.2.md)
