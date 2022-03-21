@@ -76,6 +76,10 @@
 - ParallelJIT: Exercise threaded-safe JIT
   [[code](https://github.com/llvm/llvm-project/tree/main/llvm/examples/ParallelJIT)]
 
+## Debugging
+
+- [How to create LLDB type summaries and synthetic children for your custom types](https://melatonin.dev/blog/how-to-create-lldb-type-summaries-and-synthetic-children-for-your-custom-types/)
+
 ## Clang
 
 - [clang-tutor](https://github.com/banach-space/clang-tutor) (example Clang
