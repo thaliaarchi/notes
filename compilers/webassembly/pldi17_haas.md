@@ -8,7 +8,7 @@ Proc. of the 38th Conference on Programming Language Design and
 Implementation (PLDI), Barcelona, Spain, Jun. 2017.
 
 [[paper](https://dl.acm.org/doi/10.1145/3062341.3062363)],
-[[pdf](https://dl.acm.org/doi/pdf/10.1145/3062341.3062363)],
+[[PDF](https://dl.acm.org/doi/pdf/10.1145/3062341.3062363)],
 [[video](https://www.youtube.com/watch?v=AFy5TdrFG9Y)]
 
 ## Semantics

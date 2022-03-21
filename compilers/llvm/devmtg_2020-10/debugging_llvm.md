@@ -2,9 +2,9 @@
 
 Nick Desaulniers (Google)
 
-[Video](https://www.youtube.com/watch?v=y4b-sgp6VYA),
-[Video (raw)](https://www.youtube.com/watch?v=5vmJuLfIpY4),
-[Slides](https://clangbuiltlinux.github.io/llvm-dev-conf-2020/nick/debugging_llvm.html)
+[[video](https://www.youtube.com/watch?v=y4b-sgp6VYA)],
+[[video (raw)](https://www.youtube.com/watch?v=5vmJuLfIpY4)],
+[[slides](https://clangbuiltlinux.github.io/llvm-dev-conf-2020/nick/debugging_llvm.html)]
 
 ## Description
 

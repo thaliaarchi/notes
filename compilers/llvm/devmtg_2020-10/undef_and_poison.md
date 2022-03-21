@@ -2,10 +2,10 @@
 
 Juneyoung Lee (Seoul National University)
 
-[Video](https://www.youtube.com/watch?v=ZMaZH3YYJqY),
-[Video (raw)](https://www.youtube.com/watch?v=_APJ4PtF0sk),
-[PDF Slides](https://llvm.org/devmtg/2020-09/slides/Lee-UndefPoison.pdf),
-[PPT Slides](https://llvm.org/devmtg/2020-09/slides/Lee-UndefPoison.pptx)
+[[video](https://www.youtube.com/watch?v=ZMaZH3YYJqY)],
+[[video (raw)](https://www.youtube.com/watch?v=_APJ4PtF0sk)],
+[[slides (PDF)](https://llvm.org/devmtg/2020-09/slides/Lee-UndefPoison.pdf)],
+[[slides (PPT)](https://llvm.org/devmtg/2020-09/slides/Lee-UndefPoison.pptx)]
 
 ## Description
 
