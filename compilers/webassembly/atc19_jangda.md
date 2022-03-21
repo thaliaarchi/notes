@@ -1,6 +1,15 @@
 # Not So Fast: Analyzing the Performance of WebAssembly vs. Native Code
 
-https://www.usenix.org/system/files/atc19-jangda.pdf
+Abhinav Jangda, Bobby Powers, Emery D. Berger, and Arjun Guha
+(University of Massachusetts Amherst)
+
+Proc. of the 2019 USENIX Annual Technical Conference (USENIX ATC 19),
+Renton, Washington, Jul. 2019
+
+[[paper](https://www.usenix.org/conference/atc19/presentation/jangda)],
+[[pdf](https://www.usenix.org/system/files/atc19-jangda.pdf)],
+[[video](https://www.youtube.com/watch?v=dK-8O-ajQQQ)],
+[[video (lightning talk)](https://www.youtube.com/watch?v=-6HoiVWiHiw)]
 
 ## Benchmarks
 

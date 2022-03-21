@@ -1,6 +1,15 @@
 # Bringing the Web up to Speed with WebAssembly
 
-https://dl.acm.org/doi/pdf/10.1145/3062341.3062363
+Andreas Haas, Andreas Rossberg, Derek L. Schuff, Ben L. Titzer (Google);
+Michael Holman (Microsoft); Dan Gohman, Luke Wagner, Alon Zakai
+(Mozilla); JF Bastien (Apple)
+
+Proc. of the 38th Conference on Programming Language Design and
+Implementation (PLDI), Barcelona, Spain, Jun. 2017.
+
+[[paper](https://dl.acm.org/doi/10.1145/3062341.3062363)],
+[[pdf](https://dl.acm.org/doi/pdf/10.1145/3062341.3062363)],
+[[video](https://www.youtube.com/watch?v=AFy5TdrFG9Y)]
 
 ## Semantics
 
@@ -122,8 +131,7 @@ Wasm!”):
 - Instruction types are weakened to allow composition, e.g., when typing
   the sequence `(i32.const 1) (i32.const 2) i32.add`, the type of the
   middle instruction is weakened from `ε -> i32` to `i32 -> i32 i32` to
-  compose with the other two. This answers my question about bloating
-  block parameter lists.
+  compose with the other two.
 - No requirements are enforced on the stack after a unconditional
   branches (`unreachable`, `br`, `br_table`, `return`), so expressions
   such as `a + b` can be simply compositionally compiled as
@@ -156,11 +164,16 @@ single pass with greedy register allocation. The IonMonkey optimizing
 JIT compiles it in parallel. V8 and SpiderMonkey achieve 5-6x
 compilation speed improvement with 8 compilation threads.
 
+- Chrome: One-tier AOT compilation
+- Firefox: Two-tier AOT and JIT compilation
+- WebKit: Two-tier JIT compilation
+- Edge: Two-tier interpretation and JIT compilation
+
 Wasm can be decoded to SSA form in a single linear pass. This is done by
 V8 and SpiderMonkey. V8's TurboFan compiler uses a sea of nodes
 graph-based IR (like Graal!).
 
-Reference interpreter written in OCaml.
+Reference interpreter is written in OCaml.
 
 ### §7.1 Bounds checks
 
@@ -208,7 +221,7 @@ JVM has a potentially O(n^3) worst-case for the iterative dataflow
 approach that is a consequence of unrestricted `goto`s and other
 idiosyncrasies that had to be fixed by adding stack maps.
 
-JVM, CIL, and Android Dalvik allows irreducible loops and unbalanced
+JVM, CIL, and Android Dalvik allow irreducible loops and unbalanced
 locking structures in bytecode and just relegate those constructs to an
 interpreter.
 
