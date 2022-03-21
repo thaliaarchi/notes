@@ -33,6 +33,11 @@ A notebook on compilers, programming languages, and other topics.
 - [CompCert](compilers/compcert.md)
 - Mesa [NIR](compilers/mesa_nir.md)
 
+## Programming languages
+
+- Rust
+  - [Rust Enum Expressivity](langs/rust/enum_expressivity.md)
+
 ## Topics
 
 - Colors
