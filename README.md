@@ -39,6 +39,7 @@ A notebook on compilers, programming languages, and other topics.
 ## Programming languages
 
 - Rust
+  - [Crates and tutorials](langs/rust/rust.md)
   - [Rust Enum Expressivity](langs/rust/enum_expressivity.md)
 
 ## Topics
@@ -50,7 +51,6 @@ A notebook on compilers, programming languages, and other topics.
 - [E-graphs](topics/e-graphs.md)
 - [List of ciphers](topics/ciphers.md)
 - [Paper notes](topics/papers.md)
-- [Parsing](topics/parsing.md)
 - [Programming language alphabet challenge](topics/language_alphabet.md)
 - [Programming language rankings](topics/language_rankings.md)
 
