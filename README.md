@@ -42,6 +42,7 @@ A notebook on compilers, programming languages, and other topics.
 - Rust
   - [Crates and tutorials](langs/rust/rust.md)
   - [Rust Enum Expressivity](langs/rust/enum_expressivity.md)
+- [Zig](langs/zig.md)
 
 ## Topics
 
