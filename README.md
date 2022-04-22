@@ -50,6 +50,7 @@ A notebook on compilers, programming languages, and other topics.
   - [Color libraries and color spaces](topics/colors/color-libraries.md)
   - [Color library ideas](topics/colors/color-lib-ideas.md)
 - [Compiler optimization patterns](topics/compiler_optimizations.md)
+- [Data structures](topics/data_structures.md)
 - [E-graphs](topics/e-graphs.md)
 - [Futamura projections](topics/futamura.md)
 - [List of ciphers](topics/ciphers.md)
