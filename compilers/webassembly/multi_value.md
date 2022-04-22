@@ -90,8 +90,8 @@ which could bloat parameter lists. However, Wasm validation performs a
 type weakening for the composition of instructions, which extends
 instruction types to include untouched stack values that are needed by
 later instructions, so I don't think this would be a problem (see §4.1
-“Typing Rules - Instructions” of “Bringing the Web up to Speed with
-WebAssembly”).
+“Typing Rules - Instructions” of *Bringing the Web up to Speed with
+WebAssembly*).
 
 The syntax for parameter lists is nice. I may need to steal it. Is this
 formal syntax though or an ad hoc example?
