@@ -7,11 +7,13 @@
 - [`impls`](https://docs.rs/impls): Determine if a type implements a logical
   trait expression
 - [`nom`](https://docs.rs/nom): Byte-oriented, zero-copy, parser combinators
-- [`proc-macro2`](https://docs.rs/proc-macro2): Wrapper around the compiler's
-  `proc_macro` procedural macro API
-- [`quote`](https://docs.rs/quote): Quasi-quoting macro for turning Rust AST
-  structures into tokens
-- [`syn`](https://docs.rs/syn): Parser for Rust source code
+- Macros:
+  - [`paste`](https://crates.io/crates/paste): Token-pasting macros
+  - [`proc-macro2`](https://docs.rs/proc-macro2): Wrapper around the compiler's
+    `proc_macro` procedural macro API
+  - [`quote`](https://docs.rs/quote): Quasi-quoting macro for turning Rust AST
+    structures into tokens
+  - [`syn`](https://docs.rs/syn): Parser for Rust source code
 
 ## Tutorials
 
