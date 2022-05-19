@@ -19,6 +19,7 @@
   - Haskell with llvm-hs [[code](https://github.com/llvm-hs/llvm-hs-kaleidoscope)]
     (without AST)
   - Rust with Inkwell [[code](https://github.com/TheDan64/inkwell/tree/master/examples/kaleidoscope)]
+  - Go [[code](https://github.com/qeedquan/misc_utilities/blob/master/esolang/kaleidoscope.go)]
 - BrainF [[code](https://github.com/llvm/llvm-project/tree/main/llvm/examples/BrainF)]
 - [Stacker: An Example of Using LLVM](https://releases.llvm.org/2.3/docs/Stacker.html)
   [[code](https://github.com/llvm/llvm-project/tree/9be3ca0a1f5d8b820b222858519c6b7a964cc174/stacker)]
