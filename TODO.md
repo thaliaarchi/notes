@@ -20,3 +20,7 @@
   - [Docs](https://docs.mesa3d.org/nir/index.html)
 - SSA form
   - [SSA bibliography](http://www.dcs.gla.ac.uk/~jsinger/ssa.html)
+- Compilers
+  - [StoneKnifeForth](https://github.com/kragen/stoneknifeforth)
+- Parsing
+  - Parsing with derivatives
