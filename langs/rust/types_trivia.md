@@ -7,13 +7,13 @@ transcribed by Jimmy Hartzell [[blog](https://www.thecodedmessage.com/posts/triv
 
 ## `std::fmt::Debug`
 
-Did you know that the Formatter argument to `Debug::fmt` makes it really easy to
-customize debug representations for structs, enums, lists, and sets? See the
+Did you know that the Formatter argument to `Debug::fmt` makes it *really* easy
+to customize debug representations for structs, enums, lists, and sets? See the
 `debug_*` methods on it.
 
 ## `Formatter`
 
-Did you know that `std::fmt::Formatter` is super easy to use if you want more
+Did you know that `std::fmt::Formatter` is *super* easy to use if you want more
 control over debugging for a custom type? For example, to emit a “list-like”
 type, just `Formatter::debug_list().entries(self.0.iter()).finish()`.
 
@@ -82,14 +82,14 @@ to spawn a child process on Linux (`posix_spawn`, `clone3`/`exec`,
 
 ## `Pin<T>`
 
-Did you know that the name `Pin` (and the name `Unpin`) where both heavily
+Did you know that the name `Pin` (and the name `Unpin`) where both *heavily*
 debated? Pin was almost called Pinned, for example. [The discussion](https://github.com/rust-lang/rust/issues/55766#issuecomment-438789462)
 is an interesting read now after the fact.
 
 ## `Vec<T>`
 
-Did you know that `Vec::swap_remove` is way faster than `Vec::remove` if you can
-tolerate changes to ordering?
+Did you know that `Vec::swap_remove` is *way* faster than `Vec::remove` if you
+can tolerate changes to ordering?
 
 Did you know that the smallest non-zero capacity for a `Vec<T>`
 [depends on the size of `T`](https://github.com/rust-lang/rust/blob/9a74608543d499bcc7dd505e195e8bfab9447315/library/alloc/src/raw_vec.rs#L106-L110)?
@@ -102,10 +102,10 @@ to the same (non-null) string!
 
 ## `for<'a> SomeTrait<'a>`
 
-Did you know that you can use `for<'a>` to say that a bound has to hold for any
-lifetime `'a`, not just a specific lifetime you happen to have available at the
-time. For example, `<T> for<'a>: &'a T: Read` says that any shared reference to
-a `T` must implement `Read`.
+Did you know that you can use `for<'a>` to say that a bound has to hold for
+*any* lifetime `'a`, not just a *specific* lifetime you happen to have available
+at the time. For example, `<T> for<'a>: &'a T: Read` says that *any* shared
+reference to a `T` must implement `Read`.
 
 ## [`This monstrous warp type`](https://gist.githubusercontent.com/fasterthanlime/de0955a8b29d0d66110983ebb5fae442/raw/1827a3afbca01cd42eafd0905cfdc451da805cb7/gistfile1.txt)
 
@@ -139,7 +139,7 @@ plan is to one day replace `Infallible` with a type alias for `!`?
 
 ## `fn`
 
-Specifically, did you know that the name of a function is not an `fn`? It’s a
+Specifically, did you know that the name of a function is *not* an `fn`? It’s a
 `FnDef`, which can then be [coerced to a `FnPtr`](https://github.com/rust-lang/rust/issues/86654#issuecomment-869173835)?
 
 ## `PhantomData`
@@ -162,7 +162,7 @@ declares its representation as [the same as that of u8](https://github.com/rust-
 Did you know that `Any` is *really* non-magical? It just has a blanket
 implementation for all `T` that returns `TypeId::of::<T>()`, and to downcast it
 simply compares the return value of that trait method to see if it’s safe to
-cast to downcast to a type! `TypeId` is magic though.
+cast to downcast to a type! `TypeId` *is* magic though.
 
 ## `Self`
 
@@ -174,7 +174,7 @@ https://github.com/rust-lang/rust/issues/44874
 ## `()`
 
 Did you know that `()` implements `FromIterator`, so you can
-`.collect::<Result<(), E>>` to just see if anything in an iterator erred?
+`.collect::<Result<(), E>>` to *just* see if anything in an iterator erred?
 
 [Note that this doesn’t say whether or not this is a good idea. -Jimmy]
 
@@ -209,7 +209,7 @@ to a file it may not otherwise be able to open?
 
 ## `std::sync::Condvar`/`Mutex`
 
-Did you know that Mara is doing some awesome work on making `Condvar` (and
+Did you know that Mara is doing some *awesome* work on making `Condvar` (and
 `Mutex` and `RwLock`) much better on a wide array on platforms?
 https://github.com/rust-lang/rust/issues/93740
 
@@ -265,19 +265,19 @@ counter under a lock.
 
 Did you know that `ControlFlow` is really a stepping stone towards making `?`
 work for other types than `Option` and `Result`? The full design has gone
-through a lot of iterations, but the latest and greatest is
+through a *lot* of iterations, but the latest and greatest is
 [RFC3058](https://github.com/rust-lang/rust/issues/84277).
 
 ## `File`
 
 Did you know that there are implementations of `Read`, `Write`, and `Seek` for
 `&File` as well, so multiple threads can share a single `File` and call those
-concurrently. Whether they should is a different question of course.
+concurrently. Whether they *should* is a different question of course.
 
 ## `Result<T, E>`
 
-Did you know that Rust originally (pre-1.0) had both Result and an Either type?
-They decided to remove Either [way back in 2013](https://github.com/rust-lang/rust/issues/9157)
+Did you know that Rust originally (pre-1.0) had both Result *and* an Either
+type? They decided to remove Either [way back in 2013](https://github.com/rust-lang/rust/issues/9157)
 
 ## `Cow<str>`
 
@@ -318,8 +318,8 @@ subtle? https://github.com/rust-lang/rust/issues/10488
 ## `MaybeUninit`
 
 Did you know that `MaybeUninit` arose because the previous mechanism,
-`std::mem::uninitialized`, produced immediate undefined behavior when invoked
-with most types (like `uninitialized::<bool>()`).
+`std::mem::uninitialized`, produced *immediate* undefined behavior when invoked
+with *most* types (like `uninitialized::<bool>()`).
 
 ## `struct T<const C: usize>`
 
@@ -329,7 +329,7 @@ Did you know that with Rust 1.59.0 you can now [give `C` a default value](https:
 
 Did you know that actual deallocation logic for `Arc<T>` is implemented in
 `Weak<T>`, and is invoked by considering all copies of a particular `Arc<T>` to
-collectively hold a single `Weak<T>` between them? [Source link.](https://github.com/rust-lang/rust/blob/7e9b92cb43a489b34e2bcb8d21f36198e02eedbc/library/alloc/src/sync.rs#L1108-L1109)
+*collectively* hold a single `Weak<T>` between them? [Source link](https://github.com/rust-lang/rust/blob/7e9b92cb43a489b34e2bcb8d21f36198e02eedbc/library/alloc/src/sync.rs#L1108-L1109).
 
 ## `[T; N]`
 
@@ -339,7 +339,7 @@ generics to impl for any length `N`, [we can’t *yet* do the same for `Default`
 ## `u8`
 
 Did you know that as of Rust 1.60, you can now use `u8::escape_ascii` to
-[get an iterator of the bytes needed to escape that byte character in most contexts](https://doc.rust-lang.org/std/ascii/fn.escape_default.html).
+[get an iterator of the bytes needed to escape that byte character in *most* contexts](https://doc.rust-lang.org/std/ascii/fn.escape_default.html).
 
 ## `HashMap<K, V>`
 
@@ -355,8 +355,8 @@ exclusive reference”. [Quoth David Tolnay](https://docs.rs/dtolnay/latest/dtol
 
 ## `std::ops::Range`
 
-Did you know that there’s been a lot of debate around whether or not the `Range`
-types should be `Copy`? https://github.com/rust-lang/rust/pull/21846
+Did you know that there’s been a *lot* of debate around whether or not the
+`Range` types should be `Copy`? https://github.com/rust-lang/rust/pull/21846
 
 ## `AtomicU32`
 
@@ -367,8 +367,8 @@ Did you know that you’ll often want `compare_exchange_weak` over
 
 Did you know that Hash is responsible for not just
 [one](https://github.com/rust-lang/rust/issues/29263) , but
-[two](https://github.com/rust-lang/rust/issues/65744) of the issues on the “rust
-2 breakage wishlist”?
+[*two*](https://github.com/rust-lang/rust/issues/65744) of the issues on the
+“rust 2 breakage wishlist”?
 
 ## `{integer}`
 
@@ -399,5 +399,12 @@ Did you know that `*` is (mostly) just syntax sugar for the std::ops::Mul trait?
 ## `UnsafeCell<T>`
 
 Did you know that `UnsafeCell` is one of those types that the compiler needs
-“special magic” for because it has to instruct LLVM to not assume Rust’s normal
-aliasing rules hold once code traverses the boundary of any `UnsafeCell`?
+“special magic” for because it has to instruct LLVM to *not* assume Rust’s
+normal aliasing rules hold once code traverses the boundary of any `UnsafeCell`?
+
+## `TcpStream`
+
+Did you know that in its default configuration, `TcpStream` uses
+[Nagle’s Algorithm](https://en.wikipedia.org/wiki/Nagle%27s_algorithm) to
+schedule packet sends, which can introduce unfortunate latency spikes. If you’re
+particularly latency sensitive, consider calling `TcpStream::set_nodelay(true)`.
