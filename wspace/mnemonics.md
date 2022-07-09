@@ -1,0 +1,191 @@
+# Whitespace assembly mnemonics
+
+- `push`:
+  - `push`, `psh`, `pus`
+  - `push_number`, `push_num`
+  - `push_char`, `push_ch`
+  - `append`
+  - `<number>`, `<char>`
+- `dup`:
+  - `dup`, `duplicate`, `dupli`, `dupl`
+  - `dupe`
+  - `doub`
+  - `^`
+- `copy`:
+  - `copy`
+  - `copy_n`, `copy_nth`, `copy_at`
+  - `dup_n`, `dup_nth`, `dup_at`
+  - `pick`
+  - `ref`
+  - `take`
+  - `pull`
+  - `^<number>`
+- `swap`:
+  - `swap`, `swp`, `swa`
+  - `xchg`, `exchange`, `exch`
+  - `switch`
+- `drop`:
+  - `drop`
+  - `discard`, `disc`, `dsc`
+  - `pop`
+  - `away`
+  - `del`, `delete`
+- `slide`:
+  - `slide`, `slid`
+  - `slide_n`
+  - `slide_off`
+  - `<unsigned>slide`
+- `add`:
+  - `add`
+  - `addition`
+  - `adding`
+  - `plus`
+  - `+`
+- `sub`:
+  - `sub`, `subtract`, `subt`
+  - `subtraction`
+  - `minus`
+  - `-`
+- `mul`:
+  - `mul`, `multiply`, `multi`, `mult`
+  - `multiplication`
+  - `multiple`
+  - `times`
+  - `*`
+- `div`:
+  - `div`, `divide`
+  - `division`
+  - `int_div`, `integer_division`
+  - `/`
+- `mod`:
+  - `mod`, `modulo`
+  - `rem`, `remainder`
+  - `division_part`
+  - `%`
+- `store`:
+  - `store`, `stor`, `sto`, `st`
+  - `set`
+  - `put`
+- `retrieve`:
+  - `retrieve`, `retrive`, `retri`, `retrv`, `retr`, `reti`
+  - `load`, `lod`, `ld`
+  - `fetch`
+  - `get`
+  - `rcl`
+- `label`:
+  - `label`, `lbl`
+  - `mark`, `mrk`
+  - `defun`, `def`
+  - `part`
+  - `mark_sub`, `marks`
+  - `mark_label`
+  - `mark_location`
+  - `def_label`
+  - `<label>:`
+  - `%<label>:`
+  - `@<label>`
+  - `<<label>>:`
+  - `L<number>:`
+  - `label_<number>:`
+  - `label_<number>`
+- `call`:
+  - `call`, `cll`
+  - `call_sub`, `call_subroutine`, `calls`, `cas`
+  - `call_label`
+  - `jsr`
+  - `go_sub`
+  - `subroutine`
+- `jmp`:
+  - `jmp`, `jump`, `jp`, `j`
+  - `go_to`
+  - `b`
+  - `jumps`
+  - `jump_label`
+  - `unconditional_jump`
+- `jz`:
+  - `jz`, `jumpz`, `jmpz`, `jpz`, `jmz`
+  - `jump_if_zero`, `jump_zero`, `jzero`, `jzer`, `jze`
+  - `jez`
+  - `jmp_if0`, `jp0`
+  - `zero`
+  - `jump_null`
+  - `jnil`
+  - `branchz`, `branchzs`, `brz`, `bz`
+  - `bzero`
+  - `gotoiz`
+  - `if0goto`
+- `jn`:
+  - `jn`, `jumpn`, `jmpn`, `jmn`, `jpn`
+  - `jump_negative`, `jump_nega`, `jump_neg`, `jmp_neg`, `jneg`, `jne`
+  - `jump_if_negative`, `jump_if_neg`
+  - `jumplz`, `jltz`, `jlz`
+  - `jpl0`
+  - `gotoin`
+  - `bneg`
+  - `branchltz`, `branchltzs`, `bltz`
+- `ret`:
+  - `ret`, `return`
+  - `end_subroutine`, `subroutine_end`, `end_sub`, `ends`, `ens`
+  - `end_func`
+  - `exit_sub`
+  - `control_back`, `back`
+  - `leave`
+  - `rts`
+- `end`:
+  - `end`, `end_program`, `end_prog`, `endp`
+  - `exit`
+  - `halt`, `hlt`
+  - `terminate`
+  - `quit`
+  - `die`
+  - `finish`, `finish_program`
+- `printc`:
+  - `printc`, `print_char`, `print_c`, `prtc`, `pchr`, `pc`
+  - `put_char`, `putc`, `pchar`
+  - `out_character`, `out_char`, `out_ch`, `outc`, `otc`
+  - `output_character`, `output_char`, `output_c`
+  - `o_char`, `o_chr`
+  - `char_out`, `cout`
+  - `write_character`, `write_char`, `write_ch`, `write_c`, `w_char`, `wtc`, `wrc`
+- `printi`:
+  - `printi`, `print_int`, `print_i`
+  - `print_number`, `print_num`, `print_n`, `prtn`, `pnum`, `pn`
+  - `out_integer`, `out_int`, `out_i`, `o_int`
+  - `out_num`, `out_n`, `o_num`, `otn`
+  - `put_int`, `puti`
+  - `put_num`, `putn`, `pnum`
+  - `output_number`, `output_num`, `output_n`
+  - `write_number`, `write_num`, `writen`, `wnum`, `wrn`, `wtn`
+  - `write_int`
+  - `num_out`, `nout`
+  - `iout`
+- `readc`:
+  - `readc`, `read_character`, `read_char`, `read_chr`, `read_ch`, `read_c`, `redc`, `rec`, `rdc`
+  - `rchar`, `rchr`, `rc`
+  - `get_char`, `getc`
+  - `in_char`, `in_ch`, `in_c`
+  - `i_char`, `i_chr`
+  - `inpc`
+  - `char_in`, `cin`
+- `readi`:
+  - `readi`, `read_integer`, `read_int`, `read_i`
+  - `read_number`, `read_num`, `read_n`, `r_num`, `redn`, `ren`, `rdn`, `rn`
+  - `get_int`, `get_i`
+  - `get_num`, `get_n`
+  - `in_int`, `i_int`, `in_i`
+  - `in_num`, `i_num`, `in_n`
+  - `int_in`, `i_in`
+  - `num_in`, `n_in`
+  - `inpn`
+- `shuffle`:
+  - `shuffle`
+  - `permr`
+- `dumpstack`:
+  - `dumpstack`, `dump_stack`
+  - `debug_printstack`, `debug_print_stack`
+- `dumpheap`:
+  - `dumpheap`, `dump_heap`
+  - `debug_printheap`, `debug_print_heap`
+- `dumptrace`:
+  - `dumptrace`, `dump_trace`
+  - `trace`
