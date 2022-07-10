@@ -2,8 +2,8 @@
 
 - `push`:
   - `push`, `psh`, `pus`
-  - `push_number`, `push_num`
-  - `push_char`, `push_ch`
+  - `pushnumber`, `pushnum`
+  - `pushchar`, `pushch`
   - `append`
   - `<number>`, `<char>`
 - `dup`:
@@ -13,8 +13,8 @@
   - `^`
 - `copy`:
   - `copy`
-  - `copy_n`, `copy_nth`, `copy_at`
-  - `dup_n`, `dup_nth`, `dup_at`
+  - `copyn`, `copynth`, `copyat`
+  - `dupn`, `dupnth`, `dupat`
   - `pick`
   - `ref`
   - `take`
@@ -32,8 +32,8 @@
   - `delete`, `del`
 - `slide`:
   - `slide`, `slid`
-  - `slide_n`
-  - `slide_off`
+  - `sliden`
+  - `slideoff`
   - `<unsigned>slide`
 - `add`:
   - `add`
@@ -55,12 +55,12 @@
 - `div`:
   - `divide`, `div`
   - `division`
-  - `integer_division`, `int_div`
+  - `integerdivision`, `intdiv`
   - `/`
 - `mod`:
   - `modulo`, `mod`
   - `remainder`, `rem`
-  - `division_part`
+  - `divisionpart`
   - `%`
 - `store`:
   - `store`, `stor`, `sto`, `st`
@@ -74,8 +74,8 @@
   - `recall`, `rcl`
 - `label`:
   - `label`, `lbl`
-  - `mark`, `mrk`, `mark_sub`, `mark_label`, `mark_location`
-  - `defun`, `def`, `def_label`
+  - `mark`, `mrk`, `marksub`, `marklabel`, `marklocation`
+  - `defun`, `def`, `deflabel`
   - `part`
   - `<label>:`
   - `%<label>:`
@@ -85,9 +85,9 @@
   - `label_<number>:`, `label_<number>`
 - `call`:
   - `call`, `cll`
-  - `call_subroutine`, `call_sub`, `call_s`, `ca_s`
-  - `j_sr`
-  - `go_sub`
+  - `callsubroutine`, `callsub`, `calls`, `cas`
+  - `jsr`
+  - `gosub`
   - `subroutine`
 - `jmp`:
   - `jump`, `jmp`, `jm`, `jp`, `j`
@@ -95,28 +95,28 @@
   - `goto`
 - `jz`:
   - [`jump`, `jmp`, `jm`, `jp`, `j`, `branch`, `br`, `b`, `goto`] * [`zero`, `zer`, `ze`, `z`, `null`, `nil`, `ez`, `0`]
-  - [`jump`, `jmp`, `branch`, `goto`] * [`if_zero`, `if_0`, `if0`, `i_z`]
+  - [`jump`, `jmp`, `branch`, `goto`] * [`ifzero`, `if0`, `iz`]
   - `zero`
 - `jn`:
   - [`jump`, `jmp`, `jm`, `jp`, `j`, `branch`, `br`, `b`, `goto`] * [`negative`, `nega`, `neg`, `ne`, `n`, `ltz`, `lz`, `l0`]
-  - [`jump`, `jmp`, `branch`, `goto`] * [`if_negative`, `if_neg`, `if_n`, `i_n`]
+  - [`jump`, `jmp`, `branch`, `goto`] * [`ifnegative`, `ifneg`, `ifn`, `in`]
   - `negative`
 - `ret`:
-  - `return`, `ret`, `rt_s`
-  - `end_subroutine`, `end_sub`, `end_s`, `en_s`
-  - `subroutine_end`, `sub_end`
-  - `end_function`, `end_func`
-  - `exit_sub`
-  - `control_back`, `back`
+  - `return`, `ret`, `rts`
+  - `endsubroutine`, `endsub`, `ends`, `ens`
+  - `subroutineend`, `subend`
+  - `endfunction`, `endfunc`
+  - `exitsub`
+  - `controlback`, `back`
   - `leave`
 - `end`:
-  - `end_program`, `end_prog`, `end_p`, `end`
+  - `endprogram`, `endprog`, `endp`, `end`
   - `exit`
   - `halt`, `hlt`
   - `terminate`
   - `quit`
   - `die`
-  - `finish_program`, `finish`
+  - `finishprogram`, `finish`
 - `printc`:
   - [`print`, `output`, `out`, `write`] * [`character`, `char`, `chr`, `ch`, `c`]
   - [`put`, `p`, `o`, `w`] * [`char`, `chr`, `ch`, `c`]
@@ -141,11 +141,11 @@
   - `shuffle`
   - `permr`
 - `dumpstack`:
-  - `dump_stack`
-  - `debug_print_stack`, `debug_printstack`
+  - `dumpstack`
+  - `debugprintstack`
 - `dumpheap`:
-  - `dump_heap`
-  - `debug_print_heap`, `debug_printheap`
+  - `dumpheap`
+  - `debugprintheap`
 - `dumptrace`:
-  - `dump_trace`
+  - `dumptrace`
   - `trace`
