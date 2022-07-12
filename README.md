@@ -69,6 +69,7 @@ A notebook on compilers, programming languages, and other topics.
 - [Haskell reference interpreter](wspace/haskell_reference.md)
 - [Implementation differences](wspace/differences.md)
 - [Inlay hints for Whitespace](wspace/inlay_hints/README.md)
+- [Limits for Whitespace](wspace/limits.md)
 - [My Whitespace projects](wspace/projects.md)
 - [Nospace grammar](wspace/nospace_grammar.bnf)
 - [Optimizations](wspace/optimizations.md)
