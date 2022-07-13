@@ -64,6 +64,7 @@ A notebook on compilers, programming languages, and other topics.
 
 - [Analysis errors draft](wspace/errors_draft.md)
 - [CLI draft](wspace/cli_draft.txt)
+- [Compact bitwise token encoding](wspace/bit_pack.md)
 - [Division and modulo rounding](wspace/divmod.md)
 - [Haskell notes](wspace/haskell.md)
 - [Haskell reference interpreter](wspace/haskell_reference.md)
