@@ -1,5 +1,10 @@
 # Compact bitwise token encoding
 
+Tokens are encoded with a variable number of bits: S maps to 0, T maps to 10,
+and L maps to 11. To resolve the ambiguity in the last byte of whether the
+trailing zeros are S, the second half of T, or unset, an extra 1 is appended,
+which is ignored when unpacking.
+
 I have a tradition of including bit packing in each of my major Whitespace
 implementations: [Respace](https://github.com/andrewarchi/respace/blob/master/src/binary.h),
 [Nebula](https://github.com/andrewarchi/nebula/blob/master/ws/pack.go),
