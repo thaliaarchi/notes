@@ -57,7 +57,7 @@ A notebook on compilers, programming languages, and other topics.
 - [Futamura projections](topics/futamura.md)
 - [List of ciphers](topics/ciphers.md)
 - [Programming language alphabet challenge](topics/language_alphabet.md)
-- [Programming language rankings](topics/language_rankings.md)
+- [Programming languages I know](topics/languages_i_know.md)
 
 ## Whitespace
 

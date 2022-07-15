@@ -1,0 +1,29 @@
+# Programming languages I know
+
+- VBScript
+- HTML
+- C#
+- GameMaker
+- JavaScript
+- Racket
+- TypeScript
+- Java
+- C++
+- C
+- Y86
+- Whitespace
+- Go
+- Datalog
+- Bash
+- Python
+- Julia
+- Prolog
+- Haskell
+- Elixir
+- Brainfuck
+- Coq
+- jq
+- Rust
+- Ruby
+- Erlang
+- Idris
