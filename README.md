@@ -54,6 +54,7 @@ A notebook on compilers, programming languages, and other topics.
 - [Compiler optimization patterns](topics/compiler_optimizations.md)
 - [Data structures](topics/data_structures.md)
 - [E-graphs](topics/e-graphs.md)
+- [Error handling](topics/errors.md)
 - [Futamura projections](topics/futamura.md)
 - [List of ciphers](topics/ciphers.md)
 - [Paper notes](topics/papers.md)
