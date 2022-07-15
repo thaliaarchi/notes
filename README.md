@@ -58,7 +58,7 @@ A notebook on compilers, programming languages, and other topics.
 - [List of ciphers](topics/ciphers.md)
 - [Paper notes](topics/papers.md)
 - [Programming language alphabet challenge](topics/language_alphabet.md)
-- [Programming language rankings](topics/language_rankings.md)
+- [Programming languages I know](topics/languages_i_know.md)
 
 ## Whitespace
 
