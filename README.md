@@ -48,6 +48,8 @@ A notebook on compilers, programming languages, and other topics.
 
 ## Topics
 
+- Adapton
+  - [Incremental Computation with Adapton](topics/adapton/boulder2015.md)
 - Colors
   - [Color libraries and color spaces](topics/colors/color-libraries.md)
   - [Color library ideas](topics/colors/color-lib-ideas.md)
