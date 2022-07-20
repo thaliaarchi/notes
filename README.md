@@ -49,7 +49,13 @@ A notebook on compilers, programming languages, and other topics.
 ## Topics
 
 - Adapton
+  - [Adapton: Composable, Demand-Driven Incremental Computation](topics/adapton/pldi2014.md)
+    (PLDI 2014)
   - [Incremental Computation with Adapton](topics/adapton/boulder2015.md)
+    (University of Colorado Boulder, 2015)
+  - [miniAdapton: A Minimal Implementation of Incremental Computation in Scheme](topics/adapton/miniAdapton.md)
+    (2016)
+  - [Presentation outline](topics/adapton/presentation_outline.md) (2022)
 - Colors
   - [Color libraries and color spaces](topics/colors/color-libraries.md)
   - [Color library ideas](topics/colors/color-lib-ideas.md)
