@@ -84,6 +84,7 @@ A notebook on compilers, programming languages, and other topics.
 - [Nospace grammar](wspace/nospace_grammar.bnf)
 - [Optimizations](wspace/optimizations.md)
 - [Respace](wspace/respace.md)
+- [Stack substrate IL ideas from Kitten](wspace/substrate_il_ideas.md)
 - [Syntax error recovery](wspace/syntax_recovery.md)
 - [Whitespace assembly mnemonics](wspace/mnemonics.md)
 - [Whitespace assembly syntax](wspace/wsa_draft.md)
