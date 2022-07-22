@@ -24,3 +24,5 @@
   - [StoneKnifeForth](https://github.com/kragen/stoneknifeforth)
 - Parsing
   - Parsing with derivatives
+  - [The Performance of Open Source Applications: Parsing XML at the Speed of Light](https://www.aosabook.org/en/posa/parsing-xml-at-the-speed-of-light.html)
+    [[HN](https://news.ycombinator.com/item?id=32147263)]
