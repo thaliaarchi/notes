@@ -75,6 +75,7 @@ A notebook on compilers, programming languages, and other topics.
 - [CLI draft](wspace/cli_draft.txt)
 - [Compact bitwise token encoding](wspace/bit_pack.md)
 - [Division and modulo rounding](wspace/divmod.md)
+- [GrassMudHorse](wspace/grassmudhorse.md)
 - [Haskell notes](wspace/haskell.md)
 - [Haskell reference interpreter](wspace/haskell_reference.md)
 - [Implementation differences](wspace/differences.md)
