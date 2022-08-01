@@ -10,4 +10,4 @@
 | `,` | `Ook. Ook!` | Input       |
 | `[` | `Ook! Ook?` | Head        |
 | `]` | `Ook? Ook!` | Tail        |
-|     | `Ook? Ook?` | Nop         |
+|     | `Ook? Ook?` | Banana      |
