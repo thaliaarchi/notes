@@ -13,9 +13,9 @@ Ook! instructions that are isomorphic to Brainfuck instructions:
 - `Ook! Ook?` — `[`
 - `Ook? Ook!` — `]`
 
-## Banana
+## Extension instruction
 
-`Ook? Ook?` — Give the memory pointer a banana.
+- `Ook? Ook?` — Give the memory pointer a banana.
 
 Its semantics are intentionally left ambiguous, according to the author via
 email:
