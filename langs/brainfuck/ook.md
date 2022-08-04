@@ -27,3 +27,8 @@ email:
 It was added to the Ook! specification on [2022-03-07](https://web.archive.org/web/20220424180804/https://www.dangermouse.net/esoteric/ook.html)
 and is rarely supported by implementations, instead usually being treated as a
 parse error.
+
+## Resources
+
+- [Language specification](https://www.dangermouse.net/esoteric/ook.html)
+- [Esolang wiki](https://esolangs.org/wiki/Ook!)
