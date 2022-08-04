@@ -39,7 +39,7 @@ line.
 
 Labeled control flow instructions contain an L in the opcode and one terminating
 the label, so always span a full line. With the convention of representing
-textual labels using eight S/T tokens per byte and a pathological 2048-byte
+textual labels using eight `S`/`T` tokens per byte and a pathological 2048-byte
 label (the identifier length limit in some C++ compilers), that would be 16384
 tokens for the label, plus three more for the opcode.
 
@@ -48,8 +48,8 @@ argument length is logarithmic to the size of the stack, so it wouldn't be more
 than a few tokens long.
 
 Comments are not similarly constrained and could be arbitrarily long, but should
-not occur more than a ratio of 10:1 with STL tokens, even in steganographic
-programs.
+not occur more than a ratio of 10:1 with `S`/`T`/`L` tokens, even in
+steganographic programs.
 
 ## File count limit
 
