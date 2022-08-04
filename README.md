@@ -39,6 +39,7 @@ A notebook on compilers, programming languages, and other topics.
 
 ## Programming languages
 
+- [AsciiDots](langs/asciidots.md)
 - Brainfuck
   - [Brainfuck](langs/brainfuck/brainfuck.md)
   - [Ook!](langs/brainfuck/ook.md)
