@@ -44,6 +44,7 @@ A notebook on compilers, programming languages, and other topics.
   - [Brainfuck](langs/brainfuck/brainfuck.md)
   - [Ook!](langs/brainfuck/ook.md)
   - [Spoon](langs/brainfuck/spoon.md)
+- [Deadfish](langs/deadfish.md)
 - Rust
   - [Converting between Rug and bitvec types](langs/rust/convert_rug_bitvec.md)
   - [Crates and tutorials](langs/rust/rust.md)
