@@ -26,6 +26,14 @@ minimal programs that will produce a sequence of prints.
 | `o`     | Output            |
 | other   | Print a line feed |
 
+The only effects from a Deadfish program are the sequence of numbers and blank
+lines printed, so its intermediate representation can be simply:
+
+| IR instruction | Operation        |
+| -------------- | ---------------- |
+| `number n`     | Output a number  |
+| `blanks count` | Print line feeds |
+
 ## Resources
 
 - Implementations by the creator:
