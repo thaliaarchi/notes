@@ -5,16 +5,16 @@
 Deadfish consists of four commands: increment, decrement, square, and output,
 which operate on an accumulator. The [reference implementation](https://esolangs.org/w/index.php?title=Deadfish&oldid=6598),
 which was written in C, defines the commands as `x++`, `x--`, `x = x * x`, and
-`printf("%d\n", x)`, respectively, where the accumulator `x` is an
-`unsigned int`. After a command, if `x` is equal to `256` or `-1`, then it is
-set to `0`.
+`printf("%d\n", x)`, respectively. The accumulator `x` is signed, with the type
+`int` (it's defined as `unsigned int`, but printed as signed). After a command,
+if `x` is equal to `256` or `-1`, then it is set to `0`.
 
-It prints `">> "` before every command and `\n` for any unrecognized command
-(essentially another command). Command reading is buffered, so input and
-output are not strictly ordered.
+The interpreter prints `">> "` before every command and `\n` for any
+unrecognized command (essentially another command). Command reading is buffered,
+so input and output are not strictly ordered.
 
-Deadfish is not Turing complete; however, it can be interesting to search
-for minimal programs that will produce a sequence of prints.
+Deadfish is not Turing complete; however, it can be interesting to search for
+minimal programs that will produce a sequence of prints.
 
 ## Commands
 
