@@ -8,17 +8,29 @@ is as follows:
 
 ## Architecture
 
+Languages can be defined and dynamically registered with the Nebula API. They
+have their own syntax(es), intermediate language dialect(s), and incremental
+transformation passes between arbitrary dialects. Most languages will be able to
+serve as a frontend or a backend, using incremental transformations that lower
+to or raise from common dialects.
+
 ### Language API
 
-A language can be defined with Nebula APIs and has
+**Syntax**: The concrete syntax trees represent program sources losslessly,
+including comments and whitespace, and position information is maintained
+through all phases. It also has utilities for token scanning and for parsing of
+prefix code grammars.
+
+### Dialects
+
+- Memory models
+  - Stack
+  - Memory buffer
+  - Registers
+- Data types
+  - Lazy thunk expressions
 
 ### Mixed-dialect IR
-
-A language can be defined and dynamically registered with its own syntax(es),
-including accurate location tracking in all phases; intermediate language
-dialect(s); and incremental transformation passes between arbitrary dialects.
-Most languages will be able to serve as a frontend or a backend, using
-incremental transformations that lower to or raise from common dialects.
 
 Dialects decouple control flow, data flow, and memory models, to support diverse
 representations. The core data flow dialects will include an SSA-based IR, that
@@ -33,6 +45,10 @@ projects and for library components to be reused by multiple tools, including
 external tools. The toolchain will include a static compiler and a language
 server.
 
+### Languages
+
+See [languages.md](languages.md).
+
 ### Incremental computation
 
 I intend to use incremental computation via [Salsa](https://github.com/salsa-rs/salsa),
@@ -46,24 +62,15 @@ It takes inspiration from many projects and concepts: MLIR for dialect mixing
 and registration; GraalVM for its polyglot API with high-level mixed-language
 interoperability and its sea of nodes IR with loose node ordering; LLVM for its
 library design and SSA-based IR; the SSA form variant in used in MLIR and
-WebAssembly, that uses basic block parameters instead of phi functions; and by
-Futamura projections for powerful partial evaluation.
+WebAssembly, that uses basic block parameters instead of phi functions; Nanopass
+for small transformation passes over many ILs; and Futamura projections for
+powerful partial evaluation.
 
 Whitespace is a nice starting point, because its jump-oriented control flow
 resembles a minimal LLVM IR, which can be expanded as a general IR with features
 added as needed, until it’s 1:1 with LLVM IR.
 
 Factor (for quotations, i.e., closures) and Kitten (for static stack types)
-
-## Goals
-
-### Whitespace
-
-It aims to bring excellent tooling to Whitespace, with planned components
-including an optimizing compiler, modular intermediate language, interpreter,
-and language server.
-
-before 1 April 2023, the 20th anniversary of the Whitespace 0.2 [public release](https://web.archive.org/web/20150717220656/http://compsoc.dur.ac.uk:80/whitespace/explanation.php).
 
 ## Current features
 
@@ -73,3 +80,7 @@ before 1 April 2023, the 20th anniversary of the Whitespace 0.2 [public release]
   - Supported supersets: GrassMudHorse
 - Brainfuck
   - Supported supersets: Ook! and Spoon
+
+## Approach
+
+forward, then inside-out

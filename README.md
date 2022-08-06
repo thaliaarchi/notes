@@ -89,6 +89,7 @@ A notebook on compilers, programming languages, and other topics.
 - [Limits for Whitespace](wspace/limits.md)
 - [My Whitespace projects](wspace/projects.md)
 - [Nebula 2 architecture plan](wspace/nebula2_architecture.md)
+- [Nebula 2 languages](wspace/nebula2_languages.md)
 - [Nospace grammar](wspace/nospace_grammar.bnf)
 - [Optimizations](wspace/optimizations.md)
 - [Respace](wspace/respace.md)
