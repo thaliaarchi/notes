@@ -88,6 +88,7 @@ A notebook on compilers, programming languages, and other topics.
 - [Inlay hints for Whitespace](wspace/inlay_hints/README.md)
 - [Limits for Whitespace](wspace/limits.md)
 - [My Whitespace projects](wspace/projects.md)
+- [Nebula 2 architecture plan](wspace/nebula2_architecture.md)
 - [Nospace grammar](wspace/nospace_grammar.bnf)
 - [Optimizations](wspace/optimizations.md)
 - [Respace](wspace/respace.md)
