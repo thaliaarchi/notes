@@ -43,3 +43,5 @@ and blank lines printed, so its intermediate representation can be simply:
   - [Creator's site](https://web.archive.org/web/20100425075447/http://www.jonathantoddskinner.com/projects/deadfish.html)
     with [source archives](https://web.archive.org/web/20071019052558/http://www.jonathantoddskinner.com/projects/deadfish.tar.gz)
 - [Esolang wiki](https://esolangs.org/wiki/Deadfish)
+- [Short Deadfish Numbers](https://codegolf.stackexchange.com/questions/40124/short-deadfish-numbers)
+  on Code Golf
