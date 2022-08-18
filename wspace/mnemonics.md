@@ -15,6 +15,7 @@
   - `copy`
   - `copyn`, `copynth`, `copyat`
   - `dupn`, `dupnth`, `dupat`
+  - `duplicaten`, `duplicatenth`, `duplicateat`
   - `pick`
   - `ref`
   - `take`
@@ -40,6 +41,7 @@
   - `addition`
   - `adding`
   - `plus`
+  - `sum`
   - `+`
 - `sub`:
   - `subtract`, `subt`, `sub`
