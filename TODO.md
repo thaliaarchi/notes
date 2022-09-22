@@ -21,6 +21,9 @@
 - SSA form
   - [SSA bibliography](http://www.dcs.gla.ac.uk/~jsinger/ssa.html)
 - Compilers
+  - [Graydon Hoare: 21 compilers and 3 orders of magnitude in 60 minutes](http://lambda-the-ultimate.org/node/5648)
+    [[slides](http://venge.net/graydon/talks/CompilerTalk-2019.pdf)]
+    [[HN](https://news.ycombinator.com/item?id=32780472)]
   - [StoneKnifeForth](https://github.com/kragen/stoneknifeforth)
 - Parsing
   - Parsing with derivatives
