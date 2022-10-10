@@ -8,14 +8,14 @@
   - Not object-oriented
   - Generate/parse (C++ API)
   - Stable API
-- [Go](https://github.com/llvm/llvm-project/tree/main/llvm/bindings/go)
-  - Safe, but not ergonomic types (same issues as C++ API)
-  - Generate/parse (C API)
 - [OCaml](https://github.com/llvm/llvm-project/tree/main/llvm/bindings/ocaml)
   - Generate/parse (C API)
 - [Python](https://github.com/llvm/llvm-project/tree/main/llvm/bindings/python)
   - Parse (C API)
   - Incomplete
+- [Go](https://github.com/llvm/llvm-project/tree/36b13eb8bb9dafb6a190189ada89eba15e85d39b/llvm/bindings/go)
+  ([removed](https://discourse.llvm.org/t/rfc-remove-the-go-bindings/65725))
+  - Development has moved out of tree to TinyGo
 
 ## 3rd-party bindings
 
@@ -36,7 +36,8 @@
   - Generate/parse (textual LLVM IR)
   - [Blog post](https://blog.gopheracademy.com/advent-2018/llvm-ir-and-go/)
 - TinyGo [go-llvm](https://github.com/tinygo-org/go-llvm) (Go)
-  - Fork of in-tree Go bindings
+  - Safe, but not ergonomic types (same issues as C++ API)
+  - Generate/parse (C API)
   - Uses system-installed LLVM
   - Backports features from C++ API
 
