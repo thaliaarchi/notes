@@ -23,6 +23,7 @@ A notebook on compilers, programming languages, and other topics.
   - [Language reference](compilers/llvm/langref.md)
   - [Version history](compilers/llvm/version_history.md)
 - MLIR
+  - [MLIR: Scaling Compiler Infrastructure for Domain Specific Computation](compilers/mlir/cgo21_lattner.md)
   - [Tutorials](compilers/mlir/tutorials.md)
   - [Libraries](compilers/mlir/libraries.md)
 - GraalVM
