@@ -59,3 +59,83 @@ transformations it supports.**
 *Source location tracking (traceability):* Operation provenance, including
 source provenance and transformations, should be traceable. For example,
 essential for certification of cryptographic protocols.
+
+## IR design
+
+*Textual representation:* Fully reflects in-memory representation.
+User-definable syntax.
+
+*Operations:* Everything is modeled as ops. User-extensible. Declarative syntax
+based on LLVM TableGen. Consists of an opcode, zero or more typed operands and
+results in SSA form, attributes, regions, successor blocks, and location
+information. Passes treat unknown ops conservatively. Verifiers in ops enforce
+op invariants.
+
+*Attributes:* Compile-time information about ops. Op instances have attribute
+values.
+
+*Location information:* Processed and propagated throughout the system. Compact.
+Extensible and may refer to existing location-tracking systems; e.g., AST nodes,
+file-line-column address, DWARF, etc.
+
+*Regions and blocks:* Regions provide the nesting mechanism in MLIR: ops may
+contain regions, each of which has a list of blocks in a CFG, that each contain
+ops. Region semantics specified by the op. Blocks end with a terminator op,
+which may have successor blocks. Uses a functional form of SSA, instead of phi
+nodes, where each block has typed arguments, that terminators pass values to.
+The region entry block's values are defined by the enclosing op's semantics. The
+explicit graph design and op extensibility is reminiscent of sea of nodes.
+
+*Value dominance and visibility:* Ops can only use values that are in scope
+according to SSA dominance, nesting, and semantic restrictions. Region-based
+visibility is by lexical region definitions. Ops may be isolated from above,
+such as `func.func` (`std.func` in paper), so values defined outside may not be
+referenced, allowing parallel compilation, because no use-def chains cross the
+isolation barriers.
+
+*Symbols and symbol tables:* Ops can have an attached symbol table, which
+associates string names to IR objects and can be used prior to definition.
+
+*Dialects:* Logical grouping of ops, attributes, and types. Intermixed for
+progressive lowering, reuse, extensibility, and flexibility.
+
+*Type system:* Every value is typed, by the producing op or block argument.
+User-extensible and may refer to foreign type systems. Strict equality without
+coercions. Supports non-dependent types, including trivial, parametric,
+function, sum, and product types. Dependent types are possible, but would be
+opaque to the IR.
+
+*Functions and modules:* Usually structured into functions and modules, which
+are implemented as ops. A module defines top-level constructs, including
+functions, and does not transfer control flow. A function has a single region
+and is compatible with `func.call` and `func.return` (`std` dialect in paper).
+
+## Evaluation: Applications of MLIR
+
+### TensorFlow graphs
+
+### Polyhedral code generation
+
+### Fortran IR
+
+### Domain-specific compilers
+
+## Consequences of the MLIR design
+
+### Reusable compiler passes
+
+### Dialect-specific passes
+
+### Mixing dialects together
+
+### Parallel compilation
+
+### Interoperability
+
+### Unopinionated design provides new challenges
+
+### Looking forward
+
+## Related work
+
+## Conclusion and future work
