@@ -22,6 +22,10 @@ higher level?
 MLIR's new approach vs established compilers. How were the other compilers novel
 at release and how has that changed since?
 
+The explicit graph design and op extensibility of MLIR is intentionally
+reminiscent of the sea-of-nodes representation. Graal directly uses sea of
+nodes.
+
 ## Other papers
 
 Is there a paper on GCC? Possibly worth reviewing, if only for shortcomings or
