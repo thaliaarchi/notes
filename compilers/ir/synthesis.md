@@ -32,3 +32,7 @@ Is there a paper on GCC? Possibly worth reviewing, if only for shortcomings or
 how it's changed since the introduction of LLVM.
 
 GNU Compiler for Java vs GraalVM?
+
+## Developments
+
+LLVM 2004 considered its type information, CFG, and SSA form to be high level.
