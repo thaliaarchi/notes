@@ -79,6 +79,7 @@ A notebook on compilers, programming languages, and other topics.
 - [Programming language alphabet challenge](topics/language_alphabet.md)
 - [Programming language comparisons](topics/pl_comparisons.md)
 - [Programming languages I know](topics/languages_i_know.md)
+- [Universities](topics/universities.md)
 
 ## Whitespace
 
