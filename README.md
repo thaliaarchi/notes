@@ -26,6 +26,7 @@ A notebook on compilers, programming languages, and other topics.
   - [MLIR: Scaling Compiler Infrastructure for Domain Specific Computation](compilers/mlir/cgo21_lattner.md)
   - [Tutorials](compilers/mlir/tutorials.md)
   - [Libraries](compilers/mlir/libraries.md)
+  - [Projects](compilers/mlir/projects.md)
 - GraalVM
   - [GraalVM papers](compilers/graalvm/papers.md)
   - [Graal IR: An Extensible Declarative Intermediate Representation](compilers/graalvm/graalvm_paper_notes.txt)
