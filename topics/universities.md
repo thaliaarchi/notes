@@ -55,6 +55,8 @@
 - Professors
   - [Derek Dreyer](https://people.mpi-sws.org/~dreyer/research.html)
     - Check out Coq repos and see if I can change the code a bit
+  - [Joël Ouaknine](https://people.mpi-sws.org/~joel/)
+    - [Termination of linear loops over the integers](https://people.mpi-sws.org/~joel/publications/linear-loop-termination19abs.html)
 - Groups
   - [Programming Languages and Verification](https://www.mpi-sws.org/research-areas/programming-languages-and-verification/)
 
