@@ -112,13 +112,24 @@ and is compatible with `func.call` and `func.return` (`std` dialect in paper).
 
 ## Evaluation: Applications of MLIR
 
-### TensorFlow graphs
+*TensorFlow graphs:* Models TensorFlow dataflow graphs using the same
+infrastructure, analysis, and transformation capabilities. Most graph-level
+transformations are expressible in MLIR for both TensorFlow models and LLVM IR.
 
-### Polyhedral code generation
+*Polyhedral code generation:* The `affine` dialect is a simplified polyhedral
+representation for accelerators. It operates on a structured multi-dimensional
+type for all memory accesses and does not alias. Loops are represented as
+`affine.for` with invariant bounds and have static control flow. Inside regions
+use `affine.load` and `affine.store` to restrict indexing to surrounding
+iterators. Maintaining high-level loop structure obviates raising.
 
-### Fortran IR
+*Fortran IR:* flang frontend models high-level semantics and optimizations, such
+as advanced loop optimizations, array copy elimination, call specialization,
+and devirtualization, with MLIR. This reuses basic infrastructure and dialects
+such as OpenMP.
 
-### Domain-specific compilers
+*Domain-specific compilers:* Rewrite patterns are dynamically extensible at
+runtime, e.g., for hardware drivers.
 
 ## Consequences of the MLIR design
 
