@@ -55,3 +55,8 @@
   - stage4:
     - Use `zig3` to compile the Zig compiler into `zig4`. This is binary-wise
       identical to `zig3`.
+
+- [Zig ported to SerenityOS](https://twitter.com/awesomekling/status/1602315728320880640)
+  [[talk](https://sin-ack.github.io/posts/sycl-talk-20221007/)]
+  [[PR](https://github.com/SerenityOS/serenity/pull/15428)]
+  [[HN](https://news.ycombinator.com/item?id=33955257)]
