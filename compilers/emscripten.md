@@ -8,13 +8,20 @@ Portland, Oregon, Oct. 2011
 
 [[paper](https://dl.acm.org/doi/10.1145/2048147.2048224)]
 
-> In Section 3.2 we present the ‘Relooper’ algorithm, which generates high-level
-> loop structures from the low-level branching data present in LLVM assembly. It
-> is similar to loop recovery algorithms used in decompilation (see, for
-> example, \[2], \[9]). The main difference between the Relooper and standard
-> loop recovery algorithms is that the Relooper generates loops in a different
-> language than that which was compiled originally, whereas decompilers
-> generally assume they are returning to the original language. The Relooper’s
-> goal is not to accurately recreate the original source code, but rather to
-> generate native JavaScript control flow structures, which can then be
-> implemented efficiently in modern JavaScript engines
+Emscripten is a compiler from LLVM IR to JavaScript. As such, the requirements
+are somewhat reverse of the norm, transforming low-level IR into a high-level
+language. LLVM IR lacks the structured control flow constructs of JavaScript,
+such as loops and ifs, and instead represents it as a control-flow graph (CFG)
+of branches between basic blocks. Emscripten aims to use native JavaScript
+control flow structures as much as possible, which are more efficiently executed
+by JavaScript engines. To recreate high-level structured control flow,
+Emscripten uses the Relooper algorithm and this paper proves its validity. This
+algorithm is similar to loop-recovery algorithms used in decompilers, but it
+differs in that it is not attempting to recover the original source code, but
+targets a different high-level language than the source language.
+
+Emscripten has three types of blocks:
+
+- *Simple block*
+- *Loop*
+- *Multiple*
