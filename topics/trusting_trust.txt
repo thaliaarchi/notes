@@ -1,0 +1,29 @@
+# Reflections on Trusting Trust
+
+A B : compilers
+P : program
+_s : source code
+_b : binary
+_' : has Trojan
+
+# No Trojan
+compile As with Bb -> Ab
+compile Ps with Ab -> Pb
+
+# P source has Trojan
+compile As with Bb -> Ab
+edit Ps -> P's
+compile P's with Ab -> P'b
+
+# A inserts Trojan into P
+edit As -> A's
+compile A's with Bb -> A'b
+compile Ps with A'b -> P'b
+
+# A propagates Trojan to later versions of itself and inserts Trojan into P
+edit A0s -> A0's
+compile A0's with Bb -> A0'b     compile Ps with A0'b -> P's
+compile A1s with A0'b -> A1'b    compile Ps with A1'b -> P's
+compile A2s with A1'b -> A2'b    compile Ps with A2'b -> P's
+…
+compile ANs with AM'b -> AN'b    compile Ps with AN'b -> P's
