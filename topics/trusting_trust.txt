@@ -6,24 +6,40 @@ _s : source code
 _b : binary
 _' : has Trojan
 
-# No Trojan
+## No Trojan
 compile As with Bb -> Ab
 compile Ps with Ab -> Pb
 
-# P source has Trojan
+## P source has Trojan
 compile As with Bb -> Ab
 edit Ps -> P's
 compile P's with Ab -> P'b
 
-# A inserts Trojan into P
+## A inserts Trojan into P
 edit As -> A's
 compile A's with Bb -> A'b
 compile Ps with A'b -> P'b
 
-# A propagates Trojan to later versions of itself and inserts Trojan into P
+## A propagates Trojan to later versions of itself and inserts Trojan into P
 edit A0s -> A0's
 compile A0's with Bb -> A0'b     compile Ps with A0'b -> P's
 compile A1s with A0'b -> A1'b    compile Ps with A1'b -> P's
 compile A2s with A1'b -> A2'b    compile Ps with A2'b -> P's
 …
 compile ANs with AM'b -> AN'b    compile Ps with AN'b -> P's
+
+# Countering Trusting Trust through Diverse Double-Compiling
+
+## No Trojan in A or B
+compile As with Ab -> AA1b
+compile As with Bb -> AB1b
+compile As with AA1b -> AA2b
+compile As with AB1b -> AB2b
+AA2b == AB2b
+
+## Trojan in A
+compile As with A'b -> AA'1b
+compile As with Bb -> AB1b
+compile As with AA'1b -> AA'2b
+compile As with AB1b -> AB2b
+AA2b != AB2b
