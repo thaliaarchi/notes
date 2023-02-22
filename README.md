@@ -80,6 +80,8 @@ A notebook on compilers, programming languages, and other topics.
 - [Programming language alphabet challenge](topics/language_alphabet.md)
 - [Programming language comparisons](topics/pl_comparisons.md)
 - [Programming languages I know](topics/languages_i_know.md)
+- Regular expressions
+  - [Regular expression engine history](topics/regexp/history.md)
 - [Trusting Trust](topics/trusting_trust.md)
 - [Universities](topics/universities.md)
 
