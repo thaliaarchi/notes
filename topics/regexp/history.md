@@ -30,6 +30,11 @@
   for real-world use. Contains history of re1 migrated to git, with the only
   difference being that commits with an empty author name in Mercurial use
   `Unknown`.
+- rsc code for POSIX semantics:
+  https://swtch.com/~rsc/regexp/nfa-posix.y.txt
+- rsc code for postfix notation regexp:
+  https://swtch.com/~rsc/regexp/nfa.c.txt
+  (Check IA for all URL patterns under /regexp/*)
 
 ## Rob Pike
 
@@ -37,6 +42,21 @@
   pikevm
 - [jameysharp/pikevm](https://github.com/jameysharp/pikevm): pikevm
   implementation in Rust
+- sam
+  - regexp2:
+    > In a “threaded” implementation like thompsonvm above, we simply add the
+    > saved pointer set to the thread state. Rob Pike first used this
+    > approach, in the text editor sam.
+
+    > The most interesting technique in this article is the one of storing
+    > submatch information in the regular expression thread state. The
+    > earliest instance I know of this technique in a regular expression
+    > engine is in Rob Pike's sam editor, written around 1985. (The
+    > modifications to store submatches were contributed by Bruce Janson a
+    > couple of years after the original implementation.) The technique makes
+    > a cameo in a textbook in 1974 but then seems to get lost until its
+    > reappearance in sam.
+  - Find this source code!
 
 ## Plan 9
 
@@ -64,3 +84,5 @@
     - Implements intersection and negation
     - Breaks out separate sublanguages for special treatment, all the way down
       to Knuth-Morris-Pratt string-searching, that uses only concatenation
+- tests (linked in regexp2, along with other tess):
+  https://web.archive.org/web/20130420020035/http://www2.research.att.com/~gsf/testregex/
