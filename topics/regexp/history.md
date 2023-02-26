@@ -35,6 +35,25 @@
 
 - [kyx0r/pikevm](https://github.com/kyx0r/pikevm): fork of re1.5 with only
   pikevm
+- [jameysharp/pikevm](https://github.com/jameysharp/pikevm): pikevm
+  implementation in Rust
+
+## Plan 9
+
+- [libregexp9 ported to Unix](https://9fans.github.io/plan9port/unix/)
+  > Libregexp9 is a port of Plan 9's Unicode-capable regular expression
+  > library. It is small and simple and provides the traditional extended
+  > regular expressions (without modern complications like {} and various \x
+  > character classes). It supports Unicode via wide character or UTF-8
+  > encoding.
+  - https://9fans.github.io/plan9port/man/man3/regexp.html
+  - https://9fans.github.io/plan9port/man/man7/regexp.html
+  - https://github.com/9fans/plan9port/tree/master/src/libregexp
+  - https://9fans.github.io/usr/local/plan9/src/libregexp/
+- Plan 9 [grep](https://github.com/9fans/plan9port/tree/master/src/cmd/grep)
+- Plan 9 regexp should be somewhere in here:
+  https://github.com/plan9foundation/plan9/search?q=regexp
+- [Fork of regexp9](https://github.com/tylov/regexp9)
 
 ## Others
 
