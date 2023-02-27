@@ -1,4 +1,4 @@
-# Polymorphic automata
+# Thoughts on polymorphic automata for string- and AP-matching
 
 I should make my regexp engines polymorphic over character type. I could use it
 to recognize other languages, like a Spin model. What would the appropriate
@@ -73,7 +73,11 @@ struct PredDNF {
 impl Matcher for Conj {
     type Char = APSet;
     fn matches(&self, state: &APSet) -> bool {
-        state & self.mask == self.vals
+        // If all of the masked bits are equal to the expected values
+        (state.0 ^ self.vals) & self.mask == 0
+
+        // Equivalent, when vals is within mask:
+        // state.0 & self.mask == self.vals
     }
 }
 
@@ -103,7 +107,8 @@ struct PredCNF {
 impl Matcher for Disj {
     type Char = APSet;
     fn matches(&self, state: &APSet) -> bool {
-        (state & self.mask) ^ self.vals == 0
+        // If any of the masked bits are equal to the expected values
+        !(state.0 ^ self.vals) & self.mask != 0
     }
 }
 
