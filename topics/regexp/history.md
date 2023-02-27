@@ -58,6 +58,11 @@
     > reappearance in sam.
   - Find this source code!
 
+## Ken Thompson
+
+- [grep](https://en.wikipedia.org/wiki/Grep)
+  - fgrep (not by him) uses the Aho-Corasick string-matching algorithm
+
 ## Plan 9
 
 - [libregexp9 ported to Unix](https://9fans.github.io/plan9port/unix/)
@@ -94,3 +99,11 @@
     - Introduction commit: https://github.com/adrian-thurston/ragel/commit/a8ff0c82a3a26adf1547e8bef9919f29341849b1
   - Wikipedia writes that Ragel uses Thompson's construction:
     https://en.wikipedia.org/wiki/Ragel#See_also
+
+## Algorithms
+
+- [Knuth–Morris–Pratt algorithm](https://en.wikipedia.org/wiki/Knuth%E2%80%93Morris%E2%80%93Pratt_algorithm)
+  for searching with a literal string pattern
+- [Aho-Corasick algorithm](https://en.wikipedia.org/wiki/Aho%E2%80%93Corasick_algorithm)
+  for searching with a set of literal string patterns (Equivalent to the `|` of
+  those strings?)
