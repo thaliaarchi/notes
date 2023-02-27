@@ -86,3 +86,11 @@
       to Knuth-Morris-Pratt string-searching, that uses only concatenation
 - tests (linked in regexp2, along with other tess):
   https://web.archive.org/web/20130420020035/http://www2.research.att.com/~gsf/testregex/
+- [Ragel state machine compiler](https://github.com/adrian-thurston/ragel).
+  Maybe has an interesting regexp implementation.
+  - Has a pcre grammar, that I am unsure of whether it is an example usage of
+    Ragel or used within Ragel.
+    - Source: https://github.com/adrian-thurston/ragel/tree/master/grammar/pcre
+    - Introduction commit: https://github.com/adrian-thurston/ragel/commit/a8ff0c82a3a26adf1547e8bef9919f29341849b1
+  - Wikipedia writes that Ragel uses Thompson's construction:
+    https://en.wikipedia.org/wiki/Ragel#See_also
