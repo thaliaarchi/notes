@@ -81,6 +81,7 @@ A notebook on compilers, programming languages, and other topics.
 - [Programming language comparisons](topics/pl_comparisons.md)
 - [Programming languages I know](topics/languages_i_know.md)
 - Regular expressions
+  - [Exploration of representing specialized string-searching](topics/regexp/algorithms.md)
   - [Polymorphic automata for string- and AP-matching](topics/regexp/polymorphic_automata.md)
   - [Recross ideas](topics/regexp/recross_ideas.md)
   - [Regular expression engine history](topics/regexp/history.md)
