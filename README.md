@@ -66,6 +66,8 @@ A notebook on compilers, programming languages, and other topics.
   - [miniAdapton: A Minimal Implementation of Incremental Computation in Scheme](topics/adapton/miniAdapton.md)
     (2016)
   - [Presentation outline](topics/adapton/presentation_outline.md) (2022)
+- Archival
+  - [Internet Archive library in Rust](topics/archival/ia_rust_lib.md)
 - Colors
   - [Color libraries and color spaces](topics/colors/color-libraries.md)
   - [Color library ideas](topics/colors/color-lib-ideas.md)
