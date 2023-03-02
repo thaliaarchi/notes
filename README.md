@@ -67,7 +67,7 @@ A notebook on compilers, programming languages, and other topics.
     (2016)
   - [Presentation outline](topics/adapton/presentation_outline.md) (2022)
 - Archival
-  - [Internet Archive library in Rust](topics/archival/ia_rust_lib.md)
+  - [Archiver tool](topics/archival/archiver_tool.md)
 - Colors
   - [Color libraries and color spaces](topics/colors/color-libraries.md)
   - [Color library ideas](topics/colors/color-lib-ideas.md)
