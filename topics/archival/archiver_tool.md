@@ -10,9 +10,12 @@ Caching of IA snapshots and archival of live snapshots can be treated similarly.
 
 ### Internet Archive
 
-I need good caching for IA content, to avoid frequent retrieval. I could store
-it in `~/.archive/http/<url>/ia:<timestamp>/{headers,meta}`. The `url` field
-would be normalized similarly to `urlkey`, but be represented as nested dirs.
+I need good caching for IA content, to avoid frequent retrieval. The WARC and
+HTTP headers would be stored together as a file at
+`~/.archive/http/<url>/<timestamp>`, including prefix lines for metadata of
+where the record was downloaded. The bodies would be stored in
+`~/.archive/objects`. The `url` field would be normalized similarly to `urlkey`,
+but be represented as nested dirs.
 
 I should make a polished crate for working with the documented and undocumented
 IA APIs.
@@ -20,8 +23,10 @@ IA APIs.
 ### Live snapshots
 
 Live webpage snapshots could also be captured and stored in the cache,
-coexisting with IA content, at `~/.archive/http/<url>/live:<timestamp>`. It
-should capture enough data to be able to upload those snapshots to IA.
+coexisting with IA content at `~/.archive/http/<url>/<timestamp>`, including
+prefix lines stating that it's a live capture. It should capture the same data
+as IA, so snapshots can be packaged up and uploaded. Once it is available on IA,
+it would be annotated as such.
 
 ### Downloader
 
@@ -44,7 +49,7 @@ committed and last modified, respectively, so the time of snapshot is vital.
 
 It could be stored at `~/.archive/git/repos/<repoid>`, where `repoid` is a
 normalization of the remote URL or, if it is local-only, the path. It would be
-easiest to store it as a bare git repo, so git GC should be disabled.
+easiest to store it as a bare git repo, with git GC disabled.
 
 Archived repos could have multiple remotes that would coexist, such as a local
 clone, a remote fork, and a remote upstream.
@@ -55,6 +60,14 @@ an entry in local repos' git config (doesn't work for remote repos)
 
 Support of archiving other VCSs would be useful, at least for cloned snapshots
 without deduplication, as well as automatic conversion to git.
+
+### Host archival
+
+When archiving a repository, the hosting service metadata should be retrieved
+and versioned alongside the repo. The hosting service should be automatically
+archived on IA and the source on the Software Heritage archive (see the
+[updateswh](https://github.com/rdicosmo/updateswh/blob/main/extension/updateswh.js)
+browser extension for API usage).
 
 ## Analysis
 
