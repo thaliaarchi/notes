@@ -87,6 +87,7 @@ A notebook on compilers, programming languages, and other topics.
   - [Polymorphic automata for string- and AP-matching](topics/regexp/polymorphic_automata.md)
   - [Recross ideas](topics/regexp/recross_ideas.md)
   - [Regular expression engine history](topics/regexp/history.md)
+- [Tools for VCSes other than Git](topics/vcs.md)
 - [Trusting Trust](topics/trusting_trust.md)
 - [Universities](topics/universities.md)
 
