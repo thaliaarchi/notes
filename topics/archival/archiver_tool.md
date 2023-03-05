@@ -17,6 +17,10 @@ where the record was downloaded. The bodies would be stored in
 `~/.archive/objects`. The `url` field would be normalized similarly to `urlkey`,
 but be represented as nested dirs.
 
+CDX API records should be recorded in a log file, sorted by the urlkey and
+timestamp. Never-before queried results can be inserted at the position after
+the first line and before the last line.
+
 I should make a polished crate for working with the documented and undocumented
 IA APIs.
 
@@ -25,8 +29,8 @@ IA APIs.
 Live webpage snapshots could also be captured and stored in the cache,
 coexisting with IA content at `~/.archive/http/<url>/<timestamp>`, including
 prefix lines stating that it's a live capture. It should capture the same data
-as IA, so snapshots can be packaged up and uploaded. Once it is available on IA,
-it would be annotated as such.
+as IA, even though 3rd-party WARC uploads [generally](https://www.reddit.com/r/Archiveteam/comments/oi6i96/archivebot_sending_warc_files_to_the_wayback/)
+aren't imported to the Wayback Machine.
 
 ### Downloader
 
@@ -118,8 +122,8 @@ will a gzipped file be compressed as the server compressed it in the record?
 
 A single version of every blob would be centrally stored in `~/.archive/objects`
 and identified by a SHA-256 hash of its contents. The raw SHA-1 hashes cannot be
-used, as Git object names and IA digests (which also also use SHA-1) take into
-account different header information.
+used, as Git object names take into account header information and IA digests
+sometimes vary for equal contents.
 
 Alternatively, files could remain in their source archive. WARC, Git, and zip
 (but not tar) have random access to files, so blobs could reference the file
@@ -132,10 +136,6 @@ conceptually resembles a commit).
 For Git repos, duplication is less relevant, as they are usually more
 self-contained, except for forks, but is still useful to analyze for.
 
-If retaining the source WARC files is desired, then they could be saved just as
-other live web files or on a separate disk with more capacity. They likely
-cannot be reconstructed exactly, if compressed.
-
 Perhaps Git packfile-style compression could be used.
 
 ### File normalization
@@ -147,13 +147,91 @@ that, if a normalization algorithm is added, changed, or removed, an iteration
 over source files could update its normalizations. Derived versions are not
 stored for space reasons, as they can easily be recomputed.
 
-File normalization strategies:
+Automatic file normalization strategies:
 - Line ending normalization (caveat: how to handle mixed LF/CRLF/CR files?)
 - Language AST equivalence or language-aware comment removal
 - HTML/Markdown text extraction
 - Decompression
 
+Content extraction strategies:
+- HTML code block extraction
+- HTML element extraction
+
 ## Interface
 
 Instead of building all tools in-tree, it could expose a CLI like `git log` and
 `git show`.
+
+## Internet Archive documentation
+
+- [Internet Archive Developer Portal](https://archive.org/developers/): IA
+  developer resources; mostly oriented towards collections, not the Wayback
+  Machine.
+- File formats
+  - [WARC and CDX specifications](https://iipc.github.io/warc-specifications/)
+  - [An introduction to WARC](https://archive-it.org/blog/post/the-stack-warc-file/)
+- Wayback Machine APIs
+  - [API docs (2013)](https://archive.org/help/wayback_api.php)
+  - CDX (Capture Index)
+    - [Wayback CDX Server API](https://archive.org/developers/wayback-cdx-server.html)
+      [[docs source](https://github.com/internetarchive/wayback/tree/master/wayback-cdx-server)]
+    - [Differences between v1 and v2](https://github.com/edgi-govdata-archiving/wayback/issues/8)
+    - Wayback Machine CDX image shards are privately stored in the [waybackcdx](https://archive.org/details/waybackcdx)
+      collection.
+    - sortkey is in [SURT form](http://crawler.archive.org/articles/user_manual/glossary.html#surt)
+      (Sort-friendly URI Reordering Transform), which is implemented in the
+      [webarchive-commons org.archive.url package](https://github.com/iipc/webarchive-commons/tree/master/src/main/java/org/archive/url)
+      and the [internetarchive/surt Python port](https://github.com/internetarchive/surt).
+  - Memento
+    - Fully compliant with the [Memento protocol](http://timetravel.mementoweb.org/guide/api/)
+    - [Examples (2013)](https://ws-dl.blogspot.com/2013/07/2013-07-15-wayback-machine-upgrades.html)
+  - [Availability JSON](https://archive.org/help/wayback_api.php)
+  - Save Page Now
+    - Limits requests to 15 per minute, or it will block your IP for 5 minutes
+      [(as of 2019)](https://archive.org/details/toomanyrequests_20191110)
+
+## Internet Archive tools
+
+- Lists
+  - IIPC's [Awesome Web Archiving](https://github.com/iipc/awesome-web-archiving)
+  - [Archive Team's list of tools to restore a site from the Wayback Machine](https://wiki.archiveteam.org/index.php/Restoring)
+- Tools
+  - [edgi-govdata-archiving/wayback](https://github.com/edgi-govdata-archiving/wayback)
+    [[docs](https://wayback.readthedocs.io/en/stable/index.html)]: Python API to
+    the Wayback Machine.
+  - [ArchiveBox](https://github.com/ArchiveBox/ArchiveBox): Self-hosted archival
+    tool.
+  - [OutbackCDX](https://github.com/nla/outbackcdx): RocksDB-based CDX server
+    for web archives, that's used by national libraries with millions of
+    records. Works with OpenWayback (XML) and pywb (JSON) CDX protocols.
+  - IA [cdx-summary](https://github.com/internetarchive/cdx-summary): Python CLI
+    to summarize CDX files.
+  - IIPC [jwarc](https://github.com/iipc/jwarc): WARC parser and writer.
+  - IIPC [urlcanon](https://github.com/iipc/urlcanon): Python URL parser,
+    browser-style URL canonicalizer, and SSURT (improved SURT).
+- Source of IA projects:
+  - IA [Heritrix](https://github.com/internetarchive/heritrix3) [[API docs](http://crawler.archive.org/apidocs/overview-summary.html)]:
+    IA's web crawler.
+  - [webrecorder/pywb](https://github.com/webrecorder/pywb) [[docs](https://pywb.readthedocs.io/en/latest/)]:
+    Provides the basic functionality of a Wayback Machine.
+  - IIPC [OpenWayback](https://github.com/iipc/openwayback) [[source](https://netpreserve.org/web-archiving/openwayback/)
+    [wiki](https://github.com/iipc/openwayback/wiki)]: Project to build the
+    Wayback Machine (no longer under development and recommends pywb).
+- Rust crates
+  - [wayback-rs](https://crates.io/crates/wayback-rs) [[source](https://github.com/travisbrown/wayback-rs)]:
+    Downloader using the CDX v1 API. Saves pages with the Save Page Now API as
+    an authenticated user. Guesses the body of a redirect and checks it against
+    the digest, to reduce API calls. Handles retries and redirects.
+  - [wayback-urls](https://crates.io/crates/wayback-urls) [[source](https://github.com/Xiphoseer/wayback)]:
+    URL builder for Wayback Machine CDX v2 (timemap) API.
+  - [wayback-mirror](https://crates.io/crates/wayback-mirror) [[source](https://github.com/jonas-schievink/wayback-mirror)]:
+    Simple downloader for Wayback Machine CDX v1 API.
+  - [wayback-archiver](https://crates.io/crates/wayback-archiver) [[source](https://github.com/bcongdon/wayback-archiver)]:
+    CLI that saves pages with the Save Page Now API. Has good API status code
+    handling.
+  - [warc](https://crates.io/crates/warc) [[source](https://github.com/jedireza/warc)]:
+    Reader and writer for WARC files.
+  - [warc_nom_parser](https://github.com/sbeckeriv/warc_nom_parser) [[source](https://crates.io/crates/warc_parser)]:
+    Small reader for WARC files using nom.
+  - [rust_warc](https://crates.io/crates/rust_warc) [[source](https://crates.io/crates/rust_warc)]:
+    Small reader for WARC files.
