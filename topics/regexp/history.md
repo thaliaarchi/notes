@@ -99,6 +99,12 @@
     - Introduction commit: https://github.com/adrian-thurston/ragel/commit/a8ff0c82a3a26adf1547e8bef9919f29341849b1
   - Wikipedia writes that Ragel uses Thompson's construction:
     https://en.wikipedia.org/wiki/Ragel#See_also
+- Brzozowski Derivatives and much more in the comments:
+  https://news.ycombinator.com/item?id=35053328
+  - > We built the new engine behind .NET's RegexOptions.NonBacktracking with
+    > derivatives. We will have a paper at PLDI this year on the work that went
+    > into that.
+    https://news.ycombinator.com/item?id=35058237
 
 ## Algorithms
 
