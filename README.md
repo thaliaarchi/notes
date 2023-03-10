@@ -89,6 +89,7 @@ A notebook on compilers, programming languages, and other topics.
   - [Recross ideas](topics/regexp/recross_ideas.md)
   - [Regular expression engine history](topics/regexp/history.md)
 - [Trusting Trust](topics/trusting_trust.md)
+- [Unexpectedly Turing-complete](topics/unexpected_turing.md)
 - [Universities](topics/universities.md)
 
 ## Whitespace
