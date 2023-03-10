@@ -90,6 +90,7 @@ A notebook on compilers, programming languages, and other topics.
   - [Regular expression engine history](topics/regexp/history.md)
 - [Tools for VCSes other than Git](topics/vcs.md)
 - [Trusting Trust](topics/trusting_trust.md)
+- [Unexpectedly Turing-complete](topics/unexpected_turing.md)
 - [Universities](topics/universities.md)
 
 ## Whitespace
