@@ -105,6 +105,7 @@ A notebook on compilers, programming languages, and other topics.
 - [Implementation differences](wspace/differences.md)
 - [Improving debugging for Whitespace](wspace/debugging.md)
 - [Inlay hints for Whitespace](wspace/inlay_hints/README.md)
+- [Laziness in Whitespace](wspace/laziness.md)
 - [Limits for Whitespace](wspace/limits.md)
 - [My Whitespace projects](wspace/projects.md)
 - [Nebula 2 architecture plan](wspace/nebula2_architecture.md)
