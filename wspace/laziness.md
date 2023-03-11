@@ -5,7 +5,7 @@ which was written in Haskell, have a mixture of lazy and eager effects:
 
 - `push n`: lazy literal parse `n`; eager push `n`
 - `dup`: eager pop `n`; eager push `n` and `n`
-- `copy i`: eager literal parse `i`; eager push `stack!!i`
+- `copy i`: lazy literal parse `i`; eager push `stack!!i`
 - `swap`: eager pop `n` and `m`; eager push `m` and `n`
 - `drop`: eager pop `n`
 - `slide i`: eager pop `n`; lazy literal parse `i`; lazy drop by `i`
@@ -14,24 +14,24 @@ which was written in Haskell, have a mixture of lazy and eager effects:
 - `mul`: eager pop `y` and `x`; lazy mul on `x` and `y`; eager push
 - `div`: eager pop `y` and `x`; lazy div on `x` and `y`; eager push
 - `mod`: eager pop `y` and `x`; lazy mod on `x` and `y`; eager push
-- `store`: eager pop `n` and `loc`; eager store `n` at `loc`
-- `retrieve`: eager pop `loc`; lazy retrieve at `loc` as `n`; eager push `n`
+- `store`: eager pop `n` and `loc`; eager evaluate `loc`; eager store `n` at `loc`
+- `retrieve`: eager pop `loc`; eager evaluate `loc`; lazy retrieve at `loc` as `n`; eager push `n`
 - `label l`; skip
 - `call l`: eager program parse until `label l`; eager push `pc` to call stack;
   eager jump
 - `jmp l`: eager program parse until `label l`; eager jump
-- `jz l`: eager pop `n`; eager literal parse `n`;
+- `jz l`: eager pop `n`; eager evaluate `n`;
   if n is zero, eager program parse until `label l` and eager jump
-- `jn l`: eager pop `n`; eager literal parse `n`;
+- `jn l`: eager pop `n`; eager evaluate `n`;
   if n is negative, eager program parse until `label l` and eager jump
 - `ret`: eager call stack pop `cs`; eager jump to `cs`
 - `end`: eager exit
-- `printc`: eager pop `n`; eager literal parse `n`; eager char validate `n`
-- `printi`: eager pop `n`; eager literal parse `n`
+- `printc`: eager pop `n`; eager evaluate `n`; eager char validate `n`
+- `printi`: eager pop `n`; eager evaluate `n`
 - `readc`: eager pop `loc`; eager parse next input char as `ch`;
-  eager store `ch` at `loc`
+  eager evaluate `loc`; eager store `ch` at `loc`
 - `readi`: eager pop `loc`; eager parse next input line as `ch`;
-  lazy number parse `ch`; eager store `ch` at `loc`
+  eager evaluate `loc`; eager store `ch` at `loc`; lazy number parse `ch`
 
 ## Effects
 
