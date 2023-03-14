@@ -57,11 +57,14 @@
     > a cameo in a textbook in 1974 but then seems to get lost until its
     > reappearance in sam.
   - Find this source code!
+- [Rob Pike’s simple C regex matcher in Go](https://benhoyt.com/writings/rob-pike-regex/)
+  [[HN](https://news.ycombinator.com/item?id=32434412)]
 
 ## Ken Thompson
 
 - [grep](https://en.wikipedia.org/wiki/Grep)
   - fgrep (not by him) uses the Aho-Corasick string-matching algorithm
+- [Patent](https://patents.google.com/patent/US3568156A/en) [[HN](https://news.ycombinator.com/item?id=33566557)]
 
 ## Plan 9
 
