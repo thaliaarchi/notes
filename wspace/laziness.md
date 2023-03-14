@@ -14,8 +14,10 @@ which was written in Haskell, have a mixture of lazy and eager effects:
 - `mul`: eager pop `y` and `x`; lazy mul on `x` and `y`; eager push
 - `div`: eager pop `y` and `x`; lazy div on `x` and `y`; eager push
 - `mod`: eager pop `y` and `x`; lazy mod on `x` and `y`; eager push
-- `store`: eager pop `n` and `loc`; eager evaluate `loc`; eager store `n` at `loc`
-- `retrieve`: eager pop `loc`; eager evaluate `loc`; lazy retrieve at `loc` as `n`; eager push `n`
+- `store`: eager pop `n` and `loc`; eager evaluate `loc`;
+  eager store `n` at `loc`
+- `retrieve`: eager pop `loc`; lazy evaluate `loc`;
+  lazy retrieve at `loc` as `n`; eager push `n`
 - `label l`; skip
 - `call l`: eager program parse until `label l`; eager push `pc` to call stack;
   eager jump
