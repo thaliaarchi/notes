@@ -65,6 +65,12 @@
 - [grep](https://en.wikipedia.org/wiki/Grep)
   - fgrep (not by him) uses the Aho-Corasick string-matching algorithm
 - [Patent](https://patents.google.com/patent/US3568156A/en) [[HN](https://news.ycombinator.com/item?id=33566557)]
+- > Ken Thompson wrote a regex engine which compiled (at runtime) regexes into
+  > data structures containing executable machine code, and invoked them (from C
+  > source) by jumping into the data i.e. treating its location as a function
+  > pointer. That's what's happening here except it's the start code inserted by
+  > the linker which is jumping into main.
+  https://news.ycombinator.com/item?id=27506134
 
 ## Plan 9
 
