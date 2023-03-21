@@ -110,6 +110,8 @@ gather more metadata and compare the entries, ignoring changes in the
 dynamically generated HTML, such as from sorting direction URL parameters like
 `?S=A` and `?S=D`.
 
+Metadata indexes, such as checksum lists, could be indexed.
+
 A [WARC record](https://iipc.github.io/warc-specifications/specifications/warc-format/warc-1.1/)
 contains WARC headers followed by the HTTP headers and body, exactly as
 received. For bodies to be deduplicated, it would be helpful to decompose the
@@ -161,6 +163,96 @@ Content extraction strategies:
 
 Instead of building all tools in-tree, it could expose a CLI like `git log` and
 `git show`.
+
+## Repo construction DSL
+
+Repos would be constructed using a DSL, that generates a `git fast-export`
+stream. Steps that query IA or live pages, cache results, so that successive
+runs are fast.
+
+Optional arguments are named. It could resemble a mix of shell scripting and Coq
+tactics. It should be more strongly typed than shell languages and avoid `--` as
+a prefix for flags and `\` as a line continuation. It would be nice to avoid `.`
+from Coq and instead terminate commands with LF. Strings would be multiline.
+
+Commands should be able to be scoped to repositories, perhaps with effect
+handlers or lexical scope, to enable working in multiple repos at once.
+
+Programs could be executed from files or as command line expressions, like jq or
+sed.
+
+It has a different focus than [Reposurgeon](http://www.catb.org/~esr/reposurgeon/repository-editing.html),
+(creating, instead of editing repo histories) but can take inspiration from its
+language.
+
+### Commands
+
+#### `timemap`
+
+Query and cache IA timemap for pattern.
+
+Usage: `timemap <pattern>... [matches:<pattern>]...`, where `pattern` is a
+`"glob"` or a `/regexp/`. If the glob contains no `*`, it is an exact match, or
+if the glob contains exactly one `*` at the end, it is a prefix match.
+Otherwise, it is a prefix match of the longest literal (the domain must be
+literal), which is then locally filtered.
+
+Tbe cache staleness time could be configured.
+
+```
+timemap "compsoc.dur.ac.uk" matches:"whitespace"
+```
+
+#### `parse`
+
+Parse and index a file.
+
+Usage: `parse <resource> [as:<format>]`. The format can be specified or left to
+be inferred.
+
+```
+parse "http://www.dur.ac.uk/d.j.walrond/whitespace/" as:"file_server"
+parse "http://www.dur.ac.uk/d.j.walrond/whitespace/whitespace-0.1/debian/whitespace/DEBIAN/md5sums" as:"checksums"
+```
+
+#### `author`
+
+Create an author.
+
+Usage: `author <id> <name> <email> [tz:<timezone>]`.
+
+```
+let TA = author "Thalia Archibald" "thalia@…" tz:"Europe/Berlin"
+```
+
+#### `commit`
+
+Commit a set of changes. The latest date of the added files is typically used.
+For all files, where the most precise date available is from the HTTP `Date`
+header, the earliest of those is used. Dates are verified by checking the
+timemap.
+
+Usage: `commit <author> <message> [date:<date>] <changes>`.
+
+```
+let TN = author "Takuji Nishimura" "nisimura@…" tz:"Asia/Tokyo"
+
+commit TN "Modify sgenrand seeding and add lsgenrand" [
+  modify ia:20020214230728:"http://www.math.keio.ac.jp:80/~nisimura/random/real/mt19937.out",
+  modify ia:19991110074420:"http://www.math.keio.ac.jp:80/~nisimura/random/int/mt19937int.c",
+  modify ia:19991110100826:"http://www.math.keio.ac.jp:80/~nisimura/random/int/mt19937int.out",
+  modify ia:19991110112008:"http://www.math.keio.ac.jp:80/~nisimura/random/real1/mt19937-1.c",
+  modify ia:20001002172821:"http://www.math.keio.ac.jp:80/~nisimura/random/real1/mt19937-1.out",
+  modify ia:20001002172828:"http://www.math.keio.ac.jp:80/~nisimura/random/real2/mt19937-2.c",
+  modify ia:20000520221954:"http://www.math.keio.ac.jp:80/~nisimura/random/real2/mt19937-2.out",
+]
+```
+
+If you want to always commit as one author, partially apply `commit`:
+
+```
+let commit = commit (author "Name" "email")
+```
 
 ## Internet Archive documentation
 
