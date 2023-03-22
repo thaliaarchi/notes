@@ -5,7 +5,8 @@ which was written in Haskell, have a mixture of lazy and eager effects:
 
 - `push n`: lazy literal parse `n`; eager push `n`
 - `dup`: eager pop `n`; eager push `n` and `n`
-- `copy i`: lazy literal parse `i`; eager push `stack!!i`
+- `copy i`: lazy literal parse `i`; lazy evaluate `i`; lazy copy from `i`;
+  eager push `stack!!i`
 - `swap`: eager pop `n` and `m`; eager push `m` and `n`
 - `drop`: eager pop `n`
 - `slide i`: eager pop `n`; lazy literal parse `i`; lazy drop by `i`
@@ -15,9 +16,9 @@ which was written in Haskell, have a mixture of lazy and eager effects:
 - `div`: eager pop `y` and `x`; lazy div on `x` and `y`; eager push
 - `mod`: eager pop `y` and `x`; lazy mod on `x` and `y`; eager push
 - `store`: eager pop `n` and `loc`; eager evaluate `loc`;
-  eager store `n` at `loc`
-- `retrieve`: eager pop `loc`; lazy evaluate `loc`;
-  lazy retrieve at `loc` as `n`; eager push `n`
+  eager store `n` to `loc`
+- `retrieve`: eager pop `loc`; lazy evaluate `loc`; lazy retrieve from `loc`;
+  eager push `heap!!loc`
 - `label l`; skip
 - `call l`: eager program parse until `label l`; eager push `pc` to call stack;
   eager jump
