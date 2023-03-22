@@ -47,17 +47,12 @@ needs to be reduced to character classes and alternations in preprocessing.
 Character classes would use a more complex, sorted interval set type, that could
 easily implement this trait.
 
-For atomic propositions:
+## Representing predicates with bit sets
 
 ```rust
-// An set of atomic propositions, e.g., {"a", "b", "c"}. Only used for Display.
-struct APNames {
-    names: Box<[String]>,
-}
-
-// A set of up to 64 atomic propositions. Bit indices correspond to array
-// indices in APNames.
-struct APSet(u64);
+// A set of up to 64 elements, such as atomic propositions. If a bit is 1, it
+// indicates that the element at its index is in the set.
+struct Set(u64);
 
 // A conjunction of up to 64 variables.
 struct Conj {
@@ -71,8 +66,8 @@ struct PredDNF {
 }
 
 impl Matcher for Conj {
-    type Char = APSet;
-    fn matches(&self, state: &APSet) -> bool {
+    type Char = Set;
+    fn matches(&self, state: &Set) -> bool {
         // If all of the masked bits are equal to the expected values
         (state.0 ^ self.vals) & self.mask == 0
 
@@ -82,8 +77,8 @@ impl Matcher for Conj {
 }
 
 impl Matcher for PredDNF {
-    type Char = APSet;
-    fn matches(&self, state: &APSet) -> bool {
+    type Char = Set;
+    fn matches(&self, state: &Set) -> bool {
         for conj in &self.disj {
             if conj.matches(state) {
                 return true;
@@ -105,16 +100,16 @@ struct PredCNF {
 }
 
 impl Matcher for Disj {
-    type Char = APSet;
-    fn matches(&self, state: &APSet) -> bool {
+    type Char = Set;
+    fn matches(&self, state: &Set) -> bool {
         // If any of the masked bits are equal to the expected values
         !(state.0 ^ self.vals) & self.mask != 0
     }
 }
 
 impl Matcher for PredCNF {
-    type Char = APSet;
-    fn matches(&self, state: &APSet) -> bool {
+    type Char = Set;
+    fn matches(&self, state: &Set) -> bool {
         for disj in &self.conj {
             if !disj.matches(state) {
                 return false;
@@ -128,3 +123,18 @@ impl Matcher for PredCNF {
 This approach seems very feasible for modeling propositions of few variables
 (<=64) and DNF and CNF seem to work equally well. Karnaugh maps and related may
 also be useful, but I haven’t done much in that domain.
+
+Using a bitset to represent an n-element set is n bits for the set and n*m
+bits for the predicate, where m is the number of conjunctions (if in CNF) or
+disjunctions (if in DNF). Complement, union, and intersection on sets are O(1).
+
+## Representing sets with predicates
+
+A set {a, b, c} can be represented as a = 00, b = 01, c = 10, then the predicate
+for {a} can be x(i0, i1) = ¬i0 /\ ¬i1 and for {a, c} can be
+y(i0, i1) = (¬i0 /\ ¬i1) \/ (i0 /\ ¬i1) = ¬i1.
+
+An element is then represented in log n bits, instead of 1, but it makes sets
+and predicates synonymous. A predicate is represented in m * log n bits, where m
+again is the number of conjunctions or disjunctions. Complement, union, and
+intersection on sets are O(m).
