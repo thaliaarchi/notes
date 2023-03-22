@@ -268,6 +268,11 @@ let commit = commit (author "Name" "email")
   - [An introduction to WARC](https://archive-it.org/blog/post/the-stack-warc-file/)
 - Wayback Machine APIs
   - [API docs (2013)](https://archive.org/help/wayback_api.php)
+  - WARC
+    - WARC and ARC files seem to be stored at
+      `https://archive.org/download/<filename>`, where the filename is from a
+      CDX query, as indicated in [Archive-It documentation](https://support.archive-it.org/hc/en-us/articles/360015225051-Find-and-download-your-WARC-files-with-WASAPI).
+      They give a 403 error, though.
   - CDX (Capture Index)
     - [Wayback CDX Server API](https://archive.org/developers/wayback-cdx-server.html)
       [[docs source](https://github.com/internetarchive/wayback/tree/master/wayback-cdx-server)]
@@ -285,6 +290,10 @@ let commit = commit (author "Name" "email")
   - Save Page Now
     - Limits requests to 15 per minute, or it will block your IP for 5 minutes
       [(as of 2019)](https://archive.org/details/toomanyrequests_20191110)
+    - [Save Page Now changelog](https://webapps.stackexchange.com/questions/151299/does-the-internet-wayback-machine-api-support-adding-a-link-to-scrape)
+  - URL formats
+    - [Advanced search](https://archive.org/web/web-advancedsearch.php)
+    - [Wikipedia documentation](https://en.wikipedia.org/wiki/Help:Using_the_Wayback_Machine)
 
 ## Internet Archive tools
 
