@@ -107,6 +107,7 @@ A notebook on compilers, programming languages, and other topics.
 - [Inlay hints for Whitespace](wspace/inlay_hints/README.md)
 - [Laziness in Whitespace](wspace/laziness.md)
 - [Limits for Whitespace](wspace/limits.md)
+- [Low-level representation for shared numbers](wspace/shared_numbers.md)
 - [My Whitespace projects](wspace/projects.md)
 - [Nebula 2 architecture plan](wspace/nebula2_architecture.md)
 - [Nebula 2 languages](wspace/nebula2_languages.md)
