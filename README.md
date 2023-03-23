@@ -98,6 +98,7 @@ A notebook on compilers, programming languages, and other topics.
 - [Analysis errors draft](wspace/errors_draft.md)
 - [CLI draft](wspace/cli_draft.txt)
 - [Compact bitwise token encoding](wspace/bit_pack.md)
+- [Compiler IRs](wspace/ir.md)
 - [Division and modulo rounding](wspace/divmod.md)
 - [GrassMudHorse](wspace/grassmudhorse.md)
 - [Haskell notes](wspace/haskell.md)
