@@ -84,3 +84,12 @@ store %0 %1
 %3 = Add %0 %2
 push %3
 ```
+
+### Heap dependencies
+
+- read-after-write dependency
+- write-after-read dependency
+- write-after-write dependency
+
+It could be useful to have an API to follow these dependencies in either
+direction, such as `follow_use_defs` and `follow_def_uses`.
