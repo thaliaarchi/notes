@@ -35,6 +35,19 @@ Turing-complete.
     Nicholas Carlini (2015)
   - [Tic-tac-toe](https://github.com/carlini/printf-tac-toe) by Nicholas Carlini
     (2020)
+- PostgreSQL: Uses common table expressions (CTEs) and windowing.
+  - [Cyclic tag system](https://wiki.postgresql.org/wiki/Cyclic_Tag_System) by
+    Andrew Gierth (2009)
+  - [Mandelbrot set](https://wiki.postgresql.org/wiki/Mandelbrot_set) by Peter
+    Eisentraut (2009)
+  - [Presentation](https://web.archive.org/web/20201111224603/http://assets.en.oreilly.com/1/event/27/High%20Performance%20SQL%20with%20PostgreSQL%20Presentation.pdf)
+    on cyclic tag system, Mandelbrot set, and travelling salesman problem by
+    David Fetter (2009)
+  - [Turing machine](https://blog.coelho.net/database/2013/08/17/turing-sql-1.html)
+    by Fabien Coelho (2013)
+- Transact-SQL
+  - [Brainfuck](https://stackoverflow.com/questions/900055/is-sql-or-even-tsql-turing-complete/34847489#34847489)
+    [[code](https://github.com/PopovMP/BrainFuck-SQL)] by Miroslav Popov (2016)
 - TypeScript type system
   - [Turing machine and primality test](https://github.com/microsoft/TypeScript/issues/14833)
     [[code](https://gist.github.com/hediet/63f4844acf5ac330804801084f87a6d4)]
