@@ -118,6 +118,7 @@ A notebook on compilers, programming languages, and other topics.
 - [Stack substrate IL ideas from Kitten](wspace/substrate_il_ideas.md)
 - [Syntax error recovery](wspace/syntax_recovery.md)
 - [Useful lazy patterns in Whitespace](wspace/useful_laziness.md)
+- [Whitespace 20th anniversary](wspace/20th.md)
 - [Whitespace assembly mnemonics](wspace/mnemonics.md)
 - [Whitespace assembly syntax](wspace/wsa_draft.md)
 - [Whitespace language specification](wspace/whitespace_spec.md)
