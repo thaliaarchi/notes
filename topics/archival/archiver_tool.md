@@ -116,6 +116,9 @@ Stack Exchange questions could be indexed as directories containing answers.
 A question has its own content, though, so a parent-child relationship graph
 would be more useful.
 
+.DS_Store [leaks directory contents](https://en.internetwache.org/scanning-the-alexa-top-1m-for-ds-store-files-12-03-2018/),
+which can augment other metadata.
+
 A [WARC record](https://iipc.github.io/warc-specifications/specifications/warc-format/warc-1.1/)
 contains WARC headers followed by the HTTP headers and body, exactly as
 received. For bodies to be deduplicated, it would be helpful to decompose the
