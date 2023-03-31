@@ -69,6 +69,7 @@ A notebook on compilers, programming languages, and other topics.
 - Archival
   - [Archiver tool](topics/archival/archiver_tool.md)
   - [Code Golf archival](topics/archival/code_golf_archival.md)
+- [Bits and arithmetic](topics/bits_and_arithmetic.md)
 - Colors
   - [Color libraries and color spaces](topics/colors/color-libraries.md)
   - [Color library ideas](topics/colors/color-lib-ideas.md)
