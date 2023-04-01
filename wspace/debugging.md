@@ -19,3 +19,16 @@ Notes from reading [“What a good debugger can do”](https://werat.dev/blog/wh
 
 Time travel would be very valuable in a Whitespace debugger. Are IO instructions
 the only non-determinism in Whitespace? How would its laziness affect this?
+
+## Omniscient debugging
+
+Omniscient debugging precalculates the states that make up a program trace and
+stores them in a database with indexes for efficient querying.
+
+> With the whole program history recorded and indexed, you can ask questions
+> like “how many times and where this was variable written?”, “which thread
+> freed this chunk of memory?” or even “how was this specific pixel rendered?”.
+
+This only works with one program trace, but if this was made abstract, to work
+with all program traces, it could also be used for static analyses, to optimize
+during compilation.
