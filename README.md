@@ -96,6 +96,7 @@ A notebook on compilers, programming languages, and other topics.
 
 ## Whitespace
 
+- [20 Years of Whitespace: Past and Future](wspace/20th.md)
 - [Analysis errors draft](wspace/errors_draft.md)
 - [CLI draft](wspace/cli_draft.txt)
 - [Compact bitwise token encoding](wspace/bit_pack.md)
@@ -115,6 +116,7 @@ A notebook on compilers, programming languages, and other topics.
 - [Nebula 2 architecture plan](wspace/nebula2_architecture.md)
 - [Nebula 2 languages](wspace/nebula2_languages.md)
 - [Nospace grammar](wspace/nospace_grammar.bnf)
+- [Opcode prefix tree](wspace/opcode_prefix_tree.svg)
 - [Optimizations](wspace/optimizations.md)
 - [Raising Whitespace to a higher-level language](wspace/raising.md)
 - [Respace](wspace/respace.md)
@@ -122,7 +124,6 @@ A notebook on compilers, programming languages, and other topics.
 - [Stack substrate IL ideas from Kitten](wspace/substrate_il_ideas.md)
 - [Syntax error recovery](wspace/syntax_recovery.md)
 - [Useful lazy patterns in Whitespace](wspace/useful_laziness.md)
-- [Whitespace 20th anniversary](wspace/20th.md)
 - [Whitespace as an Idris back-end](wspace/idris_backend.md)
 - [Whitespace assembly mnemonics](wspace/mnemonics.md)
 - [Whitespace assembly syntax](wspace/wsa_draft.md)
