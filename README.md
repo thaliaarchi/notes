@@ -118,6 +118,7 @@ A notebook on compilers, programming languages, and other topics.
 - [Optimizations](wspace/optimizations.md)
 - [Raising Whitespace to a higher-level language](wspace/raising.md)
 - [Respace](wspace/respace.md)
+- [Self-hosted Whitespace interpreter with lazy semantics](wspace/lazy_interpreter.md)
 - [Stack substrate IL ideas from Kitten](wspace/substrate_il_ideas.md)
 - [Syntax error recovery](wspace/syntax_recovery.md)
 - [Useful lazy patterns in Whitespace](wspace/useful_laziness.md)
