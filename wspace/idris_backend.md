@@ -1,0 +1,34 @@
+# Whitespace as an Idris back-end
+
+Whitespace could become a code generation back-end of the Idris 2 compiler.
+
+This is something that Edwin Brady, the creator of both languages, has
+considered building:
+
+> By the way, at one point I implemented a Whitespace interpreter in Idris
+> [[WS-idr](https://github.com/edwinb/WS-idr)], just to see how far Idris had
+> come along. Whitespace is unfortunately a bit too limited to work as an Idris
+> back end (at least, not without a lot of effort), but sometimes I wonder what
+> extensions it would need to make it work, just to complete the loop, as it
+> were. \[2023-03-30 via email]
+
+The Idris documentation [describes](https://github.com/idris-lang/Idris2/blob/main/docs/source/backends/backend-cookbook.rst)
+how to build a custom back-end, that uses Idris [as a library](https://github.com/idris-lang/Idris2/blob/main/docs/source/backends/custom.rst).
+
+The main language gaps that would need to be filled for Whitespace would be
+[closures](higher_level_control.md), algebraic data types, and garbage
+collection. I am unsure for the dependently-typed parts. Concurrency would not
+be able to be implemented efficiently and parallelism is not possible.
+
+Debug information with Idris source locations could be encoded as comments in
+the generated Whitespace program, where whitespace characters are escaped.
+
+Since the higher-level constructs for Whitespace are not specific to Idris, the
+compiler should expose a higher-level language, that the Idris back-end can
+generate code for. This also helps minimize the Idris code I'd need to write,
+because I'm not an expert with Idris (though may become one, if I build this).
+
+If the back-end became mature enough to compile the Idris compiler, it enables
+a loop. Idris could compile itself with the Whitespace back-end, then that could
+compile [WS-idr](https://github.com/edwinb/WS-idr), which could interpret the
+Idris compiler.
