@@ -1,0 +1,58 @@
+digraph opcodes {
+  ordering=out;
+
+  start [label="", shape=none, width=0, height=0, margin=0];
+  _,
+  S, ST, SL,
+  T, TS, TSS, TST, TT, TL, TLS, TLT,
+  L, LS, LT, LL [label=""];
+  push [label="push n"];
+  copy [label="copy n"];
+  slide [label="slide n"];
+  label [label="label l"];
+  call [label="call l"];
+  jmp [label="jmp l"];
+  jz [label="jz l"];
+  jn [label="jn l"];
+
+  start -> _;
+  _ -> S [label=S];
+  S -> push [label=S];
+  S -> ST [label=T];
+  ST -> copy [label=S];
+  ST -> slide [label=L];
+  S -> SL [label=L];
+  SL -> dup [label=S];
+  SL -> swap [label=T];
+  SL -> drop [label=L];
+  _ -> T [label=T];
+  T -> TS [label=S];
+  TS -> TSS [label=S];
+  TSS -> add [label=S];
+  TSS -> sub [label=T];
+  TSS -> mul [label=L];
+  TS -> TST [label=T];
+  TST -> div [label=S];
+  TST -> mod [label=T];
+  T -> TT [label=T];
+  TT -> store [label=S];
+  TT -> retrieve [label=T];
+  T -> TL [label=L];
+  TL -> TLS [label=S];
+  TLS -> printc [label=S];
+  TLS -> printi [label=T];
+  TL -> TLT [label=T];
+  TLT -> readc [label=S];
+  TLT -> readi [label=T];
+  _ -> L [label=L];
+  L -> LS [label=S];
+  LS -> label [label=S];
+  LS -> call [label=T];
+  LS -> jmp [label=L];
+  L -> LT [label=T];
+  LT -> jz [label=S];
+  LT -> jn [label=T];
+  LT -> ret [label=L];
+  L -> LL [label=L];
+  LL -> end [label=L];
+}
