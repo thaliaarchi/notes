@@ -79,6 +79,7 @@ A notebook on compilers, programming languages, and other topics.
 - [Error handling](topics/errors.md)
 - [Futamura projections](topics/futamura.md)
 - [List of ciphers](topics/ciphers.md)
+- [Minimal computing models](topics/minimal_computing_models.md)
 - [Nand to Tetris ALU instructions](topics/nand2tetris/ALU.md)
 - [Paper notes](topics/papers.md)
 - [Programming language alphabet challenge](topics/language_alphabet.md)

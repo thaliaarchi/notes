@@ -69,6 +69,10 @@ Turing-complete.
     by Shea Leffler (2017)
   - [Minsky machine](https://github.com/paholg/minsky/) by Paho Lurie-Gregg
     (2017)
+- x86 MMU fault handling
+  - [subleq compiler](https://github.com/jbangert/trapcc) [[video](https://www.youtube.com/watch?v=eSRcvrVs5ug)]
+    [[slides](https://github.com/jbangert/trapcc/blob/master/slides/PFLA-shmoocon.pdf)]
+    [[HN](https://news.ycombinator.com/item?id=5261598)] by Julian Bangert (2013)
 - x86 `mov`: Only the `mov` instruction of x86.
   - Turing machine in [“`mov` is Turing-complete”](https://web.archive.org/web/20130924014250/http://www.cl.cam.ac.uk/~sd601/papers/mov.pdf)
     by Stephen Dolan (2013)
