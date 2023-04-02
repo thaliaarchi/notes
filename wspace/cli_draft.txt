@@ -20,9 +20,9 @@ interpret/compile/opt:
             ...
     --mapping=<mapping>
     --lazy-parse
-        Parse lazily. No syntax errors are reported after the
-        last-executed instruction. The first occurrence of a label is
-        used for branch destinations.
+        Parse lazily. No syntax errors are reported after the last-executed
+        instruction. The first occurrence of a label is used for branch
+        destinations.
     --dupe-labels=<mode>
         options:
             error
@@ -87,8 +87,7 @@ interpret/compile/opt:
     --minify-labels
         Enable label minification
     --coalesce-asserts
-        Coalesce asserts. This results in less precise error location
-        reporting
+        Coalesce asserts. This results in less precise error location reporting
     --spec=<version>
         0.2 (disable or replace 0.3 features, if possible)
         0.3
@@ -99,9 +98,8 @@ interpret/compile/opt:
             shuffle
     --remove-dead
         Perform dead code elimination
-        - Remove dead branches in switches that will never be taken,
-          i.e. if printf is never called with the %#nb verb, that case
-          can be removed
+        - Remove dead branches in switches that will never be taken, i.e. if
+          printf is never called with the %#nb verb, that case can be removed
 
 
 interpret:
