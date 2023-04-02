@@ -103,6 +103,7 @@ A notebook on compilers, programming languages, and other topics.
 - [Compact bitwise token encoding](wspace/bit_pack.md)
 - [Compiler IRs](wspace/ir.md)
 - [Division and modulo rounding](wspace/divmod.md)
+- [Emails with Edwin and friends](wspace/emails.md)
 - [Expressing higher-level control-flow constructs in Whitespace](wspace/higher_level_control.md)
 - [Formal grammar for Whitespace](wspace/formal_grammar.md)
 - [GrassMudHorse](wspace/grassmudhorse.md)
