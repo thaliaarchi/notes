@@ -1,11 +1,11 @@
 # Emails with Edwin and friends
 
-## 2023-03-27 22:41:01
+## 2023-03-27 22:41:01 UTC
 
 From: Thalia Archibald \<thalia@archibald.dev>  
 To: Edwin Brady \<ecb10@st-andrews.ac.uk>  
 Subject: Whitespace: 20th anniversary and PL theory  
-Date: Mon, 27 Mar 2023 22:41:01 +0000
+Date: Mon, 27 Mar 2023 16:41:01 -0600
 
 Hello Edwin,
 
@@ -30,12 +30,12 @@ Thanks for any insight you can give and the fun language.
 Thanks,  
 Thalia Archibald
 
-## 2023-03-28 21:08:50
+## 2023-03-28 21:08:50 UTC
 
 From: Edwin Brady \<ecb10@st-andrews.ac.uk>  
 To: Thalia Archibald \<thalia@archibald.dev>  
 Subject: Re: Whitespace: 20th anniversary and PL theory  
-Date: Tue, 28 Mar 2023 21:08:50 +0000
+Date: Tue, 28 Mar 2023 22:08:50 +0100
 
 Hi Thalia,  
 Thanks for your email, even with the slightly scary reminder of how old Whitespace is :).
@@ -54,12 +54,12 @@ If anything else occurs to me, I'll let you know!
 
 Edwin
 
-## 2023-03-29 21:15:29
+## 2023-03-29 21:15:29 UTC
 
 From: Thalia Archibald \<thalia@archibald.dev>  
 To: Andrew Stribblehill \<ads@wompom.org>  
 Subject: Whitespace: 20th anniversary and your Debian package  
-Date: Wed, 29 Mar 2023 21:15:29 +0000
+Date: Wed, 29 Mar 2023 15:15:29 -0600
 
 Hello Andrew,
 
@@ -74,12 +74,12 @@ Do you have any files from Whitespace still?
 Thanks,  
 Thalia Archibald
 
-## 2023-03-30 09:28:53
+## 2023-03-30 09:28:53 UTC
 
 From: Thalia Archibald \<thalia@archibald.dev>  
 To: Edwin Brady \<ecb10@st-andrews.ac.uk>  
 Subject: Re: Whitespace: 20th anniversary and PL theory  
-Date: Thu, 30 Mar 2023 09:28:53 +0000
+Date: Thu, 30 Mar 2023 03:28:53 -0600
 
 Edwin,
 
@@ -91,7 +91,7 @@ If you find your Whitespace files, I'd of course be interested. Maybe it would b
 
 Thalia
 
-## 2023-03-31 16:35:20
+## 2023-03-31 16:35:20 UTC
 
 From: Andrew Stribblehill \<ads@wompom.org>  
 To: Thalia Archibald \<thalia@archibald.dev>  
@@ -107,7 +107,7 @@ I'm afraid I don't have old versions of Whitespace. I recall announcing it on Sl
 
 I'm cc'ing Edwin and Dan, to see if they have any input.
 
-## 2023-03-31 16:38:00
+## 2023-03-31 16:38:00 UTC
 
 From: Andrew Stribblehill \<ads@wompom.org>  
 To: Thalia Archibald \<thalia@archibald.dev>  
@@ -117,7 +117,7 @@ Date: Thu, 30 Mar 2023 17:38:00 +0100
 
 Trying again with a different Edwin address.
 
-## 2023-03-30 17:00:05
+## 2023-03-30 17:00:05 UTC
 
 From: Edwin Brady \<edwin.brady@gmail.com>  
 To: Andrew Stribblehill \<ads@wompom.org>, Thalia Archibald \<thalia@archibald.dev>  
@@ -133,12 +133,12 @@ If I remember rightly, the 0.3 update added enough to allow encoding a minimal f
 
 Edwin
 
-## 2023-03-30 17:04:55
+## 2023-03-30 17:04:55 UTC
 
 From: Edwin Brady \<ecb10@st-andrews.ac.uk>  
 To: Thalia Archibald \<thalia@archibald.dev>  
 Subject: Re: Whitespace: 20th anniversary and PL theory  
-Date: Thu, 30 Mar 2023 17:04:55 +0000
+Date: Thu, 30 Mar 2023 18:04:55 +0100
 
 Well I was an early adopter of darcs but I doubt I was that early! I will have to do some digging...
 
@@ -148,12 +148,12 @@ By the way, at one point I implemented a Whitespace interpreter in Idris, just t
 
 Edwin
 
-## 2023-04-01 03:00:26
+## 2023-04-01 03:00:26 UTC
 
 From: Thalia Archibald \<thalia@archibald.dev>  
 To: Edwin Brady \<ecb10@st-andrews.ac.uk>  
 Subject: Re: Whitespace: 20th anniversary and PL theory  
-Date: Sat, 01 Apr 2023 03:00:26 +0000
+Date: Fri, 31 Mar 2023 21:00:26 -0600
 
 I had actually already seen your Whitespace interpreter in Idris and, last year, I updated it to work with modern Idris (1.3.4) at https://github.com/wspace/edwinb-ws-idr. I got stuck with migrating the deprecated Coq-style tactic proofs to the newer Agda-style elaborator reflection engine, but could probably figure it out, now that I have more experience with Coq. I remember trying to upgrade it to Idris 2, but probably ran into issues with the linear types or something else.
 
