@@ -2,29 +2,27 @@
 
 ## Laziness
 
-The Haskell reference interpreter parses Whitespace programs lazily, so
-syntax errors after the last-executed instruction are not reported and
-the first occurrence of a label is used for branch destinations.
+The Haskell reference interpreter parses Whitespace programs lazily, so syntax
+errors after the last-executed instruction are not reported and the first
+occurrence of a label is used for branch destinations.
 
-When replicating lazy parsing in Rust, I'll make a Parser and
-LazyParser, both implementing the same traits: iterator, with a method
-for retrieving a label. The eager parser would parse the entire file at
-once and construct a full label map. The lazy parser would parse
-instructions as needed: when advancing pc to the next or when jumping to
-a label that needs to seek forwards.
+When replicating lazy parsing in Rust, I'll make a Parser and LazyParser, both
+implementing the same traits: iterator, with a method for retrieving a label.
+The eager parser would parse the entire file at once and construct a full label
+map. The lazy parser would parse instructions as needed: when advancing pc to
+the next or when jumping to a label that needs to seek forwards.
 
 ### AOT emulation
 
-Emulating parse laziness would be more difficult ahead-of-time and
-requires control flow analysis.
+Emulating parse laziness would be more difficult ahead-of-time and requires
+control flow analysis.
 
-If all live branch targets are valid labels and the final instruction is
-call, jmp, ret, or end, then the full source will not be parsed. A
-compile warning would be emitted for trailing junk.
+If all live branch targets are valid labels and the final instruction is call,
+jmp, ret, or end, then the full source will not be parsed. A compile warning
+would be emitted for trailing junk.
 
-If some live branch targets an invalid label or the final instruction is
-not call, jmp, ret, or end, then that branch will parse trailing junk
-and may panic.
+If some live branch targets an invalid label or the final instruction is not
+call, jmp, ret, or end, then that branch will parse trailing junk and may panic.
 
 ## GHC version
 

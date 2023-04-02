@@ -1,17 +1,16 @@
 # Whitespace language specification
 
 Whitespace is formally specified by its [implementation](https://web.archive.org/web/20150717140342/http://compsoc.dur.ac.uk/whitespace/download.php),
-not by a language reference. This document attempts to fill in gaps from
-the [tutorial](https://web.archive.org/web/20150618184706/http://compsoc.dur.ac.uk/whitespace/tutorial.php)
-with details from [testing](../tests) the reference interpreter and to
-compare [various implementations](https://github.com/wspace/corpus).
+not by a language reference. This document attempts to fill in gaps from the
+[tutorial](https://web.archive.org/web/20150618184706/http://compsoc.dur.ac.uk/whitespace/tutorial.php)
+with details from [testing](../tests) the reference interpreter and to compare
+[various implementations](https://github.com/wspace/corpus).
 
 ## Tokens
 
-The only tokens in the Whitespace language are space (U+0020), tab
-(U+0009), and line feed (U+000A), represented hereafter as S, T, and L,
-respectively. All other characters are considered comments and must be
-ignored.
+The only tokens in the Whitespace language are space (U+0020), tab (U+0009), and
+line feed (U+000A), represented hereafter as S, T, and L, respectively. All
+other characters are considered comments and must be ignored.
 
 ### Non-standard mappings
 
@@ -67,16 +66,17 @@ modification parameter" in the tutorial.
 
 The instruction prefix encoding is not [self-synchronizing](https://en.wikipedia.org/wiki/Self-synchronizing_code).
 
-The mnemonics used here follow the [Whitelips](https://vii5ard.github.io/whitespace/)/[Nebula](https://github.com/andrewarchi/nebula)
-convention and are non-normative. Whitespace assembly dialects vary
-widely between implementations and are out of scope of this document.
+The mnemonics used here follow the
+[Whitelips](https://vii5ard.github.io/whitespace/)/[Nebula](https://github.com/andrewarchi/nebula)
+convention and are non-normative. Whitespace assembly dialects vary widely
+between implementations and are out of scope of this document.
 
 ### Non-standard instructions
 
-The instruction prefix tree is not full, so extended instructions may be
-defined that are prefixed with STT, TSTL, TSL, TTL, TLSL, TLTL, TLL,
-LLS, or LLT. As these are non-standard, few implementations support them
-and the syntax is conflicting.
+The instruction prefix tree is not full, so extended instructions may be defined
+that are prefixed with STT, TSTL, TSL, TTL, TLSL, TLTL, TLL, LLS, or LLT. As
+these are non-standard, few implementations support them and the syntax is
+conflicting.
 
 | Mnemonic         | Syntax | Arg | Stack | Heap | Description | Implementation |
 | ---------------- | ------ | --- | ----- | ---- | ----------- | -------------- |
@@ -90,28 +90,27 @@ and the syntax is conflicting.
 
 ## Evaluation
 
-The reference interpreter, which is written in Haskell, has a mixture of
-lazy and eager evaluation strategies, so some instruction effects are
-interleaved. This makes erroneous programs more difficult to reason
-about. Most implementations use eager evaluation.
+The reference interpreter, which is written in Haskell, has a mixture of lazy
+and eager evaluation strategies, so some instruction effects are interleaved.
+This makes erroneous programs more difficult to reason about. Most
+implementations use eager evaluation.
 
 ### Eager effects
 
-`slide` parses its argument before checking the stack length and throws
-when zero has no sign.
+`slide` parses its argument before checking the stack length and throws when
+zero has no sign.
 
 - empty argument error: `slide`
 
 ### Eager underflow assertions
 
-All instructions eagerly assert stack lengths, throwing a user error if
-there is an underflow. Note that `copy` does not assert any length and
-`slide` only asserts a length of 1, even though both have positional
-arguments.
+All instructions eagerly assert stack lengths, throwing a user error if there is
+an underflow. Note that `copy` does not assert any length and `slide` only
+asserts a length of 1, even though both have positional arguments.
 
 - no assertions: `push` `copy` `label` `call` `jmp` `end`
-- 1 value on the stack: `dup` `drop` `slide` `retrieve` `jz` `jn`
-  `printc` `printi` `readc` `readi`
+- 1 value on the stack: `dup` `drop` `slide` `retrieve` `jz` `jn` `printc`
+  `printi` `readc` `readi`
 - 2 values on the stack: `swap` `add` `sub` `mul` `div` `mod` `store`
 - 1 value on the call stack: `ret`
 

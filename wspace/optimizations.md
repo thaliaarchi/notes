@@ -28,8 +28,8 @@
 ## Data flow
 
 - Determine integer bit width bounds
-- Determine whether stack values represent heap addresses, for heap
-  bounding and garbage collection
+- Determine whether stack values represent heap addresses, for heap bounding and
+  garbage collection
 
 ## Duplication
 
@@ -43,8 +43,8 @@
   - `x y /` -> `x >> s`
   - `x y %` -> `x & (y - 1)` (fdiv for `y > 0`, tdiv for `x > 0`)
   - `x 2 %` -> `x & 1` (fdiv, tdiv for `x > 0`)
-- Logical expressions where `a = x % 2 = x & 1` and `b = y % 2 = y & 1`
-  (fdiv, tdiv for `x > 0`)
+- Logical expressions where `a = x % 2 = x & 1` and `b = y % 2 = y & 1` (fdiv,
+  tdiv for `x > 0`)
   - NOT `^a`:
     - `1 a -`
   - AND `a & b`:
@@ -230,8 +230,8 @@ Optimizations:
   c:
   ```
 
-- Remove drops and copies when procedure drops args, but args are used
-  again afterwards:
+- Remove drops and copies when procedure drops args, but args are used again
+  afterwards:
 
   ```wsa
   0 3 3 call print_matrix
@@ -275,15 +275,15 @@ for (cnt = init; x != 0; x >>= 1) {
 
 ## Division and modulo lowering
 
-1. Lower `/` to `tdiv`, `fdiv`, `ediv`, `rdiv`, or `cdiv` and `%` to
-   `tmod`, `fmod`, `emod`, `rmod`, or `cmod`, according to the execution
-   division mode (`--div`).
-2. Replace div and mod of constant non-zero divisor with `_unchecked`
-   variants and zero divisor with error.
+1. Lower `/` to `tdiv`, `fdiv`, `ediv`, `rdiv`, or `cdiv` and `%` to `tmod`,
+   `fmod`, `emod`, `rmod`, or `cmod`, according to the execution division mode
+   (`--div`).
+2. Replace div and mod of constant non-zero divisor with `_unchecked` variants
+   and zero divisor with error.
 3. Replace division mode conversion idioms.
 4. Strength reduce constant divisor.
 5. Lower to target division mode.
-6. Replace with `_unchecked` variants and add explicit divisor checks
-   when divisor may be zero.
-7. Annotate zero divisor branches as unlikely like Rust's `unlikely!`
-   macro in [`checked_div`](https://doc.rust-lang.org/src/core/num/int_macros.rs.html#519).
+6. Replace with `_unchecked` variants and add explicit divisor checks when
+   divisor may be zero.
+7. Annotate zero divisor branches as unlikely like Rust's `unlikely!` macro in
+   [`checked_div`](https://doc.rust-lang.org/src/core/num/int_macros.rs.html#519).
