@@ -8,7 +8,7 @@
   corresponding `ret`
 - Rewrite mutually-exclusive branches as cascading branches
 
-  ```
+  ```ir
   let v = 0
   if a: v = 1
   if b: v = 2
@@ -17,7 +17,7 @@
 
   ->
 
-  ```
+  ```ir
   let v
   if      c: v = 3
   else if b: v = 2
@@ -30,6 +30,9 @@
 - Determine integer bit width bounds
 - Determine whether stack values represent heap addresses, for heap bounding and
   garbage collection
+- Eliminate branches in loops, that are dependent on certain values in a string,
+  which are never give by callers. For example, if `printf` is never called with
+  the `%#nb` verb, that case can be removed
 
 ## Duplication
 
@@ -275,7 +278,7 @@ for (cnt = init; x != 0; x >>= 1) {
 
 ## Division and modulo lowering
 
-1. Lower `/` to `tdiv`, `fdiv`, `ediv`, `rdiv`, or `cdiv` and `%` to `tmod`,
+1. Lower `/` to `tdiv`, `fdiv`, `ediv`, `rdiv`, or `cdiv`; and `%` to `tmod`,
    `fmod`, `emod`, `rmod`, or `cmod`, according to the execution division mode
    (`--div`).
 2. Replace div and mod of constant non-zero divisor with `_unchecked` variants
@@ -285,5 +288,5 @@ for (cnt = init; x != 0; x >>= 1) {
 5. Lower to target division mode.
 6. Replace with `_unchecked` variants and add explicit divisor checks when
    divisor may be zero.
-7. Annotate zero divisor branches as unlikely like Rust's `unlikely!` macro in
-   [`checked_div`](https://doc.rust-lang.org/src/core/num/int_macros.rs.html#519).
+7. Annotate zero divisor branches as unlikely like Rust's `unlikely!` intrinsic
+   in [`checked_div`](https://doc.rust-lang.org/src/core/num/int_macros.rs.html#519).
