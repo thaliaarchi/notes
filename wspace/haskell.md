@@ -1,6 +1,6 @@
 # Haskell notes
 
-`stdin` and `stdout` [translate](https://hackage.haskell.org/package/base-4.15.0.0/docs/System-IO.html#g:25)
+`stdin` and `stdout` [translate](https://hackage.haskell.org/package/base-4.18.0.0/docs/System-IO.html#g:25)
 LF to CRLF on Windows because they are text-mode `Handle`s.
 
 `putChar` used to print the value mod 256 as a byte.
@@ -10,6 +10,14 @@ LF to CRLF on Windows because they are text-mode `Handle`s.
 
 Default values for `localeEncoding`: On Linux it is the `LANG` and `LC_*`
 environment variables. On Windows it is code page.
+
+[`Int`](https://hackage.haskell.org/package/base-4.18.0.0/docs/Data-Int.html#t:Int) is
+guaranteed to have at least the range [-2^29 .. 2^29) [[Haskell 98](https://www.haskell.org/onlinereport/basic.html#sect6.4);
+[Haskell 2010](https://www.haskell.org/onlinereport/haskell2010/haskellch18.html#x26-22400018.1)]
+
+`(fromInteger n) :: Int` wraps `n` to be within `minBound :: Int` and
+`maxBound :: Int` with twos-complement, likewise for types other than `Int` (it
+is not saturating and does not error) [[Haskell mailing list, Feb 2002](https://mail.haskell.org/pipermail/haskell/2002-February/009023.html)]
 
 ## Relevant GHC changelog
 
