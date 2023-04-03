@@ -102,6 +102,7 @@ A notebook on compilers, programming languages, and other topics.
 - [CLI draft](wspace/cli_draft.txt)
 - [Compact bitwise token encoding](wspace/bit_pack.md)
 - [Compiler IRs](wspace/ir.md)
+- [Data structures for Whitespace](wspace/data_structures.md)
 - [Division and modulo rounding](wspace/divmod.md)
 - [Emails with Edwin and friends](wspace/emails.md)
 - [Expressing higher-level control-flow constructs in Whitespace](wspace/higher_level_control.md)
