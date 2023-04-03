@@ -1,115 +1,171 @@
-interpret/compile/opt:
+General
     -h, --help
-    -f <format>, --format=<format>
-        Override guessed syntax format
-        options:
-            ws
-            wsa
-            wsf
-            wsx
-    --compat=<implementation>
-        Set the compatibility mode
-        options:
-            wspace:
-                --lazy-parse
-                --dupe-labels=first
-                --eof=error
-                --error-style=wspace
-                --div=floor
-            burghard
-            ...
-    --mapping=<mapping>
-    --lazy-parse
-        Parse lazily. No syntax errors are reported after the last-executed
-        instruction. The first occurrence of a label is used for branch
-        destinations.
+
+Semantics presets
+    --pedantic
+        Enable pedantic compatibility with the reference implementation
+        --errors=haskell
+        --parse=lazy
+        --require-sign
+        --dupe-labels=first
+        --implicit-exit=false
+        --input-eof=error
+        --arith=lazy
+        --div=floor
+        --stack-index=haskell-int
+        --stack-cap=haskell-int
+        --call-stack-cap=haskell-int
+        --store-min=0
+        --store-max=haskell-integer
+        --retrieve-min=0
+        --retrieve-max=haskell-int
+    --lazy
+        --parse=lazy
+        --arith=lazy
+    --strict
+        --parse=strict
+        --arith=strict
+    --0.3
+        --instruction-set=0.3
+    --0.2
+        --instruction-set=0.2
+    --0.1
+        --instruction-set=0.1
+        --post-dump=0.1
+    --utf-8
+        --source-encoding=utf-8
+        --input-encoding=utf-8
+    --latin-1
+        --source-encoding=latin-1
+        --input-encoding=latin-1
+
+    --instruction-set=<base>
+        * 0.3 (default)
+        * 0.1, 0.2
+    --non-standard=<extension>
+        * dump
+        * trace
+    --errors=<style>
+        * detailed (default)
+        * detailed-dump
+        * haskell
+        * exit-only
+    --ghc=<version>
+        * 9 (default)
+        * 5
+    --post-dump=<style>
+        * none (default)
+        * 0.1
+        * detailed
+    --parse=<mode>
+        * lazy (default)
+            Parse programs lazily. No syntax errors are reported after the
+            last-executed instruction.
+        * eager
+            Parse programs eagerly.
+    --require-sign[=<bool>]
+        * false (default)
+        * true
     --dupe-labels=<mode>
-        options:
-            error
-            first
-            last
-    --string-style=<style>
-        options:
-            0   - terminated with 0
-            neg - terminated with -1
-            len - prefixed with length
-            raw - no prefix or suffix
-    --eof=<eof>
-        options:
-            0     - `jz`, emit 0
-            neg   - `jn`, emit -1
-            <n>   - `n sub jz`, emit n
-            error - panic on EOF
-    --error-style=<error>
-        options:
-            default
-            dump
-            wspace
-            none (useful for code golf)
+        * first (default)
+        * error
+        * last (mutually exclusive with --parse=lazy)
+    --implicit-exit[=<bool>]
+        * false (default)
+        * true
+    --source-encoding=<encoding>
+        * utf-8 (default)
+        * latin-1
+    --input-encoding=<encoding>
+        * utf-8 (default)
+        * latin-1
+    --input-eof=<mode>
+        * error (default)
+        * <number_expression>
+    --number-type=<type>
+        * big (default)
+        * int64
+        * int32
+    --arith=<mode>
+        * lazy (default)
+        * eager
     --div=<mode>
-        options:
-            floor
-            trunc
-            euclid
-            round (maybe)
-            ceil (probably not)
-    --no-big
-        Use 64-bit integers instead of arbitrary-precision
-    --negative-heap
-        Equivalent to --heap-min=-inf
-    --heap-min=<min>
-        default: 0
-    --heap-max=<max>
-        default: inf
+        * floor (default)
+        * trunc
+    --stack-index=<type>
+        * unbounded (default)
+        * haskell-int
     --stack-cap=<cap>
-        default: inf
+        * unbounded (default)
+        * haskell-int
     --call-stack-cap=<cap>
-        default: inf
-    --read-encoding=<encoding>
-        ASCII
-        UTF-8
-        UTF-16
+        * unbounded (default)
+        * haskell-int
     --checked-heap
-    --no-implicit-exit
+    --heap-min=<min>
+        --store-min=<min>
+        --retrieve-min=<min>
+    --heap-max=<max>
+        --store-max=<max>
+        --retrieve-max=<max>
+    --store-min=<min>, --retrieve-min=<min>
+        * 0 (default)
+        * unbounded
+        * <number_expression>
+    --store-max=<max>, --retrieve-max=<max>
+        * unbounded (default)
+        * haskell-int
+        * haskell-integer
+        * <number_expression>
+
+Syntax and formatting
+    --syntax=<kind>
+        Override guessed syntax format
+        * ws
+        * wsa
+        * wsf
+        * wsx
+    --mapping=<mapping>
+    --out-syntax=<kind>
+    --out-mapping=<mapping>
+
+Assembly
+    --jeof=<eof>
+        * 0
+            Assemble `jeof` to `jz`
+        * neg
+            Assemble `jeof` to `jn`
+        * <number>
+            Assemble `jeof` to `push <number> sub jz`
+    --string-style=<style>
+        * 0
+            Terminate string literals with 0 and check for the end with `jz`
+        * neg
+            Terminate string literals with -1 and check for the end with `jn`
+        * len
+            Prefix string literals with the length
+        * raw
+            Represent string literals without a length or terminator
+
+Source-level optimizations
+    --remove-dead
+        Perform dead code elimination
+    --minify-labels
+        Rewrite labels to incrementing integers, based on frequency of usage
+    --replace-0.3
+        Replace 0.3 instructions with 0.2 equivalents
     -Os
         Optimize for minimal Whitespace program byte size
     --optimize-count
         Optimize for minimal Whitespace program instruction count
     -O0
         Disable optimizations
+
+Interpreter and compiler
     -g, --debug
-        equivalent to:
-            --with-assertions
-            --minify-labels=false
-            --coalesce-asserts=false
-    --with-assertions
-        Enable assertions for wsa precondition comments
-    --minify-labels
-        Enable label minification
-    --coalesce-asserts
-        Coalesce asserts. This results in less precise error location reporting
-    --spec=<version>
-        0.2 (disable or replace 0.3 features, if possible)
-        0.3
-        Extensions?
-            debug_printstack
-            debug_printheap
-            trace
-            shuffle
-    --remove-dead
-        Perform dead code elimination
-        - Remove dead branches in switches that will never be taken, i.e. if
-          printf is never called with the %#nb verb, that case can be removed
-
-
-interpret:
-    -i <file>, --in=<file>
-    -o <file>, --out<file>
-
-fmt:
-    $0 fmt ws [--STL] [-f <format> | --format=<format>] <program>
-    $0 fmt wsx [-f <format> | --format=<format>] <program>
-    $0 fmt wsa [-f <format> | --format=<format>] <program>
-
-[--]
-<program>
+    --input=<file>
+        Use the contents of <file> as stdin
+    --no-prompt
+        Do not prompt for input from stdin
+    --output=<file>
+        Write to <file> instead of stdout
