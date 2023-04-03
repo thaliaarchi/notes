@@ -107,6 +107,7 @@ A notebook on compilers, programming languages, and other topics.
 - [Expressing higher-level control-flow constructs in Whitespace](wspace/higher_level_control.md)
 - [Formal grammar for Whitespace](wspace/formal_grammar.md)
 - [GrassMudHorse](wspace/grassmudhorse.md)
+- [Haskell compiler feature detection](wspace/feature_detect.md)
 - [Haskell notes](wspace/haskell.md)
 - [Haskell reference interpreter](wspace/haskell_reference.md)
 - [Implementation differences](wspace/differences.md)
