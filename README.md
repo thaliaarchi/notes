@@ -111,6 +111,7 @@ A notebook on compilers, programming languages, and other topics.
 - [Haskell notes](wspace/haskell.md)
 - [Haskell reference interpreter](wspace/haskell_reference.md)
 - [Implementation differences](wspace/differences.md)
+- [Implementing efficient guards](wspace/guards.md)
 - [Improving debugging for Whitespace](wspace/debugging.md)
 - [Inlay hints for Whitespace](wspace/inlay_hints/README.md)
 - [Laziness in Whitespace](wspace/laziness.md)
