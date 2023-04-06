@@ -137,6 +137,7 @@ A notebook on compilers, programming languages, and other topics.
 - [Whitespace assembly syntax](wspace/wsa_draft.md)
 - [Whitespace language specification](wspace/whitespace_spec.md)
 - [Whitespace resources](wspace/resources.md)
+- [Whitespace steganography](wspace/steganography.md)
 
 ## License
 
