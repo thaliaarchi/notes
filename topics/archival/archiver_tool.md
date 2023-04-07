@@ -112,6 +112,9 @@ dynamically generated HTML, such as from sorting direction URL parameters like
 
 Metadata indexes, such as checksum lists, could be indexed.
 
+Code blocks in HTML could be extracted (LF at the start of `pre` blocks
+[are ignored](https://html.spec.whatwg.org/multipage/parsing.html#parsing-main-inbody)).
+
 Stack Exchange questions could be indexed as directories containing answers.
 A question has its own content, though, so a parent-child relationship graph
 would be more useful.
