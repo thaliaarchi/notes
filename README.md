@@ -77,6 +77,7 @@ A notebook on compilers, programming languages, and other topics.
   - [Color library ideas](topics/colors/color-lib-ideas.md)
 - [Compiler optimization patterns](topics/compiler_optimizations.md)
 - [Data structures](topics/data_structures.md)
+- [Datalog with BDDs](topics/bdd_datalog.md)
 - [E-graphs](topics/e-graphs.md)
 - [Easter eggs](topics/easter_eggs.md)
 - [Error handling](topics/errors.md)
