@@ -1,4 +1,4 @@
-digraph opcodes {
+digraph instructions {
   ordering=out;
 
   start [label="", shape=none, width=0, height=0, margin=0];
@@ -6,14 +6,6 @@ digraph opcodes {
   S, ST, SL,
   T, TS, TSS, TST, TT, TL, TLS, TLT,
   L, LS, LT, LL [label=""];
-  push [label="push n"];
-  copy [label="copy n"];
-  slide [label="slide n"];
-  label [label="label l"];
-  call [label="call l"];
-  jmp [label="jmp l"];
-  jz [label="jz l"];
-  jn [label="jn l"];
 
   start -> _;
   _ -> S [label=S];
@@ -55,4 +47,30 @@ digraph opcodes {
   LT -> ret [label=L];
   L -> LL [label=L];
   LL -> end [label=L];
+
+  push -> number_arg;
+  copy -> number_arg;
+  slide -> number_arg;
+  label -> label_arg;
+  call -> label_arg;
+  jmp -> label_arg;
+  jz -> label_arg;
+  jn -> label_arg;
+
+  number_arg [label=""];
+  number_bits [label=""];
+  number_done [label="number arg"];
+
+  number_arg -> number_bits [label="S"];
+  number_arg -> number_bits [label="T"];
+  number_bits -> number_bits [label="S"];
+  number_bits -> number_bits [label="T"];
+  number_bits -> number_done [label="L"];
+
+  label_arg [label=""];
+  label_done [label="label arg"];
+
+  label_arg -> label_arg [label="S"];
+  label_arg -> label_arg [label="T"];
+  label_arg -> label_done [label="L"];
 }
