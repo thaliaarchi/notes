@@ -1,4 +1,4 @@
-# Universities
+# Programming languages groups at universities
 
 - Portfolio website
 - Double my list
@@ -72,3 +72,9 @@
 - [CS Rankings #4](https://csrankings.org/#/index?plan&log&europe)
 - Location: Klosterneuburg, Niederösterreich, AT (by Wien)
 - Website offline due to cyberattack
+
+## University of Washington
+
+- [University of Washington Programming Languages and Software Engineering](https://github.com/uwplse):
+  [egg](https://egraphs-good.github.io/), [Herbie](https://herbie.uwplse.org/),
+  and [Ruler](https://github.com/uwplse/ruler)
