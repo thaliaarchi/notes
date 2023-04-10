@@ -14,11 +14,11 @@ is available, as well as for its dependencies [JavaBDD](https://javabdd.sourcefo
 [[git](https://github.com/joewhaley/javabdd)] and [joeq](https://joeq.sourceforge.net/)
 [[git](https://github.com/joewhaley/joeq)].
 
-CUDD, [BuDDy](https://buddy.sourceforge.net/manual/main.html) [[SourceForge](https://sourceforge.net/projects/buddy/)],
-and [JDD](https://bitbucket.org/vahidi/jdd) are general-purpose BDD libraries.
-In Rust, the crate [cudd-sys](https://crates.io/crates/cudd-sys) provides
-bindings for CUDD and the crate [cudd](https://crates.io/crates/cudd) builds a
-higher-level API upon that.
+CUDD [[git mirror](https://github.com/ivmai/cudd)], [BuDDy](https://buddy.sourceforge.net/manual/main.html)
+[[SourceForge](https://sourceforge.net/projects/buddy/)], and [JDD](https://bitbucket.org/vahidi/jdd)
+are general-purpose BDD libraries. In Rust, the crate [cudd-sys](https://crates.io/crates/cudd-sys)
+provides bindings for CUDD and the crate [cudd](https://crates.io/crates/cudd)
+builds a higher-level API upon that.
 
 Similarly to bddbddb, [hsdatalog](https://github.com/chessai/hsdatalog) is a
 compiler in Haskell from Datalog to relational algebra and an interpreter for
