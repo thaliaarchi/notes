@@ -81,13 +81,20 @@ Turing-complete.
 
 ## Other
 
-- Conway's Game of Life
+- [Conway's Game of Life](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life)
+  - [Turing machine](http://rendell-attic.org/gol/tm.htm) by Paul Rendell (2000)
   - [Tetris](https://codegolf.stackexchange.com/questions/11880/build-a-working-game-of-tetris-in-conways-game-of-life)
     by PhiNotPi, El'endia Starman, K Zhang, Blue (Muddyfish), Cows quack
     (Kritixi Lithos), Mego, and Quartata (2017)
 - OpenType font files
   - [Addition](https://litherum.blogspot.com/2019/03/addition-font.html) by
     Litherum (2019)
+- [Rule 110](https://en.wikipedia.org/wiki/Rule_110)
+  - Cyclic tag system in [“Universality in Elementary Cellular Automata”](https://wpmedia.wolfram.com/uploads/sites/13/2018/02/15-1-1.pdf)
+    by Matthew Cook (2004)
+  - P-completeness in [“P-completeness of cellular automaton Rule 110”](https://link.springer.com/chapter/10.1007/11786986_13)
+    [[preprint](http://services.ini.uzh.ch/~tneary/NearyWoodsBCRI-04-06.pdf)]
+    by Turlough Neary and Damien Woods (2006)
 - Tetris
   - [Tetris in Tetris](https://meatfighter.com/tetromino-computer/)
     [[HN](https://news.ycombinator.com/item?id=34309725)]
