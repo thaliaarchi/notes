@@ -89,6 +89,7 @@ A notebook on compilers, programming languages, and other topics.
 - [Paper notes](topics/papers.md)
 - [Programming language alphabet challenge](topics/language_alphabet.md)
 - [Programming language comparisons](topics/pl_comparisons.md)
+- [Programming languages groups at universities](topics/universities.md)
 - [Programming languages I know](topics/languages_i_know.md)
 - Regular expressions
   - [Exploration of representing specialized string-searching](topics/regexp/algorithms.md)
@@ -98,7 +99,6 @@ A notebook on compilers, programming languages, and other topics.
 - [Tools for VCSes other than Git](topics/vcs.md)
 - [Trusting Trust](topics/trusting_trust.md)
 - [Unexpectedly Turing-complete](topics/unexpected_turing.md)
-- [Universities](topics/universities.md)
 
 ## Whitespace
 
