@@ -1,4 +1,4 @@
-ALU instructions
+Hack C-instruction operations
 
 | c      | Operation  | a=0 | a=1 | Raw operation |
 | ------ | ---------- | --- | --- | ------------- |

@@ -85,7 +85,7 @@ A notebook on compilers, programming languages, and other topics.
 - [Integer division and modulo rounding](topics/div_mod_rounding.md)
 - [List of ciphers](topics/ciphers.md)
 - [Minimal computing models](topics/minimal_computing_models.md)
-- [Nand to Tetris ALU instructions](topics/nand2tetris/ALU.md)
+- [Nand to Tetris](topics/nand2tetris/README.md)
 - [Paper notes](topics/papers.md)
 - [Programming language alphabet challenge](topics/language_alphabet.md)
 - [Programming language comparisons](topics/pl_comparisons.md)
