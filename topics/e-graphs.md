@@ -47,8 +47,11 @@ There's currently much work in connecting Datalog and e-graphs, including:
 ## Acyclic e-graphs
 
 The Cranelift mid-end has been rearchitected to use acyclic e-graphs (æ-graphs).
-This is detailed in the [RFC](https://github.com/bytecodealliance/rfcs/blob/main/accepted/cranelift-egraph.md)
-and was enabled by default in version [6.0.0](https://github.com/bytecodealliance/wasmtime/blob/main/RELEASES.md#600).
+The design is detailed in the [RFC](https://github.com/bytecodealliance/rfcs/blob/main/accepted/cranelift-egraph.md)
+and the [doc comment](https://github.com/bytecodealliance/wasmtime/blob/08d44e37462316d9b2bce59957ececce89a0969d/cranelift/egraph/src/lib.rs)
+for the initial version. It was rewritten in terms of CLIF data structures in
+[#5382](https://github.com/bytecodealliance/wasmtime/pull/5382) and enabled by
+default in version [6.0.0](https://github.com/bytecodealliance/wasmtime/blob/main/RELEASES.md#600).
 Chris Fallin will present [“ægraphs: Acyclic E-graphs for Efficient Optimization
 in a Production Compiler”](https://pldi23.sigplan.org/details/egraphs-2023-papers/2/-graphs-Acyclic-E-graphs-for-Efficient-Optimization-in-a-Production-Compiler)
 on this work at EGRAPHS 2023.
