@@ -7,4 +7,4 @@ The Hack ALU allows for [far more operations](hack_operations.md)
 efficient generated code.
 
 Philip Zucker built a formally verified version of Nand to Tetris in Coq,
-[nand2coq](https://github.com/philzook58/nand2coq).
+[nand2coq](https://github.com/philzook58/nand2coq) [[notes](https://www.philipzucker.com/nand2tetris-in-verilog-and-fpga-and-coq/)].
