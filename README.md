@@ -73,8 +73,8 @@ A notebook on compilers, programming languages, and other topics.
   - [Code Golf archival](topics/archival/code_golf_archival.md)
 - [Bits and arithmetic](topics/bits_and_arithmetic.md)
 - Colors
-  - [Color libraries and color spaces](topics/colors/color-libraries.md)
-  - [Color library ideas](topics/colors/color-lib-ideas.md)
+  - [Color libraries and color spaces](topics/colors/color_libraries.md)
+  - [Color library ideas](topics/colors/browser_color.md)
 - [Compiler optimization patterns](topics/compiler_optimizations.md)
 - [Data structures](topics/data_structures.md)
 - [Datalog with BDDs](topics/bdd_datalog.md)
