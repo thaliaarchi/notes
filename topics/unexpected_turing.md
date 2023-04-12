@@ -79,6 +79,10 @@ Turing-complete.
   - [M/o/Vfuscator compiler](https://github.com/xoreaxeaxeax/movfuscator) by
     Chris Domas (2015), with numerous programs, including [DOOM](https://github.com/xoreaxeaxeax/movfuscator/tree/master/validation/doom)
 
+### Needs verification
+
+- Coq typeclass resolver?: Typeclass resolution is an unrestricted proof search.
+
 ## Other
 
 - [Conway's Game of Life](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life)
