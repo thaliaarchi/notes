@@ -71,13 +71,13 @@ A notebook on compilers, programming languages, and other topics.
 - Archival
   - [Archiver tool](topics/archival/archiver_tool.md)
   - [Code Golf archival](topics/archival/code_golf_archival.md)
+- [BDDs and other decision diagrams](topics/bdds.md)
 - [Bits and arithmetic](topics/bits_and_arithmetic.md)
 - Colors
   - [Color in browser engines](topics/colors/browser_color.md)
   - [Color libraries and color spaces](topics/colors/color_libraries.md)
 - [Compiler optimization patterns](topics/compiler_optimizations.md)
 - [Data structures](topics/data_structures.md)
-- [Datalog with BDDs](topics/bdd_datalog.md)
 - [E-graphs](topics/e-graphs.md)
 - [Easter eggs](topics/easter_eggs.md)
 - [Error handling](topics/errors.md)
