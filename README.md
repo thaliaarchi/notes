@@ -73,6 +73,7 @@ A notebook on compilers, programming languages, and other topics.
   - [Code Golf archival](topics/archival/code_golf_archival.md)
 - [Bits and arithmetic](topics/bits_and_arithmetic.md)
 - Colors
+  - [Color in browser engines](topics/colors/browser_color.md)
   - [Color libraries and color spaces](topics/colors/color_libraries.md)
   - [Color library ideas](topics/colors/browser_color.md)
 - [Compiler optimization patterns](topics/compiler_optimizations.md)
