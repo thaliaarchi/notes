@@ -75,7 +75,6 @@ A notebook on compilers, programming languages, and other topics.
 - Colors
   - [Color in browser engines](topics/colors/browser_color.md)
   - [Color libraries and color spaces](topics/colors/color_libraries.md)
-  - [Color library ideas](topics/colors/browser_color.md)
 - [Compiler optimization patterns](topics/compiler_optimizations.md)
 - [Data structures](topics/data_structures.md)
 - [Datalog with BDDs](topics/bdd_datalog.md)

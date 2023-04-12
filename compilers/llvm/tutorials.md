@@ -25,6 +25,8 @@
   [[code](https://github.com/llvm/llvm-project/tree/9be3ca0a1f5d8b820b222858519c6b7a964cc174/stacker)]
   ([removed](https://reviews.llvm.org/rGafb1d31c54204b7f6c11e4f8815d203bcf9cffa3)
   in LLVM 2.4)
+- [Micro C](https://blog.josephmorag.com/posts/mcc0/) in Haskell with llvm-hs
+  [[code](https://github.com/jmorag/mcc)]
 - ExceptionDemo: An example using LLVM exceptions [[code](https://github.com/llvm/llvm-project/tree/main/llvm/examples/ExceptionDemo)]
 - ModuleMaker: Example project [[code](https://github.com/llvm/llvm-project/tree/main/llvm/examples/ModuleMaker)]
 - [Performance Tips for Frontend Authors](https://llvm.org/docs/Frontend/PerformanceTips.html)
