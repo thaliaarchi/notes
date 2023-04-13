@@ -138,6 +138,7 @@ A notebook on compilers, programming languages, and other topics.
   - [GrassMudHorse](wspace/semantics/grassmudhorse.md)
   - [Implementation differences](wspace/semantics/differences.md)
   - [Laziness in Whitespace](wspace/semantics/laziness.md)
+  - [PL theory of Whitespace](wspace/semantics/pl.md)
   - [Whitespace language specification](wspace/semantics/whitespace_spec.md)
   - [Whitespace resources](wspace/semantics/resources.md)
 - Syntax
