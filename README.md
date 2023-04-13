@@ -49,6 +49,8 @@ A notebook on compilers, programming languages, and other topics.
   - [Ook!](langs/brainfuck/ook.md)
   - [Spoon](langs/brainfuck/spoon.md)
 - [Deadfish](langs/deadfish.md)
+- Go
+  - [Go history](langs/go/history.md)
 - Idris
   - [Learning Idris](langs/learning_idris.md)
 - Rust
