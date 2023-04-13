@@ -26,6 +26,9 @@
 - [Go `regexp`](https://github.com/golang/go/tree/master/src/regexp)
   - [`rsc.io/binaryregexp`](https://github.com/rsc/binaryregexp): simple fork of
     Go `regexp`, changing it to work on Latin1, instead of UTF-8
+  - In the Google TechTalk for the initial release of Go, Rob Pike mentions that
+    some packages, including `regexp`, “work fine but are too simple”. I should
+    analyze earlier designs of `regexp`, including [at the initial release](https://github.com/golang/go/blob/c90d392ce3d3203e0c32b3f98d1e68c4c2b4c49b/src/pkg/regexp/regexp.go).
 - [pfalcon/re1.5](https://github.com/pfalcon/re1.5): fork of re1 to add features
   for real-world use. Contains history of re1 migrated to git, with the only
   difference being that commits with an empty author name in Mercurial use
