@@ -148,7 +148,7 @@ A notebook on compilers, programming languages, and other topics.
   - [Nospace grammar](wspace/syntax/nospace_grammar.bnf)
   - [Syntax error recovery](wspace/syntax/syntax_recovery.md)
   - [Whitespace assembly mnemonics](wspace/syntax/mnemonics.md)
-  - [Whitespace assembly syntax](wspace/syntax/wsa_draft.md)
+  - [Whitespace assembly syntax](wspace/syntax/assembly.md)
   - [Whitespace steganography](wspace/syntax/steganography.md)
 
 ## License
