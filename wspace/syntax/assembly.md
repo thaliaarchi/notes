@@ -34,39 +34,46 @@ represented as the literal `0b`.
 | 0b01   | S ST       |
 | -0b1   | T T        |
 | -0b01  | T ST       |
+| 0o     | illegal    |
+| 0o0    | S          |
+| 0o00   | S SSS      |
 | 0o2    | S TS       |
 | 0o02   | S STS      |
 | 0o002  | S STSSTS   |
+| -0o    | illegal    |
+| -0o0   | T          |
+| -0o00  | T SSS      |
 | -0o2   | T TS       |
 | -0o02  | T STS      |
 | -0o002 | T STSSTS   |
+| 0x     | illegal    |
+| 0x0    | S          |
+| 0x00   | S SSSS     |
 | 0x7    | S TTT      |
 | 0x07   | S STTT     |
 | 0x007  | S SSSSSTTT |
+| -0x    | illegal    |
+| -0x0   | T          |
+| -0x00  | T SSSS     |
 | -0x7   | T TTT      |
 | -0x07  | T STTT     |
 | -0x007 | T SSSSSTTT |
 
-## Permissive mode
+## Tokens
 
-### Tokens
+- Word
+- Integer
+- Character: `' '`
+- String: `" "`
+- Colon: `:`
+- Semicolon: `;`
+- Line comment: `#`, `//`, `--`
+- Block comment: `/* */`, `{- -}` (nested)
+- Line break: LF, CRLF, CR
 
-- instruction mnemonic
-- identifier
-- unsigned integer
-- signed integer
-- char:                 `''`
-- string:               `""`
-- colon:                `:`
-- semicolon:            `;`
-- line comment:         `#`, `//`, `--`
-- block comment:        `/* */`
-- nested block comment: `{- -}`, `(* *)`
-- line break:           LF, CRLF
+## Style
 
-### Style
-
-- consistent mnemonic names
-- consistent mnemonic casing
-- analogous mnemonic naming (e.g. not `printc` and `outnum` together)
-- consistent comment styles
+- Consistent mnemonic names
+- Consistent mnemonic casing
+- Analogous mnemonic naming (e.g. not `printc` and `outnum` together)
+- Consistent comment styles
