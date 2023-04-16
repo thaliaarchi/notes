@@ -15,6 +15,10 @@ Turing-complete.
   - [λ-calculus](https://matt.might.net/articles/c++-template-meta-programming-with-lambda-calculus/)
     by Matt Might (2009)
   - [4-bit adder](https://github.com/AaronBallman/adder) by Aaron Ballman (2013)
+- Coq typeclass resolver: Typeclass instance resolution is an unrestricted proof
+  search.
+  - [Smallfuck](https://thaliaarchi.github.io/coq-turing-typeclass/) [[code](https://github.com/thaliaarchi/coq-turing-typeclass)]
+    by Thalia Archibald (2023)
 - Haskell type system: A subset of Haskell with multi-parameter typeclasses,
   functional dependencies, and undecidable instances.
   - [Turing machine](https://www.lochan.org/keith/publications/undec.html) by
@@ -78,10 +82,6 @@ Turing-complete.
     by Stephen Dolan (2013)
   - [M/o/Vfuscator compiler](https://github.com/xoreaxeaxeax/movfuscator) by
     Chris Domas (2015), with numerous programs, including [DOOM](https://github.com/xoreaxeaxeax/movfuscator/tree/master/validation/doom)
-
-### Needs verification
-
-- Coq typeclass resolver?: Typeclass resolution is an unrestricted proof search.
 
 ## Other
 
