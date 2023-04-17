@@ -14,6 +14,7 @@
 - Rust
   - HIR
   - [Introducing MIR](https://blog.rust-lang.org/2016/04/19/MIR.html)
+  - [Bootstrapping the compiler](https://rustc-dev-guide.rust-lang.org/building/bootstrapping.html)
 - NIR
   - [NIR: A new compiler IR for Mesa](https://www.jlekstrand.net/jason/projects/mesa/nir-notes/)
   - [In defense of NIR](https://www.jlekstrand.net/jason/blog/2022/01/in-defense-of-nir/)
