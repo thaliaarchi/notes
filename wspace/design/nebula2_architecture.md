@@ -29,7 +29,7 @@ server.
 
 I intend to use incremental computation via [Salsa](https://github.com/salsa-rs/salsa),
 as [used](https://rustc-dev-guide.rust-lang.org/salsa.html) by rust-analyzer, or
-[Adapton](https://github.com/Adapton/adapton.rust) ([notes](https://github.com/andrewarchi/compiler-notes/tree/main/adapton)),
+[Adapton](https://github.com/Adapton/adapton.rust) ([notes](https://github.com/thaliaarchi/notes/tree/main/topics/adapton)),
 once I have a complete pipeline.
 
 It takes inspiration from many projects and concepts: MLIR for dialect mixing
