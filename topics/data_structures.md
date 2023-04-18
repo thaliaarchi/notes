@@ -23,5 +23,5 @@
   - [`cmd/compiler/internal/ssa.sparseSet`](https://github.com/golang/go/blob/master/src/cmd/compile/internal/ssa/sparseset.go)
     and [`sparseMap`](https://github.com/golang/go/blob/master/src/cmd/compile/internal/ssa/sparsemap.go)
 
-- [`GapVec`](https://github.com/andrewarchi/rust-sketches/blob/main/gap-vec/src/gap_vec.rs)
+- [`GapVec`](https://github.com/thaliaarchi/rust-sketches/blob/main/gap-vec/src/gap_vec.rs)
   (prototype implementation)

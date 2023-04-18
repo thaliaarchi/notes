@@ -67,7 +67,7 @@ modification parameter" in the tutorial.
 The instruction prefix encoding is not [self-synchronizing](https://en.wikipedia.org/wiki/Self-synchronizing_code).
 
 The mnemonics used here follow the
-[Whitelips](https://vii5ard.github.io/whitespace/)/[Nebula](https://github.com/andrewarchi/nebula)
+[Whitelips](https://vii5ard.github.io/whitespace/)/[Nebula](https://github.com/thaliaarchi/nebula)
 convention and are non-normative. Whitespace assembly dialects vary widely
 between implementations and are out of scope of this document.
 
