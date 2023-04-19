@@ -107,6 +107,7 @@ A notebook on compilers, programming languages, and other topics.
 - Compilation
   - [Compiler IRs](wspace/compile/ir.md)
   - [Implementing efficient guards](wspace/compile/guards.md)
+  - [Lowering Whitespace with strictness](wspace/compile/strictness.md)
   - [Optimizations](wspace/compile/optimizations.md)
 - Design
   - [Data structures for Whitespace](wspace/design/data_structures.md)
