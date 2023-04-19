@@ -26,6 +26,9 @@
     [[slides](http://venge.net/graydon/talks/CompilerTalk-2019.pdf)]
     [[HN](https://news.ycombinator.com/item?id=32780472)]
   - [StoneKnifeForth](https://github.com/kragen/stoneknifeforth)
+  - [“A catalogue of optimizing transformations”](https://www.clear.rice.edu/comp512/Lectures/Papers/1971-allen-catalog.pdf)
+    (Frances E. Allen and John Cocke, 1971)
+    (mentioned in the Cranelift [RFC for e-graphs](https://github.com/bytecodealliance/rfcs/blob/main/accepted/cranelift-egraph.md))
 - Parsing
   - Parsing with derivatives
   - [The Performance of Open Source Applications: Parsing XML at the Speed of Light](https://www.aosabook.org/en/posa/parsing-xml-at-the-speed-of-light.html)
