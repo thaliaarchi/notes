@@ -34,15 +34,23 @@ There's currently much work in connecting Datalog and e-graphs, including:
 - [“Better Together: Unifying Datalog and Equality Saturation”](https://www.mwillsey.com/papers/egglog)
   (Yihong Zhang, Remy Wang, Oliver Flatt, David Cao, Philip Zucker, Eli
   Rosenthal, Zachary Tatlock, Max Willsey, 2023)
-- [“Relational E-matching”](https://arxiv.org/abs/2108.02290)
-  (Yihong Zhang, Yisu Remy Wang, Max Willsey, and Zachary Tatlock, 2022)
+  [[PLDI 2023](https://pldi23.sigplan.org/details/pldi-2023-pldi/20/Better-Together-Unifying-Datalog-and-Equality-Saturation)]
+  [[arXiv](https://arxiv.org/abs/2304.04332)]
+  [[code](https://github.com/mwillsey/egg-smol)]
+  [[demo](https://www.mwillsey.com/egg-smol/)]
+  [[HN](https://news.ycombinator.com/item?id=35593635)]
 - [“Logging an Egg: Datalog on E-Graphs”](https://github.com/philzook58/egglog0-talk/raw/main/out.pdf)
   (Philip Zucker, 2022)
   [[PLDI 2022](https://pldi22.sigplan.org/details/egraphs-2022-papers/12/Logging-an-Egg-Datalog-on-E-Graphs)]
-  [[code](https://github.com/philzook58/egglog)] [[demo](http://www.philipzucker.com/egglog/)]
-  [[nodes and video](https://www.philipzucker.com/pldi22-notes/)]
+  [[code](https://github.com/philzook58/egglog)]
+  [[demo](http://www.philipzucker.com/egglog/)]
+  [[nodes](https://www.philipzucker.com/pldi22-notes/)]
+  [[video](https://www.youtube.com/watch?v=dbgZJyw3hnk&t=2725s)]
 - [“Your next e-graph framework looks like Datalog”](https://effect.systems/doc/pldi-2022-egraphs/abstract.pdf)
   (Yihong Zhang, 2022)
+  [[video](https://www.youtube.com/watch?v=dbgZJyw3hnk&t=3983s)]
+- [“Relational E-matching”](https://arxiv.org/abs/2108.02290)
+  (Yihong Zhang, Yisu Remy Wang, Max Willsey, and Zachary Tatlock, 2021)
 
 ## Acyclic e-graphs
 
