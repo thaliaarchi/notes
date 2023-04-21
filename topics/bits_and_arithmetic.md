@@ -26,7 +26,7 @@
   only 12 multiplies and 11 adds
   [[HN](https://news.ycombinator.com/item?id=35381968)]
 - [Fast inverse square root](https://en.wikipedia.org/wiki/Fast_inverse_square_root),
-  popularized by Quake III Arena
+  popularized by Quake III Arena; [revisited in 2023](https://hllmn.net/blog/2023-04-20_rsqrt/)
 - [The radix 2^51 trick: Faster addition and subtraction on modern CPUs](https://www.chosenplaintext.ca/articles/radix-2-51-trick.html)
   by Tim McLean
 - [Untitled collection of math notes](https://αβγ.ελ/) (formerly
