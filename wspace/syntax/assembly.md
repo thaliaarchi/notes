@@ -71,6 +71,54 @@ represented as the literal `0b`.
 - Block comment: `/* */`, `{- -}` (nested)
 - Line break: LF, CRLF, CR
 
+## Parsing
+
+```rust
+enum Token {
+    Word,
+    Integer,
+    Char,
+    String,
+    Colon,
+    Semi,
+    Comma,
+    Comment,
+    LineBreak,
+}
+
+enum SemiMode {
+    Comment,
+    LineBreak,
+    Detect,
+}
+
+enum OperandMode {
+    None,
+    /// - `(add|sub|mul|div|mod) (<lhs>? <rhs>)?`
+    /// - `store (<addr>? <value>)?`
+    /// - `retrieve <value>?`
+    Space,
+    /// - `(add|sub|mul|div|mod) (<lhs>? "," <rhs>)?`
+    /// - `store (<addr>? "," <value>)?`
+    /// - `retrieve <value>?`
+    Comma,
+}
+
+enum LabelOrder {
+    /// - `(call|jmp|jz|jn) <label>`
+    Post,
+    /// - `<label> (call|jmp|jz|jn)`
+    Pre,
+}
+```
+
+```bnf
+one_line ::=
+    | (inst LineBreak)* LineBreak
+inst ::=
+    | Mnemonic (Word | Number)*
+```
+
 ## Style
 
 - Consistent mnemonic names
