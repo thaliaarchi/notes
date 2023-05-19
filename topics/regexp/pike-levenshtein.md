@@ -1,92 +1,72 @@
 # Pike–Levenshtein: Regular expressions with an edit distance
 
+by Thalia Archibald, 19 May 2023
+
 > I wonder if there's something like Levenshtein designed around Regexes...
 >
 > Like `abcc` doesn't match the Regex `a.cd` but it's pretty close to being able
 > to. Say you have a lot of inputs or maybe a lot of Regexes are there close
 > matches? This'd let you emit diagnostics like "Hey, I think this was
-> _supposed_ to match this Regex" or something.
+> *supposed* to match this Regex" or something.
 >
 > I'm sure this'd exponentially slow down the Regex but it'd be neat.
 >
 > —David Archibald, 19 May 2023
 
-That’s a really interesting idea! Counting the minimum number of changes to be
-made to satisfy the pattern. You should read this article by Russ Cox on regular
-expression automata and see if you can adapt the Pike VM to report a Levenshtein
-distance. https://swtch.com/~rsc/regexp/regexp2.html. Here’s the C code
-corresponding to that:
-https://github.com/thaliaarchi/re1-archive/blob/main/pike.c
+That's a really interesting idea! This would compute the minimum number of edits
+needed for the string to satisfy the pattern.
 
-The Pike VM visits each character only once and maintains a list of “threads”
-for different paths in the regexp that are visiting the current character. For
-each thread, you could track the minimum cost to mutate the string to match the
-pattern as consumed so far by the thread.
+The [Pike VM](https://swtch.com/~rsc/regexp/regexp2.html) is a regular
+expression automaton, that executes in linear time. It maintains a list of
+“threads” for different paths in the regexp. The threads all process the same
+character in sync, so it visits each character only once. A thread stores the PC
+(program counter) within the regexp automaton and positions of submatches.
 
-There are at most n threads, where n is the number of operations in the regexp
+To extend this algorithm for tracking the Levenshtein distance, each thread also
+tracks the edits to the string, as consumed so far, to make it match the
+pattern.
 
-It may not be able to simply store only one mutation per thread, though, because
-a deletion, edit, and insertion affect the remainder of the expression.
+There are three kinds of edits: substitution, deletion, and insertion.
+Substitution consumes the current character and advances the PC. Deletion
+retries the same PC with the next character. Insertion matches the same
+character again with the next PC(s). Equality can be seen as a special case of
+substitution, where the edit distance is not incremented if the the current
+character matches the pattern.
 
-Instead, I think it would need to also generate threads for each kind of
-mutation (3x). But then the threads are not processing the same character at the
-same time.
+Insertion is the only edit that doesn't move to the next character, so it needs
+to add to the thread list for the current character. This needs to be bounded,
+to prevent infinite insertions.
 
-Equal doesn’t change the edit distance and moves to the next character and next
-opcode. The others add one to the edit distance of its thread. Edit moves to the
-next character and the next opcode. Deletion retries the same opcode with the
-next character. Insertion moves to the next opcode with the same character.
+The Pike VM limits the number of threads to the size of the compiled regexp—one
+for each PC. Past edits do not affect future execution, since it matches without
+backtracking; thus only the minimal edit distance needs to be retained.
 
-Insertion is the only mutation that doesn’t move to the next character, so it
-would need to add to the thread queue for the current character. It would need
-some way to bound this expansion.
+By employing a sparse array, we can efficiently check if a thread exists at a
+given PC. Threads are stored in a queue, and a separate array of `Option<usize>`
+maps the PC to the index in the queue. (This is inspired by Russ Cox' [article
+on sparse sets](https://research.swtch.com/sparse), but without using
+uninitialized memory.) We only need a thread queue for the current character and
+a thread queue and index array for the next character.
 
-In the Pike VM, a thread stores the PC (program counter) and positions of
-matches. Pike-Levenshtein would also store the edit list. Suppose there are n
-opcodes, then there are n threads. If the current character cannot be at a given
-PC in the expression, then that thread is None.
+For the current character, apply an equality or substitution to each of the
+current threads and add them to the next thread queue. Then, the same for
+deletion. If a thread already exists in the next thread queue, only replace it
+if the new edit distance is shorter. Then, apply an insertion to each of the
+threads in the next queue and add those to the back of the same queue, until
+threads exist for every PC. The initial thread queue contains one thread at the
+first character and at PC 0.
 
-When a thread is added, attempt to perform an insertion. This is done by
-comparing the edit distance with the insertion to the edit distance for the
-thread at the next PC. If it's less or would be a new thread, replace it. This
-is done in a fixpoint until no new threads are added for the current character.
+There will always be at most one thread executing per PC or, if all PCs are
+reachable from the program entrypoint, exactly one per PC.
 
-The Pike VM has runtime O(n \* m), where n is the length of the string and m is
-the number of opcodes in the regexp. Pike-Levenshtein might be O(n^2 \* m),
-because it may perform insertions up to the remaining number of characters (the
-upper bound, since the edit distance can't be greater than n).
+The Pike VM has runtime *O(n \* m)*, where *n* is the length of the string and
+*m* is the number of opcodes in the regexp automaton. Pike–Levenshtein has the
+same complexity, because the number of edits to reach every state in the
+automaton is at most *m*.
 
-It's not about thread liveness—that doesn't affect runtime—but about how many
-insertions can be performed at every step. An insertion consumes a made up
-character instead of the current character, so it doesn't move the character
-index. Pike VM coordinates threads to all move to the next character at the same
-time, so for a Levenshtein distance, it would need to saturate all insertions
-before moving on. That's where the squaring comes in.
+The matches captured are regular expressions, instead of literals as usual.
+Matches index into the edit list, rather than the input string. The edit list,
+in turn, records the character index and PC at each step, to allow for
+reconstruction of the matched pattern.
 
-If it tracks saved matches, the matches would be regular expressions, instead of
-literals. Insertions and deletions mean that character in the match takes some
-value matching the current character in the pattern.
-
-Shorter strings with fewer edits could be preferred.
-
-It would mean that the possibilities are evaluated in the order equal,
-substitute, delete, insert. That gives priority to fewer edits and shorter
-strings.
-
-I’ve been assuming there’s some upper bound on the number of edits. The
-complexity is actually O(n \* m \* o), where o is this upper bound. I was thinking
-this upper bound was n, which is not right. I’m not sure what the upper bound
-is.
-
-It could use a sparse array trick so that the threads are in a queue, but also
-have indexed access. The queue would contain threads to process. An
-`[Option<usize>; m]` would index into the queue, so that a new thread could be
-compared with the potentially existing one at the same PC. To perform all
-possible insertions, it would iterate to the end of the queue.
-
-Since the number of threads is bounded by PCs, there can’t be infinite
-insertions at a single character, because it can only visit at most m PCs.
-
-Levenshtein distance cannot be computed faster than O(n^2), so this complexity
-is actually really good. Source:
-https://en.wikipedia.org/wiki/Levenshtein_distance#Computational_complexity
+To my knowledge this is a novel algorithm.
