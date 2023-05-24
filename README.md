@@ -119,7 +119,8 @@ A notebook on compilers, programming languages, and other topics.
   - [Respace](wspace/design/respace.md)
   - [Useful lazy patterns in Whitespace](wspace/design/useful_laziness.md)
 - Higher-level
-  - [Expressing higher-level control-flow constructs in Whitespace](wspace/higher/higher_level_control.md)
+  - [Expressing higher-level control-flow constructs in Whitespace](wspace/higher/control_flow.md)
+  - [Expressing higher-level data structures in Whitespace](wspace/higher/data_structures.md)
   - [Raising Whitespace to a higher-level language](wspace/higher/raising.md)
   - [Stack substrate IL ideas from Kitten](wspace/higher/substrate_il_ideas.md)
 - History
