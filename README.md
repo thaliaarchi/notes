@@ -100,6 +100,7 @@ A notebook on compilers, programming languages, and other topics.
   - [Recross ideas](topics/regexp/recross_ideas.md)
   - [Regular expression engine history](topics/regexp/history.md)
 - [Tools for VCSes other than Git](topics/vcs.md)
+- [Tree-sitter](topics/tree-sitter.md)
 - [Trusting Trust](topics/trusting_trust.md)
 - [Unexpectedly Turing-complete](topics/unexpected_turing.md)
 
