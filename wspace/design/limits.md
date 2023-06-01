@@ -8,15 +8,17 @@ and the line width and file count each in 16 bits (up to 65,535).
 The largest Whitespace programs, pulled from data gathered in the
 [Whitespace Corpus](https://github.com/wspace/corpus):
 
-| File                            | Bytes/chars | Lines | Longest line |
-| ------------------------------- | ----------- | ----- | ------------ |
-| [quine-copy.ws]                 | 661964      | 46171 | 128          |
-| [QR.ws]                         | 614003      | 76753 | 49           |
-| [xctf-finals-2020-spaceship.ws] | 539624      | 45435 | 216          |
-| [password_checker.ws]           | 510875      | 43120 | 216          |
-| [sk-whitespace.ws]              | 135462      | 19259 | 88           |
-| [rameev.ws]                     | 94152       | 21387 | 49           |
+| File                            | Bytes/chars | Lines   | Labels | Longest line |
+| ------------------------------- | ----------- | ------- | ------ | ------------ |
+| [8cc.c.eir.ws]                  | 7,512,502   | 699,000 | 63,952 | 35           |
+| [quine-copy.ws]                 | 661,964     | 46,171  | 13     | 74           |
+| [QR.ws]                         | 629,795     | 78,727  | 0      | 13           |
+| [xctf-finals-2020-spaceship.ws] | 539,624     | 45,435  | 2,245  | 35           |
+| [password_checker.ws]           | 510,875     | 43,120  | 2,154  | 35           |
+| [sk-whitespace.ws]              | 135,462     | 19,259  | 1,240  | 25           |
+| [rameev.ws]                     | 94,152      | 21,387  | 0      | 10           |
 
+[8cc.c.eir.ws]: https://github.com/helvm/helma/blob/master/examples/ws/ws/from-elvm/8cc.c.eir.ws
 [quine-copy.ws]: https://web.archive.org/web/20150612005338/http://compsoc.dur.ac.uk/whitespace/quine-copy.ws
 [QR.ws]: https://github.com/mame/quine-relay/blob/spoiler/QR.ws
 [xctf-finals-2020-spaceship.ws]: https://github.com/umutoztunc/whitesymex/blob/main/tests/data/xctf-finals-2020-spaceship.ws
