@@ -80,10 +80,12 @@ conflicting.
 
 | Mnemonic         | Syntax | Arg | Stack | Heap | Description | Implementation |
 | ---------------- | ------ | --- | ----- | ---- | ----------- | -------------- |
-| shuffle          | STTS  |   | a0 .. an -- s0 .. sn | | Randomly permute the order of all values on the stack | [whitespace-0.4](https://github.com/haroldl/whitespace-nd) by Harold Lee |
+| Invert           | STT   |   | a0 .. an -- an .. a0 | | Invert the stack | [whitespacesdk](https://github.com/wspace/martinandhels-whitespacesdk) by MArtin SHerratt |
+| Shuffle          | STTS  |   | a0 .. an -- s0 .. sn | | Randomly permute the order of all values on the stack | [whitespace-0.4](https://github.com/haroldl/whitespace-nd) by Harold Lee |
+| OutputStack      | TLSSS (conflicts) | | .. -- | | Output the entire stack as characters | [whitespacesdk](https://github.com/wspace/martinandhels-whitespacesdk) by MArtin SHerratt |
 | shell            | TLL   | s | ?       | | Execute shell command (unimplemented) | [Spitewaste](https://github.com/collidedscope/spitewaste) by Collided Scope |
-| pyfn             | LLS   | l | a1 .. an -- a1 .. an retval | | Call the Python function registered as *l* with *n* arguments | [PYWS](https://github.com/EizoAssik/pyws) by Eizo Assik |
-| debug_printstack | LLSSS |   | --      | | Dump stack | [wsintercpp](https://web.archive.org/web/20110911114338/http://www.burghard.info/Code/Whitespace/) by Oliver Burghard |
-| debug_printheap  | LLSST |   | --      | | Dump heap | [wsintercpp](https://web.archive.org/web/20110911114338/http://www.burghard.info/Code/Whitespace/) by Oliver Burghard |
-| trace            | LLT   |   | --      | | Dump program state | [pywhitespace](https://github.com/wspace/phlip-pywhitespace) by Phillip Bradbury |
+| PYFN             | LLS   | l | a1 .. an -- a1 .. an retval | | Call the Python function registered as *l* with *n* arguments | [PYWS](https://github.com/EizoAssik/pyws) by Eizo Assik |
+| debug_printstack | LLSSS |   | --      | | Dump stack | [wsintercpp](https://github.com/wspace/burghard-wsintercpp) and [wsa](https://github.com/wspace/burghard-wsa) by Oliver Burghard |
+| debug_printheap  | LLSST |   | --      | | Dump heap | [wsintercpp](https://github.com/wspace/burghard-wsintercpp) and [wsa](https://github.com/wspace/burghard-wsa) by Oliver Burghard |
+| Trace            | LLT   |   | --      | | Dump program state | [pywhitespace](https://github.com/wspace/phlip-pywhitespace) by Phillip Bradbury |
 | eval             | LLT   | s | ?       | | (unimplemented) | [Spitewaste](https://github.com/collidedscope/spitewaste) by Collided Scope |
