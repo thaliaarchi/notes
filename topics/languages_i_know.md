@@ -27,6 +27,7 @@ for each.
 - Haskell: [whitespace-haskell](https://github.com/wspace/whitespace-haskell) (Oct 2019), CS 330 — Concepts of Programming Languages (Nov 2019)
 - Prolog: CS 330 — Concepts of Programming Languages (Oct 2019)
 - Elixir: CS 330 — Concepts of Programming Languages (Nov 2019)
+- fish: [config](https://github.com/thaliaarchi/config) (May 2020)
 - Coq: CS 401R — Software Foundations (Sep 2020)
 - Brainfuck: [codewars](https://github.com/thaliaarchi/codewars) (Nov 2020), [wsbf](https://github.com/thaliaarchi/wsbf) (Nov 2021)
 - jq: [wspace/corpus](https://github.com/wspace/corpus) (Apr 2021), [wsjq](https://github.com/thaliaarchi/wsjq) (May 2021)
