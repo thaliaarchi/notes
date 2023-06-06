@@ -1,4 +1,4 @@
-# Whitespace assembly syntax
+# Parsing any Whitespace assembly dialect
 
 ## Integer literals
 
@@ -118,6 +118,19 @@ one_line ::=
 inst ::=
     | Mnemonic (Word | Number)*
 ```
+
+### Heuristics
+
+- Almost every program will have `push`; detect push style
+  - Postfix: `push n`
+  - Literal: `n`
+- If `;` appears at the start of a line, it denotes comments
+- If multiple instructions are on a line, then disable `;` separators
+- Literal pushes are mutually exclusive with optional arguments or `;`
+  separators
+- First parse the entire `;`-less program, then use those settings to attempt to
+  parse with separators
+- Forth-style calls without the `call` mnemonic are not allowed
 
 ## Style
 
