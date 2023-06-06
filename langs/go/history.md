@@ -84,7 +84,7 @@ addresses this tradeoff:
 The technical hurdle in finding the approach that allows the compiler to use
 monomorphization or fat pointers.
 
-## Influence of xoc, an extension-oriented compiler
+## Possible influence of xoc, an extension-oriented compiler
 
 Russ Cox, Tom Bergan, Austin Clements, Frans Kaashoek, and Eddie Kohler built
 [xoc](https://pdos.csail.mit.edu/archive/xoc/), an extension-oriented compiler,
@@ -100,6 +100,15 @@ xoc. Russ and Austin have both been on the core Go team since before the public
 release, so design decisions have certainly been influenced by their work on
 xoc. Perhaps some of the technical details in how they implement abstractions on
 top of C were used in Go, as well as the philosophy of staying close to C.
+
+When I asked Russ, he said xoc had no direct influence on Go:
+
+> That must have been an editing error. There was no secret message implied. Xoc
+> did not directly influence Go, but they share the motivation of trying to
+> improve the language support available for writing systems programs. I got to
+> know Austin in grad school working on xoc and recruited them to Google and Go.
+>
+> —Russ Cox, 6 Jun 2023 08:38:40 -0400
 
 ## Version control history
 
