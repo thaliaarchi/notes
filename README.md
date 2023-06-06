@@ -129,6 +129,7 @@ A notebook on compilers, programming languages, and other topics.
   - [Emails with Edwin and friends](wspace/history/emails.md)
   - [Haskell notes](wspace/history/haskell.md)
   - [Haskell reference interpreter](wspace/history/haskell_reference.md)
+  - [Non-interpreter projects](wspace/history/non-interpreters.md)
 - Projects
   - [Analysis errors draft](wspace/projects/errors_draft.md)
   - [CLI draft](wspace/projects/cli_draft.txt)
