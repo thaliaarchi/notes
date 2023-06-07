@@ -33,6 +33,3 @@ clearly-demarcated functions, but I'm wondering if there's a better way.
 List problems and how I solved them or why they're not solved.
 
 Write out instructions and their IR mappings.
-
-For Tuesday, get lazy-wspace ready enough to present. I should have targeted
-questions ready for feedback and present with that in mind.

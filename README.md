@@ -6,16 +6,7 @@ A notebook on compilers, programming languages, and other topics.
 
 - LLVM
   - [LLVM: A Compilation Framework for Lifelong Program Analysis & Transformation](compilers/llvm/cgo04_lattner.md)
-  - [2020 LLVM Virtual Developers' Meeting](compilers/llvm/devmtg_2020-10)
-    - [Undef and Poison: Present and Future](compilers/llvm/devmtg_2020-10/undef_and_poison.md)
-    - [Everything I know about debugging LLVM](compilers/llvm/devmtg_2020-10/debugging_llvm.md)
-    - [Checked C: Adding memory safety support to LLVM](compilers/llvm/devmtg_2020-10/checked_c_memory_safety.md)
-    - [Posters](compilers/llvm/devmtg_2020-10/posters.md)
-      - Quickly Finding RISC-V Code Quality Issues with Differential Analysis
-      - llvm-diva: Debug Information Visual Analyzer
-      - Enzyme: High-Performance Automatic Differentiation of LLVM
-    - [MLIR Tutorial](compilers/llvm/devmtg_2020-10/mlir_tutorial.md)
-    - [CIL: Common MLIR Dialect for C/C++ and Fortran](compilers/llvm/devmtg_2020-10/cil_mlir_dialect.md)
+  - [2020 LLVM Virtual Developers' Meeting](compilers/llvm/index.md)
   - [LLVM architecture presentation](compilers/llvm/presentation_outline.md)
   - [Tutorials](compilers/llvm/tutorials.md)
   - [Resources](compilers/llvm/resources.md)
@@ -106,56 +97,17 @@ A notebook on compilers, programming languages, and other topics.
 
 ## Whitespace
 
+- [Assembly](wspace/assembly/index.md)
 - Compilation
-  - [Compiler IRs](wspace/compile/ir.md)
-  - [Implementing efficient guards](wspace/compile/guards.md)
-  - [Lowering Whitespace with strictness](wspace/compile/strictness.md)
-  - [Optimizations](wspace/compile/optimizations.md)
-- Design
-  - [Data structures for Whitespace](wspace/design/data_structures.md)
-  - [Limits for Whitespace](wspace/design/limits.md)
-  - [Low-level representation for shared numbers](wspace/design/shared_numbers.md)
-  - [Nebula 2 architecture plan](wspace/design/nebula2_architecture.md)
-  - [Nebula 2 languages](wspace/design/nebula2_languages.md)
-  - [Respace](wspace/design/respace.md)
-  - [Useful lazy patterns in Whitespace](wspace/design/useful_laziness.md)
-- Higher-level
-  - [Expressing higher-level control-flow constructs in Whitespace](wspace/higher/control_flow.md)
-  - [Expressing higher-level data structures in Whitespace](wspace/higher/data_structures.md)
-  - [Raising Whitespace to a higher-level language](wspace/higher/raising.md)
-  - [Stack substrate IL ideas from Kitten](wspace/higher/substrate_il_ideas.md)
-- History
-  - [20 Years of Whitespace: Past and Future](wspace/history/20th.md)
-  - [Emails with Edwin and friends](wspace/history/emails.md)
-  - [Haskell notes](wspace/history/haskell.md)
-  - [Haskell reference interpreter](wspace/history/haskell_reference.md)
-  - [Non-interpreter projects](wspace/history/non-interpreters.md)
-- Projects
-  - [Analysis errors draft](wspace/projects/errors_draft.md)
-  - [CLI draft](wspace/projects/cli_draft.txt)
-  - [Haskell compiler feature detection](wspace/projects/feature_detect.md)
-  - [Improving debugging for Whitespace](wspace/projects/debugging.md)
-  - [Inlay hints for Whitespace](wspace/projects/inlay_hints/README.md)
-  - [My Whitespace projects](wspace/projects/projects.md)
-  - [Self-hosted Whitespace interpreter with lazy semantics](wspace/projects/lazy_interpreter.md)
-  - [Whitespace as an Idris back-end](wspace/projects/idris_backend.md)
-- Semantics
-  - [GrassMudHorse](wspace/semantics/grassmudhorse.md)
-  - [Implementation differences](wspace/semantics/differences.md)
-  - [Laziness in Whitespace](wspace/semantics/laziness.md)
-  - [PL theory of Whitespace](wspace/semantics/pl.md)
-  - [Whitespace language specification](wspace/semantics/whitespace_spec.md)
-  - [Whitespace resources](wspace/semantics/resources.md)
-- Syntax
-  - [Compact bitwise token encoding](wspace/syntax/bit_pack.md)
-  - [Formal grammar for Whitespace](wspace/syntax/formal_grammar.md)
-  - [Instruction prefix tree](wspace/syntax/instruction_prefix_tree.svg)
-  - [Nospace grammar](wspace/syntax/nospace_grammar.bnf)
-  - [Parsing any Whitespace assembly dialect](wspace/syntax/assembly.md)
-  - [Syntax error recovery](wspace/syntax/syntax_recovery.md)
-  - [Whitespace assembly dialects](wspace/syntax/assembly_dialects.md)
-  - [Whitespace assembly mnemonics](wspace/syntax/mnemonics.md)
-  - [Whitespace steganography](wspace/syntax/steganography.md)
+  - [Front-end](wspace/front/index.md)
+  - [Back-end](wspace/back/index.md)
+- [Design](wspace/design/index.md)
+- [History](wspace/history/index.md)
+- [Programs](wspace/programs/index.md)
+- [Semantics](wspace/semantics/index.md)
+- [Syntax](wspace/syntax/index.md)
+- [Tools](wspace/tools/index.md)
+- [VM](wspace/vm/index.md)
 
 ## License
 
