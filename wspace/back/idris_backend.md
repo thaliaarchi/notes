@@ -1,4 +1,4 @@
-# Whitespace as an Idris back-end
+# Whitespace back-end for Idris
 
 Whitespace could become a code generation back-end of the Idris 2 compiler.
 

@@ -1,4 +1,4 @@
-# IR Comparison
+# IR comparison
 
 ## Integer types
 

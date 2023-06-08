@@ -1,4 +1,4 @@
-# LLVM Version History
+# LLVM version history
 
 ## LLVM 2.0
 

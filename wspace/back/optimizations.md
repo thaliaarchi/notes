@@ -1,4 +1,4 @@
-# Optimizations
+# Whitespace source-level optimizations
 
 ## Control flow
 
@@ -89,7 +89,8 @@ Optimizations:
   8 - ^ jz c
   ```
 
-  e.g. wslib/io/format_int.wsf:.print_base_prefix
+  e.g., [`.print_base_prefix`](https://github.com/thaliaarchi/wslib/blob/main/int/print.wsf#L73-L89)
+  in wslib/int/print.wsf
 
 - Factor out shared instructions:
 
@@ -165,4 +166,5 @@ Optimize for minimal Whitespace program instruction count.
 
 ### Division and modulo
 
-Recognize wslib/math/divmod.wsf division and modulo idioms.
+Recognize [wslib/math/divmod.wsf](https://github.com/thaliaarchi/wslib/blob/main/math/divmod.wsf)
+division and modulo idioms.

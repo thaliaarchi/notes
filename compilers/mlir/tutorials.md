@@ -1,4 +1,4 @@
-# MLIR Tutorials
+# MLIR tutorials
 
 - [Toy Tutorial](https://mlir.llvm.org/docs/Tutorials/Toy/)
   [[code](https://github.com/llvm/llvm-project/tree/main/mlir/examples/toy)]
