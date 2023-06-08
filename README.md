@@ -20,9 +20,9 @@ A notebook on compilers, programming languages, and other topics.
   - [Projects](compilers/mlir/projects.md)
 - GraalVM
   - [GraalVM papers](compilers/graalvm/papers.md)
-  - [Graal IR: An Extensible Declarative Intermediate Representation](compilers/graalvm/graalvm_paper_notes.txt)
+  - [Graal IR: An Extensible Declarative Intermediate Representation](compilers/graalvm/graal_ir.md)
   - [Practical Second Futamura Projection: Partial Evaluation for High-Performance Language Interpreters](compilers/graalvm/futamura.md)
-  - [21.2 release highlights](compilers/graalvm/release_highlights_21.2.md)
+  - [Release highlights](compilers/graalvm/release_highlights.md)
 - WebAssembly
   - [Bringing the Web up to Speed with WebAssembly](compilers/webassembly/pldi17_haas.md)
   - [Not So Fast: Analyzing the Performance of WebAssembly vs. Native Code](compilers/webassembly/atc19_jangda.md)
