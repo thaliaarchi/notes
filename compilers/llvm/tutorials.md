@@ -1,4 +1,4 @@
-# LLVM Tutorials and Examples
+# LLVM tutorials and examples
 
 ## Setting up LLVM
 

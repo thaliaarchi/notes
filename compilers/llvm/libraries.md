@@ -1,4 +1,4 @@
-# LLVM Libraries
+# LLVM libraries
 
 ## In-tree bindings
 

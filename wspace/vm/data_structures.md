@@ -1,4 +1,4 @@
-# Data structures for Whitespace
+# Data structures for a Whitespace VM
 
 ## Heap
 

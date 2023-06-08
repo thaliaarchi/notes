@@ -1,4 +1,4 @@
-# Reading List
+# Reading list
 
 - LLVM
   - [MemorySSA](https://llvm.org/docs/MemorySSA.html)

@@ -1,4 +1,4 @@
-# MLIR Tutorial
+# MLIR tutorial
 
 Mehdi Amini and River Riddle (Google)
 

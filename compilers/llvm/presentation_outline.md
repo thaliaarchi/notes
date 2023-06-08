@@ -1,4 +1,4 @@
-# LLVM Presentation Topic Plan
+# LLVM presentation topic plan
 
 - SSA form
   - Alternates to using phis

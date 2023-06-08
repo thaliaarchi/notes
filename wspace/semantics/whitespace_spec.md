@@ -1,4 +1,4 @@
-# Whitespace language specification
+# Draft Whitespace language specification
 
 Whitespace is formally specified by its [implementation](https://web.archive.org/web/20150717140342/http://compsoc.dur.ac.uk/whitespace/download.php),
 not by a language reference. This document attempts to fill in gaps from the

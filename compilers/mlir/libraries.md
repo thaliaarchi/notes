@@ -1,4 +1,4 @@
-# MLIR Libraries
+# MLIR libraries
 
 ## In-tree bindings
 

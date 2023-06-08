@@ -1,4 +1,4 @@
-# Inlay Hints for Whitespace
+# Inlay hints for Whitespace
 
 The syntax of the Whitespace programming language is invisible—it uses only
 space, tab, and line feed—so editing a program manually is tedious and most

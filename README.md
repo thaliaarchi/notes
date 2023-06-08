@@ -47,7 +47,7 @@ A notebook on compilers, programming languages, and other topics.
 - Rust
   - [Converting between Rug and bitvec types](langs/rust/convert_rug_bitvec.md)
   - [Crates and tutorials](langs/rust/rust.md)
-  - [Rust Enum Expressivity](langs/rust/enum_expressivity.md)
+  - [Rust enum expressivity](langs/rust/enum_expressivity.md)
   - [Trivia about Rust Types](langs/rust/types_trivia.md)
 - [Zig](langs/zig.md)
 

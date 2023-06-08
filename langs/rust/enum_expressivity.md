@@ -1,4 +1,4 @@
-# Rust Enum Expressivity
+# Rust enum expressivity
 
 ## Enum
 
