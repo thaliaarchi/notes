@@ -1,4 +1,4 @@
-# LLVM Resources
+# LLVM resources
 
 ## User guides
 

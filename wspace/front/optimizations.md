@@ -1,4 +1,4 @@
-# Optimizations
+# Whitespace IR-level optimizations
 
 ## Control flow
 
