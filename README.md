@@ -78,6 +78,7 @@ A notebook on compilers, programming languages, and other topics.
 - [Error handling](topics/errors.md)
 - [Futamura projections](topics/futamura.md)
 - [Integer division and modulo rounding](topics/div_mod_rounding.md)
+- [Language server design](topics/language_server.md)
 - [List of ciphers](topics/ciphers.md)
 - [Minimal computing models](topics/minimal_computing_models.md)
 - [Nand to Tetris](topics/nand2tetris/README.md)
