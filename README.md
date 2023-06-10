@@ -69,7 +69,9 @@ A notebook on compilers, programming languages, and other topics.
 - Colors
   - [Color in browser engines](topics/colors/browser_color.md)
   - [Color libraries and color spaces](topics/colors/color_libraries.md)
-- [Compiler optimization patterns](topics/compiler_optimizations.md)
+- Compiler optimizations
+  - [Compiler optimization patterns](topics/optimizations/patterns.md)
+  - [Tail-call optimization](topics/optimizations/tail_calls.md)
 - [Data structures](topics/data_structures.md)
 - [E-graphs](topics/e-graphs.md)
 - [Easter eggs](topics/easter_eggs.md)
