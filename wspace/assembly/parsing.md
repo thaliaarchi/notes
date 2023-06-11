@@ -1,6 +1,46 @@
 # Parsing any Whitespace assembly dialect
 
-## Integer literals
+## Tokens
+
+- Word
+- Integer
+- Character: `' '`
+- String: `" "`
+- Colon: `:`
+- Semicolon: `;`
+- Line comment: `#`, `//`, `--`
+- Block comment: `/* */`, `{- -}` (nested)
+- Line break: LF, CRLF, CR
+
+```bnf
+      <word> ::= <XID_Start> <XID_Continue>*
+    <number> ::= <dec_number> | <bin_number> | <oct_number> | <hex_number>
+<dec_number> ::= /[-+]?[1-9][0-9_]*|0*/
+<bin_number> ::= /[-+]?0[bB][01_]*/
+<oct_number> ::= /[-+]?0[oO]_*[0-7][0-7_]*/
+<hex_number> ::= /[-+]?0[xX]_*[0-9a-fA-F][0-9a-fA-F_]*/
+     <colon> ::= ":"
+      <semi> ::= ";"
+     <space> ::= " " | "\t"
+   <comment> ::= …
+        <lf> ::= "\n" | "\r\n" | "\r"
+```
+
+Examples:
+- `push 1`: word `push`, space, number `1` => `push 1`
+- `3slide`: number `3`, word `slide` => `slide 3`
+- `-1-`: number `-1`, word `-` => `push -1`, `sub`
+- `^2`: word `^`, number `2` => `copy 2`
+
+Unicode `XID_Start` and `XID_Continue` properties exclude `Pattern_Syntax`,
+which may not be appropriate. Other characters probably need to be included.
+
+Note that leading zeros are forbidden for decimal numbers. This is because
+leading zeros denote leading zeros in the base-2 Whitespace encoding and 10 is
+not a power of two, making it ambiguous. It also avoids confusion with C-style
+octal literals.
+
+### Integer literals
 
 Whitespace integer literals are encoded in binary with a sign, or as an empty
 sequence without a sign. To allow for representing all patterns of literals,
@@ -59,17 +99,19 @@ represented as the literal `0b`.
 | -0x07  | T STTT     |
 | -0x007 | T SSSSSTTT |
 
-## Tokens
+### Unresolved
 
-- Word
-- Integer
-- Character: `' '`
-- String: `" "`
-- Colon: `:`
-- Semicolon: `;`
-- Line comment: `#`, `//`, `--`
-- Block comment: `/* */`, `{- -}` (nested)
-- Line break: LF, CRLF, CR
+The rules for underscores in number should be compared to other languages. It
+may make sense to forbid trailing or multiple consecutive underscores. Trailing
+underscores may be problematic when abutted with a word and, if allowed, may
+need to be consumed lazily in the number grammar, so they are a part of the word
+token; however, I cannot think of a case where such a token pair would be parsed
+separately instead of joined a single identifier.
+
+Perhaps underscores or another symbol could represent leading zeros in
+Whitespace assembly numeric literals. Underscores have no semantic meaning in
+other languages, though, so this could be confusing. Only allowing leading zeros
+in powers-of-two bases seems to still be a better approach.
 
 ## Parsing
 
@@ -131,6 +173,10 @@ inst ::=
 - First parse the entire `;`-less program, then use those settings to attempt to
   parse with separators
 - Forth-style calls without the `call` mnemonic are not allowed
+
+### Parsing semicolon-delimited instructions
+
+Windows (`Vec<usize>`) for non-comment tokens and windows for in semi
 
 ## Style
 
