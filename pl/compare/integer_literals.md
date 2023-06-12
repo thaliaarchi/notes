@@ -24,7 +24,7 @@ section in Dennie Van Tassel's [History and comparison of programming languages]
 | Python <=2.5   | 8, 10, 16    | ""             | N/A           | `0`             | `0x`, `0X` | Octal        | N/A       | N/A         | N/A          | N/A          | Type     |
 | Ruby           | 2, 8, 10, 16 | "", `0d`, `0D` | `0b`, `0B`    | `0`, `0o`, `0O` | `0x`, `0X` | Octal        | `_`       | No          | No           | No           | N/A      |
 | Rust           | 2, 8, 10, 16 | ""             | `0b`          | `0o`            | `0x`       | Decimal      | `_`       | Yes         | Yes          | Yes          | Type     |
-| Rust <=0.8     | 2, 10, 16    | ""             | `0b`          | N/A             | `0x`       | Decimal      | `_`       | Yes         | Yes          | Yes          | Type     |
+| Rust 0.1–0.8   | 2, 10, 16    | ""             | `0b`          | N/A             | `0x`       | Decimal      | `_`       | Yes         | Yes          | Yes          | Type     |
 
 Shared definitions:
 
@@ -213,59 +213,35 @@ revised [31 May 2023](https://github.com/ruby/spec/blob/109d976477e726c1b5006ba3
 
 ### Rust
 
-#### Rust 1.67+
-
 ```bnf
 integer_literal ::= (dec_literal | bin_literal | oct_literal | hex_literal) integer_suffix?
 dec_literal     ::= dec_digit (dec_digit | "_")*
 bin_literal     ::= "0b" "_"* bin_digit (bin_digit | "_")*
 oct_literal     ::= "0o" "_"* oct_digit (oct_digit | "_")*
 hex_literal     ::= "0x" "_"* hex_digit (hex_digit | "_")*
-integer_suffix  ::= suffix_no_e
 ```
 
-where `suffix_no_e` is an identifier or keyword not beginning with `e` or `E`.
+The pattern `integer_suffix` has varied as integer types have been added:
+- Rust [0.9](https://doc.rust-lang.org/0.9/rust.html#number-literals)–[0.12](https://doc.rust-lang.org/0.12.0/reference.html#number-literals):
+  `u8`, `u16`, `u32`, `u64`, `u`, `i8`, `i16`, `i32`, `i64`, or `i`
+- Rust [1.0](https://doc.rust-lang.org/1.0.0/reference.html#integer-literals)–[1.27](https://doc.rust-lang.org/1.27.0/reference/tokens.html#integer-literals):
+  `u8`, `u16`, `u32`, `u64`, `usize`, `i8`, `i16`, `i32`, `i64`, or `isize`
+- Rust [1.28](https://doc.rust-lang.org/1.28.0/reference/tokens.html#integer-literals)–[1.66](https://doc.rust-lang.org/1.66.0/reference/tokens.html#integer-literals):
+  `u8`, `u16`, `u32`, `u64`, `u128`, `usize`, `i8`, `i16`, `i32`, `i64`, `i128`, or `isize`
+- Rust [1.67](https://doc.rust-lang.org/1.67.0/reference/tokens.html#integer-literals)–[1.70](https://doc.rust-lang.org/1.70.0/reference/tokens.html#integer-literals):
+  an identifier or keyword not beginning with `e` or `E`
 
 From the [language reference](https://doc.rust-lang.org/reference/tokens.html#integer-literals)
-as of [Rust 1.67](https://doc.rust-lang.org/1.67.0/reference/tokens.html#integer-literals)
+as of [Rust 0.9](https://doc.rust-lang.org/0.9/rust.html#number-literals)
 through [1.70](https://doc.rust-lang.org/1.70.0/reference/tokens.html#integer-literals).
 
 <details>
 <summary>Earlier Rust versions</summary>
 
-#### Rust 1.28–1.66
-
-```bnf
-integer_suffix  ::= "u8" | "u16" | "u32" | "u64" | "u128" | "usize"
-                  | "i8" | "i16" | "i32" | "i64" | "i128" | "isize"
-```
-
-From the language reference as of [Rust 1.28](https://doc.rust-lang.org/1.28.0/reference/tokens.html#integer-literals)
-through [1.66](https://doc.rust-lang.org/1.66.0/reference/tokens.html#integer-literals).
-
-#### Rust 1.0–1.27
-
-```bnf
-integer_suffix  ::= "u8" | "u16" | "u32" | "u64" | "usize"
-                  | "i8" | "i16" | "i32" | "i64" | "isize"
-```
-
-From the language reference as of [Rust 1.0](https://doc.rust-lang.org/1.0.0/reference.html#integer-literals)
-through [1.27](https://doc.rust-lang.org/1.27.0/reference/tokens.html#integer-literals).
-
-#### Rust 0.9–0.12
-
-```bnf
-integer_suffix  ::= "u8" | "u16" | "u32" | "u64" | "u"
-                  | "i8" | "i16" | "i32" | "i64" | "i"
-```
-
-From the language reference as of [Rust 0.9](https://doc.rust-lang.org/0.9/rust.html#number-literals)
-through [0.12](https://doc.rust-lang.org/0.12.0/reference.html#number-literals).
-
 #### Rust 0.1–0.8
 
-No octal literals:
+These versions had no octal literals, but were otherwise identical to later
+versions.
 
 ```bnf
 integer_literal ::= (dec_literal | bin_literal | hex_literal) integer_suffix?
@@ -276,21 +252,19 @@ integer_suffix  ::= "u8" | "u16" | "u32" | "u64" | "u"
                   | "i8" | "i16" | "i32" | "i64" | "i"
 ```
 
-From commit 80307576245aabf00285db020bbfbc4c3a891766 through at least the 0.8
-tag.
+From the language reference as of [Rust 0.3](https://doc.rust-lang.org/0.3/rust.html#number-literals)
+through [0.8](https://doc.rust-lang.org/0.8/rust.html#number-literals). The
+rustc and rustboot lexers matched this behavior back to [2010-07-27](https://github.com/rust-lang/rust/blob/80307576245aabf00285db020bbfbc4c3a891766/src/boot/fe/lexer.mll#L141-L145)
+in rust-lang/rust, 1.5 years before Rust 0.1.
 
-#### Rust pre 3
+From [2010-07-01](https://github.com/rust-lang/rust/blob/afc0dc8bfcc5d6fba1e907ab35c110fc074cad67/src/boot/fe/lexer.mll#L123-L127)
+through [2010-07-27](https://github.com/rust-lang/rust/blob/6662aeb779d3e44886c466378578ebe1979de15a/src/boot/fe/lexer.mll#L124-L128)
+in rust-lang/rust, integer suffixes had not yet been added.
 
-Had no suffix and used function-like cast-notation:
+#### Rust rustboot 2007–2010
 
-```bnf
-integer_suffix  ::=
-```
-
-From commit afc0dc8bfcc5d6fba1e907ab35c110fc074cad67 through
-6662aeb779d3e44886c466378578ebe1979de15a.
-
-#### Rust pre 2
+These revisions had no suffixes or octal literals, and did not allow leading
+underscores due to a bug.
 
 ```bnf
 integer_literal ::= (dec_literal | bin_literal | hex_literal)
@@ -299,10 +273,14 @@ bin_literal     ::= "0b" bin_digit (bin_digit | "_")*
 hex_literal     ::= "0x" hex_digit (hex_digit | "_")*
 ```
 
-From root through 3aaff59dba4b9fff598c49eeb579cb6c631dd4f4 in rust and
-aa2d738554e561d526809f3cba0fd643e3d12906 through master in prehistory.
+From [2007-05-22](https://github.com/graydon/rust-prehistory/blob/aa2d738554e561d526809f3cba0fd643e3d12906/src/lexer.mll#L77-L79)
+in graydon/rust-prehistory through [2010-07-01](https://github.com/rust-lang/rust/blob/3aaff59dba4b9fff598c49eeb579cb6c631dd4f4/src/boot/fe/lexer.mll#L123-L126)
+in rust-lang/rust.
 
-#### Rust pre 1
+#### Rust rustboot 2006–2007
+
+These revisions had no suffixes, and did not allow leading underscores due to a
+bug.
 
 ```bnf
 integer_literal ::= (dec_literal | bin_literal | hex_literal)
@@ -312,7 +290,9 @@ oct_literal     ::= "0o" oct_digit (oct_digit | "_")*
 hex_literal     ::= "0x" hex_digit (hex_digit | "_")*
 ```
 
-From root through c1f80de7286b4268a4c1ebaddfa35cc2d7c57a4d in prehistory.
+From the initial commit on [2006-07-23](https://github.com/graydon/rust-prehistory/blob/b0fd440798ab3cfb05c60a1a1bd2894e1618479e/src/lexer.mll#L66-L69)
+through [2007-05-22](https://github.com/graydon/rust-prehistory/blob/c1f80de7286b4268a4c1ebaddfa35cc2d7c57a4d/src/lexer.mll#L77-L80)
+in graydon/rust-prehistory.
 
 </details>
 
