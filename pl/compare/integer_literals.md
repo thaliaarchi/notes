@@ -9,21 +9,22 @@ documented in the grammars with integer literals, so it is not included here.
 This focuses on grammars. For history and context, read the [“Integer Literals”](https://web.archive.org/web/20141021124940/http://hhh.gavilan.edu/dvantassel/history/literals.html#_Toc193407229)
 section in Dennie Van Tassel's [History and comparison of programming languages](https://web.archive.org/web/20150118032430/http://hhh.gavilan.edu:80/dvantassel/history/history.html).
 
-| Language       | Bases        | Decimal prefix | Binary prefix | Octal prefix    | Hex prefix | Leading zero | Separator | Leading sep | Trailing sep | Repeated sep | Exponent |
+| Language       | Bases        | Decimal prefix | Binary prefix | Octal prefix    | Hex prefix | Leading zero | Separator | Leading sep | Trailing sep | Repeated sep | Suffix   |
 | -------------- | ------------ | -------------- | ------------- | --------------- | ---------- | ------------ | --------- | ----------- | ------------ | ------------ | -------- |
-| Ada            | 2-16         | "", `10#`      | `2#`          | `8#`            | `16#`      | Decimal      | `_`       | No          | No           | No           | Yes      |
-| C23            | 2, 8, 10, 16 | ""             | `0b`, `0B`    | `0`             | `0x`, `0X` | Octal        | `'`       | No          | No           | No           | No       |
-| C89–C17        | 8, 10, 16    | ""             | N/A           | `0`             | `0x`, `0X` | Octal        | N/A       | N/A         | N/A          | N/A          | No       |
-| Erlang         | 2-36         | "", `10#`      | `2#`          | `8#`            | `16#`      | Decimal      | `_`       | No          | No           | No           | No       |
-| Go             | 2, 8, 10, 16 | ""             | `0b`, `0B`    | `0`, `0o`, `0O` | `0x`, `0X` | Octal        | `_`       | Yes         | No           | No           | No       |
-| Java 7+        | 2, 8, 10, 16 | ""             | `0b`, `0B`    | `0`             | `0x`, `0X` | Octal        | `_`       | No          | No           | Yes          | No       |
-| Java 6         | 8, 10, 16    | ""             | N/A           | `0`             | `0x`, `0X` | Octal        | N/A       | N/A         | N/A          | N/A          | No       |
-| Python 3.6+    | 2, 8, 10, 16 | ""             | `0b`, `0B`    | `0o`, `0O`      | `0x`, `0X` | Illegal      | `_`       | Yes         | No           | No           | No       |
-| Python 3.0–3.5 | 2, 8, 10, 16 | ""             | `0b`, `0B`    | `0o`, `0O`      | `0x`, `0X` | Illegal      | N/A       | N/A         | N/A          | N/A          | No       |
-| Python 2.6–2.7 | 2, 8, 10, 16 | ""             | `0b`, `0B`    | `0`, `0o`, `0O` | `0x`, `0X` | Octal        | N/A       | N/A         | N/A          | N/A          | No       |
-| Python <=2.5   | 8, 10, 16    | ""             | N/A           | `0`             | `0x`, `0X` | Octal        | N/A       | N/A         | N/A          | N/A          | No       |
-| Ruby           | 2, 8, 10, 16 | "", `0d`, `0D` | `0b`, `0B`    | `0`, `0o`, `0O` | `0x`, `0X` | Octal        | `_`       | No          | No           | No           | No       |
-| Rust           | 2, 8, 10, 16 | ""             | `0b`          | `0o`            | `0x`       | Decimal      | `_`       | Yes         | Yes          | Yes          | No       |
+| Ada            | 2-16         | "", `10#`      | `2#`          | `8#`            | `16#`      | Decimal      | `_`       | No          | No           | No           | Exponent |
+| C23            | 2, 8, 10, 16 | ""             | `0b`, `0B`    | `0`             | `0x`, `0X` | Octal        | `'`       | No          | No           | No           | Type     |
+| C89–C17        | 8, 10, 16    | ""             | N/A           | `0`             | `0x`, `0X` | Octal        | N/A       | N/A         | N/A          | N/A          | Type     |
+| Erlang         | 2-36         | "", `10#`      | `2#`          | `8#`            | `16#`      | Decimal      | `_`       | No          | No           | No           | N/A      |
+| Go             | 2, 8, 10, 16 | ""             | `0b`, `0B`    | `0`, `0o`, `0O` | `0x`, `0X` | Octal        | `_`       | Yes         | No           | No           | N/A      |
+| Java 7+        | 2, 8, 10, 16 | ""             | `0b`, `0B`    | `0`             | `0x`, `0X` | Octal        | `_`       | No          | No           | Yes          | Type     |
+| Java 6         | 8, 10, 16    | ""             | N/A           | `0`             | `0x`, `0X` | Octal        | N/A       | N/A         | N/A          | N/A          | Type     |
+| Python 3.6+    | 2, 8, 10, 16 | ""             | `0b`, `0B`    | `0o`, `0O`      | `0x`, `0X` | Illegal      | `_`       | Yes         | No           | No           | N/A      |
+| Python 3.0–3.5 | 2, 8, 10, 16 | ""             | `0b`, `0B`    | `0o`, `0O`      | `0x`, `0X` | Illegal      | N/A       | N/A         | N/A          | N/A          | N/A      |
+| Python 2.6–2.7 | 2, 8, 10, 16 | ""             | `0b`, `0B`    | `0`, `0o`, `0O` | `0x`, `0X` | Octal        | N/A       | N/A         | N/A          | N/A          | Type     |
+| Python <=2.5   | 8, 10, 16    | ""             | N/A           | `0`             | `0x`, `0X` | Octal        | N/A       | N/A         | N/A          | N/A          | Type     |
+| Ruby           | 2, 8, 10, 16 | "", `0d`, `0D` | `0b`, `0B`    | `0`, `0o`, `0O` | `0x`, `0X` | Octal        | `_`       | No          | No           | No           | N/A      |
+| Rust           | 2, 8, 10, 16 | ""             | `0b`          | `0o`            | `0x`       | Decimal      | `_`       | Yes         | Yes          | Yes          | Type     |
+| Rust <=0.8     | 2, 10, 16    | ""             | `0b`          | N/A             | `0x`       | Decimal      | `_`       | Yes         | Yes          | Yes          | Type     |
 
 Shared definitions:
 
@@ -212,18 +213,108 @@ revised [31 May 2023](https://github.com/ruby/spec/blob/109d976477e726c1b5006ba3
 
 ### Rust
 
+#### Rust 1.67+
+
 ```bnf
-integer_literal ::= (dec_literal | bin_literal | oct_literal | hex_literal) suffix_no_e?
+integer_literal ::= (dec_literal | bin_literal | oct_literal | hex_literal) integer_suffix?
 dec_literal     ::= dec_digit (dec_digit | "_")*
 bin_literal     ::= "0b" "_"* bin_digit (bin_digit | "_")*
 oct_literal     ::= "0o" "_"* oct_digit (oct_digit | "_")*
 hex_literal     ::= "0x" "_"* hex_digit (hex_digit | "_")*
+integer_suffix  ::= suffix_no_e
 ```
 
 where `suffix_no_e` is an identifier or keyword not beginning with `e` or `E`.
 
 From the [language reference](https://doc.rust-lang.org/reference/tokens.html#integer-literals)
-as of [Rust 1.70.0](https://doc.rust-lang.org/1.70.0/reference/tokens.html#integer-literals).
+as of [Rust 1.67](https://doc.rust-lang.org/1.67.0/reference/tokens.html#integer-literals)
+through [1.70](https://doc.rust-lang.org/1.70.0/reference/tokens.html#integer-literals).
+
+<details>
+<summary>Earlier Rust versions</summary>
+
+#### Rust 1.28–1.66
+
+```bnf
+integer_suffix  ::= "u8" | "u16" | "u32" | "u64" | "u128" | "usize"
+                  | "i8" | "i16" | "i32" | "i64" | "i128" | "isize"
+```
+
+From the language reference as of [Rust 1.28](https://doc.rust-lang.org/1.28.0/reference/tokens.html#integer-literals)
+through [1.66](https://doc.rust-lang.org/1.66.0/reference/tokens.html#integer-literals).
+
+#### Rust 1.0–1.27
+
+```bnf
+integer_suffix  ::= "u8" | "u16" | "u32" | "u64" | "usize"
+                  | "i8" | "i16" | "i32" | "i64" | "isize"
+```
+
+From the language reference as of [Rust 1.0](https://doc.rust-lang.org/1.0.0/reference.html#integer-literals)
+through [1.27](https://doc.rust-lang.org/1.27.0/reference/tokens.html#integer-literals).
+
+#### Rust 0.9–0.12
+
+```bnf
+integer_suffix  ::= "u8" | "u16" | "u32" | "u64" | "u"
+                  | "i8" | "i16" | "i32" | "i64" | "i"
+```
+
+From the language reference as of [Rust 0.9](https://doc.rust-lang.org/0.9/rust.html#number-literals)
+through [0.12](https://doc.rust-lang.org/0.12.0/reference.html#number-literals).
+
+#### Rust 0.1–0.8
+
+No octal literals:
+
+```bnf
+integer_literal ::= (dec_literal | bin_literal | hex_literal) integer_suffix?
+dec_literal     ::= dec_digit (dec_digit | "_")*
+bin_literal     ::= "0b" "_"* bin_digit (bin_digit | "_")*
+hex_literal     ::= "0x" "_"* hex_digit (hex_digit | "_")*
+integer_suffix  ::= "u8" | "u16" | "u32" | "u64" | "u"
+                  | "i8" | "i16" | "i32" | "i64" | "i"
+```
+
+From commit 80307576245aabf00285db020bbfbc4c3a891766 through at least the 0.8
+tag.
+
+#### Rust pre 3
+
+Had no suffix and used function-like cast-notation:
+
+```bnf
+integer_suffix  ::=
+```
+
+From commit afc0dc8bfcc5d6fba1e907ab35c110fc074cad67 through
+6662aeb779d3e44886c466378578ebe1979de15a.
+
+#### Rust pre 2
+
+```bnf
+integer_literal ::= (dec_literal | bin_literal | hex_literal)
+dec_literal     ::= dec_digit+
+bin_literal     ::= "0b" bin_digit (bin_digit | "_")*
+hex_literal     ::= "0x" hex_digit (hex_digit | "_")*
+```
+
+From root through 3aaff59dba4b9fff598c49eeb579cb6c631dd4f4 in rust and
+aa2d738554e561d526809f3cba0fd643e3d12906 through master in prehistory.
+
+#### Rust pre 1
+
+```bnf
+integer_literal ::= (dec_literal | bin_literal | hex_literal)
+dec_literal     ::= dec_digit+
+bin_literal     ::= "0b" bin_digit (bin_digit | "_")*
+oct_literal     ::= "0o" oct_digit (oct_digit | "_")*
+hex_literal     ::= "0x" hex_digit (hex_digit | "_")*
+```
+
+From root through c1f80de7286b4268a4c1ebaddfa35cc2d7c57a4d in prehistory.
+
+</details>
 
 ## Ada-style
 
