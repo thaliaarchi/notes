@@ -55,6 +55,7 @@ A notebook on compilers, programming languages, and other topics.
   - [Whitespace](#whitespace)
 - Comparisons
   - [Programming language comparisons](pl/compare/comparisons.md)
+  - [Comparison of integer literal syntax](pl/compare/integer_literals.md)
 - Lists
   - [Programming language alphabet challenge](pl/lists/alphabet_challenge.md)
   - [PL groups at universities](pl/lists/research_groups.md)
