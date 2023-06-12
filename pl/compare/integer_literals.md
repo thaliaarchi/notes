@@ -9,19 +9,21 @@ documented in the grammars with integer literals, so it is not included here.
 This focuses on grammars. For history and context, read the [“Integer Literals”](https://web.archive.org/web/20141021124940/http://hhh.gavilan.edu/dvantassel/history/literals.html#_Toc193407229)
 section in Dennie Van Tassel's [History and comparison of programming languages](https://web.archive.org/web/20150118032430/http://hhh.gavilan.edu:80/dvantassel/history/history.html).
 
-| Language  | Bases        | Decimal prefix | Binary prefix | Octal prefix    | Hex prefix | Leading zero | Separator | Leading sep | Trailing sep | Repeated sep | Exponent |
-| --------- | ------------ | -------------- | ------------- | --------------- | ---------- | ------------ | --------- | ----------- | ------------ | ------------ | -------- |
-| Ada       | 2-16         | "", `10#`      | `2#`          | `8#`            | `16#`      | Decimal      | `_`       | No          | No           | No           | Yes      |
-| C89–C17   | 8, 10, 16    | ""             | N/A           | `0`             | `0x`, `0X` | Octal        | N/A       | N/A         | N/A          | N/A          | No       |
-| C23       | 2, 8, 10, 16 | ""             | `0b`, `0B`    | `0`             | `0x`, `0X` | Octal        | `'`       | No          | No           | No           | No       |
-| Erlang    | 2-36         | "", `10#`      | `2#`          | `8#`            | `16#`      | Decimal      | `_`       | No          | No           | No           | No       |
-| Go        | 2, 8, 10, 16 | ""             | `0b`, `0B`    | `0`, `0o`, `0O` | `0x`, `0X` | Octal        | `_`       | Yes         | No           | No           | No       |
-| Java 6    | 8, 10, 16    | ""             | N/A           | `0`             | `0x`, `0X` | Octal        | N/A       | N/A         | N/A          | N/A          | No       |
-| Java 7–20 | 2, 8, 10, 16 | ""             | `0b`, `0B`    | `0`             | `0x`, `0X` | Octal        | `_`       | No          | No           | Yes          | No       |
-| Python 2  | 2, 8, 10, 16 | ""             | `0b`, `0B`    | `0`, `0o`, `0O` | `0x`, `0X` | Octal        | N/A       | N/A         | N/A          | N/A          | No       |
-| Python 3  | 2, 8, 10, 16 | ""             | `0b`, `0B`    | `0o`, `0O`      | `0x`, `0X` | Illegal      | `_`       | Yes         | No           | No           | No       |
-| Ruby      | 2, 8, 10, 16 | "", `0d`, `0D` | `0b`, `0B`    | `0`, `0o`, `0O` | `0x`, `0X` | Octal        | `_`       | No          | No           | No           | No       |
-| Rust      | 2, 8, 10, 16 | ""             | `0b`          | `0o`            | `0x`       | Decimal      | `_`       | Yes         | Yes          | Yes          | No       |
+| Language       | Bases        | Decimal prefix | Binary prefix | Octal prefix    | Hex prefix | Leading zero | Separator | Leading sep | Trailing sep | Repeated sep | Exponent |
+| -------------- | ------------ | -------------- | ------------- | --------------- | ---------- | ------------ | --------- | ----------- | ------------ | ------------ | -------- |
+| Ada            | 2-16         | "", `10#`      | `2#`          | `8#`            | `16#`      | Decimal      | `_`       | No          | No           | No           | Yes      |
+| C23            | 2, 8, 10, 16 | ""             | `0b`, `0B`    | `0`             | `0x`, `0X` | Octal        | `'`       | No          | No           | No           | No       |
+| C89–C17        | 8, 10, 16    | ""             | N/A           | `0`             | `0x`, `0X` | Octal        | N/A       | N/A         | N/A          | N/A          | No       |
+| Erlang         | 2-36         | "", `10#`      | `2#`          | `8#`            | `16#`      | Decimal      | `_`       | No          | No           | No           | No       |
+| Go             | 2, 8, 10, 16 | ""             | `0b`, `0B`    | `0`, `0o`, `0O` | `0x`, `0X` | Octal        | `_`       | Yes         | No           | No           | No       |
+| Java 7+        | 2, 8, 10, 16 | ""             | `0b`, `0B`    | `0`             | `0x`, `0X` | Octal        | `_`       | No          | No           | Yes          | No       |
+| Java 6         | 8, 10, 16    | ""             | N/A           | `0`             | `0x`, `0X` | Octal        | N/A       | N/A         | N/A          | N/A          | No       |
+| Python 3.6+    | 2, 8, 10, 16 | ""             | `0b`, `0B`    | `0o`, `0O`      | `0x`, `0X` | Illegal      | `_`       | Yes         | No           | No           | No       |
+| Python 3.0–3.5 | 2, 8, 10, 16 | ""             | `0b`, `0B`    | `0o`, `0O`      | `0x`, `0X` | Illegal      | N/A       | N/A         | N/A          | N/A          | No       |
+| Python 2.6–2.7 | 2, 8, 10, 16 | ""             | `0b`, `0B`    | `0`, `0o`, `0O` | `0x`, `0X` | Octal        | N/A       | N/A         | N/A          | N/A          | No       |
+| Python <=2.5   | 8, 10, 16    | ""             | N/A           | `0`             | `0x`, `0X` | Octal        | N/A       | N/A         | N/A          | N/A          | No       |
+| Ruby           | 2, 8, 10, 16 | "", `0d`, `0D` | `0b`, `0B`    | `0`, `0o`, `0O` | `0x`, `0X` | Octal        | `_`       | No          | No           | No           | No       |
+| Rust           | 2, 8, 10, 16 | ""             | `0b`          | `0o`            | `0x`       | Decimal      | `_`       | Yes         | Yes          | Yes          | No       |
 
 Shared definitions:
 
@@ -103,7 +105,7 @@ as of Go 1.20, revised [15 Dec 2022](https://web.archive.org/web/20230606081724/
 
 ### Java
 
-#### Java 7–20
+#### Java 7+
 
 ```bnf
 integer_literal ::= (dec_literal | bin_literal | oct_literal | hex_literal) integer_suffix?
@@ -116,7 +118,7 @@ integer_suffix  ::= [lL]
 
 From the [The Java Language Specification](https://docs.oracle.com/javase/specs/)
 as of [Java SE 7](https://docs.oracle.com/javase/specs/jls/se7/html/jls-3.html#jls-3.10.1)
-through [Java SE 20](https://docs.oracle.com/javase/specs/jls/se20/html/jls-3.html#jls-3.10.1).
+through [20](https://docs.oracle.com/javase/specs/jls/se20/html/jls-3.html#jls-3.10.1).
 
 #### Java 6
 
@@ -133,7 +135,7 @@ as of [Java SE 6](https://docs.oracle.com/javase/specs/jls/se6/html/lexical.html
 
 ### Python
 
-#### Python 3
+#### Python 3.6+
 
 ```bnf
 integer_literal ::= dec_literal | bin_literal | oct_literal | hex_literal
@@ -144,9 +146,25 @@ hex_literal     ::= "0" [xX] ("_"? hex_digit)+
 ```
 
 From the [language reference](https://docs.python.org/3/reference/lexical_analysis.html#integer-literals)
-as of [Python 3.11.4](https://docs.python.org/3.11/reference/lexical_analysis.html#integer-literals).
+as of [Python 3.6](https://docs.python.org/3.6/reference/lexical_analysis.html#integer-literals)
+through [3.11.4](https://docs.python.org/3.11/reference/lexical_analysis.html#integer-literals).
 
-#### Python 2
+#### Python 3.0–3.5
+
+```bnf
+integer_literal ::= dec_literal | bin_literal | oct_literal | hex_literal
+dec_literal     ::= [1-9] dec_digit* | "0"+
+bin_literal     ::= "0" [bB] bin_digit+
+oct_literal     ::= "0" [oO] oct_digit+
+hex_literal     ::= "0" [xX] hex_digit+
+```
+
+C-style octal numbers with a leading zero were allowed until Python 3.0.
+
+From the language reference as of [Python 3.0](https://docs.python.org/3.0/reference/lexical_analysis.html#integer-literals)
+through [3.5](https://docs.python.org/3.5/reference/lexical_analysis.html#integer-literals).
+
+#### Python 2.6–2.7
 
 ```bnf
 integer_literal ::= (dec_literal | bin_literal | oct_literal | hex_literal) long_suffix?
@@ -157,9 +175,26 @@ hex_literal     ::= "0" [xX] hex_digit+
 long_suffix     ::= [lL]
 ```
 
-C-style octal numbers with a leading zero were allowed until Python 3.0.
+From the language reference as of [Python 2.6](https://docs.python.org/2.6/reference/lexical_analysis.html#integer-and-long-integer-literals)
+through [2.7](https://docs.python.org/2.7/reference/lexical_analysis.html#integer-and-long-integer-literals).
 
-From the language reference as of [Python 2.7](https://docs.python.org/2.7/reference/lexical_analysis.html#integer-and-long-integer-literals).
+#### Python <=2.5
+
+```bnf
+integer_literal ::= (dec_literal | oct_literal | hex_literal) long_suffix?
+dec_literal     ::= [1-9] dec_digit* | "0"
+oct_literal     ::= "0" oct_digit+
+hex_literal     ::= "0" [xX] hex_digit+
+long_suffix     ::= [lL]
+```
+
+From the [language reference](https://www.python.org/doc/versions/)
+as of [Python 1.4](https://docs.python.org/release/1.4/ref/ref2.html#HDR17)
+through [2.5](https://docs.python.org/release/2.5/ref/integers.html).
+
+The language reference was first released with Python 1.4. Before that and as
+early as [Python 0.9.1](https://github.com/smontanaro/python-0.9.1/blob/main/src/tokenizer.c#L418-L468),
+the tokenizer matches this grammar.
 
 ### Ruby
 
@@ -215,10 +250,10 @@ From [§2.4.1 “Decimal Literals”](http://www.ada-auth.org/standards/22rm/htm
 and [§2.4.2 “Based Literals”](http://www.ada-auth.org/standards/22rm/html/RM-2-4-2.html)
 in the [Language Reference Manual](https://www.adaic.org/ada-resources/standards/)
 as of [Ada 83](https://www.adaic.org/ada-resources/standards/ada83/),
-[Ada 95](https://www.adaic.org/ada-resources/standards/ada-95-documents/),
-[Ada 2005](https://www.adaic.org/ada-resources/standards/ada05/),
-[Ada 2012](http://www.ada-auth.org/standards/ada12_w_tc1.html),
-and [Ada 2022 draft 35](http://www.ada-auth.org/standards/ada22.html).
+[95](https://www.adaic.org/ada-resources/standards/ada-95-documents/),
+[2005](https://www.adaic.org/ada-resources/standards/ada05/),
+[2012](http://www.ada-auth.org/standards/ada12_w_tc1.html),
+and [2022 draft 35](http://www.ada-auth.org/standards/ada22.html).
 
 ### Erlang
 
