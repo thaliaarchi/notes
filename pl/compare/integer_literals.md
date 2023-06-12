@@ -15,7 +15,8 @@ section in Dennie Van Tassel's [History and comparison of programming languages]
 | C23            | 2, 8, 10, 16 | ""             | `0b`, `0B`    | `0`             | `0x`, `0X` | Octal        | `'`       | No          | No           | No           | Type     |
 | C89–C17        | 8, 10, 16    | ""             | N/A           | `0`             | `0x`, `0X` | Octal        | N/A       | N/A         | N/A          | N/A          | Type     |
 | Erlang         | 2-36         | "", `10#`      | `2#`          | `8#`            | `16#`      | Decimal      | `_`       | No          | No           | No           | N/A      |
-| Go             | 2, 8, 10, 16 | ""             | `0b`, `0B`    | `0`, `0o`, `0O` | `0x`, `0X` | Octal        | `_`       | Yes         | No           | No           | N/A      |
+| Go 1.13+       | 2, 8, 10, 16 | ""             | `0b`, `0B`    | `0`, `0o`, `0O` | `0x`, `0X` | Octal        | `_`       | Yes         | No           | No           | N/A      |
+| Go <=1.12      | 8, 10, 16    | ""             | N/A           | `0`             | `0x`, `0X` | Octal        | N/A       | N/A         | N/A          | N/A          | N/A      |
 | Java 7+        | 2, 8, 10, 16 | ""             | `0b`, `0B`    | `0`             | `0x`, `0X` | Octal        | `_`       | No          | No           | Yes          | Type     |
 | Java 6         | 8, 10, 16    | ""             | N/A           | `0`             | `0x`, `0X` | Octal        | N/A       | N/A         | N/A          | N/A          | Type     |
 | Python 3.6+    | 2, 8, 10, 16 | ""             | `0b`, `0B`    | `0o`, `0O`      | `0x`, `0X` | Illegal      | `_`       | Yes         | No           | No           | N/A      |
@@ -93,6 +94,8 @@ and §6.1.3.2 “Integer constants” in the [C89 standard](https://web.archive.
 
 ### Go
 
+#### Go 1.13+
+
 ```bnf
 integer_literal ::= dec_literal | bin_literal | oct_literal | hex_literal
 dec_literal     ::= [1-9] ("_"? dec_digit)* | "0"
@@ -102,7 +105,20 @@ hex_literal     ::= "0" [xX] ("_"? hex_digit)+
 ```
 
 From the [language specification](https://go.dev/ref/spec#Integer_literals)
-as of Go 1.20, revised [15 Dec 2022](https://web.archive.org/web/20230606081724/https://go.dev/ref/spec#Integer_literals).
+as of [Go 1.13](https://github.com/golang/go/blob/go1.13/doc/go_spec.html#L272-L320)
+through [1.20](https://github.com/golang/go/blob/go1.20/doc/go_spec.html#L277-L325).
+
+#### Go <=1.12
+
+```bnf
+integer_literal ::= dec_literal | oct_literal | hex_literal
+dec_literal     ::= [1-9] dec_digit*
+oct_literal     ::= "0" oct_digit*
+hex_literal     ::= "0" [xX] hex_digit+
+```
+
+From the language specification as of the initial commit on [2008-03-02](https://github.com/golang/go/blob/18c5b488a3b2e218c0e0cf2a7d4820d9da93a554/doc/go_spec#L412-L417)
+through [Go 1.12](https://github.com/golang/go/blob/go1.12/doc/go_spec.html#L271-L292).
 
 ### Java
 
