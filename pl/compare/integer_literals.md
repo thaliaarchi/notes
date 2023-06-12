@@ -9,16 +9,17 @@ documented in the grammars with integer literals, so it is not included here.
 This focuses on grammars. For history and context, read the [“Integer Literals”](https://web.archive.org/web/20141021124940/http://hhh.gavilan.edu/dvantassel/history/literals.html#_Toc193407229)
 section in Dennie Van Tassel's [History and comparison of programming languages](https://web.archive.org/web/20150118032430/http://hhh.gavilan.edu:80/dvantassel/history/history.html).
 
-| Language | Bases        | Decimal prefix | Binary prefix | Octal prefix    | Hex prefix | Leading zero | Separator | Leading sep | Trailing sep | Repeated sep |
-| -------- | ------------ | -------------- | ------------- | --------------- | ---------- | ------------ | --------- | ----------- | ------------ | ------------ |
-| C89–C17  | 8, 10, 16    | ""             | N/A           | `0`             | `0x`, `0X` | Octal        | N/A       | N/A         | N/A          | N/A          |
-| C23      | 2, 8, 10, 16 | ""             | `0b`, `0B`    | `0`             | `0x`, `0X` | Octal        | `'`       | No          | No           | No           |
-| Erlang   | 2-36         | "", `10#`      | `2#`          | `8#`            | `16#`      | Decimal      | `_`       | No          | No           | No           |
-| Go       | 2, 8, 10, 16 | ""             | `0b`, `0B`    | `0`, `0o`, `0O` | `0x`, `0X` | Octal        | `_`       | Yes         | No           | No           |
-| Python 2 | 2, 8, 10, 16 | ""             | `0b`, `0B`    | `0`, `0o`, `0O` | `0x`, `0X` | Octal        | N/A       | N/A         | N/A          | N/A          |
-| Python 3 | 2, 8, 10, 16 | ""             | `0b`, `0B`    | `0o`, `0O`      | `0x`, `0X` | Illegal      | `_`       | Yes         | No           | No           |
-| Ruby     | 2, 8, 10, 16 | "", `0d`, `0D` | `0b`, `0B`    | `0`, `0o`, `0O` | `0x`, `0X` | Octal        | `_`       | No          | No           | No           |
-| Rust     | 2, 8, 10, 16 | ""             | `0b`          | `0o`            | `0x`       | Decimal      | `_`       | Yes         | Yes          | Yes          |
+| Language | Bases        | Decimal prefix | Binary prefix | Octal prefix    | Hex prefix | Leading zero | Separator | Leading sep | Trailing sep | Repeated sep | Exponent |
+| -------- | ------------ | -------------- | ------------- | --------------- | ---------- | ------------ | --------- | ----------- | ------------ | ------------ | -------- |
+| Ada      | 2-16         | "", `10#`      | `2#`          | `8#`            | `16#`      | Decimal      | `_`       | No          | No           | No           | Yes      |
+| C89–C17  | 8, 10, 16    | ""             | N/A           | `0`             | `0x`, `0X` | Octal        | N/A       | N/A         | N/A          | N/A          | No       |
+| C23      | 2, 8, 10, 16 | ""             | `0b`, `0B`    | `0`             | `0x`, `0X` | Octal        | `'`       | No          | No           | No           | No       |
+| Erlang   | 2-36         | "", `10#`      | `2#`          | `8#`            | `16#`      | Decimal      | `_`       | No          | No           | No           | No       |
+| Go       | 2, 8, 10, 16 | ""             | `0b`, `0B`    | `0`, `0o`, `0O` | `0x`, `0X` | Octal        | `_`       | Yes         | No           | No           | No       |
+| Python 2 | 2, 8, 10, 16 | ""             | `0b`, `0B`    | `0`, `0o`, `0O` | `0x`, `0X` | Octal        | N/A       | N/A         | N/A          | N/A          | No       |
+| Python 3 | 2, 8, 10, 16 | ""             | `0b`, `0B`    | `0o`, `0O`      | `0x`, `0X` | Illegal      | `_`       | Yes         | No           | No           | No       |
+| Ruby     | 2, 8, 10, 16 | "", `0d`, `0D` | `0b`, `0B`    | `0`, `0o`, `0O` | `0x`, `0X` | Octal        | `_`       | No          | No           | No           | No       |
+| Rust     | 2, 8, 10, 16 | ""             | `0b`          | `0o`            | `0x`       | Decimal      | `_`       | Yes         | Yes          | Yes          | No       |
 
 Shared definitions:
 
@@ -29,9 +30,11 @@ oct_digit       ::= [0-7]
 hex_digit       ::= [0-9 a-f A-F]
 ```
 
-## C
+## C-style
 
-### C23
+### C
+
+#### C23
 
 ```bnf
 integer_literal ::= (dec_literal | bin_literal | oct_literal | hex_literal) integer_suffix?
@@ -50,7 +53,7 @@ bit_precise_int_suffix ::= "wb" | "WB"
 From §6.4.4.1 “Integer constants” in the [C Standard](https://iso-9899.info/wiki/The_Standard)
 as of [N3096 (2023-04-02)](https://www.open-std.org/jtc1/sc22/wg14/www/docs/n3096.pdf).
 
-### C99, C11, and C17
+#### C99, C11, and C17
 
 ```bnf
 integer_literal ::= (dec_literal | oct_literal | hex_literal) integer_suffix?
@@ -69,7 +72,7 @@ as of [N1256 (2007-09-07)](https://www.open-std.org/jtc1/sc22/wg14/www/docs/n125
 [N1570 (2011-04-04)](https://www.open-std.org/jtc1/sc22/wg14/www/docs/n1570.pdf),
 and [N2310 (2018-11-11)](https://www.open-std.org/jtc1/sc22/wg14/www/docs/n2310.pdf).
 
-### C89 and C90
+#### C89 and C90
 
 C89 and C89 have identical integer literals to later versions through C17,
 except for not having a suffix for `long long`:
@@ -83,38 +86,7 @@ long_suffix     ::= [lL]
 From §3.1.3.2 “Integer constants” in the [C89 draft](https://port70.net/~nsz/c/c89/c89-draft.html#3.1.3.2)
 and §6.1.3.2 “Integer constants” in the [C89 standard](https://web.archive.org/web/20200909074736if_/https://www.pdf-archive.com/2014/10/02/ansi-iso-9899-1990-1/ansi-iso-9899-1990-1.pdf).
 
-## Erlang
-
-Erlang supports integer literals of any base from 2 to 36, with the form
-`base#value`.
-
-```bnf
-integer_literal ::= dec_literal | base_2_literal | … | base_36_literal
-dec_literal     ::= dec_digit ("_"? dec_digit)*
-base_2_literal  ::= "2#" [0-1] ("_"? [0-1])*
-base_3_literal  ::= "3#" [0-2] ("_"? [0-2])*
-…
-base_10_literal ::= "10#" [0-9] ("_"? [0-9])*
-base_11_literal ::= "11#" [0-9 a A] ("_"? [0-9 a A])*
-base_12_literal ::= "12#" [0-9 a-b A-B] ("_"? [0-9 a-b A-B])*
-…
-base_36_literal ::= "36#" [0-9 a-z A-Z] ("_"? [0-9 a-z A-Z])*
-```
-
-Or written using the shared definitions, decimal, binary, octal, and hexadecimal
-literals are:
-
-```bnf
-dec_literal     ::= dec_digit ("_"? dec_digit)* | "10#" dec_digit ("_"? dec_digit)*
-bin_literal     ::= "2#" bin_digit ("_"? bin_digit)*
-oct_literal     ::= "8#" oct_digit ("_"? oct_digit)*
-hex_literal     ::= "16#" hex_digit ("_"? hex_digit)*
-```
-
-From the [reference manual](https://www.erlang.org/doc/reference_manual/data_types.html#number)
-as of [Erlang 14.0.1](https://www.erlang.org/docs/26/reference_manual/data_types.html#number).
-
-## Go
+### Go
 
 ```bnf
 integer_literal ::= dec_literal | bin_literal | oct_literal | hex_literal
@@ -127,9 +99,9 @@ hex_literal     ::= "0" [xX] "_"? hex_digit ("_"? hex_digit)*
 From the [language specification](https://go.dev/ref/spec#Integer_literals)
 as of Go 1.20, revised [15 Dec 2022](https://web.archive.org/web/20230606081724/https://go.dev/ref/spec#Integer_literals).
 
-## Python
+### Python
 
-### Python 3
+#### Python 3
 
 ```bnf
 integer_literal ::= dec_literal | bin_literal | oct_literal | hex_literal
@@ -142,7 +114,7 @@ hex_literal     ::= "0" [xX] ("_"? hex_digit)+
 From the [language reference](https://docs.python.org/3/reference/lexical_analysis.html#integer-literals)
 as of [Python 3.11.4](https://docs.python.org/3.11/reference/lexical_analysis.html#integer-literals).
 
-### Python 2
+#### Python 2
 
 ```bnf
 integer_literal ::= (dec_literal | bin_literal | oct_literal | hex_literal) long_suffix?
@@ -157,7 +129,7 @@ C-style octal numbers with a leading zero were allowed until Python 3.0.
 
 From the language reference as of [Python 2.7](https://docs.python.org/2.7/reference/lexical_analysis.html#integer-and-long-integer-literals).
 
-## Ruby
+### Ruby
 
 ```bnf
 integer_literal ::= dec_literal | bin_literal | oct_literal | hex_literal
@@ -171,7 +143,7 @@ From the informal [language documentation](https://docs.ruby-lang.org/en/master/
 supplemented with the [Ruby Spec Suite](https://github.com/ruby/spec/blob/master/core/kernel/Integer_spec.rb),
 revised [31 May 2023](https://github.com/ruby/spec/blob/109d976477e726c1b5006ba3d42b7e9f5d9798be/core/kernel/Integer_spec.rb).
 
-## Rust
+### Rust
 
 ```bnf
 integer_literal ::= (dec_literal | bin_literal | oct_literal | hex_literal) suffix_no_e?
@@ -185,3 +157,54 @@ where `suffix_no_e` is an identifier or keyword not beginning with `e` or `E`.
 
 From the [language reference](https://doc.rust-lang.org/reference/tokens.html#integer-literals)
 as of [Rust 1.70.0](https://doc.rust-lang.org/1.70.0/reference/tokens.html#integer-literals).
+
+## Ada-style
+
+### Ada
+
+Ada supports integer literals of any base from 2 to 16, with the form
+`base#value#exponent`.
+
+```bnf
+integer_literal ::= base_2_literal | … | base_16_literal
+dec_literal     ::= dec_digit ("_"? dec_digit)* exponent?
+base_2_literal  ::= "0"* "2#" [0-1] ("_"? [0-1])* "#" exponent?
+base_3_literal  ::= "0"* "3#" [0-2] ("_"? [0-2])* "#" exponent?
+…
+base_10_literal ::= "0"* "10#" [0-9] ("_"? [0-9])* "#" exponent?
+base_11_literal ::= "0"* "11#" [0-9 a A] ("_"? [0-9 a A])* "#" exponent?
+base_12_literal ::= "0"* "12#" [0-9 a-b A-B] ("_"? [0-9 a-b A-B])* "#" exponent?
+…
+base_16_literal ::= "0"* "16#" [0-9 a-f A-F] ("_"? [0-9 a-f A-F])* "#" exponent?
+exponent        ::= [eE] [+-]? dec_literal
+```
+
+From [§2.4.1 “Decimal Literals”](http://www.ada-auth.org/standards/22rm/html/RM-2-4-1.html#S0009)
+and [§2.4.2 “Based Literals”](http://www.ada-auth.org/standards/22rm/html/RM-2-4-2.html)
+in the [Language Reference Manual](https://www.adaic.org/ada-resources/standards/)
+as of [Ada 83](https://www.adaic.org/ada-resources/standards/ada83/),
+[Ada 95](https://www.adaic.org/ada-resources/standards/ada-95-documents/),
+[Ada 2005](https://www.adaic.org/ada-resources/standards/ada05/),
+[Ada 2012](http://www.ada-auth.org/standards/ada12_w_tc1.html),
+and [Ada 2022 draft 35](http://www.ada-auth.org/standards/ada22.html).
+
+### Erlang
+
+Erlang supports integer literals of any base from 2 to 36, with the form
+`base#value`.
+
+```bnf
+integer_literal ::= dec_literal | base_2_literal | … | base_36_literal
+dec_literal     ::= dec_digit ("_"? dec_digit)*
+base_2_literal  ::= "0"* "2#" [0-1] ("_"? [0-1])*
+base_3_literal  ::= "0"* "3#" [0-2] ("_"? [0-2])*
+…
+base_10_literal ::= "0"* "10#" [0-9] ("_"? [0-9])*
+base_11_literal ::= "0"* "11#" [0-9 a A] ("_"? [0-9 a A])*
+base_12_literal ::= "0"* "12#" [0-9 a-b A-B] ("_"? [0-9 a-b A-B])*
+…
+base_36_literal ::= "0"* "36#" [0-9 a-z A-Z] ("_"? [0-9 a-z A-Z])*
+```
+
+From the [reference manual](https://www.erlang.org/doc/reference_manual/data_types.html#number)
+as of [Erlang 14.0.1](https://www.erlang.org/docs/26/reference_manual/data_types.html#number).
