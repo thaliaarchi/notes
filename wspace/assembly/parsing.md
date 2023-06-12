@@ -13,29 +13,29 @@
 - Line break: LF, CRLF, CR
 
 ```bnf
-      <word> ::= <XID_Start> <XID_Continue>*
-    <number> ::= <dec_number> | <bin_number> | <oct_number> | <hex_number>
-<dec_number> ::= /[-+]?[1-9][0-9_]*|0*/
-<bin_number> ::= /[-+]?0[bB][01_]*/
-<oct_number> ::= /[-+]?0[oO]_*[0-7][0-7_]*/
-<hex_number> ::= /[-+]?0[xX]_*[0-9a-fA-F][0-9a-fA-F_]*/
-     <colon> ::= ":"
-      <semi> ::= ";"
-     <space> ::= " " | "\t"
-   <comment> ::= …
-        <lf> ::= "\n" | "\r\n" | "\r"
+word        ::= XID_Start XID_Continue*
+integer     ::= dec_integer | bin_integer | oct_integer | hex_integer
+dec_integer ::= /[-+]?[1-9][0-9_]*|0*/
+bin_integer ::= /[-+]?0[bB][01_]*/
+oct_integer ::= /[-+]?0[oO]_*[0-7][0-7_]*/
+hex_integer ::= /[-+]?0[xX]_*[0-9a-fA-F][0-9a-fA-F_]*/
+colon       ::= ":"
+semi        ::= ";"
+space       ::= " " | "\t"
+comment     ::= …
+lf          ::= "\n" | "\r\n" | "\r"
 ```
 
 Examples:
-- `push 1`: word `push`, space, number `1` => `push 1`
-- `3slide`: number `3`, word `slide` => `slide 3`
-- `-1-`: number `-1`, word `-` => `push -1`, `sub`
-- `^2`: word `^`, number `2` => `copy 2`
+- `push 1`: word `push`, space, integer `1` => `push 1`
+- `3slide`: integer `3`, word `slide` => `slide 3`
+- `-1-`: integer `-1`, word `-` => `push -1`, `sub`
+- `^2`: word `^`, integer `2` => `copy 2`
 
 Unicode `XID_Start` and `XID_Continue` properties exclude `Pattern_Syntax`,
 which may not be appropriate. Other characters probably need to be included.
 
-Note that leading zeros are forbidden for decimal numbers. This is because
+Note that leading zeros are forbidden for decimal integers. This is because
 leading zeros denote leading zeros in the base-2 Whitespace encoding and 10 is
 not a power of two, making it ambiguous. It also avoids confusion with C-style
 octal literals.
@@ -50,9 +50,9 @@ Assembly integer literals can be written in decimal (no prefix), binary (with a
 `0b` prefix), octal (`0o`), or hexadecimal (`0x`). In decimal, leading zeros are
 forbidden, since 10 is not a power of 2, to avoid ambiguity in the number of
 leading zeros to use in binary. In binary, octal, and hexadecimal, a `0` after
-the prefix indicates that the rest of the number is encoded in binary, with each
-digit padded to a width of 1, 3, or 4 bits, respectively. The empty integer is
-represented as the literal `0b`.
+the prefix indicates that the rest of the integer is encoded in binary, with
+each digit padded to a width of 1, 3, or 4 bits, respectively. The empty integer
+is represented as the literal `0b`.
 
 | Text   | Whitespace |
 | ------ | ---------- |
@@ -101,12 +101,12 @@ represented as the literal `0b`.
 
 ### Unresolved
 
-The rules for underscores in number should be compared to other languages. It
+The rules for underscores in integers should be compared to other languages. It
 may make sense to forbid trailing or multiple consecutive underscores. Trailing
 underscores may be problematic when abutted with a word and, if allowed, may
-need to be consumed lazily in the number grammar, so they are a part of the word
-token; however, I cannot think of a case where such a token pair would be parsed
-separately instead of joined a single identifier.
+need to be consumed lazily in the integer grammar, so they are a part of the
+word token; however, I cannot think of a case where such a token pair would be
+parsed separately instead of joined a single identifier.
 
 Perhaps underscores or another symbol could represent leading zeros in
 Whitespace assembly numeric literals. Underscores have no semantic meaning in
