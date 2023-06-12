@@ -6,7 +6,7 @@ languages.
 The sign (i.e., `-` or sometimes `+`) is often considered an operator and not
 documented in the grammars with integer literals, so it is not included here.
 
-This focuses on grammars. For history and context, read the [“Integer Literals”](https://web.archive.org/web/20141021124940/http://hhh.gavilan.edu/dvantassel/history/literals.html#_Toc193407229)
+This focuses on grammars. For history and context, read the [Integer Literals](https://web.archive.org/web/20141021124940/http://hhh.gavilan.edu/dvantassel/history/literals.html#_Toc193407229)
 section in Dennie Van Tassel's [History and comparison of programming languages](https://web.archive.org/web/20150118032430/http://hhh.gavilan.edu:80/dvantassel/history/history.html).
 
 | Language       | Bases        | Decimal prefix | Binary prefix | Octal prefix    | Hex prefix | Leading zero | Separator | Leading sep | Trailing sep | Repeated sep | Suffix   |
@@ -56,7 +56,7 @@ long_long_suffix ::= "ll" | "LL"
 bit_precise_int_suffix ::= "wb" | "WB"
 ```
 
-From §6.4.4.1 “Integer constants” in the [C Standard](https://iso-9899.info/wiki/The_Standard)
+From §6.4.4.1 Integer constants in the [C Standard](https://iso-9899.info/wiki/The_Standard)
 as of [N3096 (2023-04-02)](https://www.open-std.org/jtc1/sc22/wg14/www/docs/n3096.pdf).
 
 #### C99, C11, and C17
@@ -73,7 +73,7 @@ long_suffix     ::= [lL]
 long_long_suffix ::= "ll" | "LL"
 ```
 
-From §6.4.4.1 “Integer constants” in the [C Standard](https://iso-9899.info/wiki/The_Standard)
+From §6.4.4.1 Integer constants in the [C Standard](https://iso-9899.info/wiki/The_Standard)
 as of [N1256 (2007-09-07)](https://www.open-std.org/jtc1/sc22/wg14/www/docs/n1256.pdf),
 [N1570 (2011-04-04)](https://www.open-std.org/jtc1/sc22/wg14/www/docs/n1570.pdf),
 and [N2310 (2018-11-11)](https://www.open-std.org/jtc1/sc22/wg14/www/docs/n2310.pdf).
@@ -89,8 +89,8 @@ unsigned_suffix ::= [uU]
 long_suffix     ::= [lL]
 ```
 
-From §3.1.3.2 “Integer constants” in the [C89 draft](https://port70.net/~nsz/c/c89/c89-draft.html#3.1.3.2)
-and §6.1.3.2 “Integer constants” in the [C89 standard](https://web.archive.org/web/20200909074736if_/https://www.pdf-archive.com/2014/10/02/ansi-iso-9899-1990-1/ansi-iso-9899-1990-1.pdf).
+From §3.1.3.2 Integer constants in the [C89 draft](https://port70.net/~nsz/c/c89/c89-draft.html#3.1.3.2)
+and §6.1.3.2 Integer constants in the [C89 standard](https://web.archive.org/web/20200909074736if_/https://www.pdf-archive.com/2014/10/02/ansi-iso-9899-1990-1/ansi-iso-9899-1990-1.pdf).
 
 ### Go
 
@@ -333,8 +333,8 @@ base_16_literal ::= "0"* "16#" [0-9 a-f A-F] ("_"? [0-9 a-f A-F])* "#" exponent?
 exponent        ::= [eE] [+-]? dec_literal
 ```
 
-From [§2.4.1 “Decimal Literals”](http://www.ada-auth.org/standards/22rm/html/RM-2-4-1.html#S0009)
-and [§2.4.2 “Based Literals”](http://www.ada-auth.org/standards/22rm/html/RM-2-4-2.html)
+From [§2.4.1 Decimal Literals](http://www.ada-auth.org/standards/22rm/html/RM-2-4-1.html#S0009)
+and [§2.4.2 Based Literals](http://www.ada-auth.org/standards/22rm/html/RM-2-4-2.html)
 in the [Language Reference Manual](https://www.adaic.org/ada-resources/standards/)
 as of [Ada 83](https://www.adaic.org/ada-resources/standards/ada83/),
 [95](https://www.adaic.org/ada-resources/standards/ada-95-documents/),
