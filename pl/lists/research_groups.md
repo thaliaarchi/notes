@@ -1,4 +1,4 @@
-# Programming languages groups at universities
+# PL groups at universities
 
 - Portfolio website
 - Double my list
