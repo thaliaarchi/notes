@@ -34,22 +34,32 @@ A notebook on compilers, programming languages, and other topics.
 
 ## Programming languages
 
-- [AsciiDots](langs/asciidots.md)
-- Brainfuck
-  - [Brainfuck](langs/brainfuck/brainfuck.md)
-  - [Ook!](langs/brainfuck/ook.md)
-  - [Spoon](langs/brainfuck/spoon.md)
-- [Deadfish](langs/deadfish.md)
-- Go
-  - [Go history](langs/go/history.md)
-- Idris
-  - [Learning Idris](langs/learning_idris.md)
-- Rust
-  - [Converting between Rug and bitvec types](langs/rust/convert_rug_bitvec.md)
-  - [Crates and tutorials](langs/rust/rust.md)
-  - [Rust enum expressivity](langs/rust/enum_expressivity.md)
-  - [Trivia about Rust Types](langs/rust/types_trivia.md)
-- [Zig](langs/zig.md)
+- Programming languages
+  - Go
+    - [Go history](pl/langs/go/history.md)
+  - Idris
+    - [Learning Idris](pl/langs/idris/learning_idris.md)
+  - Rust
+    - [Converting between Rug and bitvec types](pl/langs/rust/convert_rug_bitvec.md)
+    - [Crates and tutorials](pl/langs/rust/rust.md)
+    - [Rust enum expressivity](pl/langs/rust/enum_expressivity.md)
+    - [Trivia about Rust Types](pl/langs/rust/types_trivia.md)
+  - [Zig](pl/langs/zig.md)
+- Esoteric programming languages
+  - [AsciiDots](pl/esolangs/asciidots.md)
+  - Brainfuck
+    - [Brainfuck](pl/esolangs/brainfuck/brainfuck.md)
+    - [Ook!](pl/esolangs/brainfuck/ook.md)
+    - [Spoon](pl/esolangs/brainfuck/spoon.md)
+  - [Deadfish](pl/esolangs/deadfish.md)
+  - [Whitespace](#whitespace)
+- Comparisons
+  - [Programming language comparisons](pl/compare/comparisons.md)
+- Lists
+  - [Programming language alphabet challenge](pl/lists/alphabet_challenge.md)
+  - [PL groups at universities](pl/lists/research_groups.md)
+  - [Programming languages I know](pl/lists/languages_i_know.md)
+- [Paper notes](pl/papers.md)
 
 ## Topics
 
@@ -82,11 +92,6 @@ A notebook on compilers, programming languages, and other topics.
 - [List of ciphers](topics/ciphers.md)
 - [Minimal computing models](topics/minimal_computing_models.md)
 - [Nand to Tetris](topics/nand2tetris/README.md)
-- [Paper notes](topics/papers.md)
-- [Programming language alphabet challenge](topics/language_alphabet.md)
-- [Programming language comparisons](topics/pl_comparisons.md)
-- [Programming languages groups at universities](topics/universities.md)
-- [Programming languages I know](topics/languages_i_know.md)
 - Regular expressions
   - [Exploration of representing specialized string-searching](topics/regexp/algorithms.md)
   - [Pike–Levenshtein: Regular expressions with an edit distance](topics/regexp/pike-levenshtein.md)
