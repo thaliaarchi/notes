@@ -43,6 +43,7 @@ A notebook on compilers, programming languages, and other topics.
     - [Converting between Rug and bitvec types](pl/langs/rust/convert_rug_bitvec.md)
     - [Crates and tutorials](pl/langs/rust/rust.md)
     - [Rust enum expressivity](pl/langs/rust/enum_expressivity.md)
+    - [Rust history](pl/langs/rust/history.md)
     - [Trivia about Rust Types](pl/langs/rust/types_trivia.md)
   - [Zig](pl/langs/zig.md)
 - Esoteric programming languages
