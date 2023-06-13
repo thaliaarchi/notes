@@ -6,3 +6,4 @@
 - [Haskell reference interpreter](haskell_reference.md)
 - [My Whitespace projects](my_projects.md)
 - [Non-interpreter projects](non-interpreters.md)
+- [Usage in the wild](wild.md)
