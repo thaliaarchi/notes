@@ -55,6 +55,11 @@ Optimizations:
   - `drop drop drop drop drop` -> `slide 4 drop` (-4 bytes)
   - etc.
 
+- Duplicate values:
+
+  - `x x` -> `x dup`
+  - `x y x` -> `x y ^1`
+
 - Slide reordering:
 
   - `slide n drop push x` -> `push x slide n+1` (-2 or -3 bytes)
