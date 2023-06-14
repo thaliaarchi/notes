@@ -1,24 +1,27 @@
-# javascript/vii5ard-whitelips-ide
+# Whitelips IDE (javascript/vii5ard-whitelips-ide)
+
+[[code](https://github.com/vii5ard/whitespace/blob/master/ws_asm.js)]
+[[docs](https://vii5ard.github.io/whitespace/help.html)]
 
 ```bnf
-SPACE ::= [ \t\n\r]+
-LINE_COMMENT ::=
+space ::= [ \t\n\r]+
+line_comment ::=
     | ";" [^\n]*
     | "#" [^\n]*
     | "--" [^\n]*
-MULTILINE_COMMENT ::= {-.*?-}
-NUMBER ::= [+-]?\d*
-STRING ::=
+multiline_comment ::= {-.*?-}
+number ::= [+-]?\d*
+string ::=
     | "\"" …
     | "'" …
-LABEL ::=
+label ::=
 
-TOKEN ::=
-    | LINE_COMMENT
-    | MULTILINE_COMMENT
-    | STRING
-    | NUMBER
-    | LABEL
+token ::=
+    | line_comment
+    | multiline_comment
+    | string
+    | number
+    | label
 
-NUMBER (SPACE | ";" | EOF)
+number (space | ";" | eof)
 ```
