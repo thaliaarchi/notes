@@ -7,8 +7,10 @@
 - Character: `' '`
 - String: `" "`
 - Colon: `:`
-- Comma: `,`
 - Semicolon: `;`
+- Comma: `,`
+- Left bracket: `[`
+- Right bracket: `]`
 - Line comment: `#`, `//`, `--`
 - Block comment: `/* */`, `{- -}` (nested)
 - Space
@@ -26,8 +28,10 @@ hex_integer   ::= /[-+]?0[xX]_*[0-9a-fA-F][0-9a-fA-F_]*/
 char          ::= "'" … "'"
 string        ::= "\"" … "\""
 colon         ::= ":"
-comma         ::= ","
 semi          ::= ";"
+lbrack        ::= "["
+rbrack        ::= "]"
+comma         ::= ","
 line_comment  ::= "#" … | "//" … | "--" …
 block_comment ::= "/*" … "*/" | "{-" … "-}"
 space         ::= " " | "\t"
@@ -48,6 +52,9 @@ Note that leading zeros are forbidden for decimal integers. This is because
 leading zeros denote leading zeros in the base-2 Whitespace encoding and 10 is
 not a power of two, making it ambiguous. It also avoids confusion with C-style
 octal literals.
+
+`[` and `]` are used for Lime Whitespace–style macro definitions. When not in a
+macro definition, they should be treated as part of adjacent words.
 
 ### Integer literals
 
@@ -124,7 +131,7 @@ in powers-of-two bases seems to still be a better approach.
 
 ## Parsing
 
-### Resolving mnemonics
+### Consistent mnemonics
 
 Files must be internally consistent with mnemonics and other syntax options.
 
@@ -135,19 +142,24 @@ label encoding and would be better supported by imports.
 
 ### Resolving semicolon ambiguity
 
-First, parse the program, excluding all tokens on a line after a `;`. This
-subset of the program should be syntactically valid on its own, regardless of
-whether `;` denotes a comment or an instruction delimiter. Then, attempt to
-parse the sections after semicolons. Those instructions must use the same
-mnemonics as the rest of the program, or `;` denotes a comment.
+A `;` can denotes a line comment or an instruction delimiter. Parsing should
+support both and detect which is used.
 
-During the first pass, whenever a potential `;`-comment is encountered, push the
-current length of the parsed instructions to a vector, to track the indices
-where `;`-separated instructions would be inserted. Likewise, during the second
-pass, track the indices where each parsed sub-range ends. Then, if it passes the
-heuristic merge the two instruction vectors using those ranges. `;`-separated
-instructions are far less common than `;`-comments, so this additional cost is
-acceptable.
+First try to parse assuming `;`-comments and detect the style with heuristics as
+it goes. If `;`-delimiters cannot be ruled out, try to parse again assuming
+`;`-delimiters and accept the AST with fewer errors. `;`-delimiters are far less
+common than `;`-comments, so the additional cost when used is acceptable.
+
+The subset of the program with `;`-comments removed will not necessarily be
+syntactically valid. If a macro uses `;`-delimiters, the macro terminator could
+interpreted as commented out. Instructions do not have this problem, because
+they cannot span multiple lines and thus cannot have `;`-comments between
+arguments.
+
+There should be few false positives when detecting `;`-delimiters and most
+programs cannot be parsed in both styles. Although, this does leave the
+possibility for malicious programs, that would be parsed differently with
+`;`-comments or `;`-delimiters, I think the benefits outweigh the risk.
 
 ### Modes
 
@@ -190,9 +202,6 @@ acceptable.
   space-delimited arguments.
 - Forth-style calls without the `call` mnemonic are too ambiguous with
   permissive mnemonic inference and not allowed.
-
-Cases where a file passes these heuristics, but was intended to have
-`;`-comments should be very rare.
 
 ## Style
 
