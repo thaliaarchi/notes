@@ -1,20 +1,26 @@
 # Other Whitespace assembly dialects
 
-- c/kspalaiologos-asm2ws
+## Have documented extensions
+
 - c/rdebath
+- csharp/littlebughunter-assembler
+- haskell/burghard-wsa
+- java/matou-whasm
+- java/vyo-kairos
+- whitespace/thaliaarchi-wslib
+
+## Other assemblers
+
+- c/kspalaiologos-asm2ws
 - c/threeifbywhiskey-blacktime
 - coffeescript/ehrlichbryan
 - cpp/codesiiita-spoj
 - cpp/kapustaikwas
 - cpp/pavelshub
 - cpp/timvandermeij
-- csharp/littlebughunter-assembler
 - go/zorchenhimer
-- haskell/burghard-wsa
 - haskell/helvm-helpa
 - java/martinandhels-whitespacesdk
-- java/matou-whasm
-- java/vyo-kairos
 - javascript/kmyk-translater
 - javascript/susisu
 - objective-c/emilbahnsen-assembler
@@ -44,4 +50,3 @@
 - whitespace/drebelsky-programs
 - whitespace/lukepebody-advent-of-code
 - whitespace/t3nsor-spoj
-- whitespace/thaliaarchi-wslib
