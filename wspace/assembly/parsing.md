@@ -7,26 +7,35 @@
 - Character: `' '`
 - String: `" "`
 - Colon: `:`
+- Comma: `,`
 - Semicolon: `;`
 - Line comment: `#`, `//`, `--`
 - Block comment: `/* */`, `{- -}` (nested)
+- Space
 - Line break: LF, CRLF, CR
 
+Grammar:
+
 ```bnf
-word        ::= XID_Start XID_Continue*
-integer     ::= dec_integer | bin_integer | oct_integer | hex_integer
-dec_integer ::= /[-+]?[1-9][0-9_]*|0*/
-bin_integer ::= /[-+]?0[bB][01_]*/
-oct_integer ::= /[-+]?0[oO]_*[0-7][0-7_]*/
-hex_integer ::= /[-+]?0[xX]_*[0-9a-fA-F][0-9a-fA-F_]*/
-colon       ::= ":"
-semi        ::= ";"
-space       ::= " " | "\t"
-comment     ::= …
-lf          ::= "\n" | "\r\n" | "\r"
+word          ::= XID_Start XID_Continue*
+integer       ::= dec_integer | bin_integer | oct_integer | hex_integer
+dec_integer   ::= /[-+]?[1-9][0-9_]*|0*/
+bin_integer   ::= /[-+]?0[bB][01_]*/
+oct_integer   ::= /[-+]?0[oO]_*[0-7][0-7_]*/
+hex_integer   ::= /[-+]?0[xX]_*[0-9a-fA-F][0-9a-fA-F_]*/
+char          ::= "'" … "'"
+string        ::= "\"" … "\""
+colon         ::= ":"
+comma         ::= ","
+semi          ::= ";"
+line_comment  ::= "#" … | "//" … | "--" …
+block_comment ::= "/*" … "*/" | "{-" … "-}"
+space         ::= " " | "\t"
+line_break    ::= "\n" | "\r\n" | "\r"
 ```
 
 Examples:
+
 - `push 1`: word `push`, space, integer `1` => `push 1`
 - `3slide`: integer `3`, word `slide` => `slide 3`
 - `-1-`: integer `-1`, word `-` => `push -1`, `sub`
@@ -115,68 +124,75 @@ in powers-of-two bases seems to still be a better approach.
 
 ## Parsing
 
-```rust
-enum Token {
-    Word,
-    Integer,
-    Char,
-    String,
-    Colon,
-    Semi,
-    Comma,
-    Comment,
-    LineBreak,
-}
+### Resolving mnemonics
 
-enum SemiMode {
-    Comment,
-    LineBreak,
-    Detect,
-}
+Files must be internally consistent with mnemonics and other syntax options.
 
-enum OperandMode {
-    None,
-    /// - `(add|sub|mul|div|mod) (<lhs>? <rhs>)?`
-    /// - `store (<addr>? <value>)?`
-    /// - `retrieve <value>?`
-    Space,
-    /// - `(add|sub|mul|div|mod) (<lhs>? "," <rhs>)?`
-    /// - `store (<addr>? "," <value>)?`
-    /// - `retrieve <value>?`
-    Comma,
-}
+Although some other assemblers support multiple mnemonics per instruction, I
+don't know of any program that are inconsistent. This could arise, if programs
+of differing styles were concatenated, but that would also have issues with
+label encoding and would be better supported by imports.
 
-enum LabelOrder {
-    /// - `(call|jmp|jz|jn) <label>`
-    Post,
-    /// - `<label> (call|jmp|jz|jn)`
-    Pre,
-}
-```
+### Resolving semicolon ambiguity
 
-```bnf
-one_line ::=
-    | (inst LineBreak)* LineBreak
-inst ::=
-    | Mnemonic (Word | Number)*
-```
+First, parse the program, excluding all tokens on a line after a `;`. This
+subset of the program should be syntactically valid on its own, regardless of
+whether `;` denotes a comment or an instruction delimiter. Then, attempt to
+parse the sections after semicolons. Those instructions must use the same
+mnemonics as the rest of the program, or `;` denotes a comment.
+
+During the first pass, whenever a potential `;`-comment is encountered, push the
+current length of the parsed instructions to a vector, to track the indices
+where `;`-separated instructions would be inserted. Likewise, during the second
+pass, track the indices where each parsed sub-range ends. Then, if it passes the
+heuristic merge the two instruction vectors using those ranges. `;`-separated
+instructions are far less common than `;`-comments, so this additional cost is
+acceptable.
+
+### Modes
+
+- Semicolon:
+  - Comment
+  - Instruction delimiter
+- Push:
+  - Postfix: `push n`
+  - Literal: `n`
+- Operands:
+  - None
+  - Space:
+    - `(add|sub|mul|div|mod) (lhs? rhs)?`
+    - `store (addr? value)?`
+    - `retrieve value?`
+  - Comma:
+    - `(add|sub|mul|div|mod) ((lhs ",")? rhs)?`
+    - `store ((addr ",")? value)?`
+    - `retrieve value?`
+- Label definition:
+  - Colon: `l ":"`
+  - Mnemonic: `label l`
+  - Sigil: `"@" l`, `"." l`, `"label_" l`, etc.
+- Label operand:
+  - Postfix: `(call|jmp|jz|jn) l`
+  - Prefix: `l (call|jmp|jz|jn)`
 
 ### Heuristics
 
-- Almost every program will have `push`; detect push style
-  - Postfix: `push n`
-  - Literal: `n`
-- If `;` appears at the start of a line, it denotes comments
-- If multiple instructions are on a line, then disable `;` separators
+- Almost every program will have `push`; detect push style.
+- If multiple instructions appear on the same line separated by spaces, then `;`
+  denotes a comment.
+- If a line starts with a `;` or there are consecutive `;`s, then `;` denotes a
+  comment. If a program has one instruction per line, then commented code would
+  almost always appear at the start of a line.
 - Literal pushes are mutually exclusive with optional arguments or `;`
-  separators
-- First parse the entire `;`-less program, then use those settings to attempt to
-  parse with separators
-- Forth-style calls without the `call` mnemonic are not allowed
+  separators.
+- `:` always denotes a label. It is mutually exclusive with a label mnemonic.
+- `,` always denotes an argument delimiter. It is mutually exclusive with
+  space-delimited arguments.
+- Forth-style calls without the `call` mnemonic are too ambiguous with
+  permissive mnemonic inference and not allowed.
 
-### Parsing semicolon-delimited instructions
-
-Windows (`Vec<usize>`) for non-comment tokens and windows for in semi
+Cases where a file passes these heuristics, but was intended to have
+`;`-comments should be very rare.
 
 ## Style
 
