@@ -1,7 +1,7 @@
 # Non-interpreter projects
 
-A list of all projects in the Whitespace Corpus, that aren't interpreters or
-disassemblers.
+A list of all projects in the Whitespace Corpus, that aren't interpreters,
+assemblers, or disassemblers.
 
 ## Whitespace backends
 
@@ -36,53 +36,3 @@ disassemblers.
 ## Symbolic executors
 
 - python/umutoztunc-whitesymex
-
-## Assemblers
-
-- c/kspalaiologos-asm2ws
-- c/manarice
-- c/rdebath
-- c/threeifbywhiskey-blacktime
-- coffeescript/ehrlichbryan
-- cpp/codesiiita-spoj
-- cpp/kapustaikwas
-- cpp/pavelshub
-- cpp/timvandermeij
-- csharp/littlebughunter-assembler
-- go/zorchenhimer
-- haskell/burghard-wsa
-- haskell/helvm-helpa
-- java/martinandhels-whitespacesdk
-- java/matou-whasm
-- java/vyo-kairos
-- javascript/kmyk-translater
-- javascript/susisu
-- javascript/vii5ard-whitelips-ide
-- objective-c/emilbahnsen-assembler
-- perl/ephphatha-wsm2ws
-- php/igorw-wsm
-- python/drafear-converter
-- python/eizoassik-pyws
-- python/ganeshsankaran
-- python/hunminpark
-- python/ilikepython256-whitespace-unc
-- python/jrialland
-- python/kraterkraken
-- python/meand
-- python/ryndvs-aoc
-- python/smithers-bluespace
-- python/stephenchappell
-- python/tokigun-esotope-ws
-- ruby/angel
-- ruby/bossiernesto
-- ruby/collidedscope-spitewaste
-- ruby/shimo-yukicoder
-- ruby/wconrad
-- rust/censoredusername-whitespacers
-- rust/faultier-albino
-- rust/faultier-whitebase
-- scala/dashlambda-eso
-- whitespace/drebelsky-programs
-- whitespace/lukepebody-advent-of-code
-- whitespace/t3nsor-spoj
-- whitespace/thaliaarchi-wslib
