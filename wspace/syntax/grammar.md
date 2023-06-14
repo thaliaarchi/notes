@@ -1,4 +1,4 @@
-# Formal grammar for Whitespace
+# Whitespace grammar
 
 ## Parsing forwards
 
