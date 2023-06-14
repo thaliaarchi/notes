@@ -1,20 +1,21 @@
-# Nospace grammar
+# Nospace (cpp/buyoh-nospace)
 
+[[code](https://github.com/buyoh/nospace/blob/master/main.cpp)]
+[[docs](https://github.com/buyoh/nospace/blob/master/docs/tutorial_en.md)]
+
+```bnf
 program ::= (func | let)*
 
-## Tokens
-
+# Tokens
 integer ::= /[0-9]+/
 char ::= /'([^\\\t\n\s']|\\[\\tns'])*'/
 ident ::= /[A-Za-z_][A-Za-z0-9_]*/
 
-## Whitespace (allowed between every token)
-
+# Whitespace (allowed between every token)
 space ::= /[ \t\n\v\f\r]/
 comment ::= /#[^#]*#/
 
-## Expressions
-
+# Expressions
 expr ::= expr_bin5
 expr_val ::=
     | integer
@@ -33,8 +34,7 @@ expr_bin3 ::= expr_bin2 (("==" | "!=" | "<" | "<=" | ">" | ">=") expr_bin3)?
 expr_bin4 ::= expr_bin3 (("&&" || "||") expr_bin4)?
 expr_bin5 ::= expr_bin4 (("=" | "+=" | "-=" | "*=" | "/=" | "%=") expr_bin5)?
 
-## Statements
-
+# Statements
 func ::=
     | "func" ":" ident "(" (ident ("," ident)*)? ")"
         "{" (stmt | let)* "}"
@@ -50,3 +50,4 @@ stmt ::=
     | "return" (":" expr)? ";"
     | expr ";"
 block ::= "{" stmt* "}"
+```
