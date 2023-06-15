@@ -1,7 +1,9 @@
-# Lime Whitespace (c/manarice-lime)
+# Lime Whitespace assembly
 
-[[code](https://github.com/ManaRice/whitespace/blob/master/wsa.c)]
-[[docs](https://github.com/ManaRice/whitespace/blob/master/ws/wsa/README.md)]
+- Corpus: [c/manarice-lime](https://github.com/wspace/corpus/blob/main/c/manarice-lime/project.json)
+- Source: [code](https://github.com/ManaRice/whitespace/blob/master/wsa.c),
+  [docs](https://github.com/ManaRice/whitespace/blob/master/ws/wsa/README.md)
+  (last updated [2022-05-30](https://github.com/ManaRice/whitespace/tree/e8db8719e170c12875dac571c39ac811c7d0ec52))
 
 ```bnf
 program ::= space* (inst space+)* inst? space*
@@ -74,5 +76,3 @@ Notes:
   unchanged
 - `push 0` and `push -0` are encoded as `SS SSL`
 - The pattern `.` includes `\n` here
-
-Last updated [2022-05-30](https://github.com/ManaRice/whitespace/tree/e8db8719e170c12875dac571c39ac811c7d0ec52).

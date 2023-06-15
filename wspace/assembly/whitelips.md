@@ -1,7 +1,9 @@
-# Whitelips IDE (javascript/vii5ard-whitelips-ide)
+# Whitelips IDE assembly
 
-[[code](https://github.com/vii5ard/whitespace/blob/master/ws_asm.js)]
-[[docs](https://vii5ard.github.io/whitespace/help.html#assembly)]
+- Corpus: [javascript/vii5ard-whitelips-ide](https://github.com/wspace/corpus/blob/main/javascript/vii5ard-whitelips-ide/project.json)
+- Source: [code](https://github.com/vii5ard/whitespace/blob/master/ws_asm.js),
+  [docs](https://vii5ard.github.io/whitespace/help.html#assembly)
+  (last updated [2022-11-29](https://github.com/vii5ard/whitespace/tree/a42adf9407063fd4be09047e6d254364c5e5b9d2))
 
 ```bnf
 program ::= space* (inst space+)* inst? space*
@@ -123,5 +125,3 @@ Notes:
 - Labels are assigned sequentially from `0` in definition order
 - Multiline comments are not nested
 - The pattern `.` includes `\n` here
-
-Last updated [2022-11-29](https://github.com/vii5ard/whitespace/tree/a42adf9407063fd4be09047e6d254364c5e5b9d2).
