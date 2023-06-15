@@ -8,14 +8,14 @@
 ## Grammar
 
 ```bnf
-program ::= space* (inst space+)* inst? space*
+program ::= space? (inst space)* inst? space?
 inst ::=
-    | ("PUSH" | "push") space+ number
+    | ("PUSH" | "push") space number
     | "DUPE" | "dupe" | "DUP" | "dup"
-    | ("COPY" | "copy") space+ number
+    | ("COPY" | "copy") space number
     | "SWAP" | "swap"
     | "DROP" | "drop"
-    | ("SLIDE" | "slide") space+ number
+    | ("SLIDE" | "slide") space number
     | "ADD" | "add"
     | "SUB" | "sub"
     | "MUL" | "mul"
@@ -24,10 +24,10 @@ inst ::=
     | "STORE" | "store"
     | "FETCH" | "fetch" | "RETRIEVE" | "retrieve"
     | label ":"
-    | ("CALL" | "call") space+ label
-    | ("JMP" | "jmp") space+ label
-    | ("JZ" | "jz") space+ label
-    | ("JN" | "jn") space+ label
+    | ("CALL" | "call") space label
+    | ("JMP" | "jmp") space label
+    | ("JZ" | "jz") space label
+    | ("JN" | "jn") space label
     | "RET" | "ret"
     | "END" | "end"
     | "PRINTC" | "printc"
@@ -35,11 +35,11 @@ inst ::=
     | "READC" | "readc"
     | "READI" | "readi"
     | ("MACRO" | "macro")
-        space+ word
-        space* "["
-        (space* (word | label | number)
-                (space+ (word | label | number))*)?
-        space* "]"
+        space word
+        space? "["
+        (space? (word | label | number)
+                (space (word | label | number))*)?
+        space? "]"
     | word
 
 word ::= [^ \t\n.:;\[\]*/\\'"#$-]+
@@ -48,8 +48,8 @@ number ::=
     | "-"? [0-9]{1,64}
     | "0x" [0-9a-fA-F]{1,64}
     | "'" ([^\\] | \\[nt] | \\.) "'"
-space ::=
-    | [ \t\n]*
+space ::= ([ \t\n] | comment)+
+comment ::=
     | "//" .*? "\n"
     | "/*" .*? "*/"
     | ";" .*? "\n"

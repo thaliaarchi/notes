@@ -8,10 +8,10 @@
 ## Grammar
 
 ```bnf
-program ::= (trim_space* (inst | comment)? trim_space* line_break)*
-            trim_space* (inst | comment)? trim_space* line_break?
+program ::= (trim_space? (inst | comment)? trim_space? line_break)*
+            trim_space? (inst | comment)? trim_space? line_break?
 inst ::=
-    | "push" space+ (number | variable)
+    | "push" space (number | variable)
     | "dup"
     | "swap"
     | "pop"
@@ -20,13 +20,13 @@ inst ::=
     | "mul" arith_op
     | "div" arith_op
     | "mod" arith_op
-    | "store" (space+ number (space+ number)?)?
-    | "retrieve" (space+ number)?
-    | "lbl" space+ label
-    | "call" space+ label
-    | "jmp" space+ label
-    | "jpz" space+ label
-    | "jpn" space+ label
+    | "store" (space number (space number)?)?
+    | "retrieve" (space number)?
+    | "lbl" space label
+    | "call" space label
+    | "jmp" space label
+    | "jpz" space label
+    | "jpn" space label
     | "ret"
     | "exit"
     | "print_char"
@@ -35,11 +35,11 @@ inst ::=
     | "read_number"
 arith_op ::=
     | ε
-    | space+ number
-    | space+ variable
-    | space+ variable space+ number
-    | space+ number space+ variable
-    | space+ variable space+ variable
+    | space number
+    | space variable
+    | space variable space number
+    | space number space variable
+    | space variable space variable
 
 number ::=
     | [0-9]+
@@ -51,8 +51,8 @@ variable ::= "*" .*?
 comment ::= "//" .*?
 
 line_break ::= "\n" | "\r" | "\r\n"
-space ::= " " | "\t"
-trim_space ::= Char.IsWhiteSpace NOT line_break
+space ::= [ \t]+
+trim_space ::= (Char.IsWhiteSpace NOT line_break)+
 ```
 
 Opcodes are matched case-insensitively.
