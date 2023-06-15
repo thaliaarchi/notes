@@ -3,7 +3,6 @@
 ## Have documented extensions
 
 - c/rdebath
-- csharp/littlebughunter-assembler
 - haskell/burghard-wsa
 - java/matou-whasm
 - java/vyo-kairos
