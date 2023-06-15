@@ -1,7 +1,7 @@
 # Whitelips IDE (javascript/vii5ard-whitelips-ide)
 
 [[code](https://github.com/vii5ard/whitespace/blob/master/ws_asm.js)]
-[[docs](https://vii5ard.github.io/whitespace/help.html)]
+[[docs](https://vii5ard.github.io/whitespace/help.html#assembly)]
 
 ```bnf
 program ::= space* (inst space+)* inst? space*
@@ -32,14 +32,15 @@ inst ::=
     | "readc" (space+ number)?
     | "readi" (space+ number)?
     | "include" space+ string
-    | "macro" space+ word ":" … "$$"
-
-keywords ::=
-    | "$$"
+    | "macro" space+ word ":" space* (macro_inst space+)* "$$"
+    | word
+macro_inst ::=
+    | inst
     | "$label"
     | "$number"
     | "$string"
     | "$redef"
+    | "$" [0-9]+
 
 token ::=
     | word
@@ -57,7 +58,7 @@ space ::=
     | ";" [^\n]*
     | "#" [^\n]*
     | "--" [^\n]*
-    | "{-" .*? "-}"
+    | "{-" .*? "-}" | "{-" .*$
 ```
 
 Strings may contain escape sequences: `\n` as LF; `\t` as tab; `\` followed by
@@ -73,15 +74,43 @@ first non-local label prepends nothing. The mnemonic label definition form does
 not scope local labels.
 
 Macros are only applied when the types of the successive tokens match the
-parameter types expected by the macro. Macros names can shadow mnemonics as a
-way to overload them. When the argument types do not match, if the name shadows
-a mnemonic, that instruction is used instead; otherwise, the macro invocation is
-replaced with nothing.
+parameter types expected by the macro. When the argument types do not match, if
+it has the name of a mnemonic, that instruction is used instead; otherwise, the
+macro invocation is silently replaced with nothing.
+
+A macro can be named anything, that's a valid word token. This includes
+instruction mnemonics, the names of previously defined macros, or labels. It
+only shadows a mnemonic if the arguments are of the appropriate types. Macros
+shadow previously defined macros of the same name. Macros do not expand in label
+position, so do not conflict with labels. Unless shadowed, `$$`, `$label`,
+`$number`, `$string`, and `$redef` are reserved outside of a macro. The `$n`
+label form is not reserved. A macro named as any of these keywords cannot be
+referenced within a macro.
+
+Labels can be generated in a macro using the form `$n`, where `n` is a decimal
+number. These are replaced with a token of the form `.__id__n__`, where `id` is
+the global count of macro expansions, starting from 1.
+
+A macro cannot contain `$$`, so it cannot expand to a full macro definition
+without the caller adding `$$`.
+
+Macros are in scope for their body and any successive instructions, as well as
+any files included after the definition. Macros defined in an included file are
+introduced into the scope of the parent file. Macros are supposed to have a
+recursion depth of 16, but it does not seem to work.
+
+`include` assembles the named file, with all already seen symbols visible to the
+child assembler, and appends it to the end of the including file. Only the first
+`include` for a filename is expanded. `include`s are not expanded in a macro
+definition.
 
 Bugs in the assembler:
 - The mnemonic label definition form does not scope local labels
 - `call`, `jmp`, `jz`, and `jn` allow numbers as arguments, but label resolution
   always fails, because labels cannot be defined by numbers
+- `$n` tokens in macros appear to only partially implemented
+- Macro recursion is not properly implemented or restricted
+- `{-`-comments can be unterminated
 - Space is optional after a word or number, if followed by a `;`-comment, but is
   required when followed by other comments or a string. Space is optional after
   a string or comment.
@@ -94,3 +123,5 @@ Notes:
 - Labels are assigned sequentially from `0` in definition order
 - Multiline comments are not nested
 - The pattern `.` includes `\n` here
+
+Last updated [2022-11-29](https://github.com/vii5ard/whitespace/tree/a42adf9407063fd4be09047e6d254364c5e5b9d2).
