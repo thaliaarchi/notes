@@ -9,23 +9,26 @@ documented in the grammars with integer literals, so it is not included here.
 This focuses on grammars. For history and context, read the [Integer Literals](https://web.archive.org/web/20141021124940/http://hhh.gavilan.edu/dvantassel/history/literals.html#_Toc193407229)
 section in Dennie Van Tassel's [History and comparison of programming languages](https://web.archive.org/web/20150118032430/http://hhh.gavilan.edu:80/dvantassel/history/history.html).
 
-| Language       | Bases        | Decimal prefix | Binary prefix | Octal prefix    | Hex prefix | Leading zero | Separator | Leading sep | Trailing sep | Repeated sep | Suffix   |
-| -------------- | ------------ | -------------- | ------------- | --------------- | ---------- | ------------ | --------- | ----------- | ------------ | ------------ | -------- |
-| Ada            | 2-16         | "", `10#`      | `2#`          | `8#`            | `16#`      | Decimal      | `_`       | No          | No           | No           | Exponent |
-| C23            | 2, 8, 10, 16 | ""             | `0b`, `0B`    | `0`             | `0x`, `0X` | Octal        | `'`       | No          | No           | No           | Type     |
-| C89–C17        | 8, 10, 16    | ""             | N/A           | `0`             | `0x`, `0X` | Octal        | N/A       | N/A         | N/A          | N/A          | Type     |
-| Erlang         | 2-36         | "", `10#`      | `2#`          | `8#`            | `16#`      | Decimal      | `_`       | No          | No           | No           | N/A      |
-| Go 1.13+       | 2, 8, 10, 16 | ""             | `0b`, `0B`    | `0`, `0o`, `0O` | `0x`, `0X` | Octal        | `_`       | Yes         | No           | No           | N/A      |
-| Go <=1.12      | 8, 10, 16    | ""             | N/A           | `0`             | `0x`, `0X` | Octal        | N/A       | N/A         | N/A          | N/A          | N/A      |
-| Java 7+        | 2, 8, 10, 16 | ""             | `0b`, `0B`    | `0`             | `0x`, `0X` | Octal        | `_`       | No          | No           | Yes          | Type     |
-| Java 6         | 8, 10, 16    | ""             | N/A           | `0`             | `0x`, `0X` | Octal        | N/A       | N/A         | N/A          | N/A          | Type     |
-| Python 3.6+    | 2, 8, 10, 16 | ""             | `0b`, `0B`    | `0o`, `0O`      | `0x`, `0X` | Illegal      | `_`       | Yes         | No           | No           | N/A      |
-| Python 3.0–3.5 | 2, 8, 10, 16 | ""             | `0b`, `0B`    | `0o`, `0O`      | `0x`, `0X` | Illegal      | N/A       | N/A         | N/A          | N/A          | N/A      |
-| Python 2.6–2.7 | 2, 8, 10, 16 | ""             | `0b`, `0B`    | `0`, `0o`, `0O` | `0x`, `0X` | Octal        | N/A       | N/A         | N/A          | N/A          | Type     |
-| Python <=2.5   | 8, 10, 16    | ""             | N/A           | `0`             | `0x`, `0X` | Octal        | N/A       | N/A         | N/A          | N/A          | Type     |
-| Ruby           | 2, 8, 10, 16 | "", `0d`, `0D` | `0b`, `0B`    | `0`, `0o`, `0O` | `0x`, `0X` | Octal        | `_`       | No          | No           | No           | N/A      |
-| Rust           | 2, 8, 10, 16 | ""             | `0b`          | `0o`            | `0x`       | Decimal      | `_`       | Yes         | Yes          | Yes          | Type     |
-| Rust 0.1–0.8   | 2, 10, 16    | ""             | `0b`          | N/A             | `0x`       | Decimal      | `_`       | Yes         | Yes          | Yes          | Type     |
+| Language          | Bases        | Decimal prefix | Binary prefix | Octal prefix    | Hex prefix | Leading zero | Separator | Leading sep | Trailing sep | Repeated sep | Suffix   |
+| ----------------- | ------------ | -------------- | ------------- | --------------- | ---------- | ------------ | --------- | ----------- | ------------ | ------------ | -------- |
+| Ada               | 2-16         | "", `10#`      | `2#`          | `8#`            | `16#`      | Decimal      | `_`       | No          | No           | No           | Exponent |
+| C23               | 2, 8, 10, 16 | ""             | `0b`, `0B`    | `0`             | `0x`, `0X` | Octal        | `'`       | No          | No           | No           | Type     |
+| C89–C17           | 8, 10, 16    | ""             | N/A           | `0`             | `0x`, `0X` | Octal        | N/A       | N/A         | N/A          | N/A          | Type     |
+| Erlang            | 2-36         | "", `10#`      | `2#`          | `8#`            | `16#`      | Decimal      | `_`       | No          | No           | No           | N/A      |
+| Go 1.13+          | 2, 8, 10, 16 | ""             | `0b`, `0B`    | `0`, `0o`, `0O` | `0x`, `0X` | Octal        | `_`       | Yes         | No           | No           | N/A      |
+| Go <=1.12         | 8, 10, 16    | ""             | N/A           | `0`             | `0x`, `0X` | Octal        | N/A       | N/A         | N/A          | N/A          | N/A      |
+| Java 7+           | 2, 8, 10, 16 | ""             | `0b`, `0B`    | `0`             | `0x`, `0X` | Octal        | `_`       | No          | No           | Yes          | Type     |
+| Java 6            | 8, 10, 16    | ""             | N/A           | `0`             | `0x`, `0X` | Octal        | N/A       | N/A         | N/A          | N/A          | Type     |
+| Python 3.6+       | 2, 8, 10, 16 | ""             | `0b`, `0B`    | `0o`, `0O`      | `0x`, `0X` | Illegal      | `_`       | Yes         | No           | No           | N/A      |
+| Python 3.0–3.5    | 2, 8, 10, 16 | ""             | `0b`, `0B`    | `0o`, `0O`      | `0x`, `0X` | Illegal      | N/A       | N/A         | N/A          | N/A          | N/A      |
+| Python 2.6–2.7    | 2, 8, 10, 16 | ""             | `0b`, `0B`    | `0`, `0o`, `0O` | `0x`, `0X` | Octal        | N/A       | N/A         | N/A          | N/A          | Type     |
+| Python <=2.5      | 8, 10, 16    | ""             | N/A           | `0`             | `0x`, `0X` | Octal        | N/A       | N/A         | N/A          | N/A          | Type     |
+| Ruby              | 2, 8, 10, 16 | "", `0d`, `0D` | `0b`, `0B`    | `0`, `0o`, `0O` | `0x`, `0X` | Octal        | `_`       | No          | No           | No           | N/A      |
+| Rust              | 2, 8, 10, 16 | ""             | `0b`          | `0o`            | `0x`       | Decimal      | `_`       | Yes         | Yes          | Yes          | Type     |
+| Rust 0.1–0.8      | 2, 10, 16    | ""             | `0b`          | N/A             | `0x`       | Decimal      | `_`       | Yes         | Yes          | Yes          | Type     |
+| Visual Basic 15.5 | 2, 8, 10, 16 | ""             | `&B`, `&b`    | `&O`, `&o`      | `&H`, `&h` | Decimal      | `_`       | Yes         | No           | Yes          | Type     |
+| Visual Basic 15.0 | 2, 8, 10, 16 | ""             | `&B`, `&b`    | `&O`, `&o`      | `&H`, `&h` | Decimal      | `_`       | No          | No           | Yes          | Type     |
+| Visual Basic 7.0  | 8, 10, 16    | ""             | N/A           | `&O`, `&o`      | `&H`, `&h` | Decimal      | N/A       | N/A         | N/A          | N/A          | Type     |
 
 Shared definitions:
 
@@ -362,3 +365,67 @@ base_36_literal ::= "0"* "36#" [0-9 a-z A-Z] ("_"? [0-9 a-z A-Z])*
 
 From the [reference manual](https://www.erlang.org/doc/reference_manual/data_types.html#number)
 as of [Erlang 14.0.1](https://www.erlang.org/docs/26/reference_manual/data_types.html#number).
+
+## Visual Basic
+
+### Visual Basic 15.5
+
+VB 15.5 added leading digit separators.
+
+```bnf
+integer_literal ::= (int_literal | bin_literal | oct_literal | hex_literal) integer_suffix?
+dec_literal     ::= dec_digit ("_"* dec_digit)*
+bin_literal     ::= ("&B" | "&b") ("_"* bin_digit)+
+oct_literal     ::= ("&O" | "&o") ("_"* oct_digit)+
+hex_literal     ::= ("&H" | "&h") ("_"* hex_digit)+
+integer_suffix  ::= [Uu]?[Ss] | [Uu]?[Ii] | [Uu]?[Ll] | "%" | "&"
+```
+
+Noted in [what's new](https://learn.microsoft.com/en-us/dotnet/visual-basic/whats-new/#visual-basic-155)
+for Visual Basic 15.0.
+
+### Visual Basic 15.0
+
+VB 15.0 added binary literals and digit separators.
+
+```bnf
+integer_literal ::= (int_literal | bin_literal | oct_literal | hex_literal) integer_suffix?
+dec_literal     ::= dec_digit ("_"* dec_digit)*
+bin_literal     ::= ("&B" | "&b") bin_digit ("_"* bin_digit)*
+oct_literal     ::= ("&O" | "&o") oct_digit ("_"* oct_digit)*
+hex_literal     ::= ("&H" | "&h") hex_digit ("_"* hex_digit)*
+integer_suffix  ::= [Uu]?[Ss] | [Uu]?[Ii] | [Uu]?[Ll] | "%" | "&"
+```
+
+Noted in [what's new](https://learn.microsoft.com/en-us/dotnet/visual-basic/whats-new/#visual-basic-15)
+for Visual Basic 15.0.
+
+### Visual Basic 8.0–11.0
+
+VB 8.0 added unsigned types.
+
+```bnf
+integer_literal ::= (int_literal | oct_literal | hex_literal) integer_suffix?
+dec_literal     ::= dec_digit+
+oct_literal     ::= ("&O" | "&o") oct_digit+
+hex_literal     ::= ("&H" | "&h") hex_digit+
+integer_suffix  ::= [Uu]?[Ss] | [Uu]?[Ii] | [Uu]?[Ll] | "%" | "&"
+```
+
+Decimal literals represent the signed decimal value of the integral literal,
+whereas octal and hexadecimal literals represent the unsigned binary value.
+
+The suffix variants stand for the types `Short` and `UShort`, `Integer` and
+`UInteger`, `Long` and `ULong`, `Integer`, and `Long`, respectively. When no
+type suffix is specified, the type is `Integer` if it is in the range of
+`Integer`, `Long` if in the range of `Long`, or otherwise a compile-time error.
+
+According to the language specification for Visual Basic 8.0–11.0.
+
+### Visual Basic 7.0–7.1
+
+```bnf
+integer_suffix  ::= [Ss] | [Ii] | [Ll] | "%" | "&"
+```
+
+According to the language specification for Visual Basic 7.0–7.1.
