@@ -8,35 +8,35 @@
 ## Grammar
 
 ```bnf
-program ::= space* (inst space+)* inst? space*
+program ::= space? (inst space)* inst? space?
 inst ::=
-    | "push" space+ (number | string)
+    | "push" space (number | string)
     | "dup"
-    | "copy" space+ number
+    | "copy" space number
     | "swap"
     | "drop"
-    | "slide" space+ number
-    | "add" (space+ number)?
-    | "sub" (space+ number)?
-    | "mul" (space+ number)?
-    | "div" (space+ number)?
-    | "mod" (space+ number)?
+    | "slide" space number
+    | "add" (space number)?
+    | "sub" (space number)?
+    | "mul" (space number)?
+    | "div" (space number)?
+    | "mod" (space number)?
     | "store"
-    | "retrieve" (space+ number)?
+    | "retrieve" (space number)?
     | word ":"
-    | "label" space+ word
-    | "call" space+ word
-    | "jmp" space+ word
-    | "jz" space+ word
-    | "jn" space+ word
+    | "label" space word
+    | "call" space word
+    | "jmp" space word
+    | "jz" space word
+    | "jn" space word
     | "ret"
     | "end"
     | "printc"
     | "printi"
-    | "readc" (space+ number)?
-    | "readi" (space+ number)?
-    | "include" space+ string
-    | "macro" space+ word ":" space* (macro_inst space+)* "$$"
+    | "readc" (space number)?
+    | "readi" (space number)?
+    | "include" space string
+    | "macro" space word ":" space? (macro_inst space)* "$$"
     | word
 macro_inst ::=
     | inst
@@ -46,19 +46,13 @@ macro_inst ::=
     | "$redef"
     | "$" [0-9]+
 
-token ::=
-    | word
-    | word ":"
-    | number
-    | string
-    | space
 word ::= [0-9a-zA-Z_$.]+
 number ::= [+-]?\d*
 string ::=
     | "\"" ([^"\n\\] | \\[nt] | \\[0-9]+ | \\.)*? "\""
     | "'" ([^'\n\\] | \\[nt] | \\[0-9]+ | \\.)*? "'"
-space ::=
-    | [ \t\n\r]+
+space ::= ([ \t\n\r] | comment)+
+comment ::=
     | ";" [^\n]*
     | "#" [^\n]*
     | "--" [^\n]*
