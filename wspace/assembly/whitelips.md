@@ -5,6 +5,8 @@
   [docs](https://vii5ard.github.io/whitespace/help.html#assembly)
   (last updated [2022-11-29](https://github.com/vii5ard/whitespace/tree/a42adf9407063fd4be09047e6d254364c5e5b9d2))
 
+## Grammar
+
 ```bnf
 program ::= space* (inst space+)* inst? space*
 inst ::=
@@ -63,6 +65,10 @@ space ::=
     | "{-" .*? "-}" | "{-" .*$
 ```
 
+The pattern `.` includes `\n` here.
+
+## Semantics
+
 Strings may contain escape sequences: `\n` as LF; `\t` as tab; `\` followed by
 greedy decimal digits, parsed as the decimal value; or `\` followed by a UTF-16
 code unit (including LF, allowing for line continuations). `"`-strings are
@@ -74,6 +80,13 @@ definitions and references in a block are scoped to that block and are encoded
 by prepending the parent label to the local labels. The entry block before the
 first non-local label prepends nothing. The mnemonic label definition form does
 not scope local labels.
+
+`include` assembles the named file, with all already seen symbols visible to the
+child assembler, and appends it to the end of the including file. Only the first
+`include` for a filename is expanded. `include`s are not expanded in a macro
+definition.
+
+### Macros
 
 Macros are only applied when the types of the successive tokens match the
 parameter types expected by the macro. When the argument types do not match, if
@@ -101,12 +114,15 @@ any files included after the definition. Macros defined in an included file are
 introduced into the scope of the parent file. Macros are supposed to have a
 recursion depth of 16, but it does not seem to work.
 
-`include` assembles the named file, with all already seen symbols visible to the
-child assembler, and appends it to the end of the including file. Only the first
-`include` for a filename is expanded. `include`s are not expanded in a macro
-definition.
+## Notes
 
-Bugs in the assembler:
+- UTF-16 code unit–oriented
+- Uses `BigInt` for numbers and string characters
+- Labels are assigned sequentially from `0` in definition order
+- Multiline comments are not nested
+
+## Bugs in the assembler
+
 - The mnemonic label definition form does not scope local labels
 - `call`, `jmp`, `jz`, and `jn` allow numbers as arguments, but label resolution
   always fails, because labels cannot be defined by numbers
@@ -118,10 +134,3 @@ Bugs in the assembler:
   a string or comment.
 - It uses `\s` sometimes instead of `[ \t\n\r]`, so these extra space characters
   would become start word token
-
-Notes:
-- UTF-16 code unit–oriented
-- Uses `BigInt` for numbers and string characters
-- Labels are assigned sequentially from `0` in definition order
-- Multiline comments are not nested
-- The pattern `.` includes `\n` here
