@@ -2,7 +2,6 @@
 
 ## Have documented extensions
 
-- c/rdebath
 - java/matou-whasm
 - java/vyo-kairos
 - whitespace/thaliaarchi-wslib
