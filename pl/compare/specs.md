@@ -1,5 +1,14 @@
 # Programming language specifications
 
+## C#
+
+- C# Preview [features](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/proposals/primary-constructors)
+- C# 11.0 [features](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/proposals/csharp-11.0)
+- C# 10.0 [features](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/proposals/csharp-10.0)
+- C# 9.0 [features](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/proposals/csharp-9.0)
+- C# 8.0 [features](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/proposals/csharp-8.0)
+- C# 7.0 [draft specification](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/language-specification/introduction)
+
 ## Visual Basic
 
 The specification appears to have been last updated for VB 11.0, with only
