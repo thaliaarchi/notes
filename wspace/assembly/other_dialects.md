@@ -3,7 +3,6 @@
 ## Have documented extensions
 
 - c/rdebath
-- haskell/burghard-wsa
 - java/matou-whasm
 - java/vyo-kairos
 - whitespace/thaliaarchi-wslib
