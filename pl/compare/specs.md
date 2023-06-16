@@ -9,6 +9,11 @@
 - C# 8.0 [features](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/proposals/csharp-8.0)
 - C# 7.0 [draft specification](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/language-specification/introduction)
 
+## Java
+
+[Java Language Specification](https://docs.oracle.com/javase/specs/), editions
+Java SE 6–20.
+
 ## Visual Basic
 
 The specification appears to have been last updated for VB 11.0, with only
@@ -54,3 +59,14 @@ may have documentation for VB 6 and earlier.
   [web](https://web.archive.org/web/20021218171156/http://msdn.microsoft.com/library/en-us/vbls7/html/vbSpecStart.asp)
 - Visual Basic 7.0 beta 1 Language Specification:
   [web mirror](https://classicvb.net/vfred/langspec.asp)
+
+## YAML
+
+All specification are listed on the [YAML site](https://yaml.org/spec/) and
+maintained [on GitHub](https://github.com/yaml/yaml-spec).
+
+- YAML [specification 1.2.2](https://yaml.org/spec/1.2.2/)
+- YAML [specification 1.2.1](https://yaml.org/spec/1.2.1/)
+- YAML [specification 1.2.0](https://yaml.org/spec/1.2.0/)
+- YAML [specification 1.1](https://yaml.org/spec/1.1/)
+- YAML [specification 1.0](https://yaml.org/spec/1.0/)
