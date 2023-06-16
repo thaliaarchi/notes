@@ -1,8 +1,9 @@
 # rdebath assembly
 
 - Corpus: [c/rdebath](https://github.com/wspace/corpus/blob/main/c/rdebath/project.json)
-- Source: [code](https://github.com/rdebath/whitespace)
-  (last updated [2021-08-11](https://github.com/wspace/rdebath-c/tree/31315a56a064029e5486eececf144bc833b526cb))
+- Source: [code](https://github.com/wspace/rdebath-c)
+  (last updated [2023-06-16](https://github.com/wspace/rdebath-c/tree/31315a56a064029e5486eececf144bc833b526cb)),
+  [upstream](https://github.com/rdebath/whitespace)
 
 ## wsa.l
 
@@ -44,7 +45,7 @@ label_def ::=
 number ::=
     | space [0-9]+
     | space? "-" [0-9]+
-    | space? "'" [^\\] "'"
+    | space? "'" [^\\\n'] "'"
     | space? "'\\" [ntab'] "'"
 label ::=
     | space [0-9]+
@@ -57,10 +58,6 @@ comment ::=
 space ::= [ \t]+
 lf ::= "\n"
 ```
-
-### Bugs in assembler
-
-- It allows a `'''` char
 
 ## wsa.sed
 
@@ -120,7 +117,6 @@ lf ::= "\n"
 ### Bugs in assembler
 
 - Only the I/O mnemonics are case-insensitive
-- Some tab literals have been replaced with spaces in the script
 
 ## Mnemonics
 
