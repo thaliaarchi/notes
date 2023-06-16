@@ -14,6 +14,7 @@ section in Dennie Van Tassel's [History and comparison of programming languages]
 | Ada               | 2-16         | "", `10#`      | `2#`          | `8#`            | `16#`      | Decimal      | `_`       | No          | No           | No           | Exponent |
 | C23               | 2, 8, 10, 16 | ""             | `0b`, `0B`    | `0`             | `0x`, `0X` | Octal        | `'`       | No          | No           | No           | Type     |
 | C89–C17           | 8, 10, 16    | ""             | N/A           | `0`             | `0x`, `0X` | Octal        | N/A       | N/A         | N/A          | N/A          | Type     |
+| C#                | 2, 10, 16    | ""             | `0b`, `0B`    | N/A             | `0x`, `0X` | Decimal      | `_`       | Yes         | No           | Yes          | Type     |
 | Erlang            | 2-36         | "", `10#`      | `2#`          | `8#`            | `16#`      | Decimal      | `_`       | No          | No           | No           | N/A      |
 | Go 1.13+          | 2, 8, 10, 16 | ""             | `0b`, `0B`    | `0`, `0o`, `0O` | `0x`, `0X` | Octal        | `_`       | Yes         | No           | No           | N/A      |
 | Go <=1.12         | 8, 10, 16    | ""             | N/A           | `0`             | `0x`, `0X` | Octal        | N/A       | N/A         | N/A          | N/A          | N/A      |
@@ -94,6 +95,19 @@ long_suffix     ::= [lL]
 
 From §3.1.3.2 Integer constants in the [C89 draft](https://port70.net/~nsz/c/c89/c89-draft.html#3.1.3.2)
 and §6.1.3.2 Integer constants in the [C89 standard](https://web.archive.org/web/20200909074736if_/https://www.pdf-archive.com/2014/10/02/ansi-iso-9899-1990-1/ansi-iso-9899-1990-1.pdf).
+
+### C#
+
+```bnf
+integer_literal ::= (dec_literal | bin_literal | hex_literal) integer_suffix?
+dec_literal     ::= dec_digit ("_"* dec_digit)*
+bin_literal     ::= ("0" [bB]) ("_"* bin_digit)+
+hex_literal     ::= ("0" [xX]) ("_"* hex_digit)+
+integer_suffix  ::= [Uu][Ll]? | [Ll][Uu]?
+```
+
+According to the language specification as of [C# 7](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/language-specification/lexical-structure#6453-integer-literals)
+and described informally in the [language reference](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/integral-numeric-types).
 
 ### Go
 
@@ -375,9 +389,9 @@ VB 15.5 added leading digit separators.
 ```bnf
 integer_literal ::= (int_literal | bin_literal | oct_literal | hex_literal) integer_suffix?
 dec_literal     ::= dec_digit ("_"* dec_digit)*
-bin_literal     ::= ("&B" | "&b") ("_"* bin_digit)+
-oct_literal     ::= ("&O" | "&o") ("_"* oct_digit)+
-hex_literal     ::= ("&H" | "&h") ("_"* hex_digit)+
+bin_literal     ::= ("&" [Bb]) ("_"* bin_digit)+
+oct_literal     ::= ("&" [Oo]) ("_"* oct_digit)+
+hex_literal     ::= ("&" [Hh]) ("_"* hex_digit)+
 integer_suffix  ::= [Uu]?[Ss] | [Uu]?[Ii] | [Uu]?[Ll] | "%" | "&"
 ```
 
@@ -391,9 +405,9 @@ VB 15.0 added binary literals and digit separators.
 ```bnf
 integer_literal ::= (int_literal | bin_literal | oct_literal | hex_literal) integer_suffix?
 dec_literal     ::= dec_digit ("_"* dec_digit)*
-bin_literal     ::= ("&B" | "&b") bin_digit ("_"* bin_digit)*
-oct_literal     ::= ("&O" | "&o") oct_digit ("_"* oct_digit)*
-hex_literal     ::= ("&H" | "&h") hex_digit ("_"* hex_digit)*
+bin_literal     ::= ("&" [Bb]) bin_digit ("_"* bin_digit)*
+oct_literal     ::= ("&" [Oo]) oct_digit ("_"* oct_digit)*
+hex_literal     ::= ("&" [Hh]) hex_digit ("_"* hex_digit)*
 integer_suffix  ::= [Uu]?[Ss] | [Uu]?[Ii] | [Uu]?[Ll] | "%" | "&"
 ```
 
@@ -407,8 +421,8 @@ VB 8.0 added unsigned types.
 ```bnf
 integer_literal ::= (int_literal | oct_literal | hex_literal) integer_suffix?
 dec_literal     ::= dec_digit+
-oct_literal     ::= ("&O" | "&o") oct_digit+
-hex_literal     ::= ("&H" | "&h") hex_digit+
+oct_literal     ::= ("&" [Oo]) oct_digit+
+hex_literal     ::= ("&" [Hh]) hex_digit+
 integer_suffix  ::= [Uu]?[Ss] | [Uu]?[Ii] | [Uu]?[Ll] | "%" | "&"
 ```
 
