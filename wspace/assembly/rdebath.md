@@ -62,6 +62,66 @@ lf ::= "\n"
 
 - It allows a `'''` char
 
+## wsa.sed
+
+### Grammar
+
+```bnf
+program ::= (line lf)* line?
+line ::= space? inst? space?
+inst ::=
+    | "push" integer
+    | "pushs" string
+    | "doub"
+    | "swap"
+    | "pop"
+    | "add" integer?
+    | "sub" integer?
+    | "mul"
+    | "div"
+    | "mod"
+    | "store" integer?
+    | "retrive" integer?
+    | "label" label
+    | "call" label
+    | "jump" label
+    | "jumpz" label
+    | "jumpn" label
+    | "jumppz" label
+    | "jumpnz" label
+    | "jumpp" label
+    | "jumppn" label
+    | "jumpnp" label
+    | "ret"
+    | "exit"
+    | (?i)"outC"
+    | (?i)"outN"
+    | (?i)"InC"
+    | (?i)"InN"
+    | "test" integer
+    | "ifoption" identifier
+    | "endoption"
+    | "include" identifier
+    | "debug_printheap"
+    | "debug_printstack"
+
+integer ::= space? "-"? [0-9]+
+string ::= space? "\"" [^"]* "\""
+identifier ::= space? [a-z A-Z][a-z A-Z 0-9 _]*
+label ::= identifier
+space ::= [ \t]+
+lf ::= "\n"
+```
+
+### Notes
+
+- Assemble a near-Burghard dialect
+
+### Bugs in assembler
+
+- Only the I/O mnemonics are case-insensitive
+- Some tab literals have been replaced with spaces in the script
+
 ## Mnemonics
 
 The assemblers allow various mnemonics and emit code that's linked with
@@ -95,8 +155,8 @@ Standard instructions:
 - `readn`
 
 Extension instructions:
-- `pushs`
-- `jp`
-- `jzp`
-- `jzn`
-- `jnz`
+- `pushs` (Burghard `pushs`)
+- `jp` (Burghard `jumpp`)
+- `jzp` (Burghard `jumppz`)
+- `jzn` (Burghard `jumpnz`)
+- `jnz` (Burghard `jumpnp`/`jumppn`)
