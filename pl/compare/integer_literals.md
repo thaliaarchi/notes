@@ -9,27 +9,31 @@ documented in the grammars with integer literals, so it is not included here.
 This focuses on grammars. For history and context, read the [Integer Literals](https://web.archive.org/web/20141021124940/http://hhh.gavilan.edu/dvantassel/history/literals.html#_Toc193407229)
 section in Dennie Van Tassel's [History and comparison of programming languages](https://web.archive.org/web/20150118032430/http://hhh.gavilan.edu:80/dvantassel/history/history.html).
 
-| Language          | Bases        | Decimal prefix | Binary prefix | Octal prefix    | Hex prefix | Leading zero | Separator | Leading sep | Trailing sep | Repeated sep | Suffix   |
-| ----------------- | ------------ | -------------- | ------------- | --------------- | ---------- | ------------ | --------- | ----------- | ------------ | ------------ | -------- |
-| Ada               | 2-16         | "", `10#`      | `2#`          | `8#`            | `16#`      | Decimal      | `_`       | No          | No           | No           | Exponent |
-| C23               | 2, 8, 10, 16 | ""             | `0b`, `0B`    | `0`             | `0x`, `0X` | Octal        | `'`       | No          | No           | No           | Type     |
-| C89–C17           | 8, 10, 16    | ""             | N/A           | `0`             | `0x`, `0X` | Octal        | N/A       | N/A         | N/A          | N/A          | Type     |
-| C#                | 2, 10, 16    | ""             | `0b`, `0B`    | N/A             | `0x`, `0X` | Decimal      | `_`       | Yes         | No           | Yes          | Type     |
-| Erlang            | 2-36         | "", `10#`      | `2#`          | `8#`            | `16#`      | Decimal      | `_`       | No          | No           | No           | N/A      |
-| Go 1.13+          | 2, 8, 10, 16 | ""             | `0b`, `0B`    | `0`, `0o`, `0O` | `0x`, `0X` | Octal        | `_`       | Yes         | No           | No           | N/A      |
-| Go <=1.12         | 8, 10, 16    | ""             | N/A           | `0`             | `0x`, `0X` | Octal        | N/A       | N/A         | N/A          | N/A          | N/A      |
-| Java 7+           | 2, 8, 10, 16 | ""             | `0b`, `0B`    | `0`             | `0x`, `0X` | Octal        | `_`       | No          | No           | Yes          | Type     |
-| Java 6            | 8, 10, 16    | ""             | N/A           | `0`             | `0x`, `0X` | Octal        | N/A       | N/A         | N/A          | N/A          | Type     |
-| Python 3.6+       | 2, 8, 10, 16 | ""             | `0b`, `0B`    | `0o`, `0O`      | `0x`, `0X` | Illegal      | `_`       | Yes         | No           | No           | N/A      |
-| Python 3.0–3.5    | 2, 8, 10, 16 | ""             | `0b`, `0B`    | `0o`, `0O`      | `0x`, `0X` | Illegal      | N/A       | N/A         | N/A          | N/A          | N/A      |
-| Python 2.6–2.7    | 2, 8, 10, 16 | ""             | `0b`, `0B`    | `0`, `0o`, `0O` | `0x`, `0X` | Octal        | N/A       | N/A         | N/A          | N/A          | Type     |
-| Python <=2.5      | 8, 10, 16    | ""             | N/A           | `0`             | `0x`, `0X` | Octal        | N/A       | N/A         | N/A          | N/A          | Type     |
-| Ruby              | 2, 8, 10, 16 | "", `0d`, `0D` | `0b`, `0B`    | `0`, `0o`, `0O` | `0x`, `0X` | Octal        | `_`       | No          | No           | No           | N/A      |
-| Rust              | 2, 8, 10, 16 | ""             | `0b`          | `0o`            | `0x`       | Decimal      | `_`       | Yes         | Yes          | Yes          | Type     |
-| Rust 0.1–0.8      | 2, 10, 16    | ""             | `0b`          | N/A             | `0x`       | Decimal      | `_`       | Yes         | Yes          | Yes          | Type     |
-| Visual Basic 15.5 | 2, 8, 10, 16 | ""             | `&B`, `&b`    | `&O`, `&o`      | `&H`, `&h` | Decimal      | `_`       | Yes         | No           | Yes          | Type     |
-| Visual Basic 15.0 | 2, 8, 10, 16 | ""             | `&B`, `&b`    | `&O`, `&o`      | `&H`, `&h` | Decimal      | `_`       | No          | No           | Yes          | Type     |
-| Visual Basic 7.0  | 8, 10, 16    | ""             | N/A           | `&O`, `&o`      | `&H`, `&h` | Decimal      | N/A       | N/A         | N/A          | N/A          | Type     |
+## Summary
+
+| Language          | Bases            | Decimal prefix | Binary prefix | Octal prefix    | Hex prefix | Leading zero | Separator | Leading sep | Trailing sep | Repeated sep | Suffix   |
+| ----------------- | ---------------- | -------------- | ------------- | --------------- | ---------- | ------------ | --------- | ----------- | ------------ | ------------ | -------- |
+| Ada               | 2-16             | "", `10#`      | `2#`          | `8#`            | `16#`      | Decimal      | `_`       | No          | No           | No           | Exponent |
+| C23               | 2, 8, 10, 16     | ""             | `0b`, `0B`    | `0`             | `0x`, `0X` | Octal        | `'`       | No          | No           | No           | Type     |
+| C89–C17           | 8, 10, 16        | ""             | N/A           | `0`             | `0x`, `0X` | Octal        | N/A       | N/A         | N/A          | N/A          | Type     |
+| C#                | 2, 10, 16        | ""             | `0b`, `0B`    | N/A             | `0x`, `0X` | Decimal      | `_`       | Yes         | No           | Yes          | Type     |
+| Erlang            | 2-36             | "", `10#`      | `2#`          | `8#`            | `16#`      | Decimal      | `_`       | No          | No           | No           | N/A      |
+| Go 1.13+          | 2, 8, 10, 16     | ""             | `0b`, `0B`    | `0`, `0o`, `0O` | `0x`, `0X` | Octal        | `_`       | Yes         | No           | No           | N/A      |
+| Go <=1.12         | 8, 10, 16        | ""             | N/A           | `0`             | `0x`, `0X` | Octal        | N/A       | N/A         | N/A          | N/A          | N/A      |
+| Java 7+           | 2, 8, 10, 16     | ""             | `0b`, `0B`    | `0`             | `0x`, `0X` | Octal        | `_`       | No          | No           | Yes          | Type     |
+| Java 6            | 8, 10, 16        | ""             | N/A           | `0`             | `0x`, `0X` | Octal        | N/A       | N/A         | N/A          | N/A          | Type     |
+| Python 3.6+       | 2, 8, 10, 16     | ""             | `0b`, `0B`    | `0o`, `0O`      | `0x`, `0X` | Illegal      | `_`       | Yes         | No           | No           | N/A      |
+| Python 3.0–3.5    | 2, 8, 10, 16     | ""             | `0b`, `0B`    | `0o`, `0O`      | `0x`, `0X` | Illegal      | N/A       | N/A         | N/A          | N/A          | N/A      |
+| Python 2.6–2.7    | 2, 8, 10, 16     | ""             | `0b`, `0B`    | `0`, `0o`, `0O` | `0x`, `0X` | Octal        | N/A       | N/A         | N/A          | N/A          | Type     |
+| Python <=2.5      | 8, 10, 16        | ""             | N/A           | `0`             | `0x`, `0X` | Octal        | N/A       | N/A         | N/A          | N/A          | Type     |
+| Ruby              | 2, 8, 10, 16     | "", `0d`, `0D` | `0b`, `0B`    | `0`, `0o`, `0O` | `0x`, `0X` | Octal        | `_`       | No          | No           | No           | N/A      |
+| Rust              | 2, 8, 10, 16     | ""             | `0b`          | `0o`            | `0x`       | Decimal      | `_`       | Yes         | Yes          | Yes          | Type     |
+| Rust 0.1–0.8      | 2, 10, 16        | ""             | `0b`          | N/A             | `0x`       | Decimal      | `_`       | Yes         | Yes          | Yes          | Type     |
+| Visual Basic 15.5 | 2, 8, 10, 16     | ""             | `&B`, `&b`    | `&O`, `&o`      | `&H`, `&h` | Decimal      | `_`       | Yes         | No           | Yes          | Type     |
+| Visual Basic 15.0 | 2, 8, 10, 16     | ""             | `&B`, `&b`    | `&O`, `&o`      | `&H`, `&h` | Decimal      | `_`       | No          | No           | Yes          | Type     |
+| Visual Basic 7.0  | 8, 10, 16        | ""             | N/A           | `&O`, `&o`      | `&H`, `&h` | Decimal      | N/A       | N/A         | N/A          | N/A          | Type     |
+| YAML 1.2          | 8, 10, 16        | ""             | N/A           | `0o`            | `0x`       | Decimal      | N/A       | N/A         | N/A          | N/A          | N/A      |
+| YAML 1.1          | 2, 8, 10, 16, 60 | ""             | `0b`          | `0`             | `0x`       | Decimal      | `_`       | Yes         | Yes          | Yes          | N/A      |
 
 Shared definitions:
 
@@ -328,6 +332,43 @@ through [2007-05-22](https://github.com/graydon/rust-prehistory/blob/c1f80de7286
 in graydon/rust-prehistory.
 
 </details>
+
+### YAML 1.2
+
+```bnf
+integer_literal ::= dec_literal | oct_literal | hex_literal
+dec_literal     ::= [-+]? dec_digit+
+oct_literal     ::= "0o" oct_digit+
+hex_literal     ::= "0x" hex_digit+
+```
+
+According to the patterns in Tag Resolution in the language specification as of
+[versions 1.2.0](https://yaml.org/spec/1.2.0/#id2604185), [1.2.1](https://yaml.org/spec/1.2.1/#id2805071),
+and [1.2.2](https://yaml.org/spec/1.2.2/#10213-integer). The separate section on
+the `int` type was removed and this section is less specific, so some details
+may be missing.
+
+### YAML 1.1
+
+Until YAML 1.2, YAML had sexagesimal (base 60) literals.
+
+```bnf
+integer_literal ::= [-+]? (dec_literal | oct_literal | hex_literal | sex_literal)
+dec_literal     ::= [1-9] (dec_digit | "_")* | "0"
+bin_literal     ::= "0b" (bin_digit | "_")+
+oct_literal     ::= "0" (oct_digit | "_")+
+hex_literal     ::= "0x" (hex_digit | "_")+
+sex_literal     ::= [1-9][0-9_]* (":" [0-5]?[0-9])+
+```
+
+The grammar allows for empty digits when using underscores. This may be a bug in
+the spec. An example has the decimal literal `+12,345`, but I assume this was a
+mistake.
+
+Specified in the [Integer Language-Independent Type](https://yaml.org/type/int.html)
+specification for YAML 1.1. The YAML specification 1.0 does not have enough
+details to describe it, but it has the [same examples](https://yaml.org/spec/1.0/#id2490997)
+for decimal, octal, hexadecimal, and sexagesimal as 1.1.
 
 ## Ada-style
 
