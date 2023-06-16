@@ -10,15 +10,15 @@
 
 ```bnf
 program ::= (line lf)* line?
-line ::= space? (inst | label_def inst?)? space? comment?
+line ::= space? (label_def space?)? inst? space? comment?
 
 inst ::=
-    | "push" space number
+    | "push" number
     | "dup"
-    | ("copy" | "pick") space number
+    | ("copy" | "pick") number
     | "swap"
     | "drop" | "discard"
-    | "slide" space number
+    | "slide" number
     | "add"
     | "sub"
     | "mul"
@@ -26,11 +26,11 @@ inst ::=
     | "mod"
     | "store"
     | "fetch" | "retrieve" | "retrive" | "retreive"
-    | "label" space label
-    | "call" space label
-    | ("jmp" | "jump") space label
-    | "jz" space label
-    | "jn" space label
+    | "label" label
+    | "call" label
+    | ("jmp" | "jump") label
+    | "jz" label
+    | "jn" label
     | "ret" | "return"
     | "quit" | "exit" | "end"
     | "outc" | "outchar" | "printc"
@@ -39,16 +39,18 @@ inst ::=
     | "readn" | "readnum" | "readi"
 label_def ::=
     | [0-9]+ ":"
-    | name space? ":"
+    | "."? name space? ":"
 
 number ::=
-    | "-"? [0-9]+
-    | "'" [^\\] "'"
-    | "'\\" [ntab'] "'"
+    | space [0-9]+
+    | space? "-" [0-9]+
+    | space? "'" [^\\] "'"
+    | space? "'\\" [ntab'] "'"
 label ::=
-    | [0-9]+
-    | name
-name ::= "."? [a-z A-Z _ $] [a-z A-Z 0-9 _ $]*
+    | space [0-9]+
+    | space name
+    | space? "." name
+name ::= [a-z A-Z _ $] [a-z A-Z 0-9 _ $]*
 comment ::=
     | ";" .*?
     | "#" .*?
