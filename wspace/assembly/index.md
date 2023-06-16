@@ -4,6 +4,7 @@
 - [Mnemonics](mnemonics.md)
 - Dialects
   - [Whitelips IDE](whitelips.md) (javascript/vii5ard-whitelips-ide)
+  - [Burghard](burghard.md) (haskell/burghard-wsa)
   - [Lime Whitespace](limews.md) (c/manarice)
   - [littleBugHunter](littlebughunter.md) (csharp/littlebughunter-assembler)
   - [Other](other_dialects.md)
