@@ -186,6 +186,9 @@ possibility for malicious programs, that would be parsed differently with
 - Label operand:
   - Postfix: `(call|jmp|jz|jn) l`
   - Prefix: `l (call|jmp|jz|jn)`
+- Macro style:
+  - Whitelips: `macro name: … $$`
+  - Lime: `macro name[…]` (implies that `[` and `]` are tokens)
 
 ### Heuristics
 
