@@ -5,3 +5,4 @@
 - [Steganography](steganography.md)
 - [Syntax error recovery](syntax_recovery.md)
 - [Whitespace grammar](wspace_grammar.md)
+- [Whitespace token mappings](mappings.md)
