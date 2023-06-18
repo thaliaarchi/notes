@@ -66,7 +66,7 @@
 ## Ken Thompson
 
 - [grep](https://en.wikipedia.org/wiki/Grep)
-  - fgrep (not by him) uses the Aho-Corasick string-matching algorithm
+  - fgrep (not by him) uses the Aho–Corasick string-matching algorithm
 - [Patent](https://patents.google.com/patent/US3568156A/en) [[HN](https://news.ycombinator.com/item?id=33566557)]
 - > Ken Thompson wrote a regex engine which compiled (at runtime) regexes into
   > data structures containing executable machine code, and invoked them (from C
@@ -122,6 +122,6 @@
 
 - [Knuth–Morris–Pratt algorithm](https://en.wikipedia.org/wiki/Knuth%E2%80%93Morris%E2%80%93Pratt_algorithm)
   for searching with a literal string pattern
-- [Aho-Corasick algorithm](https://en.wikipedia.org/wiki/Aho%E2%80%93Corasick_algorithm)
+- [Aho–Corasick algorithm](https://en.wikipedia.org/wiki/Aho%E2%80%93Corasick_algorithm)
   for searching with a set of literal string patterns (Equivalent to the `|` of
   those strings?)

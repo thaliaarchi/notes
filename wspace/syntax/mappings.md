@@ -1,5 +1,11 @@
 # Whitespace token mappings
 
+## Parsing
+
+Use Aho–Corasick or Teddy for literals (via [aho_corasick](https://docs.rs/aho-corasick/latest/aho_corasick/)).
+
+Use a regular expression set for when patterns are needed (via [regex-automata](https://docs.rs/regex-automata/0.2.0/regex_automata/dfa/regex/struct.Regex.html#method.find_leftmost_iter)).
+
 ## Examples
 
 ### Gorispace
@@ -10,6 +16,9 @@ Japanese and one in English. The patterns `ウホ+` is space, `ウッホ+` is ta
 respectively. Any characters that don't appear in those tokens are removed
 before processing, so the patterns really have `[^ウッホーイ]*` or `[^hoswragh]*`,
 respectively, between every character.
+
+In practice, programs will be automatically generated, so a shortcut could check
+only the fixed strings with 2–4 `o`s and `a`s and 1–4 `ホ`s.
 
 [fact.gs](https://github.com/technohippy/gorispace/blob/master/samples/fact.gs)
 excerpt (wrapped):
