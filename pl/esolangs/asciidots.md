@@ -17,7 +17,7 @@
 | `\|`    | horiz -> dead      |
 | `:`     | value == 0 -> dead |
 | `;`     | value == 1 -> dead |
-| `\\`    | (x, y) -> (y, x)   |
+| `\`     | (x, y) -> (y, x)   |
 | `/`     | (x, y) -> (-y, x)  |
 | `(`     | right              |
 | `)`     | left               |

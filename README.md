@@ -63,6 +63,10 @@ A notebook on compilers, programming languages, and other topics.
   - [PL groups at universities](pl/lists/research_groups.md)
   - [Programming languages I know](pl/lists/languages_i_know.md)
 
+## Projects
+
+- [Detecting esolang polyglots](projects/esolang_detect.md)
+
 ## Topics
 
 - Adapton
