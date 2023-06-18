@@ -64,6 +64,10 @@ A notebook on compilers, programming languages, and other topics.
   - [Programming languages I know](pl/lists/languages_i_know.md)
 - [Paper notes](pl/papers.md)
 
+## Projects
+
+- [Detecting esolang polyglots](projects/esolang_detect.md)
+
 ## Topics
 
 - Adapton
