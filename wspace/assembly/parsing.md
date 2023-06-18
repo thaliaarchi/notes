@@ -14,29 +14,33 @@
 - Line comment: `#`, `//`, `--`
 - Block comment: `/* */`, `{- -}` (nested)
 - Space
-- Line break: LF, CRLF, CR
+- Line break: LF, CRLF
 
 Grammar:
 
 ```bnf
-word          ::= XID_Start XID_Continue*
-integer       ::= dec_integer | bin_integer | oct_integer | hex_integer
-dec_integer   ::= /[-+]?[1-9][0-9_]*|0*/
-bin_integer   ::= /[-+]?0[bB][01_]*/
-oct_integer   ::= /[-+]?0[oO]_*[0-7][0-7_]*/
-hex_integer   ::= /[-+]?0[xX]_*[0-9a-fA-F][0-9a-fA-F_]*/
-char          ::= "'" … "'"
-string        ::= "\"" … "\""
-colon         ::= ":"
-semi          ::= ";"
-lbrack        ::= "["
-rbrack        ::= "]"
-comma         ::= ","
-line_comment  ::= "#" … | "//" … | "--" …
-block_comment ::= "/*" … "*/" | "{-" … "-}"
-space         ::= " " | "\t"
-line_break    ::= "\n" | "\r\n" | "\r"
+word           ::= (XID_Start | word_symbol) (XID_Continue | word_symbol)*
+word_symbol    ::= [!$%&*+-./<=>?@\\^_|~]
+integer        ::= dec_integer | bin_integer | oct_integer | hex_integer
+dec_integer    ::= [-+]?[1-9][0-9_]*|0*
+bin_integer    ::= [-+]?0[bB][01_]*
+oct_integer    ::= [-+]?0[oO]_*[0-7][0-7_]*
+hex_integer    ::= [-+]?0[xX]_*[0-9a-fA-F][0-9a-fA-F_]*
+char           ::= "'" … "'"
+string         ::= "\"" … "\""
+colon          ::= ":"
+semi           ::= ";"
+comma          ::= ","
+lbracket       ::= "["
+rbracket       ::= "]"
+line_comment   ::= ("#" | "//" | "--") [^\n]*
+block_comment  ::= "/*" .* "*/"
+nested_comment ::= "{-" .*? (nested_comment .*?)* "-}"?
+space          ::= " " | "\t"
+line_break     ::= "\n" | "\r\n"
 ```
+
+`word_symbol` is all ASCII symbols except for ``:;"'`()[]{}``.
 
 Examples:
 
