@@ -21,11 +21,11 @@ Grammar:
 ```bnf
 word           ::= (XID_Start | word_symbol) (XID_Continue | word_symbol)*
 word_symbol    ::= [!$%&*+-./<=>?@\\^_|~]
-integer        ::= dec_integer | bin_integer | oct_integer | hex_integer
-dec_integer    ::= [-+]?[1-9][0-9_]*|0*
-bin_integer    ::= [-+]?0[bB][01_]*
-oct_integer    ::= [-+]?0[oO]_*[0-7][0-7_]*
-hex_integer    ::= [-+]?0[xX]_*[0-9a-fA-F][0-9a-fA-F_]*
+integer        ::= [-+]? (dec_integer | bin_integer | oct_integer | hex_integer)
+dec_integer    ::= ([1-9] ("_"* [0-9])* | "0")
+bin_integer    ::= "0" [bB] ("_"* [01])*
+oct_integer    ::= "0" [oO] ("_"* [0-7])+
+hex_integer    ::= "0" [xX] ("_"* [0-9 a-f A-F])+
 char           ::= "'" … "'"
 string         ::= "\"" … "\""
 colon          ::= ":"
@@ -74,50 +74,72 @@ the prefix indicates that the rest of the integer is encoded in binary, with
 each digit padded to a width of 1, 3, or 4 bits, respectively. The empty integer
 is represented as the literal `0b`.
 
-| Text   | Whitespace |
-| ------ | ---------- |
-| 0      | S          |
-| -0     | T          |
-| 7      | S TTT      |
-| -7     | T TTT      |
-| 00     | illegal    |
-| 007    | illegal    |
-| 0b     |            |
-| 0b0    | S          |
-| 0b00   | S S        |
-| 0b000  | S SS       |
-| -0b    | illegal    |
-| -0b0   | T          |
-| -0b00  | T S        |
-| -0b000 | T SS       |
-| 0b1    | S T        |
-| 0b01   | S ST       |
-| -0b1   | T T        |
-| -0b01  | T ST       |
-| 0o     | illegal    |
-| 0o0    | S          |
-| 0o00   | S SSS      |
-| 0o2    | S TS       |
-| 0o02   | S STS      |
-| 0o002  | S STSSTS   |
-| -0o    | illegal    |
-| -0o0   | T          |
-| -0o00  | T SSS      |
-| -0o2   | T TS       |
-| -0o02  | T STS      |
-| -0o002 | T STSSTS   |
-| 0x     | illegal    |
-| 0x0    | S          |
-| 0x00   | S SSSS     |
-| 0x7    | S TTT      |
-| 0x07   | S STTT     |
-| 0x007  | S SSSSSTTT |
-| -0x    | illegal    |
-| -0x0   | T          |
-| -0x00  | T SSSS     |
-| -0x7   | T TTT      |
-| -0x07  | T STTT     |
-| -0x007 | T SSSSSTTT |
+Examples:
+
+| Text   | Whitespace  |
+| ------ | ----------- |
+| 7      | S TTT       |
+| -7     | T TTT       |
+| 007    | illegal     |
+| 0b1    | S T         |
+| 0b01   | S ST        |
+| -0b1   | T T         |
+| -0b01  | T ST        |
+| 0o2    | S TS        |
+| 0o02   | S STS       |
+| 0o002  | S STSSTS    |
+| -0o2   | T TS        |
+| -0o02  | T STS       |
+| -0o002 | T STSSTS    |
+| 0x7    | S TTT       |
+| 0x07   | S STTT      |
+| 0x007  | S SSSSSTTT  |
+| -0x7   | T TTT       |
+| -0x07  | T STTT      |
+| -0x007 | T SSSSSTTT  |
+
+Although octal and hexadecimal are powers of two and could have leading zeros
+unambiguously map to binary, it is confusing.
+
+For example, `0x7` is 111 in binary. In the common case, leading zeros are not
+wanted, so this should be encoded as S TTT. If we wanted it padded to the nybble
+boundary, the syntax could be `0x07`, which would be encoded as S STTT. With a
+leading zero nybble, it would be `0x007` as S SSSS STTT. This behavior is
+non-obvious when there are multiple leading zeros.
+
+With this behavior carried over to binary, `0b01` would be S T and `0b001` would
+be S ST. In binary, it would be ideal if the bits as written in the literal
+corresponded exactly to the encoded bits, but this breaks that intuition. Since
+octal and hexadecimal are unlikely to need this leading zero feature, I instead
+forbid leading zeros entirely.
+
+It is often useful to write leading zeros, such as when dealing with characters
+like writing `0x0a` or `0b00001010` for LF. These should not be padded, which
+suggests that a separate syntax for raw binary literals is needed. Perhaps an
+`r` prefix like `0xr0a`, `0br00001010`, or only `0r00001010`.
+
+Zeros:
+
+| Whitespace assembly      | Whitespace  |
+| ------------------------ | ----------- |
+| `0`, `+0`                | S           |
+| `-0`                     | T           |
+| `00`, `+00`, `-00`       | illegal     |
+| `0b`                     |             |
+| `+0b`                    | S           |
+| `0b0`, `+0b0`            | S S         |
+| `0b00`, `+0b00`          | S SS        |
+| `-0b`                    | T           |
+| `-0b0`                   | T S         |
+| `-0b00`                  | T SS        |
+| `0o`, `+0o`, `-0o`       | illegal     |
+| `0o0`, `+0o0`            | S           |
+| `-0o0`                   | T           |
+| `0o00`, `+0o00`, `-0o00` | illegal     |
+| `0x`,   `+0x`,   `-0x`   | illegal     |
+| `0x0`,  `+0x0`           | S           |
+| `-0x0`                   | T           |
+| `0x00`, `+0x00`, `-0x00` | illegal     |
 
 ### Unresolved
 
