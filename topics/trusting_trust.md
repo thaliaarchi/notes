@@ -6,10 +6,15 @@ In Ken Thompson's 1984 Turing Award Lecture, [“Reflections on Trusting Trust�
 [[mirror](https://users.ece.cmu.edu/~ganger/712.fall02/papers/p761-thompson.pdf)],
 he describes a method for inserting a [backdoor](https://en.wikipedia.org/wiki/Backdoor_(computing)#Compiler_backdoors)
 into a compiler binary, and programs it compiles, without it remaining in the
-source—an attack, which he actually [carried out](https://niconiconi.neocities.org/posts/ken-thompson-really-did-launch-his-trusting-trust-trojan-attack-in-real-life/)
-[[HN](https://news.ycombinator.com/item?id=33008519)]. He also discusses quines,
-compiler bootstrapping, and the layers of trust in software. It's an easy,
-3-page paper, well worth a read.
+source. He also discusses quines, compiler bootstrapping, and the layers of
+trust in software. It's an easy, 3-page paper, well worth a read.
+
+Ken has confirmed that he actually [carried out](https://niconiconi.neocities.org/posts/ken-thompson-really-did-launch-his-trusting-trust-trojan-attack-in-real-life/)
+[[HN](https://news.ycombinator.com/item?id=33008519)] this attack internally and
+that it was [discovered and fixed](https://www.tuhs.org/pipermail/tuhs/2021-September/024486.html)
+[[HN](https://news.ycombinator.com/item?id=36389660)] by someone in the PWB
+department, who was confused why the compiler binary grew by one byte on every
+compilation.
 
 ### Conventions
 
