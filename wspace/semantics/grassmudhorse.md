@@ -10,6 +10,23 @@ GrassMudHorse uses 草 “grass” (U+8349), 泥 “mud” (U+6CE5), and 马 “
 `end` to be written equivalently as either “river crab” or “horse horse horse”
 (i.e., `L` `L` `L`). Only some implementations support river and crab.
 
+The grammar for scanning tokens in the [original Java implementation](https://github.com/wspace/bearice-grassmudhorse/blob/main/src/cn/icybear/GrassMudHorse/JOTCompiler.java#L362-L393)
+is as follows:
+
+```bnf
+tokens ::=
+    | C* R* G    { S }
+    | C* R* M    { T }
+    | C* R* H    { L }
+    | C* R* EOF  { EOF }
+    | R+ C       { RC }
+G ::= "草"
+M ::= "泥"
+H ::= "马"
+R ::= "河"
+C ::= "蟹"
+```
+
 ## Error handling
 
 There are two behaviors for handling unpaired river and crab tokens: ignoring
