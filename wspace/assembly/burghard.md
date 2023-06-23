@@ -1,9 +1,9 @@
 # Burghard assembly
 
-- Corpus: [haskell/burghard-wsa](https://github.com/wspace/corpus/blob/main/haskell/burghard-wsa/project.json)
 - Source: [code](https://github.com/wspace/burghard-wsa/blob/main/trans.hs),
   [docs](https://github.com/wspace/burghard-wsa/blob/main/intro.md)
   (last updated [2023-02-20](https://github.com/wspace/burghard-wsa/tree/9f463d027f9e59238382adb69a1af9bc294c1f6a))
+- Corpus: [haskell/burghard-wsa](https://github.com/wspace/corpus/blob/main/haskell/burghard-wsa/project.json)
 
 ## Parsing
 
@@ -65,10 +65,9 @@ program ::= (inst? lf)*
 inst ::=
     | "push" integer
     | "pushs" string
-    | "pop"
-    | "label" label
     | "doub"
     | "swap"
+    | "pop"
     | "add" integer?
     | "sub" integer?
     | "mul" integer?
@@ -76,6 +75,7 @@ inst ::=
     | "mod" integer?
     | "store" integer?
     | "retrive" integer?
+    | "label" label
     | "call" label
     | "jump" label
     | "jumpz" label
@@ -86,10 +86,10 @@ inst ::=
     | ("jumpnp" | "jumppn") label
     | "ret"
     | "exit"
-    | "outn"
     | "outc"
-    | "inn"
+    | "outn"
     | "inc"
+    | "inn"
     | "debug_printstack"
     | "debug_printheap"
     | "test" integer
