@@ -53,4 +53,56 @@ with `#` and `##` does not work, because of the conflict with `#`-comments. The
 
 Whitelips defines its own macro system. While it would be supported by Respace,
 it fills the same purpose as `@define`, so is also excluded from the grammar.
-Optional arguments are included, although no program uses them.
+Whitelips already allows multiple instructions on a line. Optional arguments are
+included, although no program uses them.
+
+## Changes to Whitelips since Respace
+
+([Compare Whitelips by commits](https://github.com/vii5ard/whitespace/compare/b19aedadc672e2110d8833a93f93639a48c49670..a42adf9407063fd4be09047e6d254364c5e5b9d2))
+
+- `example/lib/alias.wsa` and `example/lib/std.wsa`:
+  - Add `retrive` alias for `retrieve`
+  - Add argument aliases for `add`, `sub`, `mul`, and `div`
+  - Add `test` macro for `dup push $number sub`
+- Create programs:
+  - `example/mal.wsa` (one per line)
+  - `example/vm/bf.wsa`/`.ws` (one per line)
+  - `example/vm/mal.wsa`/`.ws` (one per line)
+  - `example/wc/bf2wsa.wsa`/`.ws` (multi per line)
+- Add Brainfuck and Malbolge support
+
+Find:
+
+- When was multi per line support added?
+
+Changes:
+
+- 0.13.0
+  - Big int
+- 0.10.1:
+  - Added optional parameters
+  - Added `example/wc/bf2wsa.ws`
+  - EOF is interpreted as "no change"
+- Some time
+  - `<title>` from “Whitelips the Whitespace IDE” to “Whitespace the Esoteric
+    Language IDE” and in modal from “Whitelips IDE for Whitespace” to Whitelips
+    IDE for esoteric languages”
+    => Maybe rename to just Whitelips in my usage?
+  - `ws_asm.js`
+    - Undocumented `$n` macro meta labels added (search for
+        `builder.macroCallCounter`)
+    - `--`- and `{-` `-}`–comments added (search for `parseMultiLineComment` and
+      `getTokens`)
+    - Macros used to fail when the argument types didn't match; now they
+      silently don't apply
+    - Duplicate labels are forbidden
+    - Labels starting with `.` or `_` used to be assigned by a counter, but now
+      they're scoped to the parent label
+  - `ws_core.js`
+    - Optional parameters added for `add`, `sub`, `mul`, `div`, `mod`,
+      `retrieve`, `readc`, and `readi`
+
+Contributions:
+
+- Is `example/mal.wsa` different from `example/vm/mal.wsa`?
+- Remove optional parameters from macros since handled in core
