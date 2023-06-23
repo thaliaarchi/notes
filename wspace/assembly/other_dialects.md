@@ -2,13 +2,13 @@
 
 ## Have documented extensions
 
+- c/kspalaiologos-asm2ws
 - java/matou-whasm
 - java/vyo-kairos
 - whitespace/thaliaarchi-wslib
 
 ## Other assemblers
 
-- c/kspalaiologos-asm2ws
 - c/threeifbywhiskey-blacktime
 - coffeescript/ehrlichb
 - cpp/codesiiita-spoj
