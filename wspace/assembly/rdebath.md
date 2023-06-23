@@ -1,9 +1,9 @@
 # rdebath assembly
 
-- Corpus: [c/rdebath](https://github.com/wspace/corpus/blob/main/c/rdebath/project.json)
 - Source: [code](https://github.com/wspace/rdebath-c)
   (last updated [2023-06-16](https://github.com/wspace/rdebath-c/tree/31315a56a064029e5486eececf144bc833b526cb)),
   [upstream](https://github.com/rdebath/whitespace)
+- Corpus: [c/rdebath](https://github.com/wspace/corpus/blob/main/c/rdebath/project.json)
 
 ## wsa.l
 

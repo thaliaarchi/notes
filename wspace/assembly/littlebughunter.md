@@ -1,9 +1,9 @@
 # littleBugHunter assembly
 
-- Corpus: [csharp/littlebughunter-assembler](https://github.com/wspace/corpus/blob/main/csharp/littlebughunter-assembler/project.json)
 - Source: [code](https://github.com/littleBugHunter/WhitespaceAssembler),
   [docs](https://github.com/littleBugHunter/WhitespaceAssembler/blob/master/README.md)
   (last updated [2019-12-27](https://github.com/littleBugHunter/WhitespaceAssembler/tree/fd8a7a0189537507cc29eac4e286386192c8b6e7))
+- Corpus: [csharp/littlebughunter-assembler](https://github.com/wspace/corpus/blob/main/csharp/littlebughunter-assembler/project.json)
 
 ## Grammar
 
