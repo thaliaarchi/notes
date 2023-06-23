@@ -2,7 +2,6 @@
 
 ## Have documented extensions
 
-- c/kspalaiologos-asm2ws
 - java/matou-whasm
 - java/vyo-kairos
 - whitespace/thaliaarchi-wslib
