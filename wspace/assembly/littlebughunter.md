@@ -78,7 +78,7 @@ Numbers are parsed and stored as signed 32-bit integers and cannot be outside
 those bounds. Hex numbers are parsed as unsigned 32-bit integers, but
 interpreted as signed.
 
-## Encoding
+## Generation
 
 Variables are assigned addresses, incrementing from 0, in order of first use
 (variables are not defined). Labels are encoded as numbers, incrementing from 0,
