@@ -10,14 +10,14 @@
 
 - c/kspalaiologos-asm2ws
 - c/threeifbywhiskey-blacktime
-- coffeescript/ehrlichbryan
+- coffeescript/ehrlichb
 - cpp/codesiiita-spoj
-- cpp/kapustaikwas
-- cpp/pavelshub
+- cpp/kapustaikwas27
+- cpp/pavel987
 - cpp/timvandermeij
 - go/zorchenhimer
 - haskell/helvm-helpa
-- java/martinandhels-whitespacesdk
+- java/mash-whitespacesdk
 - javascript/kmyk-translater
 - javascript/susisu
 - objective-c/emilbahnsen-assembler
@@ -26,7 +26,7 @@
 - python/drafear-converter
 - python/eizoassik-pyws
 - python/ganeshsankaran
-- python/hunminpark
+- python/avantgarde95
 - python/ilikepython256-whitespace-unc
 - python/jrialland
 - python/kraterkraken
@@ -35,7 +35,7 @@
 - python/smithers-bluespace
 - python/stephenchappell
 - python/tokigun-esotope-ws
-- ruby/angel
+- ruby/angelp57
 - ruby/bossiernesto
 - ruby/collidedscope-spitewaste
 - ruby/shimo-yukicoder
