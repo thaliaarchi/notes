@@ -110,7 +110,7 @@ may be empty.
 Integer literals are parsed with `read :: Integer`, so it follows the same
 grammar as `readi` in the reference interpreter.
 
-## Translating
+## Generating
 
 Extension control flow instructions generate auxiliary labels of the form
 `__trans__pc__kind__`, where `pc` is the 1-indexed position of the instruction
