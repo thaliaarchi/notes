@@ -3,7 +3,7 @@
 - [Parsing any dialect](parsing.md)
 - [Mnemonics](mnemonics.md)
 - Dialects
-  - [Whitelips IDE](whitelips.md) (javascript/vii5ard-whitelips-ide)
+  - [Whitelips](whitelips.md) (javascript/vii5ard-whitelips)
   - [Burghard](burghard.md) (haskell/burghard-wsa)
   - [Respace](respace.md) (cpp/thaliaarchi-respace)
   - [rdebath](rdebath.md) (c/rdebath)
