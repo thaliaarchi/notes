@@ -117,11 +117,13 @@ recursion depth of 16, but it does not seem to work.
 
 ## Bugs in the assembler
 
+- Macro recursion is not properly implemented or restricted
+
+### Bugs fixed in my fork
+
 - The mnemonic label definition form does not scope local labels
 - `call`, `jmp`, `jz`, and `jn` allow numbers as arguments, but label resolution
   always fails, because labels cannot be defined by numbers
-- `$n` tokens in macros appear to only partially implemented
-- Macro recursion is not properly implemented or restricted
 - `{-`-comments can be unterminated
 - Space is optional after a word or number, if followed by a `;`-comment, but is
   required when followed by other comments or a string. Space is optional after
