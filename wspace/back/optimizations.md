@@ -6,6 +6,8 @@
 - Replace non-recursive single-entry `call` and `ret` with `jmp`
 - Replace `call` with `jmp` when `end` or error always reached before
   corresponding `ret`
+- Move the hottest jump targets earlier in the program, for interpreters with
+  linear label seeking like the reference
 
 ## Byte size
 
