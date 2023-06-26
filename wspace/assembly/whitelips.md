@@ -23,12 +23,12 @@ inst ::=
     | "mod" (space number)?
     | "store"
     | "retrieve" (space number)?
-    | word ":"
-    | "label" space word
-    | "call" space word
-    | "jmp" space word
-    | "jz" space word
-    | "jn" space word
+    | label ":"
+    | "label" space label
+    | "call" space label
+    | "jmp" space label
+    | "jz" space label
+    | "jn" space label
     | "ret"
     | "end"
     | "printc"
@@ -36,8 +36,8 @@ inst ::=
     | "readc" (space number)?
     | "readi" (space number)?
     | "include" space string
-    | "macro" space word ":" space? (macro_inst space)* "$$"
-    | word
+    | "macro" space label ":" space? (macro_inst space)* "$$"
+    | label (space (label | number | string))*
 macro_inst ::=
     | inst
     | "$label"
@@ -46,7 +46,7 @@ macro_inst ::=
     | "$redef"
     | "$" [0-9]+
 
-word ::= [a-zA-Z_$.][a-zA-Z0-9_$.]*
+label ::= [a-zA-Z_$.][a-zA-Z0-9_$.]*
 number ::= [+-]?\d*
 string ::=
     | "\"" ([^"\n\\] | \\[nt] | \\[0-9]+ | \\.)*? "\""
@@ -87,7 +87,7 @@ parameter types expected by the macro. When the argument types do not match, if
 it has the name of a mnemonic, that instruction is used instead; otherwise, the
 macro invocation is silently replaced with nothing.
 
-A macro can be named anything, that's a valid word token. This includes
+A macro can be named anything, that's a valid label token. This includes
 instruction mnemonics, the names of previously defined macros, or labels. It
 only shadows a mnemonic if the arguments are of the appropriate types. Macros
 shadow previously defined macros of the same name. Macros do not expand in label
@@ -125,8 +125,8 @@ recursion depth of 16, but it does not seem to work.
 - `call`, `jmp`, `jz`, and `jn` allow numbers as arguments, but label resolution
   always fails, because labels cannot be defined by numbers
 - `{-`-comments can be unterminated
-- Space is optional after a word or number, if followed by a `;`-comment, but is
-  required when followed by other comments or a string. Space is optional after
-  a string or comment.
+- Space is optional after a label reference or number, if followed by a
+  `;`-comment, but is required when followed by other comments or a string.
+  Space is optional after a string or comment.
 - It uses `\s` sometimes instead of `[ \t\n\r]`, so these extra space characters
-  would become start word token
+  would become the start of a label token
