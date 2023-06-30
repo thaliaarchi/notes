@@ -105,6 +105,11 @@ Turing-complete.
   - P-completeness in [“P-completeness of cellular automaton Rule 110”](https://link.springer.com/chapter/10.1007/11786986_13)
     [[preprint](http://services.ini.uzh.ch/~tneary/NearyWoodsBCRI-04-06.pdf)]
     by Turlough Neary and Damien Woods (2006)
+- Terraria
+  - [Computerraria](https://github.com/misprit7/computerraria), a fully
+    compliant 32-bit RISC-V computer
+    [[video](https://www.youtube.com/watch?v=zXPiqk0-zDY)]
+    by Xander Naumenko (2023)
 - Tetris
   - [Tetris in Tetris](https://meatfighter.com/tetromino-computer/)
     [[HN](https://news.ycombinator.com/item?id=34309725)]
