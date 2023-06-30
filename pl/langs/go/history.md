@@ -84,6 +84,28 @@ addresses this tradeoff:
 The technical hurdle in finding the approach that allows the compiler to use
 monomorphization or fat pointers.
 
+## Compiler and bootstrapping
+
+The first release of the Go compiler written in Go was [Go 1.5](https://go.dev/doc/go1.5).
+Before then, a custom in-tree C compiler was necessary to guarantee the C code
+would work with the stack management of goroutines. The process of the new
+implementation was presented at [Gopherfest 2015](https://go.dev/talks/2015/gogo.slide).
+
+The compiler was converted in a semi-automated fashion from C to Go using tools
+custom-written for the task. This process was outlined at [GopherCon 2014](https://go.dev/talks/2014/c2go.slide).
+One large problem was the pervasive use of gotos. Rather than using a general
+solution like [“An Algorithm for Structuring Flowgraphs”](https://dl.acm.org/doi/10.1145/321992.321999)
+(Brenda S. Baker, 1977), which [Russ cites](https://go.dev/talks/2014/c2go.slide#40),
+they handle trivial rewrites in their converter and rewrite the rest by hand.
+
+The old in-tree C compiler is not mentioned in the current [bootstrapping docs](https://go.dev/doc/install/source#go14),
+so I assume it's use is probably automated and unnecessary to mention.
+
+The SSA backend was [proposed in 2015](https://docs.google.com/document/d/1szwabPJJc4J-igUZU4ZKprOrNRNJug2JPD8OYi3i1K0/edit),
+motivated by the translation to Go, introduced for 64-bit x86 systems in
+[Go 1.7](https://go.dev/doc/go1.7#compiler), and completed for all architectures
+in [Go 1.8](https://go.dev/doc/go1.8#compiler).
+
 ## Possible influence of xoc, an extension-oriented compiler
 
 Russ Cox, Tom Bergan, Austin Clements, Frans Kaashoek, and Eddie Kohler built
