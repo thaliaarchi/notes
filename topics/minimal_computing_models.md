@@ -6,6 +6,8 @@
 - [Iota and Jot](https://en.wikipedia.org/wiki/Iota_and_Jot)
 - [Cyclic tag system](https://en.wikipedia.org/wiki/Tag_system#Cyclic_tag_systems)
 - [Minsky machine](https://esolangs.org/wiki/Minsky_machine)
+- [Markov algorithm](https://en.wikipedia.org/wiki/Markov_algorithm)
 - [μ-recursive functions](https://en.wikipedia.org/wiki/General_recursive_function)
+- [Queue automaton](https://en.wikipedia.org/wiki/Queue_automaton)
 - [Subleq](https://en.wikipedia.org/wiki/One-instruction_set_computer#Subtract_and_branch_if_less_than_or_equal_to_zero)
   [[Esolang](https://esolangs.org/wiki/Subleq)]
