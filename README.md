@@ -53,6 +53,7 @@ A notebook on compilers, programming languages, and other topics.
     - [Ook!](pl/esolangs/brainfuck/ook.md)
     - [Spoon](pl/esolangs/brainfuck/spoon.md)
   - [Deadfish](pl/esolangs/deadfish.md)
+  - [Leaf](pl/esolangs/leaf.md)
   - [Whitespace](#whitespace)
 - Comparisons
   - [Programming language comparisons](pl/compare/comparisons.md)
@@ -62,6 +63,7 @@ A notebook on compilers, programming languages, and other topics.
   - [Programming language alphabet challenge](pl/lists/alphabet_challenge.md)
   - [PL groups at universities](pl/lists/research_groups.md)
   - [Programming languages I know](pl/lists/languages_i_know.md)
+  - [Turing tarpits](pl/lists/turing_tarpits.md)
 - [Paper notes](pl/papers.md)
 
 ## Projects
