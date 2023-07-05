@@ -18,16 +18,18 @@ Turing-complete.
     by Aaron Ballman (2013)
 - Coq typeclass resolver: Typeclass instance resolution is an unrestricted proof
   search.
-  - [Smallfuck](https://thaliaarchi.github.io/coq-turing-typeclass/) [[code](https://github.com/thaliaarchi/coq-turing-typeclass)]
-    [[HN](https://news.ycombinator.com/item?id=35591529)]
+  - [Smallfuck](https://thaliaarchi.github.io/coq-turing-typeclass/)
     by Thalia Archibald (2023)
+    [[code](https://github.com/thaliaarchi/coq-turing-typeclass)]
+    [[HN](https://news.ycombinator.com/item?id=35591529)]
 - Haskell type system: A subset of Haskell with multi-parameter typeclasses,
   functional dependencies, and undecidable instances.
   - [Turing machine](https://www.lochan.org/keith/publications/undec.html)
     by Keith Wansbrough (1998)
   - [SK combinator calculus](https://wiki.haskell.org/Type_SK)
     by Rob Dockins (2006)
-  - [N-queens problem](https://aphyr.com/posts/342-typing-the-technical-interview)
+  - [Typing the technical interview](https://aphyr.com/posts/342-typing-the-technical-interview):
+    N-queens problem
     by Kyle Kingsbury (2017)
 - Java generics: A subset of Java with subtype checking.
   - Turing machine and a parser generator for fluent interfaces in
@@ -54,37 +56,49 @@ Turing-complete.
     by Fabien Coelho (2013)
 - Transact-SQL
   - [Brainfuck](https://stackoverflow.com/questions/900055/is-sql-or-even-tsql-turing-complete/34847489#34847489)
-    [[code](https://github.com/PopovMP/BrainFuck-SQL)]
     by Miroslav Popov (2016)
+    [[code](https://github.com/PopovMP/BrainFuck-SQL)]
 - TypeScript type system
   - [Turing machine and primality test](https://github.com/microsoft/TypeScript/issues/14833)
+    by Henning Dieterichs (2017)
     [[code](https://gist.github.com/hediet/63f4844acf5ac330804801084f87a6d4)]
     [[HN](https://news.ycombinator.com/item?id=14905043)]
-    by Henning Dieterichs (2017)
+  - [Meta-Typing](https://github.com/ronami/meta-typing): many math, list,
+    sorting, and puzzle functions and algorithms at type level
+    by Ronen Amiel (2020)
+    [[HN](https://news.ycombinator.com/item?id=36595512)]
   - [Smallfuck](https://itnext.io/typescript-and-turing-completeness-ba8ded8f3de3)
-    [[code](https://gist.github.com/ryandabler/fd7884cb9072e66717d9f5d4b23bd5e8)]
     by Ryan Dabler (2021)
+    [[code](https://gist.github.com/ryandabler/fd7884cb9072e66717d9f5d4b23bd5e8)]
+  - [Typescripting the technical interview](https://www.richard-towers.com/2023/03/11/typescripting-the-technical-interview.html):
+    N-queens problem
+    by Richard Towers (2023)
+    [[HN](https://news.ycombinator.com/item?id=35120084)]
+  - [Type Challenges](https://github.com/type-challenges/type-challenges)
+    by Anthony Fu (2020)
 - Rust type system: A subset of Rust with type parameters, traits,
   multi-parameter traits, and associated types.
   - [Turing machine](https://www.reddit.com/r/rust/comments/2o6yp8/comment/cmkrjz2/)
-    [[code](https://web.archive.org/web/20141225090046/http://pastie.org/9757227)]
-    by comex (2014); [updated](https://www.reddit.com/r/rust/comments/5y4x9r/comment/denibgy/)
-    [[code](https://web.archive.org/web/20170316010408/https://ghostbin.com/paste/vnjmh)]
+    by comex (2014)
+    [[code](https://web.archive.org/web/20141225090046/http://pastie.org/9757227)],
+    [updated](https://www.reddit.com/r/rust/comments/5y4x9r/comment/denibgy/)
     (2017)
+    [[code](https://web.archive.org/web/20170316010408/https://ghostbin.com/paste/vnjmh)]
   - [Smallfuck](https://sdleffler.github.io/RustTypeSystemTuringComplete/)
+    by Shea Leffler (2017)
     [[code](https://github.com/sdleffler/tarpit-rs)]
     [[HN 1](https://news.ycombinator.com/item?id=13843288), [2](https://news.ycombinator.com/item?id=26445332)]
-    by Shea Leffler (2017)
   - [Minsky machine](https://github.com/paholg/minsky/)
     by Paho Lurie-Gregg (2017)
 - x86 MMU fault handling
-  - [subleq compiler](https://github.com/jbangert/trapcc) [[video](https://www.youtube.com/watch?v=eSRcvrVs5ug)]
+  - [trapcc](https://github.com/jbangert/trapcc): subleq compiler
+    by Julian Bangert (2013)
+    [[video](https://www.youtube.com/watch?v=eSRcvrVs5ug)]
     [[slides](https://github.com/jbangert/trapcc/blob/master/slides/PFLA-shmoocon.pdf)]
     [[HN](https://news.ycombinator.com/item?id=5261598)]
-    by Julian Bangert (2013)
 - x86 `mov`: Only the `mov` instruction of x86.
-  - Turing machine in [“`mov` is Turing-complete”](https://web.archive.org/web/20130924014250/http://www.cl.cam.ac.uk/~sd601/papers/mov.pdf)
-    by Stephen Dolan (2013)
+  - [“`mov` is Turing-complete”](https://web.archive.org/web/20130924014250/http://www.cl.cam.ac.uk/~sd601/papers/mov.pdf):
+    Turing machine by Stephen Dolan (2013)
   - [M/o/Vfuscator compiler](https://github.com/xoreaxeaxeax/movfuscator)
     by Chris Domas (2015), with numerous programs, including [DOOM](https://github.com/xoreaxeaxeax/movfuscator/tree/master/validation/doom)
 
@@ -103,17 +117,17 @@ Turing-complete.
   - Cyclic tag system in [“Universality in Elementary Cellular Automata”](https://wpmedia.wolfram.com/uploads/sites/13/2018/02/15-1-1.pdf)
     by Matthew Cook (2004)
   - P-completeness in [“P-completeness of cellular automaton Rule 110”](https://link.springer.com/chapter/10.1007/11786986_13)
-    [[preprint](http://services.ini.uzh.ch/~tneary/NearyWoodsBCRI-04-06.pdf)]
     by Turlough Neary and Damien Woods (2006)
+    [[preprint](http://services.ini.uzh.ch/~tneary/NearyWoodsBCRI-04-06.pdf)]
 - Terraria
-  - [Computerraria](https://github.com/misprit7/computerraria), a fully
+  - [Computerraria](https://github.com/misprit7/computerraria): a fully
     compliant 32-bit RISC-V computer
-    [[video](https://www.youtube.com/watch?v=zXPiqk0-zDY)]
     by Xander Naumenko (2023)
+    [[video](https://www.youtube.com/watch?v=zXPiqk0-zDY)]
 - Tetris
   - [Tetris in Tetris](https://meatfighter.com/tetromino-computer/)
-    [[HN](https://news.ycombinator.com/item?id=34309725)]
     by Mike Birken (2023)
+    [[HN](https://news.ycombinator.com/item?id=34309725)]
 
 ## Lists
 
