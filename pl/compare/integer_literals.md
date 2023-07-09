@@ -8,6 +8,8 @@ documented in the grammars with integer literals, so it is not included here.
 
 This focuses on grammars. For history and context, read the [Integer Literals](https://web.archive.org/web/20141021124940/http://hhh.gavilan.edu/dvantassel/history/literals.html#_Toc193407229)
 section in Dennie Van Tassel's [History and comparison of programming languages](https://web.archive.org/web/20150118032430/http://hhh.gavilan.edu:80/dvantassel/history/history.html).
+Pascal Rigaux's [Syntax across languages](http://rigaux.org/language-study/syntax-across-languages/Mthmt.html#MthmtNmbrSntx)
+also lists more languages than here.
 
 ## Summary
 
