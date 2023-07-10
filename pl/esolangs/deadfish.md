@@ -53,6 +53,13 @@ padded with an arbitrary number of `d` instruction. When the padding amount is
 even, it can insert repeated `id` or `di` pairs, as appropriate to avoid
 resetting to 0. Otherwise, it would need to search for another path.
 
+## Strategies
+
+- Depth-first search: guaranteed optimal in exponential time
+- Meet-in-the-middle depth-first search: guaranteed optimal in square root of
+  exponential time; uses modular square root
+- Heuristics: not guaranteed optimal, but fast
+
 ## Inverses
 
 For all values, except for 255 and 1<<32 - 2, `i` has an inverse with `d`. For
