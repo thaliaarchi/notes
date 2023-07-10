@@ -97,13 +97,13 @@ class HelloWorld(Console c) {
 
 | Repo                                                              | User                                                                                                   | Innovation | Completeness | Theme | Total |
 | ----------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------ | ---------- | ------------ | ----- | ----- |
-| [pltgames-testoy](https://github.com/mdg/pltgames-testoy)         | [mdg](https://web.archive.org/web/20141024194103/http://www.pltgames.com/user/mdg)                     | 5 | 5 | 5 | 15 |
-| [vigil](https://github.com/munificent/vigil)                      | [munificent](https://web.archive.org/web/20141024200801/http://www.pltgames.com/user/munificent)       | 5 | 5 | 3 | 13 |
-| [bianca](https://archive.softwareheritage.org/browse/origin/directory/?origin_url=https://github.com/aaditmshah/bianca) (archive) | [aaditmshah](https://web.archive.org/web/20141024191401/http://www.pltgames.com/user/aaditmshah) | 4 | 4 | 4 | 12 |
-| [pipo](https://github.com/zayac/pipo)                             | [zayac](https://web.archive.org/web/20141024200843/http://www.pltgames.com/user/zayac)                 | 4 | 4 | 4 | 12 |
+| [Testoy](https://github.com/mdg/pltgames-testoy)                  | [mdg](https://web.archive.org/web/20141024194103/http://www.pltgames.com/user/mdg)                     | 5 | 5 | 5 | 15 |
+| [Vigil](https://github.com/munificent/vigil)                      | [munificent](https://web.archive.org/web/20141024200801/http://www.pltgames.com/user/munificent)       | 5 | 5 | 3 | 13 |
+| [Bianca](https://archive.softwareheritage.org/browse/origin/directory/?origin_url=https://github.com/aaditmshah/bianca) (archive) | [aaditmshah](https://web.archive.org/web/20141024191401/http://www.pltgames.com/user/aaditmshah) | 4 | 4 | 4 | 12 |
+| [PIPO](https://github.com/zayac/pipo)                             | [zayac](https://web.archive.org/web/20141024200843/http://www.pltgames.com/user/zayac)                 | 4 | 4 | 4 | 12 |
 | [symplex](https://github.com/greedy/symplex)                      | [greedy](https://web.archive.org/web/20141024191421/http://www.pltgames.com/user/greedy)               | 4 | 4 | 4 | 12 |
-| [fortholito](https://github.com/tormaroe/fortholito)              | [tormaroe](https://web.archive.org/web/20141024200806/http://www.pltgames.com/user/tormaroe)           | 3 | 5 | 2 | 10 |
+| [FORTHolito](https://github.com/tormaroe/fortholito)              | [tormaroe](https://web.archive.org/web/20141024200806/http://www.pltgames.com/user/tormaroe)           | 3 | 5 | 2 | 10 |
 | [isitoq](https://github.com/gatesphere/isitoq)                    | [gatesphere](https://web.archive.org/web/20141024191416/http://www.pltgames.com/user/gatesphere)       | 4 | 4 | 1 | 9  |
-| [plt-banker](https://github.com/efoxepstein/plt-banker)           | [elitheeli](https://web.archive.org/web/20141024191406/http://www.pltgames.com/user/elitheeli)         | 2 | 4 | 2 | 8  |
+| [Banker](https://github.com/efoxepstein/plt-banker)               | [elitheeli](https://web.archive.org/web/20141024191406/http://www.pltgames.com/user/elitheeli)         | 2 | 4 | 2 | 8  |
 | [constrained](https://github.com/fwg/constrained)                 | [fwg](https://web.archive.org/web/20141024191411/http://www.pltgames.com/user/fwg)                     | 1 | 1 | 3 | 5  |
 | [11rank](https://github.com/morefreeze/11rank)                    | [morefreeze](https://web.archive.org/web/20141024200742/http://www.pltgames.com/user/morefreeze)       | 1 | 1 | 1 | 3  |

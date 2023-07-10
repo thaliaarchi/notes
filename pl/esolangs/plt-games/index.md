@@ -25,17 +25,18 @@ many of which are worthy of review.
 
 ## My favorites
 
-Particularly compelling to me, from a short review, are Myopia, which is based
-on µ-recursive functions and pointed me to the contest, and Leaf, a language
-based on binary tree rewrites.
-
-- [Leaf](https://github.com/CRogers/leaf) by Callum Rogers: Uses only one binary
+- [Leaf](https://github.com/CRogers/leaf) by Callum Rogers uses only one binary
   tree, with operations to manipulate it.
   [[tutorial](https://crogers.github.io/leaf/tutorial.html)]
   [[playground](https://crogers.github.io/leaf/default.htm)]
-- [Myopia](https://github.com/miikka/myopia) by Miikka Koskinen: Based on
+  [[my implementation](https://github.com/thaliaarchi/leafy)]
+- [Cratylus](https://github.com/thaliaarchi/foones-cratylus) by Pablo Barenbaum
+  is a polynomial rewriting esolang, that is a superset of Conway's FRACTRAN.
+- [Eightfold](https://github.com/thaliaarchi/foones-eightfold) by Pablo
+  Barenbaum is a dependently typed esolang.
+- [Myopia](https://github.com/miikka/myopia) by Miikka Koskinen is based on
   µ-recursive functions.
-- [Vigil](https://github.com/munificent/vigil) by Bob Nystrom: Enforces
+- [Vigil](https://github.com/munificent/vigil) by Bob Nystrom enforces
   contracts by deleting offending functions from the source code.
-- [Turipong](https://github.com/rpav/turipong) by Ryan Pavlik: A Befunge
+- [Turipong](https://github.com/rpav/turipong) by Ryan Pavlik is a Befunge
   derivative inspired by Pong; however it has no user-controlled paddles.
