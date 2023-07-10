@@ -80,4 +80,4 @@ while( true )
 | ----------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------ | ---------- | ------------ | ----- | ----- |
 | [liveJSONAutomata](https://github.com/jacopofar/liveJSONAutomata) | jacopofar                                                                                              | 5 | 5 | 5 | 15 |
 | [silica](https://github.com/gatesphere/silica)                    | [gatesphere](https://web.archive.org/web/20141024191416/http://www.pltgames.com/user/gatesphere)       | 5 | 5 | 5 | 15 |
-| [Turbo-Impress](https://github.com/philipbjorge/Turbo-Impress)    | philipbjorge                                                                                           | 4 | 4 | 4 | 12 |
+| [Turbo Impress](https://github.com/philipbjorge/Turbo-Impress)    | philipbjorge                                                                                           | 4 | 4 | 4 | 12 |

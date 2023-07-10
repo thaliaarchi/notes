@@ -37,5 +37,5 @@ Game on!
 
 | Repo                                                              | User                                                                                                   | Innovation | Completeness | Theme | Total |
 | ----------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------ | ---------- | ------------ | ----- | ----- |
-| [grinder](https://github.com/gatesphere/grinder)                  | [gatesphere](https://web.archive.org/web/20141024191416/http://www.pltgames.com/user/gatesphere)       | 4 | 4 | 5 | 13 |
-| [strip18](https://github.com/puffnfresh/strip18)                  | [pufuwozu](https://web.archive.org/web/20121209004446/http://www.pltgames.com/user/pufuwozu)           | 4 | 4 | 5 | 13 |
+| [Grinder](https://github.com/gatesphere/grinder)                  | [gatesphere](https://web.archive.org/web/20141024191416/http://www.pltgames.com/user/gatesphere)       | 4 | 4 | 5 | 13 |
+| [STRIP-18](https://github.com/puffnfresh/strip18)                 | [pufuwozu](https://web.archive.org/web/20121209004446/http://www.pltgames.com/user/pufuwozu)           | 4 | 4 | 5 | 13 |
