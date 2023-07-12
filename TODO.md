@@ -29,6 +29,8 @@
   - [“A catalogue of optimizing transformations”](https://www.clear.rice.edu/comp512/Lectures/Papers/1971-allen-catalog.pdf)
     (Frances E. Allen and John Cocke, 1971)
     (mentioned in the Cranelift [RFC for e-graphs](https://github.com/bytecodealliance/rfcs/blob/main/accepted/cranelift-egraph.md))
+- PL
+  - Kimball Germane's [2019 PL Winter School](https://web.archive.org/web/20230110212048/http://services.kimball.germane.net/w/page/4884af99c870772c)
 - Parsing
   - Parsing with derivatives
   - [The Performance of Open Source Applications: Parsing XML at the Speed of Light](https://www.aosabook.org/en/posa/parsing-xml-at-the-speed-of-light.html)
