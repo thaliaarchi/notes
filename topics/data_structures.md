@@ -3,6 +3,9 @@
 - Racket [`VList`](https://docs.racket-lang.org/functional-data-structures/VList.html):
   Described in [“Fast Functional Lists, Hash-Lists, Deques and Variable Length
   Arrays”](https://infoscience.epfl.ch/record/52465) by Phil Bagwell (2002).
+  Rosetta Code has a [VList](https://rosettacode.org/wiki/VList) task and
+  Wikipedia had a [VList](https://web.archive.org/web/20160811160743/https://en.wikipedia.org/wiki/VList)
+  page, that has since been deleted
 
 - Zig [`SegmentedList`](https://github.com/ziglang/zig/blob/master/lib/std/segmented_list.zig):
   A stack data structure that allocates list segments sized in increasing powers
