@@ -53,6 +53,7 @@ A notebook on compilers, programming languages, and other topics.
     - [Ook!](pl/esolangs/brainfuck/ook.md)
     - [Spoon](pl/esolangs/brainfuck/spoon.md)
   - [Deadfish](pl/esolangs/deadfish.md)
+  - [Featured languages on the Esolang wiki](pl/esolangs/esolang_wiki_featured.md) (category)
   - [Leaf](pl/esolangs/leaf.md)
   - [PLT Games](pl/esolangs/plt-games/index.md) (category)
   - [Whitespace](#whitespace)
