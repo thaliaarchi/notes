@@ -110,6 +110,11 @@ Turing-complete.
   - [Tetris](https://codegolf.stackexchange.com/questions/11880/build-a-working-game-of-tetris-in-conways-game-of-life)
     by PhiNotPi, El'endia Starman, K Zhang, Blue (Muddyfish), Cows quack
     (Kritixi Lithos), Mego, and Quartata (2017)
+- Minecraft
+  - [Minecraft in Minecraft](https://www.youtube.com/watch?v=-BP7DhHTU-I)
+    by sammyuri, Uwerta, and Stack (2022)
+    [[PC Gamer](https://www.pcgamer.com/minecraftception-redstone-pc-chungus/)]
+    [[HN](https://news.ycombinator.com/item?id=36716916)]
 - OpenType font files
   - [Addition](https://litherum.blogspot.com/2019/03/addition-font.html)
     by Litherum (2019)
