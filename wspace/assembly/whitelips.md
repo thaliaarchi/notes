@@ -2,7 +2,7 @@
 
 - Source: [code](https://github.com/vii5ard/whitespace/blob/master/ws_asm.js),
   [docs](https://vii5ard.github.io/whitespace/help.html#assembly)
-  (last updated [2022-11-29](https://github.com/vii5ard/whitespace/tree/a42adf9407063fd4be09047e6d254364c5e5b9d2))
+  (last updated [2023-07-14](https://github.com/vii5ard/whitespace/tree/3745b952b731f0bc7d60c0eabe99210ff5bc72ab))
 - Corpus: [javascript/vii5ard-whitelips](https://github.com/wspace/corpus/blob/main/javascript/vii5ard-whitelips/project.json)
 
 ## Grammar
@@ -110,7 +110,7 @@ recursion depth of 16, but it does not seem to work.
 
 ## Notes
 
-- UTF-16 code unit–oriented
+- UTF-8–oriented
 - Uses `BigInt` for numbers and string characters
 - Labels are assigned sequentially from `0` in definition order
 - Multiline comments are not nested
