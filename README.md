@@ -102,6 +102,7 @@ A notebook on compilers, programming languages, and other topics.
 - [List of ciphers](topics/ciphers.md)
 - [Minimal computing models](topics/minimal_computing_models.md)
 - [Nand to Tetris](topics/nand2tetris/README.md)
+- [QR code art](topics/qr.md)
 - Regular expressions
   - [Exploration of representing specialized string-searching](topics/regexp/algorithms.md)
   - [Pike–Levenshtein: Regular expressions with an edit distance](topics/regexp/pike-levenshtein.md)
