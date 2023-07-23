@@ -2,6 +2,7 @@
 
 ## Have documented extensions
 
+- java/jbanana
 - java/matou-whasm
 - java/vyo-kairos
 - whitespace/thaliaarchi-wslib
