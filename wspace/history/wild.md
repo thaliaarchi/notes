@@ -40,3 +40,10 @@ compiler courses.
   - [ws-compiler](https://gitlab.com/tejaskasetty/ws-compiler)
     Whitespace parser by Sushrith Arkal, Tejas Kasetty, and Suhas Sumukh,
     academic year 2016–2017
+- Practical Experiences of Programming at King's College London
+  - [whiteSpaceInterpreter](https://github.com/faurehu/whiteSpaceInterpreter)
+    by Matias Faure
+    [[spec](https://github.com/faurehu/whiteSpaceInterpreter/blob/master/Whitespace.pdf)]
+- Lenguajes y Compiladores at Universidad EIA
+  - [WhiteSpaceInterpreter](https://github.com/EIA-University/WhiteSpaceInterpreter)
+    by Zuleimi Esteffanny González Muñoz
