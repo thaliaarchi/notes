@@ -63,6 +63,7 @@
 - Partial evaluation
   - Futamura projections
   - “Collapsing Towers of Interpreters” and “Lightweight Modular Staging”
+    - [“Elementary Tutorial on Normalization by Evaluation”](https://okmij.org/ftp/tagless-final/NBE.html)
 - Compiler IRs
   - Irreducible control flow
     - [“A study of irreducibility in C programs”](https://sci-hub.st/10.1002/spe.1059)
@@ -81,6 +82,8 @@
     (Guillaume Bonfante, Jean-Yves Marion, and Daniel Reynaud, 2009)
   - [ ] [“Reachability Analysis of Self Modifying Code”](https://arxiv.org/abs/1909.12626)
     (Tayssir Touili and Xin Ye, 2017)
+  - [ ] [“LTL model checking of self modifying code”](https://dl.acm.org/doi/10.1007/s10703-022-00394-8)
+    (Tayssir Touili and Xin Ye, 2022)
 
 See the papers chosen for Kimball's [winter 2023 CS 630](https://faculty.cs.byu.edu/~kimball/630/Schedule.html)
 and [2019 PL winter school](https://web.archive.org/web/20220428153213/http://services.kimball.germane.net/w/page/4884af99c870772c).
@@ -96,7 +99,14 @@ and [2019 PL winter school](https://web.archive.org/web/20220428153213/http://se
   - Build a [Whitespace backend for Idris](../wspace/back/idris_backend.md)
 - Concatenative
   - Chuck Moore's languages, like colorForth and Machine Forth
+    - [MF](https://github.com/CCurl/MachineForth) (inspired by Machine Forth)
   - High-level languages, like Kitten, Factor, and Joy
+  - [*Starting Forth*](https://www.forth.com/starting-forth/) by Leo Brodie
+  - [*Thinking Forth*](https://thinking-forth.sourceforge.net/) by Leo Brodie
+  - [“Forth: The programming language that writes itself: The Web Page”](https://ratfactor.com/forth/the_programming_language_that_writes_itself.html)
+    [[HN](https://news.ycombinator.com/item?id=36748043)]
+  - Abstractly interpreting stack operations to SSA (like I did with Nebula)
+    [[HN](https://news.ycombinator.com/item?id=36749452)]
 
 ## Implementing languages
 
@@ -124,6 +134,10 @@ and [2019 PL winter school](https://web.archive.org/web/20220428153213/http://se
   - µ-recursive functions: Myopia
 - Instruction sets
   - Gameboy
+  - JVM
+    - [in Rust](https://andreabergia.com/blog/2023/07/i-have-written-a-jvm-in-rust/)
+      [[HN](https://news.ycombinator.com/item?id=36811554)]
+  - [QFTASM](https://esolangs.org/wiki/QFTASM)
   - Y86
 
 ## Challenges
