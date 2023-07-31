@@ -21,7 +21,7 @@
   - *Hacker's Delight*
   - Build Whitespace runtime with GMP and a GC (e.g., [Boehm GC](https://en.wikipedia.org/wiki/Boehm_garbage_collector))
 
-## Tutorial projects
+## Self-guided courses
 
 - [Nand to Tetris](https://www.nand2tetris.org/)
   - [ ] HDL simulator
@@ -29,7 +29,61 @@
   - [x] Hack assembler
   - [ ] Jack compiler
   - [ ] Archive the course
-- Northeastern [CS 4410: Compiler Design](https://course.ccs.neu.edu/cs4410/)
+- [“An Incremental Approach to Compiler Construction”](http://scheme2006.cs.uchicago.edu/11-ghuloum.pdf)
+  (Abdulaziz Ghuloum, 2006)
+  - Nada Amin's [implementation](https://github.com/namin/inc), including
+    “Compilers: Backend to Frontend and Back to Front Again” (Abdulaziz Ghuloum,
+    2006) and “How to compile with continuations” (Matt Might)
+- Northeastern [CS 4410/6410: Compiler Design](https://course.ccs.neu.edu/cs4410/)
+  - Semesters:
+    [Spring 2023](https://course.ccs.neu.edu/cs4410sp23/),
+    [Spring 2022](https://course.ccs.neu.edu/cs4410sp22/),
+    [Spring 2021](https://course.ccs.neu.edu/cs4410sp21/),
+    [Spring 2020](https://course.ccs.neu.edu/cs4410sp20/),
+    [Spring 2019](https://course.ccs.neu.edu/cs4410sp19/),
+    [Spring 2017](https://course.ccs.neu.edu/cs4410sp17/)
+- UCSD [CSE131/231: Compiler Construction](https://ucsd-compilers-s23.github.io/)
+- EECS 483: Compiler Construction
+  - Semesters:
+    [Fall 2022](https://maxsnew.com/teaching/eecs-483-fa22/),
+    [Fall 2021](https://maxsnew.com/teaching/eecs-483-fa21/)
+- Cornell [CS 6120: Advanced Compilers](https://www.cs.cornell.edu/courses/cs6120/)
+  - Semesters:
+    [Spring 2022](https://www.cs.cornell.edu/courses/cs6120/2022sp/),
+    [Fall 2020](https://www.cs.cornell.edu/courses/cs6120/2020fa/),
+    [Fall 2019](https://www.cs.cornell.edu/courses/cs6120/2019fa/)
+  - Students write high-quality blog posts, including:
+    - [Global Value Numbering](https://www.cs.cornell.edu/courses/cs6120/2019fa/blog/global-value-numbering/)
+    - [A Dependently Typed Language](https://www.cs.cornell.edu/courses/cs6120/2019fa/blog/dependently-typed-language/)
+  - [Bril](https://github.com/sampsyo/bril) compiler IR for learning
+    [[docs](https://capra.cs.cornell.edu/bril/)]
+- EECS 598: Category Theory for Computer Scientists
+  - Semesters:
+    [Winter 2023](http://maxsnew.com/teaching/eecs-598-w23/),
+    [Winter 2022](http://maxsnew.com/teaching/eecs-598-w22/)
+- University of Cambridge Compiler Construction
+  - Semesters:
+    [2022-23](https://www.cl.cam.ac.uk/teaching/2223/CompConstr/),
+    [2021-22](https://www.cl.cam.ac.uk/teaching/2122/CompConstr/),
+    [2020-21](https://www.cl.cam.ac.uk/teaching/2021/CompConstr/),
+    [2019-20](https://www.cl.cam.ac.uk/teaching/1920/CompConstr/),
+    [2018-19](https://www.cl.cam.ac.uk/teaching/1819/CompConstr/),
+    [2017-18](https://www.cl.cam.ac.uk/teaching/1718/CompConstr/),
+    [2016-17](https://www.cl.cam.ac.uk/teaching/1617/CompConstr/),
+    [2015-16](https://www.cl.cam.ac.uk/teaching/1516/CompConstr/),
+    [2014-15](https://www.cl.cam.ac.uk/teaching/1415/CompConstr/),
+    [2013-14](https://www.cl.cam.ac.uk/teaching/1314/CompConstr/),
+    [2012-13](https://www.cl.cam.ac.uk/teaching/1213/CompConstr/),
+    [2011-12](https://www.cl.cam.ac.uk/teaching/1112/CompConstr/)
+- University of Pennsylvania [CIS 341: Compilers](https://www.seas.upenn.edu/~cis3410/current/)
+  - Semesters:
+    [Spring 2022](https://www.seas.upenn.edu/~cis3410/22sp/),
+    [Spring 2020](https://www.seas.upenn.edu/~cis3410/20sp/),
+    [Spring 2018](https://www.seas.upenn.edu/~cis3410/18sp/),
+    [Spring 2017](https://www.seas.upenn.edu/~cis3410/17sp/),
+    [Spring 2015](https://www.seas.upenn.edu/~cis3410/15sp/),
+    [Spring 2013](https://www.seas.upenn.edu/~cis3410/13sp/)
+- (Repeat) CMU [Computer Systems: A Programmer's Perspective](https://csapp.cs.cmu.edu/)
 - *Software Foundations*
   - To start: Merge my SF work from as a student and TA, to use as a base.
   - *Logical Foundations* (7/17 chapters remaining)
