@@ -29,8 +29,7 @@ Turing-complete.
   - [SK combinator calculus](https://wiki.haskell.org/Type_SK)
     by Rob Dockins (2006)
   - [Typing the technical interview](https://aphyr.com/posts/342-typing-the-technical-interview):
-    N-queens problem
-    by Kyle Kingsbury (2017)
+    N-queens problem by Kyle Kingsbury (2017)
 - Java generics: A subset of Java with subtype checking.
   - Turing machine and a parser generator for fluent interfaces in
     [“Java Generics are Turing Complete”](https://arxiv.org/abs/1605.05274)
@@ -71,8 +70,7 @@ Turing-complete.
     by Ryan Dabler (2021)
     [[code](https://gist.github.com/ryandabler/fd7884cb9072e66717d9f5d4b23bd5e8)]
   - [Typescripting the technical interview](https://www.richard-towers.com/2023/03/11/typescripting-the-technical-interview.html):
-    N-queens problem
-    by Richard Towers (2023)
+    N-queens problem by Richard Towers (2023)
     [[HN](https://news.ycombinator.com/item?id=35120084)]
   - [Type Challenges](https://github.com/type-challenges/type-challenges)
     by Anthony Fu (2020)
@@ -90,6 +88,10 @@ Turing-complete.
     [[HN 1](https://news.ycombinator.com/item?id=13843288), [2](https://news.ycombinator.com/item?id=26445332)]
   - [Minsky machine](https://github.com/paholg/minsky/)
     by Paho Lurie-Gregg (2017)
+- Rust `macros_rules!` and traits
+  - [fortraith](https://github.com/Ashymad/fortraith): compile-time Forth
+    compiler by Szymon Mikulicz (2020)
+    [[HN](https://news.ycombinator.com/item?id=23501474)]
 - x86 MMU fault handling
   - [trapcc](https://github.com/jbangert/trapcc): subleq compiler
     by Julian Bangert (2013)
