@@ -71,21 +71,4 @@ The mnemonics used here follow the
 convention and are non-normative. Whitespace assembly dialects vary widely
 between implementations and are out of scope of this document.
 
-### Non-standard instructions
-
-The instruction prefix tree is not full, so extended instructions may be defined
-that are prefixed with STT, TSTL, TSL, TTL, TLSL, TLTL, TLL, LLS, or LLT. As
-these are non-standard, few implementations support them and the syntax is
-conflicting.
-
-| Mnemonic         | Syntax | Arg | Stack | Heap | Description | Implementation |
-| ---------------- | ------ | --- | ----- | ---- | ----------- | -------------- |
-| Invert           | STT   |   | a0 .. an -- an .. a0 | | Invert the stack | [whitespacesdk](https://github.com/wspace/mash-whitespacesdk) by MArtin SHerratt |
-| Shuffle          | STTS  |   | a0 .. an -- s0 .. sn | | Randomly permute the order of all values on the stack | [whitespace-nd](https://github.com/haroldl/whitespace-nd) by Harold Lee |
-| OutputStack      | TLSSS (conflicts) | | .. -- | | Output the entire stack as characters | [whitespacesdk](https://github.com/wspace/mash-whitespacesdk) by MArtin SHerratt |
-| shell            | TLL   | s | ?       | | Execute shell command (unimplemented) | [Spitewaste](https://github.com/collidedscope/spitewaste) by Collided Scope |
-| PYFN             | LLS   | l | a1 .. an -- a1 .. an retval | | Call the Python function registered as *l* with *n* arguments | [PYWS](https://github.com/EizoAssik/pyws) by Eizo Assik |
-| debug_printstack | LLSSS |   | --      | | Dump stack | [wsintercpp](https://github.com/wspace/burghard-wsintercpp), [wsinterws](https://github.com/wspace/burghard-wsinterws), and [wsa](https://github.com/wspace/burghard-wsa) by Oliver Burghard |
-| debug_printheap  | LLSST |   | --      | | Dump heap | [wsintercpp](https://github.com/wspace/burghard-wsintercpp), [wsinterws](https://github.com/wspace/burghard-wsinterws), and [wsa](https://github.com/wspace/burghard-wsa) by Oliver Burghard |
-| Trace            | LLT   |   | --      | | Dump program state | [pywhitespace](https://github.com/wspace/phlip-pywhitespace) by Phillip Bradbury |
-| eval             | LLT   | s | ?       | | (unimplemented) | [Spitewaste](https://github.com/collidedscope/spitewaste) by Collided Scope |
+Some implementations define [non-standard instructions](extensions.md).
