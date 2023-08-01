@@ -31,7 +31,8 @@
   - Generate/parse (C and C++ API) and pure-Haskell structures with
     bidirectional conversions to/from LLVM types
   - [Docs](https://hackage.haskell.org/package/llvm-hs/docs/LLVM.html)
-- [LLIR](https://github.com/llir/llvm) (Go)
+- [llir/llvm](https://github.com/llir/llvm) and
+  [llir/irutil](https://github.com/llir/irutil) (Go)
   - Safe types
   - Generate/parse (textual LLVM IR)
   - [Blog post](https://blog.gopheracademy.com/advent-2018/llvm-ir-and-go/)
