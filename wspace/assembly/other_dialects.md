@@ -15,6 +15,7 @@
 - cpp/kapustaikwas27
 - cpp/pavel987
 - cpp/timvandermeij
+- erlang/derek121-mrwhite
 - go/zorchenhimer
 - haskell/helvm-helpa
 - java/mash-whitespacesdk
