@@ -13,6 +13,12 @@
 - [“The Art of Code”](https://www.youtube.com/watch?v=6avJHaC3C2U)
   by Dylan Beattie, first presented Sep 2019
   [[abstract](https://dylanbeattie.net/talks/the-art-of-code.html)]
+- [“Lex and Parse All the Whitespace - leex and yecc and the Whitespace Esoteric
+  Programming Language”](https://www.youtube.com/watch?v=SGw_MACpYZM&list=LLC2ow-YjQdKuWy9M2pardeg&index=1)
+  by Derek Brown, lightning talk at
+  [Erlang & Elixir Factory SF Bay Area 2017](https://web.archive.org/web/20170720060809/http://www.erlang-factory.com/sfbay2017/)
+  [[code](https://github.com/derek121/mrwhite)]
+  [[slides](https://github.com/derek121/mrwhite/blob/master/priv/mrwhite.pdf)]
 - [“Steganography: Hiding your secrets with PHP”](https://www.slideshare.net/raulfraile/steganography-hiding-your-secrets-with-php)
   by Raúl Fraile, Jan 2015
   [[code](https://github.com/raulfraile/steganography_talk)]
