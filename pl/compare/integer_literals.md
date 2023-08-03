@@ -24,6 +24,7 @@ also lists more languages than here.
 | Go <=1.12         | 8, 10, 16        | ""             | N/A           | `0`             | `0x`, `0X` | Octal        | N/A       | N/A         | N/A          | N/A          | N/A      |
 | Java 7+           | 2, 8, 10, 16     | ""             | `0b`, `0B`    | `0`             | `0x`, `0X` | Octal        | `_`       | No          | No           | Yes          | Type     |
 | Java 6            | 8, 10, 16        | ""             | N/A           | `0`             | `0x`, `0X` | Octal        | N/A       | N/A         | N/A          | N/A          | Type     |
+| JSON              | 10               | ""             | N/A           | N/A             | N/A        | Illegal      | N/A       | N/A         | N/A          | N/A          | Exponent |
 | Python 3.6+       | 2, 8, 10, 16     | ""             | `0b`, `0B`    | `0o`, `0O`      | `0x`, `0X` | Illegal      | `_`       | Yes         | No           | No           | N/A      |
 | Python 3.0–3.5    | 2, 8, 10, 16     | ""             | `0b`, `0B`    | `0o`, `0O`      | `0x`, `0X` | Illegal      | N/A       | N/A         | N/A          | N/A          | N/A      |
 | Python 2.6–2.7    | 2, 8, 10, 16     | ""             | `0b`, `0B`    | `0`, `0o`, `0O` | `0x`, `0X` | Octal        | N/A       | N/A         | N/A          | N/A          | Type     |
@@ -172,6 +173,22 @@ integer_suffix  ::= [lL]
 
 From the [The Java Language Specification](https://docs.oracle.com/javase/specs/)
 as of [Java SE 6](https://docs.oracle.com/javase/specs/jls/se6/html/lexical.html#3.10.1).
+
+### JSON
+
+```bnf
+number_literal  ::= "-"? integer fraction? exponent?
+integer         ::= [1-9] dec_digit* | "0"
+fraction        ::= "." dec_digit+
+exponent        ::= [eE] [-+]? dec_digit+
+```
+
+Specified in [RFC 4627](https://datatracker.ietf.org/doc/html/rfc4627#section-2.4),
+[RFC 7159](https://datatracker.ietf.org/doc/html/rfc7159#section-6),
+[RFC 8259](https://datatracker.ietf.org/doc/html/rfc8259#section-6),
+ECMA-404 ([1st](https://www.ecma-international.org/wp-content/uploads/ECMA-404_1st_edition_october_2013.pdf)
+and [2nd](https://www.ecma-international.org/wp-content/uploads/ECMA-404_2nd_edition_december_2017.pdf)
+editions), and [ISO/IEC 21778:2017](https://www.iso.org/standard/71616.html).
 
 ### Python
 
