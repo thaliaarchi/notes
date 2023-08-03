@@ -14,6 +14,17 @@
 [Java Language Specification](https://docs.oracle.com/javase/specs/), editions
 Java SE 6–20.
 
+## JSON
+
+- [STD 90](https://www.rfc-editor.org/info/std90)
+  [RFC 8259](https://datatracker.ietf.org/doc/html/rfc8259) (December 2017)
+- [ECMA-404](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/),
+  2nd edition (December 2017): [pdf](https://www.ecma-international.org/wp-content/uploads/ECMA-404_2nd_edition_december_2017.pdf)
+- [ISO/IEC 21778:2017](https://www.iso.org/standard/71616.html) (November 2017)
+- [RFC 7159](https://www.rfc-editor.org/info/rfc7159) (March 2014)
+- ECMA-404, 1st edition (October 2013): [pdf](https://www.ecma-international.org/wp-content/uploads/ECMA-404_1st_edition_october_2013.pdf)
+- [RFC 4627](https://datatracker.ietf.org/doc/html/rfc4627) (July 2006)
+
 ## Visual Basic
 
 The specification appears to have been last updated for VB 11.0, with only
