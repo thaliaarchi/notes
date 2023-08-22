@@ -37,6 +37,8 @@ also lists more languages than here.
 | Visual Basic 7.0  | 8, 10, 16        | ""             | N/A           | `&O`, `&o`      | `&H`, `&h` | Decimal      | N/A       | N/A         | N/A          | N/A          | Type     |
 | YAML 1.2          | 8, 10, 16        | ""             | N/A           | `0o`            | `0x`       | Decimal      | N/A       | N/A         | N/A          | N/A          | N/A      |
 | YAML 1.1          | 2, 8, 10, 16, 60 | ""             | `0b`          | `0`             | `0x`       | Decimal      | `_`       | Yes         | Yes          | Yes          | N/A      |
+| Zig 0.8+          | 2, 8, 10, 16     | ""             | `0b`          | `0o`            | `0x`       | Decimal      | `_`       | No          | No           | No           | N/A      |
+| Zig <=0.7         | 2, 8, 10, 16     | ""             | `0b`          | `0o`            | `0x`       | Decimal      | N/A       | N/A         | N/A          | N/A          | N/A      |
 
 Shared definitions:
 
@@ -352,7 +354,9 @@ in graydon/rust-prehistory.
 
 </details>
 
-### YAML 1.2
+### YAML
+
+#### YAML 1.2
 
 ```bnf
 integer_literal ::= dec_literal | oct_literal | hex_literal
@@ -367,7 +371,7 @@ and [1.2.2](https://yaml.org/spec/1.2.2/#10213-integer). The separate section on
 the `int` type was removed and this section is less specific, so some details
 may be missing.
 
-### YAML 1.1
+#### YAML 1.1
 
 Until YAML 1.2, YAML had sexagesimal (base 60) literals.
 
@@ -388,6 +392,36 @@ Specified in the [Integer Language-Independent Type](https://yaml.org/type/int.h
 specification for YAML 1.1. The YAML specification 1.0 does not have enough
 details to describe it, but it has the [same examples](https://yaml.org/spec/1.0/#id2490997)
 for decimal, octal, hexadecimal, and sexagesimal as 1.1.
+
+### Zig
+
+#### Zig 0.8+
+
+```bnf
+integer_literal ::= dec_literal | bin_literal | oct_literal | hex_literal
+dec_literal     ::= dec_digit ("_"? dec_digit)*
+bin_literal     ::= "0b" bin_digit ("_"? bin_digit)*
+oct_literal     ::= "0o" oct_digit ("_"? oct_digit)*
+hex_literal     ::= "0x" hex_digit ("_"? hex_digit)*
+```
+
+Defined in the Zig grammar from Zig [0.8.0](https://ziglang.org/documentation/0.8.0/#Grammar)
+through [0.11.0](https://ziglang.org/documentation/0.11.0/#Grammar).
+
+#### Zig <=0.7
+
+```bnf
+integer_literal ::= dec_literal | bin_literal | oct_literal | hex_literal
+dec_literal     ::= dec_digit+
+bin_literal     ::= "0b" bin_digit+
+oct_literal     ::= "0o" oct_digit+
+hex_literal     ::= "0x" hex_digit+
+```
+
+Defined in the Zig grammar from Zig [0.4.0](https://ziglang.org/documentation/0.4.0/#Grammar)
+through [0.7.1](https://ziglang.org/documentation/0.7.1/#Grammar) and documented
+by example from [0.1.0](https://ziglang.org/documentation/0.1.0/#integer-literals)
+through [0.3.0](https://ziglang.org/documentation/0.3.0/#Integer-Literals).
 
 ## Ada-style
 

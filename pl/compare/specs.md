@@ -73,7 +73,7 @@ may have documentation for VB 6 and earlier.
 
 ## YAML
 
-All specification are listed on the [YAML site](https://yaml.org/spec/) and
+All specifications are listed on the [YAML site](https://yaml.org/spec/) and
 maintained [on GitHub](https://github.com/yaml/yaml-spec).
 
 - YAML [specification 1.2.2](https://yaml.org/spec/1.2.2/)
@@ -81,3 +81,8 @@ maintained [on GitHub](https://github.com/yaml/yaml-spec).
 - YAML [specification 1.2.0](https://yaml.org/spec/1.2.0/)
 - YAML [specification 1.1](https://yaml.org/spec/1.1/)
 - YAML [specification 1.0](https://yaml.org/spec/1.0/)
+
+## Zig
+
+The [Zig Language Reference](https://ziglang.org/documentation/master/) is
+published for all versions and maintained [on GitHub](https://github.com/ziglang/zig/blob/master/doc/langref.html.in).
