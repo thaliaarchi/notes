@@ -74,6 +74,8 @@ Turing-complete.
     [[HN](https://news.ycombinator.com/item?id=35120084)]
   - [Type Challenges](https://github.com/type-challenges/type-challenges)
     by Anthony Fu (2020)
+  - [Type System Chess](https://github.com/Dragon-Hatcher/type-system-chess)
+    by Daniel James (2023)
 - Rust type system: A subset of Rust with type parameters, traits,
   multi-parameter traits, and associated types.
   - [Turing machine](https://www.reddit.com/r/rust/comments/2o6yp8/comment/cmkrjz2/)
@@ -88,6 +90,9 @@ Turing-complete.
     [[HN 1](https://news.ycombinator.com/item?id=13843288), [2](https://news.ycombinator.com/item?id=26445332)]
   - [Minsky machine](https://github.com/paholg/minsky/)
     by Paho Lurie-Gregg (2017)
+  - [Type System Chess](https://github.com/Dragon-Hatcher/type-system-chess)
+    by Daniel James (2023), which spurred [improvements](https://github.com/rust-lang/rust/pull/114611)
+    to rustc [[post](https://nnethercote.github.io/2023/08/25/how-to-speed-up-the-rust-compiler-in-august-2023.html#my-improvements)]
 - Rust `macros_rules!` and traits
   - [fortraith](https://github.com/Ashymad/fortraith): compile-time Forth
     compiler by Szymon Mikulicz (2020)
