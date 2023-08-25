@@ -8,6 +8,8 @@ additional languages can be found on the Wikipedia article for [modulo](https://
 
 - C: `/` `%`
 - C++: `/` `%`
+- Coq:
+  [`Z.quot` `Z.rem` `Z.quotrem` `Infix "÷"`](https://coq.inria.fr/library/Coq.ZArith.BinIntDef.html#lab1087)
 - Go: [`/` `%`](https://golang.org/ref/spec#Integer_operators)
   [`big.Int.Quo`](https://golang.org/pkg/math/big/#Int.Quo)
   [`big.Int.Rem`](https://golang.org/pkg/math/big/#Int.Rem)
@@ -32,6 +34,9 @@ additional languages can be found on the Wikipedia article for [modulo](https://
 
 ## Floored
 
+- Coq:
+  [`Z.div` `Z.modulo` `Z.div_eucl` `Infix "/"` `Infix "mod"`](https://coq.inria.fr/library/Coq.ZArith.BinIntDef.html#lab1086)
+  [`N.div` `N.modulo` `N.div_eucl` `Infix "/"` `Infix "mod"`](https://coq.inria.fr/library/Coq.NArith.BinNatDef.html#N.div_eucl)
 - GMP: [`mpz_fdiv_q` `mpz_fdiv_r` `mpz_fdiv_qr`](https://gmplib.org/manual/Integer-Division)
 - Haskell: [`div`](https://hackage.haskell.org/package/base/docs/Prelude.html#v:div)
   [`mod`](https://hackage.haskell.org/package/base/docs/Prelude.html#v:mod)
