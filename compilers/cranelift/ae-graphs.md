@@ -36,7 +36,7 @@ Memory stores “somehow” need edges in the e-graph. ~ Sounds like what sea of
 nodes already does!
 
 Benefits:
-- Powerful optimizations
+- powerful optimizations
 - strongly normalizing
 - more compact IR
 - cheaper analysis?
@@ -156,3 +156,48 @@ be optimized? It should be `v4 = v3 + v4`, but that requires commuting. The
 e-graph, if saturated, would have found that, but how would it know that it
 should extract that term, instead of an equivalent one? How is the cost
 computed?
+
+### Rewrites and repair
+
+Fixup requires backlinks (parent pointers) and re-interning, which are costly.
+Parent lists, duplicated node storage, and parent list merging and deduping
+should be eliminated. Instead, perform all rewrites eagerly.
+
+Cycles occur in e-graphs, even if the original e-graph is acyclic (e.g., from
+SSA). For example, x + 0 => x has a self-edge.
+
+To solve this, æ-graphs don't join e-classes or rewrite a node and instead
+represent e-classes as trees of union nodes. As the e-graph is built, track the
+latest ID for a given value. Rewrite rules are invoked when a node is created
+and only the final unioned ID is entered into the hashcons map.
+
+### Combination of insights
+
+Æ-graphs combine multiple insights:
+- Eager rewriting
+  - Enables persistence (otherwise uses don't pick up optimized refs)
+- Persistent immutable data structure
+  - Maintains acyclicity (creating a cycle requires mutable args)
+- Acyclicity
+  - Allows eager rewriting (otherwise, need to revisit and do fixpoint)
+
+## E-graphs vs æ-graphs
+
+egg-style e-graph: batched rewriting and repair
+- Benefits:
+  - strongly normalizing
+  - supports arbitrarily cyclic input
+- Downsides:
+  - requires parent pointers and rehashing on fixup
+  - repair step is a fixpoint
+
+Æ-graphs: eager rewriting and immutable union nodes
+- Benefits:
+  - single-pass rewrite
+  - no parent pointers (minimal memory and maintenance overhead)
+- Downsides:
+  - can miss rewrites (depending on rule structure)
+  - cannot support cyclic input (e.g., see through phi nodes)
+
+Would I still need parent pointers for other kinds of optimizations? If so, that
+would negate some of the benefits of æ-graphs.
