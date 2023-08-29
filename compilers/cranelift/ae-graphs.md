@@ -1,0 +1,158 @@
+# ægraphs: Acyclic E-graphs for Efficient Optimization in a Production Compiler
+
+Notes on “ægraphs: Acyclic E-graphs for Efficient Optimization in a Production
+Compiler” by Chris Fallin at PLDI 2023 in the EGRAPHS workshop.
+
+[[video](https://vimeo.com/843540328)]
+
+- Cranelift aims for as close to formally verified as practical
+  - What formal techniques are used to verify Cranelift?
+- Mentions [“A Catalogue of Optimizing Transformations”](https://www.clear.rice.edu/comp512/Lectures/Papers/1971-allen-catalog.pdf)
+  (Fran Allen and John Cocke, 1971), which I should finally read.
+- Optimizations mentioned:
+  - GVN, constant folding, loop-invariant code motion
+  - Alias analysis
+    - When a node is replaced with another, it points to the first.
+  - Redundant load elimination, store-to-load forwarding
+- Cranelift uses a CFG of basic blocks with block parameters instead of phis
+- High-level description of e-graphs: a sea of nodes representation with some
+  “special properties”. Sounds like a great complement to a sea of nodes IR.
+- Converting to e-graphs:
+  - Cranelift converts the CFG to e-graphs, then back to a CFG.
+
+## E-graph per basic block
+
+The naïve approach is to use one e-graph per basic block, but that limits
+rewrite scope and sharing/amortization and eliminates control optimizations.
+
+## E-graph sea of nodes
+
+Use one e-graph for the whole program or one per function.
+
+Represent control flow as structured nodes, like an `if` node, in a nested tree
+of regions. Like Graal's structured loops or Relooper.
+
+Memory stores “somehow” need edges in the e-graph. ~ Sounds like what sea of
+nodes already does!
+
+Benefits:
+- Powerful optimizations
+- strongly normalizing
+- more compact IR
+- cheaper analysis?
+
+Downsides
+- very different from CFG (conversion overheads)
+- side-effects are tricky
+- issues with irreducible control flow
+
+If writing the compiler from scratch, he'd be more interested in taking a
+regions-based approach.
+
+Jamey Sharp's [optir](https://github.com/jameysharp/optir) prototype uses this
+approach. It uses Regionalized Value State Dependency Graphs and e-graphs
+
+### My reflection
+
+Since my IR is sea of nodes in an arena, I already have the building blocks for
+a whole-program e-graph representation. I think I could avoid a two-way
+conversion between e-graphs and a CFG. `NodeTable` hashes my nodes for unique
+insertion, so I could rework it to a hashcons structure to power the e-graph.
+
+I anticipate a naïve approach would significantly complicate scheduling, as
+expressions on mutually exclusive control flow paths would be shared. I already
+expected scheduling complications from choosing sea of nodes, though, and
+HotSpot and Graal have already solved those, so it may be a non-issue. This is
+addressed later with scoped elaboration.
+
+Perhaps I could make it work without structuring control flow. I've written
+several irreducible programs, that I'd want to compile, so it would be valuable.
+If the terminators are also nodes, the dependence could be used. Cyclic edges
+might then be problematic… hinted at by the name “acyclic e-graphs”.
+
+I think this approach would make optimizing across basic blocks easier. It could
+recognize something like `if x < y { x } else { y }`, even when unstructured,
+and rewrite it to `min(x, y)`.
+
+With the load-store edges explicit, it may be able to subsume redundant load
+elimination and store-to-load forwarding. Once the values of addresses are
+optimized by the e-graph, it could more precisely determine which addresses are
+aliasing.
+
+## E-graph with CFG skeleton
+
+Uses an e-graph scope for the whole function body, but keeps the CFG around.
+Effectful operations, like memory stores, remain in the CFG and are ordered. CFG
+nodes point into the e-graph, which contains the pure nodes. This sounds very
+close to my current approach.
+
+CFG skeleton contains:
+- all blocks, with blockparams
+- side-effecting operators
+- block terminators
+
+e-graph contains:
+- blockparam values, as terminals
+- all pure operators, without associated location
+
+Benefits:
+- cheap to convert to/from CFG, algorithmically and in implementation
+- optimizations across function scope (mostly)
+
+Downsides:
+- harder to express rewrites that alter side-effects
+- need special support for seeing through blockparams
+
+### Elaboration
+
+To lower the e-graph with CFG skeleton to a CFG (“elaboration”): …
+
+His convention is to identify e-classes as `ec0`, `ec1`, …, `ecn`, and
+elaborated SSA values as `v0`, `v1`, …, `vn`.
+
+When moving an expression that is used by multiple, but not all, branches, to an
+earlier point, such that it can be shared by all branches, it creates a “partial
+redundancy”.
+
+#### Dominance
+
+A dominates B if all paths to B first pass through A. The immediate dominator is
+the closest dominator, that dominates a given block. Dominance forms a tree.
+
+SSA requires the invariant that a value's definition dominates its uses.
+
+GVN: if an operator dominates a duplicate copy of itself, reuse the original.
+Implemented with domtree pre-order traversal and a scoped map (pushing a scope
+on pre-order, then popping the scope with its changes on post-order). This map
+allows lookup of computations to get the SSA value and reuse.
+
+What data structure is used for the scoped hash map? A persistent hash map like
+Rust `im::HashMap`?
+
+#### Scoped elaboration
+
+Domtree pre-order traversal, building the same e-class-to-elaborated map, except
+it's a scoped hash map.
+
+Anything elaborated by a dominator is available for use in a child.
+
+Subsumes:
+- Scoped elaboration subsumes GVN.
+- It also can subsume loop-invariant code motion by choosing to
+  insert higher in the loopnest (which is computed earlier) and insert earlier
+  in the scoped map.
+- Rematerialization: choosing to duplicate anyways (e.g., to alleviate register
+  pressure from retaining computations long-term). Cranelift does this for
+  integer constants and adds with a single integer constant.
+
+How would something like:
+
+```ir
+v3 = v1 + v2
+v4 = v1 + v4 + v2
+```
+
+be optimized? It should be `v4 = v3 + v4`, but that requires commuting. The
+e-graph, if saturated, would have found that, but how would it know that it
+should extract that term, instead of an equivalent one? How is the cost
+computed?
