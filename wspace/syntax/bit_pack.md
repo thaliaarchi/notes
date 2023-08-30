@@ -21,8 +21,10 @@ implementations: [Respace], [Nebula], [yspace], and [Nebula 2]. Nebula 2 has
 configurable bit order unlike the others, which were `Msb0`.
 
 As far as I can tell, Respace was the first implementation of this algorithm and
-had been discovered independently, though it had been mentioned theoretically
-[in 2012](https://github.com/wspace/corpus/tree/main/python/res-trans32).
+had been discovered independently. A similar [converter](https://github.com/wspace/res0001-trans32)
+between 2- and 3-letter alphabets was built by r.e.s. for a Whitespace
+[coding challenge](https://codegolf.stackexchange.com/questions/6025/remove-vowels-without-using-too-many-different-characters/6100#6100)
+in 2012, but it operates on characters, instead of bits.
 
 [Respace]: https://github.com/thaliaarchi/respace/blob/master/src/binary.h
 [Nebula]: https://github.com/thaliaarchi/nebula/blob/master/ws/pack.go
