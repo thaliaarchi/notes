@@ -59,12 +59,6 @@ a whole-program e-graph representation. I think I could avoid a two-way
 conversion between e-graphs and a CFG. `NodeTable` hashes my nodes for unique
 insertion, so I could rework it to a hashcons structure to power the e-graph.
 
-I anticipate a naïve approach would significantly complicate scheduling, as
-expressions on mutually exclusive control flow paths would be shared. I already
-expected scheduling complications from choosing sea of nodes, though, and
-HotSpot and Graal have already solved those, so it may be a non-issue. This is
-addressed later with scoped elaboration.
-
 Perhaps I could make it work without structuring control flow. I've written
 several irreducible programs, that I'd want to compile, so it would be valuable.
 If the terminators are also nodes, the dependence could be used. Cyclic edges
@@ -157,11 +151,12 @@ e-graph, if saturated, would have found that, but how would it know that it
 should extract that term, instead of an equivalent one? How is the cost
 computed?
 
-### Rewrites and repair
+### Union nodes
 
-Fixup requires backlinks (parent pointers) and re-interning, which are costly.
-Parent lists, duplicated node storage, and parent list merging and deduping
-should be eliminated. Instead, perform all rewrites eagerly.
+E-graphs perform rewrites in a batch, then repair invariants. Fixup requires
+backlinks (parent pointers) and re-interning, which are costly. Parent lists,
+duplicated node storage, and parent list merging and deduping should be
+eliminated. Instead, perform all rewrites eagerly.
 
 Cycles occur in e-graphs, even if the original e-graph is acyclic (e.g., from
 SSA). For example, x + 0 => x has a self-edge.
@@ -201,3 +196,69 @@ egg-style e-graph: batched rewriting and repair
 
 Would I still need parent pointers for other kinds of optimizations? If so, that
 would negate some of the benefits of æ-graphs.
+
+### Compromises
+
+- More targeted rewrites
+  - No catch-all commutativity or associativity rewrites like
+    `(iadd a b) => (iadd b a)` or `(iadd a (iadd b c)) => (iadd (iadd a b) c)`.
+  - Limited non-directional rewrites like
+    `(bnot (band a b)) => (bor (bnot a) (bnot b))`, but only as a part of a
+    strategy (e.g., to push `bnot`s downward to leaves). Only one direction.
+- Acyclicity
+  - Precludes rules that operate over blockparams (phis)
+
+This is at least as powerful as traditional rewrites, but has solved phase
+ordering and can make use of multi-version, cost-based extraction.
+
+### Influences from e-graphs
+
+Æ-graphs take several things from e-graphs:
+- Rewriting: a powerful unifying paradigm for optimizations
+- Multiple value representations: exploring all rewrite paths and resolving
+  final values in a principled way with a cost function
+- Sea-of-nodes IR for pure values: natural framework for code motion
+
+## Performance
+
+Most slowdowns come from instruction scheduling ([#6250](https://github.com/bytecodealliance/wasmtime/issues/6260))
+or missing opt rules, such as magic div constants ([#6049](https://github.com/bytecodealliance/wasmtime/issues/6049)).
+
+## Future
+
+Instruction scheduler as an extraction pass
+- The ISA instruction selector could be an extraction pass, that lowers directly
+  from e-classes.
+- This would have complex interactions, because scoped elaboration works
+  forwards and instruction selection works backwards.
+
+Optimization through blockparms (phis)
+- Phis are currently terminals (opaque).
+- This would enable sparse conditional constant propagation, unifying
+  branch-folding and constant-propagation.
+- The challenge is dealing with cycles. It could be partially addressed by
+  limiting analysis to forms that operate in a single pass, such as skipping
+  back-edges.
+
+Non-greedy instruction selection
+- Optimal extraction depends on elaboration, but extraction is currently done
+  before elaboration. Multiple uses of a value can share its cost and if another
+  inst needs an expensive value, it becomes sunk cost.
+
+Fused and unrolled rewrites
+- They have efficient rule dispatch from a decision tree, but it can only
+  perform one step at a time.
+- Perhaps a path of rewrites could be statically unrolled or insertion of
+  intermediates could be elided, if they're know to be bad (more expensive or
+  always subsumed).
+
+Instruction scheduling
+- The æ-graph discards location information and scoped elaboration recomputes
+  it.
+- The as-late-as-possible schedule is often quite bad.
+- Perhaps it could use heuristics from register pressure or the original code
+  order.
+
+## Work with Cranelift
+
+They mentor students and collaborate with researchers.
