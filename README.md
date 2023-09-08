@@ -35,6 +35,7 @@ A notebook on compilers, programming languages, and other topics.
 - [QBE](compilers/qbe.md)
 - [CompCert](compilers/compcert.md)
 - Mesa [NIR](compilers/mesa_nir.md)
+- [Coffee Compiler Club 2023-09-08](compilers/coffee_compiler_club_20230908.md)
 
 ## Programming languages
 
