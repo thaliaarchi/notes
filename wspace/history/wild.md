@@ -34,6 +34,11 @@
 Students have built Whitespace interpreters for several open-choice projects in
 compiler courses.
 
+- A computability course at St Andrews had students prove the
+  Turing-completeness of Whitespace [in 2006](https://web.archive.org/web/20141011193151/http://compsoc.dur.ac.uk/archives/whitespace/2007-December/000064.html).
+- Compiler Construction at Cambridge listed Whitespace in its section on
+  additional resources from [2014](https://www.cl.cam.ac.uk/teaching/1415/CompConstr/materials.html)
+  to [2022](https://www.cl.cam.ac.uk/teaching/2122/CompConstr/materials.html).
 - Term project for [COMPSCI 4TB3](https://www.cas.mcmaster.ca/~cs4tb3/outline.html)
   at McMaster University
   - [erasure](https://github.com/jmesyou/erasure)
