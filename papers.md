@@ -39,3 +39,6 @@ Papers I have read and presentations I have watched for research and projects.
   Compiler IR”](https://sci-hub.st/10.1145/2816707.2816715)
   (David Leopoldseder, Lukas Stadler, Christian Wimmer, Hanspeter Mossenböck,
   2015)
+- GraalVM 2016+
+- [“Taming Control Flow: A Structured Approach to Eliminating Goto Statements”](https://sci-hub.st/10.1109/ICCL.1994.288377)
+  (Ana Erosa and Laurie Hendren. 1994)
