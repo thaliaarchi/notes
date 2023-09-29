@@ -103,6 +103,9 @@ A notebook on compilers, programming languages, and other topics.
 - [E-graphs](topics/e-graphs.md)
 - [Easter eggs](topics/easter_eggs.md)
 - [Error handling](topics/errors.md)
+- Floating-point arithmetic
+  - [Boolean algebra with floating-point numbers](topics/floating-point/boolean_algebra.md)
+  - [Software floating point libraries](topics/floating-point/software_impls.md)
 - [Futamura projections](topics/futamura.md)
 - [Integer division and modulo rounding](topics/div_mod_rounding.md)
 - [Language server design](topics/language_server.md)
