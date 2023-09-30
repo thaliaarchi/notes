@@ -31,13 +31,6 @@ Forks:
 - [tacanslabs/berkeley-softfloat-3](https://github.com/tacanslabs/berkeley-softfloat-3)
   adds Wasm build support.
 
-## GNU MPFR
-
-[GNU MPFR](https://www.mpfr.org/) is a C library for floating-point computations
-with arbitrary precision, which is set on construction.
-
-Rug for Rust wraps MPFR with [`Float`](https://docs.rs/rug/latest/rug/struct.Float.html).
-
 ## LLVM `APFloat`
 
 `llvm::APFloat` is a C++ data type in LLVM, that implements arbitrary-precision
@@ -51,6 +44,35 @@ Rust, used in rustc and [Cranelift](https://github.com/CraneStation/rustc_apfloa
 
 [`ieee-apsqrt`](https://github.com/SolraBizna/ieee-apsqrt) extends
 `rustc_apfloat` with square root.
+
+## GNU MPFR
+
+[GNU MPFR](https://www.mpfr.org/) is a C library for floating-point computations
+with arbitrary precision, which is set on construction.
+
+Rug for Rust wraps MPFR with [`Float`](https://docs.rs/rug/latest/rug/struct.Float.html).
+
+## GCC …
+
+…
+
+## libm
+
+libm is a C math library for machines that support IEEE-754 binary64. Is has
+several implementations.
+
+- [musl math](https://git.musl-libc.org/cgit/musl/tree/src/math) is the libm for
+  musl-libc
+- [fdlibm](https://www.netlib.org/fdlibm/) (Freely Distributable LIBM)
+- [FreeMiNT FDlibm](https://github.com/freemint/fdlibm) forked from fdlibm in
+  2008 and has since been maintained and expanded.
+- [OpenLibm](https://openlibm.org/) was built for Julia, and works consistently
+  across compilers and operating systems and in 32- and 64-bit environments.
+- [FreeBSD msun](https://github.com/freebsd/freebsd-src/tree/master/lib/msun) is
+  FreeBSD's math library
+- CRlibm (correctly-rounded mathematical library)
+  - [CRlibm.jl](https://github.com/JuliaIntervals/CRlibm.jl) wraps it for Julia
+    and says that CRlibm is state-of-the-art
 
 ## simple-soft-float
 
@@ -80,9 +102,8 @@ great reference and has excellent tests.
 
 ## Tests and benchmarks
 
-Adjacent to Berkeley SoftFloat is [Berkeley TestFloat](http://www.jhauser.us/arithmetic/TestFloat.html).
-
-simple-soft-float has [excellent tests](https://salsa.debian.org/Kazan-team/simple-soft-float/-/tree/master/test_data).
-
-The author of softfloat-wrapper [benchmarked](https://github.com/dalance/softfloat_bench)
-softfloat-sys against simple-soft-float and Rug.
+- [Berkeley TestFloat](http://www.jhauser.us/arithmetic/TestFloat.html)
+- FreeMiNT FDlibm [tests](https://github.com/freemint/fdlibm/tree/master/tests)
+- simple-soft-float [tests](https://salsa.debian.org/Kazan-team/simple-soft-float/-/tree/master/test_data)
+- [Benchmark](https://github.com/dalance/softfloat_bench) of softfloat-sys,
+  simple-soft-float, and Rug `Float`
