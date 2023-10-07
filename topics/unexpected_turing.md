@@ -108,6 +108,7 @@ Turing-complete.
     Turing machine by Stephen Dolan (2013)
   - [M/o/Vfuscator compiler](https://github.com/xoreaxeaxeax/movfuscator)
     by Chris Domas (2015), with numerous programs, including [DOOM](https://github.com/xoreaxeaxeax/movfuscator/tree/master/validation/doom)
+    [[talk](https://www.youtube.com/watch?v=2VF_wPkiBJY)]
 
 ## Other
 

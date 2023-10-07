@@ -19,6 +19,9 @@
 - Compiler back-end and runtime:
   - *Crafting Interpreters*
   - *Hacker's Delight*
+  - *Handbook of Floating-Point Arithmetic* by Jean-Michel Muller, Nicolas
+    Brunie, Florent de Dinechin, Claude-Pierre Jeannerod, Mioara Joldes, Vincent
+    Lefèvre, Guillaume Melquiond, Nathalie Revol, and Serge Torres, 2018
   - Build Whitespace runtime with GMP and a GC (e.g., [Boehm GC](https://en.wikipedia.org/wiki/Boehm_garbage_collector))
 
 ## Self-guided courses
