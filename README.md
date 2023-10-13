@@ -118,6 +118,7 @@ A notebook on compilers, programming languages, and other topics.
   - [Polymorphic automata for string- and AP-matching](topics/regexp/polymorphic_automata.md)
   - [Recross ideas](topics/regexp/recross_ideas.md)
   - [Regular expression engine history](topics/regexp/history.md)
+- [Souper](topics/souper.md)
 - [Tree-sitter](topics/tree-sitter.md)
 - [Trusting Trust](topics/trusting_trust.md)
 - [Unexpectedly Turing-complete](topics/unexpected_turing.md)
