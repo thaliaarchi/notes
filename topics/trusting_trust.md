@@ -52,8 +52,8 @@ compilation.
 
 ## Countering Trusting Trust through Diverse Double-Compiling
 
-David Wheeler introduces a method to counter this attack in [“Countering Trusting
-Trust through Diverse Double-Compiling”](https://arxiv.org/abs/1004.5548)
+David A. Wheeler introduces a method to counter this attack in [“Countering
+Trusting Trust through Diverse Double-Compiling”](https://arxiv.org/abs/1004.5548)
 (2005). With a compiler binary, the source for that compiler, and an alternate
 compiler, compiling the source of the first compiler with both yields two
 functionally equivalent stage-1 compilers. Compiling the compiler source again

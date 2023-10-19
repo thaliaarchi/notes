@@ -4,6 +4,7 @@ Notes on “ægraphs: Acyclic E-graphs for Efficient Optimization in a Productio
 Compiler” by Chris Fallin at PLDI 2023 in the EGRAPHS workshop.
 
 [[video](https://vimeo.com/843540328)]
+[[conference](https://pldi23.sigplan.org/details/egraphs-2023-papers/2/-graphs-Acyclic-E-graphs-for-Efficient-Optimization-in-a-Production-Compiler)]
 
 - Cranelift aims for as close to formally verified as practical
   - What formal techniques are used to verify Cranelift?

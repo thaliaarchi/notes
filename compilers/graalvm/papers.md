@@ -118,7 +118,7 @@ GraalVM papers, particularly pertaining to IR design, filtered from the list of
   - Institute for System Software, Johannes Kepler Universität Linz; Oracle Labs
   - 10 pages
 
-- Thomas Würthinger [Graal and truffle: modularity and separation of concerns as
+- Thomas Würthinger [Graal and Truffle: Modularity and separation of concerns as
   cornerstones for building a multipurpose
   runtime](http://dx.doi.org/10.1145/2584469.2584663) In *Proceedings of the
   companion publication of the 13th international conference on Modularity

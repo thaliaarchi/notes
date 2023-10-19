@@ -4,7 +4,8 @@
 
 Luís Marques (lowRISC)
 
-[[poster](https://d1keuthy5s86c8.cloudfront.net/static/ems/upload/files/poster.pdf)],
+[[blog](https://lowrisc.org/blog/2020/10/how-we-used-differential-testing-to-rapidly-find-and-fix-missed-optimisation-opportunities-in-llvms-risc-v-backend/)]
+[[poster](https://lowrisc.org/blog/2020/10/how-we-used-differential-testing-to-rapidly-find-and-fix-missed-optimisation-opportunities-in-llvms-risc-v-backend/llvm-dev-meeting-oct-2020-poster.pdf)],
 [[code](https://github.com/lowRISC/longfruit)]
 
 RISC-V still has cases of bad code generation, so LongFruit is a tool
@@ -37,6 +38,7 @@ With llvm-diva, we aim to address the following points:
 William Moses, Valentin Churavy (MIT)
 
 [[poster](https://d1keuthy5s86c8.cloudfront.net/static/ems/upload/files/Enzyme_llvmdev.pdf)]
+[[project](https://enzyme.mit.edu/)]
 
 Applying differentiable programming techniques and machine learning
 algorithms to foreign programs requires developers to either rewrite
