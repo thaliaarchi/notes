@@ -29,6 +29,11 @@
   - 15 December 2022 for Fall 2023
 - Professors
   - [John Regehr](https://www.cs.utah.edu/~regehr/)
+    - Alive2
+      - ae-graphs mentions this
+  - [Mary Hall](https://users.cs.utah.edu/~mhall/)
+    - Has MLIR talk in her files:
+      - https://users.cs.utah.edu/~mhall/mlir4hpc/pienaar-MLIR-Tutorial.pdf
 
 ## University of Illinois at Urbana–Champaign
 
@@ -78,3 +83,20 @@
 - [University of Washington Programming Languages and Software Engineering](https://github.com/uwplse):
   [egg](https://egraphs-good.github.io/), [Herbie](https://herbie.uwplse.org/),
   and [Ruler](https://github.com/uwplse/ruler)
+
+## Cornell
+
+- Adrian Sampson
+
+## MIT
+
+https://css.csail.mit.edu/stack/
+
+## Northeastern
+
+https://courses.ccs.neu.edu/cs4410/
+
+## St Andrews
+
+Edwin Brady
+- https://www.type-driven.org.uk/edwinb/pages/contact.html
