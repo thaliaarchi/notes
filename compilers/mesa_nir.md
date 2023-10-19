@@ -1,12 +1,12 @@
 # NIR
 
-https://www.jlekstrand.net/jason/blog/2022/01/in-defense-of-nir/
+https://www.gfxstrand.net/faith/blog/2022/01/in-defense-of-nir/
 
 ## Structured control-flow
 
 ## Algebraic optimizations
 
-https://www.jlekstrand.net/jason/projects/mesa/nir-notes/
+https://www.gfxstrand.net/faith/projects/mesa/nir-notes/
 
 > All of the basic data structures in NIR are typedef’d C structs
 

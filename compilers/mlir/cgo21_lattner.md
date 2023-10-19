@@ -1,6 +1,8 @@
 # MLIR: Scaling Compiler Infrastructure for Domain Specific Computation
 
 [[paper](https://ieeexplore.ieee.org/abstract/document/9370308)]
+[[Sci-Hub](https://sci-hub.st/10.1109/CGO51591.2021.9370308)]
+[[preprint](https://arxiv.org/abs/2002.11054)]
 
 ## Abstract
 
