@@ -6,6 +6,8 @@
 
 ## [Releases](https://c9x.me/compile/releases.html)
 
+- 1.2 release proposal
+  [[2023-09-07](https://lists.sr.ht/~mpu/qbe/%3CZPkmHE9KLohoEohE%40cloudsdale.the-delta.net.eu.org%3E)]
 - 1.1
   [[git](https://c9x.me/git/qbe.git/tag/?h=v1.1)]
   [[tar.xz](https://c9x.me/compile/release/qbe-1.1.tar.xz)]
@@ -22,13 +24,19 @@
 - 1.0 release candidate
   [[git](https://c9x.me/git/qbe.git/commit/?id=cec9855fa0c8d9566d4c9755ef7677f49634bc60)]
   [[2022-03-15](https://lists.sr.ht/~mpu/qbe/%3C51390118-2d77-4f40-90d5-b5986066ea4a%40www.fastmail.com%3E)]
-- Homebrew (`brew install qbe`)
+
+## Installation
+
+- Homebrew: [`brew install qbe`](https://formulae.brew.sh/formula/qbe)
   [[2022-06-25](https://lists.sr.ht/~mpu/qbe/%3CD1B8B993-3705-41DE-9CC2-34AEC4201E7E%40slashdev.space%3E)]
+- Gentoo: [`qbe`](https://packages.gentoo.org/packages/sys-devel/qbe)
 
 ## Documentation
 
 - [QBE Intermediate Language](https://c9x.me/compile/doc/il.html): the reference
   document for QBE IL
+  [[1.1](https://c9x.me/compile/doc/il-v1.1.html)]
+  [[1.0](https://c9x.me/compile/doc/il-v1.0.html)]
 - [QBE vs LLVM](https://c9x.me/compile/doc/llvm.html): short comparison with
   LLVM [[HN](https://news.ycombinator.com/item?id=25273907)]
 - [Resources for Amateur Compiler Writers](https://c9x.me/compile/bib/):
@@ -92,5 +100,6 @@
   [[2022-04-11](https://lists.sr.ht/~mpu/qbe/%3CCAAS8gYCGQLSc3qpc4_1CjTb5eL11RRoXJ2RD0fNZCgsrW7TvSg%40mail.gmail.com%3E)]
 - Hare's wishlist for qbe
   [[2022-05-16](https://lists.sr.ht/~mpu/qbe/%3CCK12HKZG9X8T.2I2C6VZPATL9X%40taiga%3E)]
-- Line number info tracking (proposed)
-  [[2023-01-26](https://lists.sr.ht/~mpu/qbe/patches/38465)]
+- Line number info tracking
+  [[2023-06-07](https://lists.sr.ht/~mpu/qbe/%3C20230126110943.14927-1-t%40laumann.xyz%3E)]
+  [[2023-08-18](https://lists.sr.ht/~mpu/qbe/%3CCUG1WB99DHM7.10AE8XNZK6PQJ%40monch%3E)]
