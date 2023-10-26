@@ -14,7 +14,10 @@ Ken has confirmed that he actually [carried out](https://niconiconi.neocities.or
 that it was [discovered and fixed](https://www.tuhs.org/pipermail/tuhs/2021-September/024486.html)
 [[HN](https://news.ycombinator.com/item?id=36389660)] by someone in the PWB
 department, who was confused why the compiler binary grew by one byte on every
-compilation.
+compilation. Russ Cox asked Ken for a copy of the backdoor source code and
+[describes](https://research.swtch.com/nih) [[HN](https://news.ycombinator.com/item?id=38020792)
+in detail how it works, providing a Research Unix Sixth Edition
+[emulator he wrote in Go](https://research.swtch.com/v6/) to try it.
 
 ### Conventions
 
