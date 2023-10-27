@@ -44,6 +44,9 @@ projects.
 - 2023-10-18:
   [“Partial Evaluation of Computation Process, Revisited”](https://sci-hub.st/10.1023/A:1010043619517)
   (Yoshihiko Futamura, 1999)
+- 2023-10-27:
+  [“Secrets of the Glasgow Haskell Compiler inliner”](https://sci-hub.st/10.1017/S0956796802004331)
+  (Simon Peyton Jones and Simon Marlow, 2002)
 
 ## 2022
 
