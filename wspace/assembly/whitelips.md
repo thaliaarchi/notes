@@ -46,8 +46,10 @@ macro_inst ::=
     | "$redef"
     | "$" [0-9]+
 
-label ::= [a-zA-Z_$.][a-zA-Z0-9_$.]*
-number ::= [+-]?\d*
+label ::=
+    | [a-zA-Z_$.][a-zA-Z0-9_$.]*
+    | number
+number ::= [+-]?\d+
 string ::=
     | "\"" ([^"\n\\] | \\[nt] | \\[0-9]+ | \\.)*? "\""
     | "'" ([^'\n\\] | \\[nt] | \\[0-9]+ | \\.)*? "'"
@@ -56,7 +58,9 @@ comment ::=
     | ";" [^\n]*
     | "#" [^\n]*
     | "--" [^\n]*
-    | "{-" .*? "-}" | "{-" .* EOF
+    | block_comment
+block_comment ::=
+    | "{-" ([^{-]* | "{" ([^-]|$) | "-" ([^}]|$) | block_comment) "-}"
 ```
 
 The pattern `.` includes `\n` here.
@@ -64,8 +68,8 @@ The pattern `.` includes `\n` here.
 ## Semantics
 
 Strings may contain escape sequences: `\n` as LF; `\t` as tab; `\` followed by
-greedy decimal digits, parsed as the decimal value; or `\` followed by a UTF-16
-code unit (including LF, allowing for line continuations). `"`-strings are
+greedy decimal digits, parsed as the decimal value; or `\` followed by any UTF-8
+character (including LF, allowing for line continuations). `"`-strings are
 NUL-terminated, but `'`-strings are not.
 
 Labels starting with `.` are local labels. A non-local label definition (the
@@ -124,9 +128,3 @@ recursion depth of 16, but it does not seem to work.
 - The mnemonic label definition form does not scope local labels
 - `call`, `jmp`, `jz`, and `jn` allow numbers as arguments, but label resolution
   always fails, because labels cannot be defined by numbers
-- `{-`-comments can be unterminated
-- Space is optional after a label reference or number, if followed by a
-  `;`-comment, but is required when followed by other comments or a string.
-  Space is optional after a string or comment.
-- It uses `\s` sometimes instead of `[ \t\n\r]`, so these extra space characters
-  would become the start of a label token
