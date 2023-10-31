@@ -47,6 +47,9 @@ projects.
 - 2023-10-27:
   [“Secrets of the Glasgow Haskell Compiler inliner”](https://sci-hub.st/10.1017/S0956796802004331)
   (Simon Peyton Jones and Simon Marlow, 2002)
+- [2023-10-31](compilers/llvm/thesis.md):
+  [“LLVM: An Infrastructure for Multi-Stage Optimization”](https://llvm.org/pubs/2002-12-LattnerMSThesis.html)
+  (Chris Lattner, 2002)
 
 ## 2022
 
