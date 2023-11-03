@@ -5,7 +5,7 @@ Turing-complete.
 
 ## Subsets of programming languages
 
-- C99 variable-length arrays: A subset of C99, “disembodied C”, with only VLA
+- C variable-length arrays: A subset of C99, “disembodied C”, with only VLA
   length expressions and functions with empty bodies, parameters, and forward
   declarations.
   - [MD5, SHA-256, and Conway’s Game of Life](https://lemon.rip/w/c99-vla-tricks/)
@@ -53,6 +53,27 @@ Turing-complete.
     by David Fetter (2009)
   - [Turing machine](https://blog.coelho.net/database/2013/08/17/turing-sql-1.html)
     by Fabien Coelho (2013)
+- Rust type system: A subset of Rust with type parameters, traits,
+  multi-parameter traits, and associated types.
+  - [Turing machine](https://www.reddit.com/r/rust/comments/2o6yp8/comment/cmkrjz2/)
+    by comex (2014)
+    [[code](https://web.archive.org/web/20141225090046/http://pastie.org/9757227)],
+    [updated](https://www.reddit.com/r/rust/comments/5y4x9r/comment/denibgy/)
+    (2017)
+    [[code](https://web.archive.org/web/20170316010408/https://ghostbin.com/paste/vnjmh)]
+  - [Smallfuck](https://sdleffler.github.io/RustTypeSystemTuringComplete/)
+    by Shea Leffler (2017)
+    [[code](https://github.com/sdleffler/tarpit-rs)]
+    [[HN 1](https://news.ycombinator.com/item?id=13843288), [2](https://news.ycombinator.com/item?id=26445332)]
+  - [Minsky machine](https://github.com/paholg/minsky/)
+    by Paho Lurie-Gregg (2017)
+  - [Type System Chess](https://github.com/Dragon-Hatcher/type-system-chess)
+    by Daniel James (2023), which spurred [improvements](https://github.com/rust-lang/rust/pull/114611)
+    to rustc [[post](https://nnethercote.github.io/2023/08/25/how-to-speed-up-the-rust-compiler-in-august-2023.html#my-improvements)]
+- Rust `macros_rules!` and traits
+  - [fortraith](https://github.com/Ashymad/fortraith): compile-time Forth
+    compiler by Szymon Mikulicz (2020)
+    [[HN](https://news.ycombinator.com/item?id=23501474)]
 - Transact-SQL
   - [Brainfuck](https://stackoverflow.com/questions/900055/is-sql-or-even-tsql-turing-complete/34847489#34847489)
     by Miroslav Popov (2016)
@@ -76,27 +97,8 @@ Turing-complete.
     by Anthony Fu (2020)
   - [Type System Chess](https://github.com/Dragon-Hatcher/type-system-chess)
     by Daniel James (2023)
-- Rust type system: A subset of Rust with type parameters, traits,
-  multi-parameter traits, and associated types.
-  - [Turing machine](https://www.reddit.com/r/rust/comments/2o6yp8/comment/cmkrjz2/)
-    by comex (2014)
-    [[code](https://web.archive.org/web/20141225090046/http://pastie.org/9757227)],
-    [updated](https://www.reddit.com/r/rust/comments/5y4x9r/comment/denibgy/)
-    (2017)
-    [[code](https://web.archive.org/web/20170316010408/https://ghostbin.com/paste/vnjmh)]
-  - [Smallfuck](https://sdleffler.github.io/RustTypeSystemTuringComplete/)
-    by Shea Leffler (2017)
-    [[code](https://github.com/sdleffler/tarpit-rs)]
-    [[HN 1](https://news.ycombinator.com/item?id=13843288), [2](https://news.ycombinator.com/item?id=26445332)]
-  - [Minsky machine](https://github.com/paholg/minsky/)
-    by Paho Lurie-Gregg (2017)
-  - [Type System Chess](https://github.com/Dragon-Hatcher/type-system-chess)
-    by Daniel James (2023), which spurred [improvements](https://github.com/rust-lang/rust/pull/114611)
-    to rustc [[post](https://nnethercote.github.io/2023/08/25/how-to-speed-up-the-rust-compiler-in-august-2023.html#my-improvements)]
-- Rust `macros_rules!` and traits
-  - [fortraith](https://github.com/Ashymad/fortraith): compile-time Forth
-    compiler by Szymon Mikulicz (2020)
-    [[HN](https://news.ycombinator.com/item?id=23501474)]
+  - [Flappy Bird](https://zackoverflow.dev/writing/flappy-bird-in-type-level-typescript/)
+    by Zack Radisic (2023)
 - x86 MMU fault handling
   - [trapcc](https://github.com/jbangert/trapcc): subleq compiler
     by Julian Bangert (2013)
