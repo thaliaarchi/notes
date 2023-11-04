@@ -35,6 +35,9 @@ projects.
   [“Memory-safe Execution of C on a Java VM”](https://sci-hub.st/10.1145/2786558.2786565)
   (Matthias Grimmer, Roland Schatz, Chris Seaton, Thomas Würthinger, and
   Hanspeter Mossenböck, 2014)
+- 2023-10-06:
+  [“Parsing distfix operators”](https://dl.acm.org/doi/10.1145/5657.5659)
+  (Simon Peyton Jones, 1986)
 - 2023-10-15:
   [“Arbitrary precision arithmetic using continued fractions”](https://www.microsoft.com/en-us/research/publication/arbitrary-precision-arithmetic-using-continued-fractions/)
   (Simon Peyton Jones, 1984)
@@ -195,11 +198,33 @@ projects.
       (Cliff Click, 1995)
     - [“A Simple Graph-Based Intermediate Representation”](https://dl.acm.org/doi/10.1145/202529.202534)
       (Cliff Click and Michael Paleczny, 1995)
+    - [“Combining Analyses, Combining Optimizations”](https://www.researchgate.net/publication/2394127_Combining_Analyses_Combining_Optimizations)
+      Thesis (Cliff Click, 1995)
     - [“Combining Analyses, Combining Optimizations“](https://dl.acm.org/doi/10.1145/201059.201061)
       (Cliff Click and Keith D. Cooper, 1995)
     - [“The Java HotSpot™ Server Compiler”](https://www.usenix.org/conference/jvm-01/java-hotspot%E2%84%A2-server-compiler)
       (Michael Paleczny, Christopher Vick, and Cliff Click, 2001)
-  - GHC / G-machine
+  - Haskell / G-machine
+    - [“Implementing lazy functional languages on stock hardware: the Spineless
+      Tagless G-machine”](https://www.microsoft.com/en-us/research/publication/implementing-lazy-functional-languages-on-stock-hardware-the-spineless-tagless-g-machine/)
+      (Simon Peyton Jones, 1992)
+    - [“The Implementation of Functional Programming Languages”](https://archive.org/details/implementationof00peyt)
+      (Simon Peyton Jones, 1987)
+    - [“Implementing Functional Languages: a tutorial”](https://www.microsoft.com/en-us/research/publication/implementing-functional-languages-a-tutorial/)
+      (Simon Peyton Jones and David R Lester, 2000)
+    - [“The Spineless Tagless G-machine, naturally”](https://dl.acm.org/doi/10.1145/289423.289439)
+      (Jon Mountjoy, 1998)
+    - [“Type classes in Haskell”](https://www.microsoft.com/en-us/research/publication/type-classes-in-haskell/)
+      (Cordelia Hall, Kevin Hammond, Simon Peyton Jones, and Philip Wadler,
+      1994)
+    - [“State in Haskell”](https://www.microsoft.com/en-us/research/publication/state-in-haskell/)
+      (John Launchbury and Simon Peyton Jones, 1995)
+    - [“A transformation-based optimiser for Haskell”](https://sci-hub.st/10.1016/S0167-6423(97)00029-4)
+      (Simon Peyton Jones and André L.M. Santos, 1998)
+    - [“C--: a portable assembly language that supports garbage collection”](https://www.microsoft.com/en-us/research/publication/portable-assembly-language-supports-garbage-collection/)
+      (Simon Peyton Jones, Norman Ramsey, and Fermin Reig, 1999)
+    - [“Beyond Functional Programming: The Verse Programming Language”](https://www.youtube.com/watch?v=832JF1o7Ck8)
+      (Simon Peyton Jones, 2022)
   - [“Graph IRs for Impure Higher-Order Languages: Making Aggressive
     Optimizations Affordable with Precise Effect Dependencies”](https://bracevac.org/assets/pdf/oopsla23.pdf)
     (Oliver Bračevac, Guannan Wei, Songlin Jia, Supun Abeysinghe, Yuxuan Jiang,
