@@ -84,12 +84,15 @@ Turing-complete.
     [[code](https://gist.github.com/hediet/63f4844acf5ac330804801084f87a6d4)]
     [[HN](https://news.ycombinator.com/item?id=14905043)]
   - [Meta-Typing](https://github.com/ronami/meta-typing): many math, list,
-    sorting, and puzzle functions and algorithms at type level
+    sorting, and puzzle functions and algorithms at type-level
     by Ronen Amiel (2020)
     [[HN](https://news.ycombinator.com/item?id=36595512)]
   - [Smallfuck](https://itnext.io/typescript-and-turing-completeness-ba8ded8f3de3)
     by Ryan Dabler (2021)
     [[code](https://gist.github.com/ryandabler/fd7884cb9072e66717d9f5d4b23bd5e8)]
+  - [ts-calc](https://github.com/ecyrbe/ts-calc): integer arithmetic implemented
+    at type-level as string operations in decimal with table digit lookups
+    by ecyrbe (2022)
   - [Typescripting the technical interview](https://www.richard-towers.com/2023/03/11/typescripting-the-technical-interview.html):
     N-queens problem by Richard Towers (2023)
     [[HN](https://news.ycombinator.com/item?id=35120084)]
