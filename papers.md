@@ -53,6 +53,9 @@ projects.
 - [2023-10-31](compilers/llvm/thesis.md):
   [“LLVM: An Infrastructure for Multi-Stage Optimization”](https://llvm.org/pubs/2002-12-LattnerMSThesis.html)
   (Chris Lattner, 2002)
+- [2023-11-16](topics/rules_engine/rete.md):
+  [“Rete: A Fast Algorithm for the Many Pattern/Many Object Pattern Match Problem”](https://sci-hub.st/10.1016/0004-3702(82)90020-0)
+  (Charles L. Forgy, 1982)
 
 ## 2022
 
