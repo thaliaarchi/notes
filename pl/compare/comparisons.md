@@ -9,11 +9,13 @@
   by Pascal Rigaux
 - [History and comparison of programming languages](https://web.archive.org/web/20150118032430/http://hhh.gavilan.edu:80/dvantassel/history/history.html)
   by Dennie Van Tassel
-- [Syntactics — The Surface of Programming Languages](https://web.archive.org/web/20160917091324/http://web.cs.mun.ca/~ulf/pld/surface.html)
+- [“Syntactics — The Surface of Programming Languages”](https://web.archive.org/web/20160917091324/http://web.cs.mun.ca/~ulf/pld/surface.html)
   by Ulf Schünemann
-- [The seven programming ur-languages](https://madhadron.com/programming/seven_ur_languages.html)
+- [“The seven programming ur-languages”](https://madhadron.com/programming/seven_ur_languages.html)
 - My [comparison of integer literal syntax](integer_literals.md)
 - [Numeric literals of arbitrary bases](https://www.reddit.com/r/ProgrammingLanguages/comments/ri26d5/numeric_literals_of_arbitrary_bases/)
+- [“A Brief, Incomplete, and Mostly Wrong History of Programming Languages”](https://james-iry.blogspot.com/2009/05/brief-incomplete-and-mostly-wrong.html)
+  by James Iry
 
 ## Rankings
 
