@@ -77,6 +77,7 @@ A notebook on compilers, programming languages, and other topics.
 ## Projects
 
 - [Detecting esolang polyglots](projects/esolang_detect.md)
+- [Loose threads](projects/loose_threads.md)
 - [Personal git forge](projects/personal_git_forge.md)
 - [Post-undergrad projects](projects/post_undergrad.md)
 
