@@ -257,3 +257,6 @@ projects.
   - [“Relational E-matching”](https://arxiv.org/abs/2108.02290)
     (Yihong Zhang, Yisu Remy Wang, Max Willsey, and Zachary Tatlock, 2021)
     [[notes](topics/e-graphs.md)]
+- History
+  - [“JavaScript: The First 20 Years”](https://dl.acm.org/doi/10.1145/3386327)
+    (Allen Wirfs-Brock and Brendan Eich, 2020)
