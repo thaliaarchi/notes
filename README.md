@@ -80,6 +80,7 @@ A notebook on compilers, programming languages, and other topics.
 - [Loose threads](projects/loose_threads.md)
 - [Personal git forge](projects/personal_git_forge.md)
 - [Post-undergrad projects](projects/post_undergrad.md)
+- [Project genesis](projects/project_genesis.md)
 
 ## Topics
 
