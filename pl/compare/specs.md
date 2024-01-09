@@ -1,5 +1,9 @@
 # Programming language specifications
 
+## ActionScript
+
+ActionScript 3 is specified by the [proposed ECMA-262 edition 4](https://archives.ecma-international.org/2005/misc/as3lang.pdf).
+
 ## C#
 
 - C# Preview [features](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/proposals/primary-constructors)
@@ -8,6 +12,10 @@
 - C# 9.0 [features](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/proposals/csharp-9.0)
 - C# 8.0 [features](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/proposals/csharp-8.0)
 - C# 7.0 [draft specification](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/language-specification/introduction)
+
+## JavaScript
+
+JavaScript is standardized as ECMAScript in [ECMA-262](https://ecma-international.org/publications-and-standards/standards/ecma-262/).
 
 ## Java
 
