@@ -22,6 +22,9 @@ also lists more languages than here.
 | Erlang            | 2–36             | "", `10#`      | `2#`          | `8#`            | `16#`      | Decimal      | `_`       | No          | No           | No           | N/A      |
 | Go 1.13+          | 2, 8, 10, 16     | ""             | `0b`, `0B`    | `0`, `0o`, `0O` | `0x`, `0X` | Octal        | `_`       | Yes         | No           | No           | N/A      |
 | Go ≤1.12          | 8, 10, 16        | ""             | N/A           | `0`             | `0x`, `0X` | Octal        | N/A       | N/A         | N/A          | N/A          | N/A      |
+| Haskell with extensions | 2, 8, 10, 16 | ""           | `0b`, `0B`    | `0o`, `0O`      | `0x`, `0X` | Decimal      | `_`       | Yes         | No           | Yes          | N/A      |
+| Haskell 1.3+      | 8, 10, 16        | ""             | N/A           | `0o`, `0O`      | `0x`, `0X` | Decimal      | N/A       | N/A         | N/A          | N/A          | N/A      |
+| Haskell 1.0–1.2   | 10               | ""             | N/A           | N/A             | N/A        | Decimal      | N/A       | N/A         | N/A          | N/A          | N/A      |
 | Java 7+           | 2, 8, 10, 16     | ""             | `0b`, `0B`    | `0`             | `0x`, `0X` | Octal        | `_`       | No          | No           | Yes          | Type     |
 | Java ≤6           | 8, 10, 16        | ""             | N/A           | `0`             | `0x`, `0X` | Octal        | N/A       | N/A         | N/A          | N/A          | Type     |
 | JSON              | 10               | ""             | N/A           | N/A             | N/A        | Illegal      | N/A       | N/A         | N/A          | N/A          | Exponent |
@@ -132,7 +135,7 @@ hex_literal     ::= "0" [xX] ("_"? hex_digit)+
 
 From the [language specification](https://go.dev/ref/spec#Integer_literals)
 as of [Go 1.13](https://github.com/golang/go/blob/go1.13/doc/go_spec.html#L272-L320)
-through [1.20](https://github.com/golang/go/blob/go1.20/doc/go_spec.html#L277-L325).
+through [1.21.6](https://github.com/golang/go/blob/go1.21.6/doc/go_spec.html#L277-L325).
 
 #### Go ≤1.12
 
@@ -145,6 +148,61 @@ hex_literal     ::= "0" [xX] hex_digit+
 
 From the language specification as of the initial commit on [2008-03-02](https://github.com/golang/go/blob/18c5b488a3b2e218c0e0cf2a7d4820d9da93a554/doc/go_spec#L412-L417)
 through [Go 1.12](https://github.com/golang/go/blob/go1.12/doc/go_spec.html#L271-L292).
+
+### Haskell
+
+#### Haskell 1.3+
+
+```bnf
+integer_literal ::= dec_literal | oct_literal | hex_literal
+dec_literal     ::= dec_digit+
+oct_literal     ::= "0" [oO] oct_digit+
+hex_literal     ::= "0" [xX] hex_digit+
+```
+
+From the [Haskell Report](https://wiki.haskell.org/Language_and_library_specification),
+as of Haskell [1.3](http://haskell.org/definition/haskell-report-1.3.ps.gz),
+[1.4](http://haskell.org/definition/haskell-report-1.4-html.tar.gz),
+[98](https://www.haskell.org/onlinereport/lexemes.html), and
+[2010](https://www.haskell.org/onlinereport/haskell2010/haskellch2.html#x7-190002.5).
+
+#### Haskell 1.0–1.2
+
+```bnf
+integer_literal ::= dec_digit+
+```
+
+From the [Haskell Report](https://wiki.haskell.org/Language_and_library_specification),
+as of Haskell [1.0](http://haskell.org/definition/haskell-report-1.0.ps.gz),
+[1.1](http://haskell.org/definition/haskell-report-1.1.tar.gz),
+and [1.2](http://haskell.org/definition/haskell-report-1.2.ps.gz).
+
+#### `NumericUnderscores` extension
+
+```bnf
+integer_literal ::= dec_literal | oct_literal | hex_literal
+dec_literal     ::= dec_digit ("_"* dec_digit)*
+oct_literal     ::= "0" [oO] ("_"* oct_digit)+
+hex_literal     ::= "0" [xX] ("_"* hex_digit)+
+```
+
+From the [`NumericUnderscores`](https://ghc.gitlab.haskell.org/ghc/doc/users_guide/exts/numeric_underscores.html#extension-NumericUnderscores)
+language extension.
+
+#### `BinaryLiterals` extension
+
+```bnf
+bin_literal     ::= "0" [bB] bin_digit+
+```
+
+It includes underscores, when `NumericUnderscores` is also enabled:
+
+```bnf
+bin_literal     ::= "0" [bB] ("_"* bin_digit)+
+```
+
+From the [`BinaryLiterals`](https://ghc.gitlab.haskell.org/ghc/doc/users_guide/exts/binary_literals.html#extension-BinaryLiterals)
+language extension.
 
 ### Java
 
@@ -161,7 +219,7 @@ integer_suffix  ::= [lL]
 
 From the [The Java Language Specification](https://docs.oracle.com/javase/specs/)
 as of [Java SE 7](https://docs.oracle.com/javase/specs/jls/se7/html/jls-3.html#jls-3.10.1)
-through [20](https://docs.oracle.com/javase/specs/jls/se20/html/jls-3.html#jls-3.10.1).
+through [21](https://docs.oracle.com/javase/specs/jls/se21/html/jls-3.html#jls-3.10.1).
 
 #### Java ≤6
 
@@ -209,7 +267,7 @@ hex_literal     ::= "0" [xX] ("_"? hex_digit)+
 
 From the [language reference](https://docs.python.org/3/reference/lexical_analysis.html#integer-literals)
 as of [Python 3.6](https://docs.python.org/3.6/reference/lexical_analysis.html#integer-literals)
-through [3.11.4](https://docs.python.org/3.11/reference/lexical_analysis.html#integer-literals).
+through [3.12.1](https://docs.python.org/3.12/reference/lexical_analysis.html#integer-literals).
 
 #### Python 3.0–3.5
 
@@ -270,7 +328,7 @@ hex_literal     ::= "0" [xX] hex_digit ("_"? hex_digit)*
 
 From the informal [language documentation](https://docs.ruby-lang.org/en/master/syntax/literals_rdoc.html#label-Integer+Literals)
 supplemented with the [Ruby Spec Suite](https://github.com/ruby/spec/blob/master/core/kernel/Integer_spec.rb),
-revised [31 May 2023](https://github.com/ruby/spec/blob/109d976477e726c1b5006ba3d42b7e9f5d9798be/core/kernel/Integer_spec.rb).
+revised [13 Nov 2023](https://github.com/ruby/spec/blob/71cfe8c3f9da32dd5f993edeb1ba0a6d39f4b880/core/kernel/Integer_spec.rb).
 
 ### Rust
 
@@ -294,7 +352,7 @@ The pattern `integer_suffix` has varied as integer types have been added:
 
 From the [language reference](https://doc.rust-lang.org/reference/tokens.html#integer-literals)
 as of [Rust 0.9](https://doc.rust-lang.org/0.9/rust.html#number-literals)
-through [1.70](https://doc.rust-lang.org/1.70.0/reference/tokens.html#integer-literals).
+through [1.75](https://doc.rust-lang.org/1.75.0/reference/tokens.html#integer-literals).
 
 <details>
 <summary>Earlier Rust versions</summary>
@@ -475,7 +533,7 @@ base_36_literal ::= "0"* "36#" [0-9 a-z A-Z] ("_"? [0-9 a-z A-Z])*
 ```
 
 From the [reference manual](https://www.erlang.org/doc/reference_manual/data_types.html#number)
-as of [Erlang 14.0.1](https://www.erlang.org/docs/26/reference_manual/data_types.html#number).
+as of [Erlang 14.2.1](https://www.erlang.org/docs/26/reference_manual/data_types.html#number).
 
 ## Visual Basic
 
