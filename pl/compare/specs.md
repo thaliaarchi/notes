@@ -13,6 +13,22 @@ ActionScript 3 is specified by the [proposed ECMA-262 edition 4](https://archive
 - C# 8.0 [features](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/proposals/csharp-8.0)
 - C# 7.0 [draft specification](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/language-specification/introduction)
 
+## Haskell
+
+- [Haskell 2010 Report](http://www.haskell.org/onlinereport/haskell2010)
+- [Haskell 98 Report](https://www.haskell.org/onlinereport/)
+- [Haskell 1.4 Report](http://haskell.org/definition/haskell-report-1.4-html.tar.gz)
+- [Haskell 1.3 Report](http://haskell.org/definition/haskell-report-1.3.ps.gz)
+  (PostScript)
+- [Haskell 1.2 Report](http://haskell.org/definition/haskell-report-1.2.ps.gz)
+  (PostScript)
+- [Haskell 1.1 Report](http://haskell.org/definition/haskell-report-1.1.tar.gz)
+  (TeX)
+- [Haskell 1.0 Report](http://haskell.org/definition/haskell-report-1.0.ps.gz)
+  (PostScript)
+
+Other formats for the reports are [listed on the Haskell wiki](https://wiki.haskell.org/Language_and_library_specification).
+
 ## JavaScript
 
 JavaScript is standardized as ECMAScript in [ECMA-262](https://ecma-international.org/publications-and-standards/standards/ecma-262/).
