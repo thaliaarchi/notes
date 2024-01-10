@@ -19,8 +19,17 @@ JavaScript is standardized as ECMAScript in [ECMA-262](https://ecma-internationa
 
 ## Java
 
-[Java Language Specification](https://docs.oracle.com/javase/specs/), editions
-Java SE 6–20.
+- [Java Language Specification](https://docs.oracle.com/javase/specs/), editions
+  Java SE 6–21.
+- [The Java Language Specification, Third Edition](https://web.archive.org/web/20050618001445/http://java.sun.com/docs/books/jls/third_edition/html/j3TOC.html)
+  [[home](https://web.archive.org/web/20050614235647/http://java.sun.com:80/docs/books/jls/index.html)]
+- [The Java Language Specification, Second Edition](https://web.archive.org/web/20000815203845/http://java.sun.com/docs/books/jls/second_edition/html/j.title.doc.html)
+  [[home](https://web.archive.org/web/20000815085551/http://java.sun.com:80/docs/books/jls/index.html)]
+  - [The Java Language Specification, Second Edition draft](https://web.archive.org/web/20000408023931/http://www.java.sun.com:80/aboutJava/communityprocess/maintenance/JLS/index.html)
+    [[home](https://web.archive.org/web/20000520010636/http://java.sun.com:80/docs/books/jls/index.html)]
+- [Changes for Java 1.1](https://web.archive.org/web/19980215011821/http://java.sun.com/docs/books/jls/html/1.1Update.html)
+- [The Java Language Specification, First Edition](https://web.archive.org/web/19980215010253/http://java.sun.com/docs/books/jls/html/index.html)
+  [[home](https://web.archive.org/web/19980214234634/http://java.sun.com/docs/books/jls/index.html)]
 
 ## JSON
 
