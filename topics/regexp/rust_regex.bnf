@@ -10,25 +10,27 @@ space if ignore_whitespace ::= ε
 space if !ignore_whitespace ::= (\p{White_Space} | "#" .*?\n?)*
 
 single ::=
-    | space "(" space group space ")" regex
-    | space "[" set_class space "]"
+    | space group
+    | space set_class
 repetition ::=
-    | uncounted_repetition
-    | counted_repetition
+    | space uncounted_repetition
+    | space counted_repetition
 # BUG?: No space before ungreedy "?".
-uncounted_repetition ::= space ("?" | "*" | "+") "?"?
-counted_repetition ::=
-    | space "{" decimal space ("," decimal? space)? "}"
-    | space "{" "," decimal space "}"
+uncounted_repetition ::= ("?" | "*" | "+") "?"?
+counted_repetition ::= "{" repetition_range "}" space "?"?
+repetition_range ::=
+    | decimal space ("," decimal? space)?
+    | "," decimal space
 decimal ::= (space digit)+
 digit ::= [0-9]
 
 group ::=
-    | "?P<" capture_name ">" regex
-    | "?<" capture_name ">" regex
-    | "?" flags
-    | "?" flags? ":" regex
-    | regex
+    | "(" space "?P<" capture_name ">" regex space ")"
+    | "(" space "?<" capture_name ">" regex space ")"
+    # BUG?: No space before ")".
+    | "(" space "?" flags ")"
+    | "(" space "?" flags? ":" regex space ")"
+    | "(" space regex space ")"
 capture_name ::= capture_char_first capture_char_rest*
 capture_char_first ::= "_" | alphabetic
 capture_char_rest ::= "_" | "." | "[" | "]" | alphanumeric
@@ -39,12 +41,14 @@ flags ::= flag+ | flag* "-" flag+
 flag ::= [imsUuRx]
 
 set_class ::=
-    | space "[:" "^"? ascii_class_name ":]"
-    | space "[" set_class_open set_class* space "]"
-    | space intersection
-    | space difference
-    | space symmetric_difference
-    | space set_class_range
+    | "[" space set_class_element space "]"
+set_class_element ::=
+    | "[:" "^"? ascii_class_name ":]"
+    | "[" set_class_open set_class_element* space "]"
+    | intersection
+    | difference
+    | symmetric_difference
+    | set_class_range
 ascii_class_name ::=
     | "alnum" | "alpha" | "ascii" | "blank" | "cntrl" | "digit" | "graph"
     | "lower" | "print" | "punct" | "space" | "upper" | "word" | "xdigit"
