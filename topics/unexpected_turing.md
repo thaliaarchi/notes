@@ -101,7 +101,8 @@ Turing-complete.
   - [Type System Chess](https://github.com/Dragon-Hatcher/type-system-chess)
     by Daniel James (2023)
   - [Flappy Bird](https://zackoverflow.dev/writing/flappy-bird-in-type-level-typescript/)
-    by Zack Radisic (2023)
+    by Zack Radisic (2023) parses the types in Rust to emit a bytecode, which is
+    evaluated by a VM in Zig
 - x86 MMU fault handling
   - [trapcc](https://github.com/jbangert/trapcc): subleq compiler
     by Julian Bangert (2013)
