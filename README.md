@@ -81,6 +81,7 @@ A notebook on compilers, programming languages, and other topics.
 - [Personal git forge](projects/personal_git_forge.md)
 - [Post-undergrad projects](projects/post_undergrad.md)
 - [Project genesis](projects/project_genesis.md)
+- [tar library](projects/tar_library.md)
 
 ## Topics
 
