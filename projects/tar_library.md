@@ -19,6 +19,14 @@
   OS, until and only if they are used with the host filesystem. When converting
   to `Path`, `OsString::from_encoded_bytes_unchecked` could be used with
   appropriate sanitization first, to allow for more patterns of invalid UTF-8.
+- Date parsing is suspicious. For base-256 numbers, it doesn't handle negative
+  numbers and only uses the last 8 bytes, whereas [Go](https://github.com/golang/go/blob/f19f31f2e7c136a8dae03cbfe4f8ebbb8b54569b/src/archive/tar/strconv.go#L93-L135)
+  decodes all bytes, checks for overflow, and handles negative.
+- Retrieving the most precise version of each field, from the various extended
+  headers, and parsing and verifying it is cumbersome.
+- It doesn't seem to support PAX format.
+- The rough edges and incompleteness implies a better library could be
+  influential.
 
 ## Previous implementations
 
@@ -27,3 +35,8 @@ Wikipedia as influential, so I could use my archival work there.
 
 I'd want to make compatibility modes, for functioning as different
 implementations.
+
+An in-depth [Go issue](https://golang.org/issues/12594) describes the incorrect
+assumptions made in `archive/tar`, which is useful for a historical perspective
+and survey (see [the `Reader` fix](https://github.com/golang/go/blob/f19f31f2e7c136a8dae03cbfe4f8ebbb8b54569b/src/archive/tar/reader.go#L432-L460)).
+It mentions the commit introducing base-256 numbers into GNU tar [in 1999](https://git.savannah.gnu.org/cgit/tar.git/commit/?id=e4e624848b53ac02f1212af2209a63d28e40afec).
