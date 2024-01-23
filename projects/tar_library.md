@@ -40,3 +40,12 @@ An in-depth [Go issue](https://golang.org/issues/12594) describes the incorrect
 assumptions made in `archive/tar`, which is useful for a historical perspective
 and survey (see [the `Reader` fix](https://github.com/golang/go/blob/f19f31f2e7c136a8dae03cbfe4f8ebbb8b54569b/src/archive/tar/reader.go#L432-L460)).
 It mentions the commit introducing base-256 numbers into GNU tar [in 1999](https://git.savannah.gnu.org/cgit/tar.git/commit/?id=e4e624848b53ac02f1212af2209a63d28e40afec).
+
+### star
+
+Schily tar (star) by Jörg Schilling is an influential and early tar
+implementation. Its [man pages](https://linux.die.net/man/1/ustar) compare many
+tar implementations (see `artype`). Its source is on SourceForge in [star](https://sourceforge.net/projects/s-tar/),
+and possibly also [schilytools](https://sourceforge.net/projects/schilytools/)
+which has more releases. [FreshPorts](https://www.freshports.org/archivers/star)
+describes its benefits over other tar implementations.
