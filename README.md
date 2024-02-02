@@ -78,6 +78,7 @@ A notebook on compilers, programming languages, and other topics.
 
 - [Buffered I/O library ideas](projects/bufio_library.md)
 - [Detecting esolang polyglots](projects/esolang_detect.md)
+- [GHC decompilation](projects/ghc_decompile.md)
 - [Loose threads](projects/loose_threads.md)
 - [Personal git forge](projects/personal_git_forge.md)
 - [Post-undergrad projects](projects/post_undergrad.md)
