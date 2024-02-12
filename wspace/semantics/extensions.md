@@ -77,6 +77,15 @@ instruction:
 | -------- | ------ | --- | --------------------------- | ------------------------------------------------------------- |
 | `PYFN`   | LLS    | l   | a1 .. an -- a1 .. an retval | Call the Python function registered as *l* with *n* arguments |
 
+## Spiceweight
+
+[Spiceweight](https://github.com/collidedscope/spiceweight) by Collided Scope
+defines the following instructions:
+
+| Mnemonic | Syntax | Arg | Stack         | Description                                                                                                                                   |
+| -------- | ------ | --- | ------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
+| `shell`  | TLL    |     | cmd -- output | Execute shell command *cmd* and push its output (stdout and stderr), where *cmd* and *output* are base-128 numbers representing ASCII strings |
+
 ## Spitewaste
 
 [Spitewaste](https://github.com/collidedscope/spitewaste) by Collided Scope
