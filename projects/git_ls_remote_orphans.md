@@ -33,6 +33,46 @@ The documentation for gitnamespaces has this in its [security section](https://g
 Where in the Git protocol are these “have” lines exposed? Is it available in
 libgit2 (I assume not)? Could it be extracted to a separate routine?
 
+## Git
+
+- `do_fetch(_, _, _)` (fetch.c)
+  - `must_list_refs = 1`: Must execute a branch that sets this
+  - `transport_get_remote_refs(_, _)` (transport.c)
+    - `transport->vtable->get_refs_list(_, for_push = 0, _)`
+      - `vtable.get_refs_list = get_refs_list` (transport-helper.c)
+        - Set by `transport_helper_init` (transport-helper.c), called in
+          `transport_get` (transport.c) when the remote is a foreign VCS
+      - `builtin_smart_vtable->get_refs_list = get_refs_via_connect` (transport.c)
+        - Set in `transport_get` (transport.c)
+        - `get_refs_via_connect` (transport.c)
+          - `handshake(_, _, _, must_list_refs = 1)` (transport.c)
+            - Server protocol v2:
+              `get_remote_refs(_, _, _, for_push = 0, _, _, _)` (connect.c)
+            - Server protocol v0 or v1:
+              `get_remote_heads(_, _, 0, _, _)` (connect.c)
+      - `taken_over_vtable->get_refs_list = get_refs_via_connect` (transport.c)
+        - Set by `do_take_over` (transport-helper.c)
+        - (see above)
+      - `bundle_vtable->get_refs_list = get_refs_from_bundle` (transport.c)
+        - Set in `transport_get` (transport.c)
+        - `get_refs_from_bundle(_, for_push = 0, _)` (transport.c)
+          - `get_refs_from_bundle_inner` (transport.c)
+
+## libgit2
+
+- [`git_remote_ls`](https://libgit2.org/libgit2/#HEAD/group/remote/git_remote_ls)
+  (src/libgit2/remote.c, include/git2/remote.h)
+  - `remote->transport->ls` (`struct git_transport` in include/git2/sys/transport.h)
+    - `.ls = git_smart__ls` (`git_transport_smart` in src/libgit2/transports/smart.c)
+      - `git_smart__ls` (src/libgit2/transports/smart.c)
+        - The data has already been retrieved
+    - `.ls = local_ls` (`git_transport_local` in src/libgit2/transports/local.c)
+      - `local_ls` (src/libgit2/transports/local.c)
+        - The data has already been retrieved
+
+`git_remote_ls` just retrieves the already-fetched refs from the transport. This
+list is available after connection and until a new connection is initiated.
+
 ## Use case: Quine Relay
 
 [Quine Relay](https://github.com/mame/quine-relay) is a quine that cycles
