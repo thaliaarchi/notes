@@ -83,6 +83,7 @@ A notebook on compilers, programming languages, and other topics.
 - [Personal git forge](projects/personal_git_forge.md)
 - [Post-undergrad projects](projects/post_undergrad.md)
 - [Project genesis](projects/project_genesis.md)
+- [Requesting a list of all Git commits from a forge](projects/git_ls_remote_orphans.md)
 - [tar library](projects/tar_library.md)
 
 ## Topics
