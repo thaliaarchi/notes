@@ -59,6 +59,7 @@ additional languages can be found on the Wikipedia article for [modulo](https://
   [`mod_u`](https://docs.rs/rug/latest/rug/struct.Integer.html#method.mod_u)
 - Rust: [`div_euclid`](https://doc.rust-lang.org/std/primitive.i32.html#method.div_euclid)
   [`rem_euclid`](https://doc.rust-lang.org/std/primitive.i32.html#method.rem_euclid)
+- SMT-LIB: [`(div Int Int)` `(mod Int Int)`](https://smtlib.cs.uiowa.edu/theories-Ints.shtml)
 
 ## Ceiling
 
