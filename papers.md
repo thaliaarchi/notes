@@ -12,7 +12,7 @@ projects.
 - [2023-03-09](topics/unexpected_turing.md):
   [“`mov` is Turing-complete”](https://web.archive.org/web/20130924014250/http://www.cl.cam.ac.uk/~sd601/papers/mov.pdf)
   (Stephen Dolan, 2013)
-- [2023-04-09](topics/bdds.md):
+- [2023-04-09](logic/bdds.md):
   [“Using Datalog with Binary Decision Diagrams for Program Analysis”](https://people.csail.mit.edu/mcarbin/papers/aplas05.pdf)
   (John Whaley, Dzintars Avots, Michael Carbin, and Monica S. Lam, 2005)
 - [2023-05-29](topics/tree-sitter.md):
@@ -53,7 +53,7 @@ projects.
 - [2023-10-31](compilers/llvm/thesis.md):
   [“LLVM: An Infrastructure for Multi-Stage Optimization”](https://llvm.org/pubs/2002-12-LattnerMSThesis.html)
   (Chris Lattner, 2002)
-- [2023-11-16](topics/rules_engine/rete.md):
+- [2023-11-16](logic/rete.md):
   [“Rete: A Fast Algorithm for the Many Pattern/Many Object Pattern Match Problem”](https://sci-hub.st/10.1016/0004-3702(82)90020-0)
   (Charles L. Forgy, 1982)
 
@@ -83,13 +83,13 @@ projects.
   [“Practical Second Futamura Projection: Partial Evaluation for
   High-Performance Language Interpreters”](https://sci-hub.st/10.1145/3359061.3361077)
   (Florian Latifi, 2019)
-- [2022-07-18](topics/adapton/boulder2015.md):
+- [2022-07-18](logic/adapton/boulder2015.md):
   [“Incremental Computation with Adapton”](https://vimeo.com/122066659)
   (Matthew Hammer, 2015)
-- [2022-07-19](topics/adapton/pldi2014.md):
+- [2022-07-19](logic/adapton/pldi2014.md):
   [“Adapton: Composable, Demand-Driven Incremental Computation”](http://matthewhammer.org/adapton/adapton-pldi2014.pdf)
   (Matthew Hammer, Khoo Yit Phang, Michael Hicks, and Jeffrey Foster, 2014)
-- [2022-07-19](topics/adapton/miniAdapton.md):
+- [2022-07-19](logic/adapton/miniAdapton.md):
   [“miniAdapton: A Minimal Implementation of Incremental Computation in Scheme”](https://arxiv.org/abs/1609.05337)
   (Dakota Fisher, Mathew Hammer, William Byrd, and Matthew Might, 2016)
 - [2022-10-20](compilers/mlir/cgo21_lattner.md):
@@ -247,16 +247,16 @@ projects.
   - [“Better Together: Unifying Datalog and Equality Saturation”](https://www.mwillsey.com/papers/egglog)
     (Yihong Zhang, Remy Wang, Oliver Flatt, David Cao, Philip Zucker, Eli
     Rosenthal, Zachary Tatlock, Max Willsey, 2023)
-    [[notes](topics/e-graphs.md)]
+    [[notes](logic/e-graphs/survey.md)]
   - [“Logging an Egg: Datalog on E-Graphs”](https://github.com/philzook58/egglog0-talk/raw/main/out.pdf)
     (Philip Zucker, 2022)
-    [[notes](topics/e-graphs.md)]
+    [[notes](logic/e-graphs/survey.md)]
   - [“Your next e-graph framework looks like Datalog”](https://effect.systems/doc/pldi-2022-egraphs/abstract.pdf)
     (Yihong Zhang, 2022)
-    [[notes](topics/e-graphs.md)]
+    [[notes](logic/e-graphs/survey.md)]
   - [“Relational E-matching”](https://arxiv.org/abs/2108.02290)
     (Yihong Zhang, Yisu Remy Wang, Max Willsey, and Zachary Tatlock, 2021)
-    [[notes](topics/e-graphs.md)]
+    [[notes](logic/e-graphs/survey.md)]
 - History
   - [“JavaScript: The First 20 Years”](https://dl.acm.org/doi/10.1145/3386327)
     (Allen Wirfs-Brock and Brendan Eich, 2020)
