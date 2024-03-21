@@ -74,6 +74,24 @@ A notebook on compilers, programming languages, and other topics.
   - [Programming languages I know](pl/lists/languages_i_know.md)
 - [Paper notes](pl/papers.md)
 
+## Logic
+
+- Adapton
+  - [Adapton: Composable, Demand-Driven Incremental Computation](logic/adapton/pldi2014.md)
+    (PLDI 2014)
+  - [Incremental Computation with Adapton](logic/adapton/boulder2015.md)
+    (University of Colorado Boulder, 2015)
+  - [miniAdapton: A Minimal Implementation of Incremental Computation in Scheme](logic/adapton/miniAdapton.md)
+    (2016)
+  - [Presentation outline](logic/adapton/presentation_outline.md) (2022)
+- [BDDs and other decision diagrams](logic/bdds.md)
+- E-graphs
+  - [ægraphs: Acyclic E-graphs for Efficient Optimization in a Production Compiler](logic/e-graphs/ae-graphs.md)
+  - [ae-graphs (in Cranelift) vs e-graphs](logic/e-graphs/ae-graphs_vs_e-graphs.md)
+  - [E-graph literature survey](logic/e-graphs/survey.md)
+  - [Guided equality saturation](logic/e-graphs/guided_eqsat.md)
+- [Rete Algorithm](logic/rete.md)
+
 ## Projects
 
 - [Buffered I/O library ideas](projects/bufio_library.md)
@@ -88,18 +106,9 @@ A notebook on compilers, programming languages, and other topics.
 
 ## Topics
 
-- Adapton
-  - [Adapton: Composable, Demand-Driven Incremental Computation](topics/adapton/pldi2014.md)
-    (PLDI 2014)
-  - [Incremental Computation with Adapton](topics/adapton/boulder2015.md)
-    (University of Colorado Boulder, 2015)
-  - [miniAdapton: A Minimal Implementation of Incremental Computation in Scheme](topics/adapton/miniAdapton.md)
-    (2016)
-  - [Presentation outline](topics/adapton/presentation_outline.md) (2022)
 - Archival
   - [Archiver tool](topics/archival/archiver_tool.md)
   - [Code Golf archival](topics/archival/code_golf_archival.md)
-- [BDDs and other decision diagrams](topics/bdds.md)
 - [Bits and arithmetic](topics/bits_and_arithmetic.md)
 - Colors
   - [Color in browser engines](topics/colors/browser_color.md)
@@ -108,7 +117,6 @@ A notebook on compilers, programming languages, and other topics.
   - [Compiler optimization patterns](topics/optimizations/patterns.md)
   - [Tail-call optimization](topics/optimizations/tail_calls.md)
 - [Data structures](topics/data_structures.md)
-- [E-graphs](topics/e-graphs.md)
 - [Easter eggs](topics/easter_eggs.md)
 - [Error handling](topics/errors.md)
 - Floating-point arithmetic

@@ -1,4 +1,4 @@
-# E-graphs
+# E-graph literature survey
 
 An [e-graph](https://en.wikipedia.org/wiki/E-graph) is a data structure, that
 efficiently stores equivalent terms in a language.
