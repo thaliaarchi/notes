@@ -49,3 +49,10 @@ tar implementations (see `artype`). Its source is on SourceForge in [star](https
 and possibly also [schilytools](https://sourceforge.net/projects/schilytools/)
 which has more releases. [FreshPorts](https://www.freshports.org/archivers/star)
 describes its benefits over other tar implementations.
+
+### List
+
+- Git: [`archive-tar.c`](https://git.kernel.org/pub/scm/git/git.git/tree/archive-tar.c)
+  and `archive-zip.c`, used in `git archive`, `git bugreport`, `git diagnose`,
+  `git upload-archive`, and `git upload-archive--writer`
+- Go: `archive/tar` and `archive/zip`
