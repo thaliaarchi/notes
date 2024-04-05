@@ -30,7 +30,8 @@ projects.
   (Olin Shivers, 1988)
 - [2023-09-24](compilers/graalvm/c.md):
   [“An Efficient Approach for Accessing C Data Structures from JavaScript”](https://sci-hub.st/10.1145/2633301.2633302)
-  (Matthias Grimmer, Thomas Würthinger, Andreas Wöß, Hanspeter Mossenböck, 2014)
+  (Matthias Grimmer, Thomas Würthinger, Andreas Wöß, and Hanspeter Mossenböck,
+  2014)
 - [2023-09-24](compilers/graalvm/c.md):
   [“Memory-safe Execution of C on a Java VM”](https://sci-hub.st/10.1145/2786558.2786565)
   (Matthias Grimmer, Roland Schatz, Chris Seaton, Thomas Würthinger, and
@@ -65,7 +66,7 @@ projects.
 - [2022-02-26](compilers/webassembly/pldi17_haas.md):
   [“Bringing the Web up to Speed with WebAssembly”](https://dl.acm.org/doi/10.1145/3062341.3062363)
   (Andreas Haas, Andreas Rossberg, Derek L. Schuff, Ben L. Titzer, Michael
-  Holman, Dan Gohman, Luke Wagner, Alon Zakai, JF Bastien, 2017)
+  Holman, Dan Gohman, Luke Wagner, Alon Zakai, and JF Bastien, 2017)
 - [2022-02-26](compilers/webassembly/atc19_jangda.md):
   [“Not So Fast: Analyzing the Performance of WebAssembly vs. Native Code”](https://www.usenix.org/conference/atc19/presentation/jangda)
   (Abhinav Jangda, Bobby Powers, Emery D. Berger, and Arjun Guha, 2019)
@@ -95,11 +96,11 @@ projects.
 - [2022-10-20](compilers/mlir/cgo21_lattner.md):
   [“MLIR: Scaling Compiler Infrastructure for Domain Specific Computation”](https://sci-hub.st/10.1109/CGO51591.2021.9370308)
   (Chris Lattner, Mehdi Amini, Uday Bondhugula, Albert Cohen, Andy Davis,
-  Jacques Pienaar, River Riddle, Tatiana Shpeisman, Nicolas Vasilache, Oleksandr
-  Zinenko, 2021)
+  Jacques Pienaar, River Riddle, Tatiana Shpeisman, Nicolas Vasilache, and
+  Oleksandr Zinenko, 2021)
 - [2022-11-01](compilers/graalvm/papers.md):
   [“Polyglot Code Finder”](https://sci-hub.st/10.1145/3397537.3397559)
-  (Jan Ehmueller, Alexander Riese, Hendrik Tjabben, Fabio Niephaus, Robert
+  (Jan Ehmueller, Alexander Riese, Hendrik Tjabben, Fabio Niephaus, and Robert
   Hirschfeld, 2020)
 - [2022-11-01](compilers/graalvm/papers.md):
   [“Machine Learning to Ease Understanding of Data Driven Compiler
@@ -111,7 +112,7 @@ projects.
   (Thomas Würthinger, 2014)
 - [2022-11-01](compilers/graalvm/papers.md):
   [“Truffle: A Self-Optimizing Runtime System”](https://sci-hub.st/10.1145/2384716.2384723)
-  (Christian Wimmer, Thomas Würthinger, 2012)
+  (Christian Wimmer and Thomas Würthinger, 2012)
 - [2022-12-30](compilers/emscripten.md):
   [“Emscripten: An LLVM-to-JavaScript Compiler”](https://sci-hub.st/10.1145/2048147.2048224)
   (Alon Zakai, 2011)
@@ -121,7 +122,7 @@ projects.
 - [2021-08-10](compilers/graalvm/graal_ir.md):
   [“Graal IR: An Extensible Declarative Intermediate Representation”](https://ssw.jku.at/General/Staff/GD/APPLC-2013-paper_12.pdf)
   (Gilles Duboscq, Lukas Stadler, Thomas Würthinger, Doug Simon, Christian
-  Wimmer, Hanspeter Mössenböck, 2013)
+  Wimmer, and Hanspeter Mössenböck, 2013)
 
 ## 2020
 
@@ -179,7 +180,7 @@ projects.
   - Graal
     - Again: [“Graal IR: An Extensible Declarative Intermediate Representation”](https://ssw.jku.at/General/Staff/GD/APPLC-2013-paper_12.pdf)
       (Gilles Duboscq, Lukas Stadler, Thomas Würthinger, Doug Simon, Christian
-      Wimmer, Hanspeter Mössenböck, 2013)
+      Wimmer, and Hanspeter Mössenböck, 2013)
     - [“One VM to Rule Them All”](https://sci-hub.st/10.1145/2509578.2509581)
       (Thomas Würthinger, Christian Wimmer, Andreas Wöß, Lukas Stadler, Gilles
       Duboscq, Christian Humer, Gregor Richards, Doug Simon, and Mario Wolczko,
@@ -189,8 +190,8 @@ projects.
       (Gilles Duboscq, Thomas Würthinger, Lukas Stadler, Christian Wimmer, Doug
       Simon, and Hanspeter Mössenböck, 2013)
     - [“A Domain-Specific Language for Building Self-Optimizing AST Interpreters”](https://sci-hub.st/10.1145/2658761.2658776)
-      (Christian Humer, Christian Wimmer, Christian Wirth, Andreas Wöß, Thomas
-      Würthinger, 2014)
+      (Christian Humer, Christian Wimmer, Christian Wirth, Andreas Wöß, and
+      Thomas Würthinger, 2014)
     - [“Applying Futamura Projections to Compose Languages and Tools in GraalVM”](https://popl19.sigplan.org/details/pepm-2019-papers/2/Applying-Futamura-Projections-to-Compose-Languages-and-Tools-in-GraalVM-Invited-Talk)
       (Christian Humer, 2019)
     - GraalVM 2016+
@@ -239,14 +240,14 @@ projects.
   - Again: LLVM Stackifier algorithm [[article](https://medium.com/leaningtech/solving-the-structured-control-flow-problem-once-and-for-all-5123117b1ee2)]
   - [“Java-to-JavaScript Translation via Structured Control Flow Reconstruction
     of Compiler IR”](https://sci-hub.st/10.1145/2816707.2816715)
-    (David Leopoldseder, Lukas Stadler, Christian Wimmer, Hanspeter Mossenböck,
-    2015)
+    (David Leopoldseder, Lukas Stadler, Christian Wimmer, and Hanspeter
+    Mossenböck, 2015)
   - [“Taming Control Flow: A Structured Approach to Eliminating Goto Statements”](https://sci-hub.st/10.1109/ICCL.1994.288377)
     (Ana Erosa and Laurie Hendren. 1994)
 - E-graphs
   - [“Better Together: Unifying Datalog and Equality Saturation”](https://www.mwillsey.com/papers/egglog)
     (Yihong Zhang, Remy Wang, Oliver Flatt, David Cao, Philip Zucker, Eli
-    Rosenthal, Zachary Tatlock, Max Willsey, 2023)
+    Rosenthal, Zachary Tatlock, and Max Willsey, 2023)
     [[notes](logic/e-graphs/survey.md)]
   - [“Logging an Egg: Datalog on E-Graphs”](https://github.com/philzook58/egglog0-talk/raw/main/out.pdf)
     (Philip Zucker, 2022)
