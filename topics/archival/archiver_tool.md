@@ -77,13 +77,19 @@ Support of archiving other VCSs would be useful, at least for cloned snapshots
 without deduplication, as well as automatic conversion to Git. Various tools for
 other VCSs export using the Git fast-export format.
 
-### Host archival
+### Forge archival
 
-When archiving a repository, the hosting service metadata should be retrieved
-and versioned alongside the repo. The hosting service should be automatically
-archived on IA and the source on the Software Heritage archive (see the
-[updateswh](https://github.com/rdicosmo/updateswh/blob/main/extension/updateswh.js)
-browser extension for API usage).
+When archiving a repository, the forge metadata should be retrieved and
+versioned alongside the repo. The forge should be automatically archived on IA
+and the source on the Software Heritage archive (see the [updateswh](https://github.com/rdicosmo/updateswh/blob/main/extension/updateswh.js)
+browser extension for API usage). Perhaps I could contribute to SWH so it saves
+forge metadata too.
+
+#### GitHub
+
+- [go-gh](https://pkg.go.dev/github.com/cli/go-gh): first-party GitHub client in
+  Go
+- [Octocrab](https://github.com/XAMPPRocky/octocrab): GitHub client in Rust
 
 ## Analysis
 
