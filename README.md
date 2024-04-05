@@ -32,6 +32,7 @@ A notebook on compilers, programming languages, and other topics.
   - [Multi-Value All the Wasm!](compilers/webassembly/multi_value.md)
 - Cranelift
   - [ægraphs: Acyclic E-graphs for Efficient Optimization in a Production Compiler](compilers/cranelift/ae-graphs.md)
+  - [Cranelift mid-end optimizers](compilers/cranelift/mid-end.md)
 - [Emscripten](compilers/emscripten.md)
 - [QBE](compilers/qbe.md)
 - [CompCert](compilers/compcert.md)

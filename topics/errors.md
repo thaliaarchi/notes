@@ -10,6 +10,9 @@
 - [Modular Errors in Rust](https://sabrinajewson.org/blog/errors)
   [[HN](https://news.ycombinator.com/item?id=35502874)]
 
+- Discussion on representing errors in a compiler, including GHC
+  [[Reddit](https://www.reddit.com/r/Compilers/comments/1523446/do_compilers_store_errors_in_memory/)]
+
 ## Obsolete syntax
 
 Rust used to parse obsolete syntax, when not too difficult, and emit errors
