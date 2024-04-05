@@ -13,11 +13,42 @@
   - [Rhino](https://web.mit.edu/javascript/doc/rhino/index.html) is an
     implementation of JavaScript in Java, from [fall 1997](https://web.mit.edu/javascript/doc/rhino/history.html),
     when a version of Netscape entirely in Java was in the works
-- String interning in Rust
-  - [`istr`](https://crates.io/crates/istr)
-- [Softfloat](https://stackoverflow.com/questions/2186788/is-there-an-open-source-c-c-implementation-of-ieee-754-operations)
 
-## Books and things to study
+## Topics
+
+- Compiler IRs
+  - RVSDG (Regionalized Value State Dependence Graph)
+    - [optir](https://github.com/jameysharp/optir): Proof-of-concept RVSDG IR
+    - [numba-rvsdg](https://github.com/numba/numba-rvsdg): Numba-compatible
+      RVSDG utilities
+  - History of CPS, SSA, and ANF in the context of the [T programming language](https://paulgraham.com/thist.html)
+    [[HN](https://news.ycombinator.com/item?id=36732335)] and a related [thread](https://langdev.stackexchange.com/questions/2079/what-are-the-disadvantages-of-using-cps-form)
+- Computer construction
+  - From Nand to Tetris
+  - [Nandgame](https://nandgame.com/) (and [r/nandgame_u](https://www.reddit.com/r/nandgame_u))
+  - [MHRD](https://steamcommunity.com/app/576030): game to design CPU in
+    hardware description language
+  - [Bitwise](https://github.com/pervognsen/bitwise): series to build a hardware
+    and software stack from scratch
+- Garbage collection
+  - [Boehm–Demers–Weiser GC](https://www.hboehm.info/gc/)
+    - Wasmtime considered it for use as a general-purpose GC for WebAssembly,
+      until that goal was [removed](https://github.com/bytecodealliance/rfcs/commit/b678bf4796851e19ebc41c88c90f76cd0ecd9fb1)
+      from the roadmap
+- WebAssembly
+  - [RFC: Add support for the WebAssembly tail calls proposal in Wasmtime](https://github.com/bytecodealliance/rfcs/blob/main/accepted/tail-calls.md)
+    [[PR](https://github.com/bytecodealliance/rfcs/pull/29)] (2023-01-20)
+  - [RFC: Implement Wasm GC in Wasmtime](https://github.com/bytecodealliance/rfcs/blob/main/accepted/wasm-gc.md)
+    [[PR](https://github.com/bytecodealliance/rfcs/pull/31)] (2023-04-14)
+  - [Extended Numeric Representations in WebAssembly](https://www-old.cs.utah.edu/docs/techreports/2019/pdf/UUCS-19-009.pdf),
+    Bachelor's thesis by Scott Butler, supervised by Matthew Flatt
+    (December 2019) [[code](https://github.com/ScottButler87/ExtendedNumerics)]
+
+## Tools to try
+
+- [insta](https://github.com/mitsuhiko/insta): snapshot testing for Rust
+
+## Books and papers to read
 
 - [The Rust Performance Book](https://nnethercote.github.io/perf-book/)
   by Nicholas Nethercote
@@ -53,9 +84,14 @@
   - [“A Kripke Logical Relation Between ML and Assembly”](https://people.mpi-sws.org/~dreyer/papers/lrmlasm/main.pdf)
     (Chung-Kil Hur and Derek Dreyer, 2011)
 - University of Utah
-  - [“Binding as Sets of Scopes: Notes on a new model of macro expansion for
-    Racket”](https://users.cs.utah.edu/plt/scope-sets/)
-    (Matthew Flatt)
+  - John Regehr
+    - [“Provably Correct Peephole Optimizations with Alive”](https://users.cs.utah.edu/~regehr/papers/pldi15.pdf)
+      (Nuno P. Lopes, David Menendez, Santosh Nagarakatte, and John Regehr,
+      2015)
+  - Matthew Flatt
+    - [“Binding as Sets of Scopes: Notes on a new model of macro expansion for
+      Racket”](https://users.cs.utah.edu/plt/scope-sets/)
+      (Matthew Flatt, 2016)
   - [Pavel Panchekha](https://pavpanchekha.com/)
 - [Shriram Krishnamurthi](https://cs.brown.edu/~sk/)
 - University of Washington

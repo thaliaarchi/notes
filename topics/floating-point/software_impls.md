@@ -107,3 +107,7 @@ great reference and has excellent tests.
 - simple-soft-float [tests](https://salsa.debian.org/Kazan-team/simple-soft-float/-/tree/master/test_data)
 - [Benchmark](https://github.com/dalance/softfloat_bench) of softfloat-sys,
   simple-soft-float, and Rug `Float`
+
+## TODO
+
+Fully list libraries from [this thread](https://stackoverflow.com/questions/2186788/is-there-an-open-source-c-c-implementation-of-ieee-754-operations).
