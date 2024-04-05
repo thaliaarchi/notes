@@ -47,6 +47,8 @@ A notebook on compilers, programming languages, and other topics.
     - [Go history](pl/langs/go/history.md)
   - Idris
     - [Learning Idris](pl/langs/idris/learning_idris.md)
+  - jq
+    - [Initial implementations of jq](pl/langs/jq/proto_jq.md)
   - Rust
     - [Converting between Rug and bitvec types](pl/langs/rust/convert_rug_bitvec.md)
     - [Crates and tutorials](pl/langs/rust/rust.md)
