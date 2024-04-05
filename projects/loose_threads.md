@@ -45,10 +45,6 @@
     Bachelor's thesis by Scott Butler, supervised by Matthew Flatt
     (December 2019) [[code](https://github.com/ScottButler87/ExtendedNumerics)]
 
-## Tools to try
-
-- [insta](https://github.com/mitsuhiko/insta): snapshot testing for Rust
-
 ## Books and papers to read
 
 - [The Rust Performance Book](https://nnethercote.github.io/perf-book/)
@@ -59,11 +55,16 @@
   - [related videos and talks linked by HN](https://news.ycombinator.com/item?id=38244927)
 - [Algorithms in Rust for implementing pattern matching](https://github.com/yorickpeterse/pattern-matching-in-rust)
 
-## Articles I have read or libs I have seen, but not listed
+## Tools and libraries to try
+
+- [insta](https://github.com/mitsuhiko/insta): snapshot testing for Rust
+- [Gxhash](https://github.com/ogxd/gxhash): fast non-cryptograph hashing
+  algorithm in Rust
+
+## Articles I have read, but not listed
 
 - [Writing a JVM in Rust](https://andreabergia.com/blog/2023/07/i-have-written-a-jvm-in-rust/)
   series by Andrea Bergia
-- [Gxhash](https://github.com/ogxd/gxhash)
 
 ## Other
 

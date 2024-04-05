@@ -268,6 +268,10 @@ projects.
   - [“Relational E-matching”](https://arxiv.org/abs/2108.02290)
     (Yihong Zhang, Yisu Remy Wang, Max Willsey, and Zachary Tatlock, 2021)
     [[notes](logic/e-graphs/survey.md)]
+  - [“egg: Fast and Extensible Equality Saturation”](https://dl.acm.org/doi/10.1145/3434304)
+    (Max Willsey, Chandrakana Nandi, Yisu Remy Wang, Oliver Flatt, Zachary
+    Tatlock, and Pavel Panchekha, POPL 2021)
+    [[arXiv](https://arxiv.org/abs/2004.03082)]
 - History
   - [“JavaScript: The First 20 Years”](https://dl.acm.org/doi/10.1145/3386327)
     (Allen Wirfs-Brock and Brendan Eich, 2020)
