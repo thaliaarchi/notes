@@ -36,6 +36,7 @@
       until that goal was [removed](https://github.com/bytecodealliance/rfcs/commit/b678bf4796851e19ebc41c88c90f76cd0ecd9fb1)
       from the roadmap
 - WebAssembly
+  - [GC Extension](https://github.com/WebAssembly/gc/blob/main/proposals/gc/Overview.md)
   - [RFC: Add support for the WebAssembly tail calls proposal in Wasmtime](https://github.com/bytecodealliance/rfcs/blob/main/accepted/tail-calls.md)
     [[PR](https://github.com/bytecodealliance/rfcs/pull/29)] (2023-01-20)
   - [RFC: Implement Wasm GC in Wasmtime](https://github.com/bytecodealliance/rfcs/blob/main/accepted/wasm-gc.md)
@@ -63,44 +64,6 @@
 - [Writing a JVM in Rust](https://andreabergia.com/blog/2023/07/i-have-written-a-jvm-in-rust/)
   series by Andrea Bergia
 - [Gxhash](https://github.com/ogxd/gxhash)
-
-## Grad school
-
-- Berkeley
-  - [graduate programs](https://grad.berkeley.edu/admissions/choosing-your-program/list/)
-  - [fees](https://registrar.berkeley.edu/tuition-fees-residency/tuition-fees/fee-schedule/)
-- [Edwin Brady](https://research-portal.st-andrews.ac.uk/en/persons/edwin-charles-brady)
-  - [From Whitespace to Idris](https://serokell.io/blog/from-whitespace-to-idris)
-    [[video](https://www.youtube.com/watch?v=_prvbd0e_pI)]
-  - [Epic—A Library for Generating Compilers](https://research-portal.st-andrews.ac.uk/en/publications/epica-library-for-generating-compilers)
-  - [Programming in Idris: a Tutorial](https://research-portal.st-andrews.ac.uk/en/publications/programming-in-idris-a-tutorial)
-  - [Idris—Systems Programming Meets Full Dependent Types](https://research-portal.st-andrews.ac.uk/en/publications/idris-systems-programming-meets-full-dependent-types)
-  - [A Verified Staged Interpreter is a Verified Compiler: Multi-stage
-    Programming with Dependent Types](https://research-portal.st-andrews.ac.uk/en/publications/a-verified-staged-interpreter-is-a-verified-compiler-multi-stage--2)
-  - [Ivor, a Proof Engine](https://research-portal.st-andrews.ac.uk/en/publications/ivor-a-proof-engine)
-    - Namesake: [Ivor the Engine](https://en.wikipedia.org/wiki/Ivor_the_Engine)
-- [Neel Krishnaswami](https://www.cl.cam.ac.uk/~nk480/)
-- [MPI-SWS](https://plv.mpi-sws.org/rustbelt/)
-  - [“A Kripke Logical Relation Between ML and Assembly”](https://people.mpi-sws.org/~dreyer/papers/lrmlasm/main.pdf)
-    (Chung-Kil Hur and Derek Dreyer, 2011)
-- University of Utah
-  - John Regehr
-    - [“Provably Correct Peephole Optimizations with Alive”](https://users.cs.utah.edu/~regehr/papers/pldi15.pdf)
-      (Nuno P. Lopes, David Menendez, Santosh Nagarakatte, and John Regehr,
-      2015)
-  - Matthew Flatt
-    - [“Binding as Sets of Scopes: Notes on a new model of macro expansion for
-      Racket”](https://users.cs.utah.edu/plt/scope-sets/)
-      (Matthew Flatt, 2016)
-  - [Pavel Panchekha](https://pavpanchekha.com/)
-- [Shriram Krishnamurthi](https://cs.brown.edu/~sk/)
-- University of Washington
-  - [Herbie](https://herbie.uwplse.org/)
-- University of California, San Diego
-  - [Nadia Polikarpova](https://cseweb.ucsd.edu/~npolikarpova/)
-- Letter of recommendation
-  - [Shriram Krishnamurthi's advice](https://cs.brown.edu/~sk/Memos/Reco-From-Me/),
-    which Kimball follows
 
 ## Other
 
