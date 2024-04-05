@@ -12,6 +12,24 @@ Turing-complete.
     by lemon (2022)
 - C++ templates: A subset of C++ with only templates, template specialization,
   `struct`, `typename`, and `typedef`.
+  - [“Impact of Economics on Compiler Optimization”](https://sci-hub.se/10.1145/376656.376751)
+    by Arch D. Robison (2001), in section 4, frames C++ templates as a
+    compile-time optimization in, provides a tree sum example, and compares it
+    to functional programming:
+
+    > Template metaprograms are programs that run at compilation time. When the
+    > ISO C++ committee added templates to C++, the following features were
+    > required:
+    > - Instantiation of member types (and member constants of integral type) is
+    >   demand driven.
+    > - Template identifiers may be overloaded, with resolution based on pattern
+    >   matching.
+    > - Templates may be recursive.
+    >
+    > The list above makes obvious to functional programmers what the committee
+    > did not realize until later: templates are a functional language,
+    > evaluated at compilation time.
+
   - [λ-calculus](https://matt.might.net/articles/c++-template-meta-programming-with-lambda-calculus/)
     by Matt Might (2009)
   - [4-bit adder](https://github.com/AaronBallman/adder)

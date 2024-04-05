@@ -3,6 +3,13 @@
 Papers I have read and conference talks I have watched for research and
 projects.
 
+## 2024
+
+- 2024-04-04:
+  [“Impact of Economics on Compiler Optimization”](https://sci-hub.se/10.1145/376656.376751)
+  (Arch D. Robison, 2001), discussed in a [thread](https://mastodon.social/@regehr/111096553132093803)
+  by John Regehr
+
 ## 2023
 
 - [2023-03-09](topics/unexpected_turing.md):
@@ -234,6 +241,9 @@ projects.
     (Oliver Bračevac, Guannan Wei, Songlin Jia, Supun Abeysinghe, Yuxuan Jiang,
     Yuyan Bao, and Tiark Rompf, 2023)
     [[OOPSLA 2023](https://2023.splashcon.org/track/splash-2023-oopsla)]
+  - CPS
+    - [“Control Flow Analysis in Scheme”](https://www.khoury.northeastern.edu/home/shivers/papers/pldi88.pdf)
+      (Olin Shivers, PLDI 1988)
 - Control-flow structuring
   - Again: [“Emscripten: An LLVM-to-JavaScript Compiler”](https://sci-hub.st/10.1145/2048147.2048224)
     (Alon Zakai, 2011)
