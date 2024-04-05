@@ -110,6 +110,7 @@ A notebook on compilers, programming languages, and other topics.
 - Archival
   - [Archiver tool](topics/archival/archiver_tool.md)
   - [Code Golf archival](topics/archival/code_golf_archival.md)
+  - [Developing with the Internet Archive](topics/archival/internet_archive.md)
 - [Bits and arithmetic](topics/bits_and_arithmetic.md)
 - Colors
   - [Color in browser engines](topics/colors/browser_color.md)
