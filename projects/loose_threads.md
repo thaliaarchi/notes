@@ -18,6 +18,8 @@
   - [Eleventy](https://www.11ty.dev/)
   - [Jekyll vs Hugo vs Gatsby vs Next vs Zola vs Eleventy](https://mtm.dev/static)
   - [Simplified Saaze](https://jamstack.org/generators/simplified-saaze/)
+- Contributing to egglog
+  - Interesting issues: [Egglog interface from rust](https://github.com/egraphs-good/egglog/issues/232)
 
 ## Topics
 
@@ -49,6 +51,17 @@
   - [Extended Numeric Representations in WebAssembly](https://www-old.cs.utah.edu/docs/techreports/2019/pdf/UUCS-19-009.pdf),
     Bachelor's thesis by Scott Butler, supervised by Matthew Flatt
     (December 2019) [[code](https://github.com/ScottButler87/ExtendedNumerics)]
+- Formal methods
+  - [“What I've Learned About Formal Methods In Half a Year”](https://jakob.space/blog/what-ive-learned-about-formal-methods.html)
+    by Jakob Kreuze (2023) [[HN](https://news.ycombinator.com/item?id=35511152)
+    describes what the author learned from [CSCI 1710: Logic for Systems](https://csci1710.github.io/)
+    (model checking with Alloy) and [CSCI 1951x Formal Proof and Verification](https://browncs1951x.github.io/)
+    (formal verification with Lean) at Brown. In the latter, they implemented
+    Scheme in Lean.
+    - [*The Hitchhiker’s Guide to Logical Verification*](https://lean-forward.github.io/hitchhikers-guide/2024/)
+      teaches Lean and is used in Brown CS 1951x. Seems similar to Software
+      Foundations.
+    - [Lean Game Server](https://adam.math.hhu.de/): games to learn Lean 4
 
 ## Books and papers to read
 

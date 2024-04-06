@@ -143,6 +143,7 @@ A notebook on compilers, programming languages, and other topics.
   - [Recross ideas](topics/regexp/recross_ideas.md)
   - [Regular expression engine history](topics/regexp/history.md)
   - [Regular expression implementations](topics/regexp/engines.md)
+- [Short notes on papers](topics/short_paper_notes.md)
 - [Souper](topics/souper.md)
 - [Tools for VCSes other than Git](topics/vcs.md)
 - [Tree-sitter](topics/tree-sitter.md)
