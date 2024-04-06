@@ -13,6 +13,11 @@
   - [Rhino](https://web.mit.edu/javascript/doc/rhino/index.html) is an
     implementation of JavaScript in Java, from [fall 1997](https://web.mit.edu/javascript/doc/rhino/history.html),
     when a version of Netscape entirely in Java was in the works
+- Blog
+  - [Zola](https://www.getzola.org/)
+  - [Eleventy](https://www.11ty.dev/)
+  - [Jekyll vs Hugo vs Gatsby vs Next vs Zola vs Eleventy](https://mtm.dev/static)
+  - [Simplified Saaze](https://jamstack.org/generators/simplified-saaze/)
 
 ## Topics
 
@@ -60,6 +65,8 @@
 - [insta](https://github.com/mitsuhiko/insta): snapshot testing for Rust
 - [Gxhash](https://github.com/ogxd/gxhash): fast non-cryptograph hashing
   algorithm in Rust
+- [VSCode LLVM Compiler Explorer](https://github.com/sunxfancy/vscode-llvm):
+  exploring LLVM IR and machine IR after each pass
 
 ## Articles I have read, but not listed
 

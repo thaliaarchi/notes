@@ -5,6 +5,9 @@ projects.
 
 ## 2024
 
+- 2024-04-05:
+  [“Magic: The Gathering is Turing Complete”](https://arxiv.org/abs/1904.09828)
+  (Alex Churchill, Stella Biderman, and Austin Herrick, 2019)
 - 2024-04-04:
   [“Impact of Economics on Compiler Optimization”](https://sci-hub.se/10.1145/376656.376751)
   (Arch D. Robison, 2001), discussed in a [thread](https://mastodon.social/@regehr/111096553132093803)
@@ -57,6 +60,9 @@ projects.
 - [2023-04-09](logic/bdds.md):
   [“Using Datalog with Binary Decision Diagrams for Program Analysis”](https://people.csail.mit.edu/mcarbin/papers/aplas05.pdf)
   (John Whaley, Dzintars Avots, Michael Carbin, and Monica S. Lam, 2005)
+- [2023-03-09](topics/unexpected_turing.md):
+  [“Java Generics are Turing Complete”](https://arxiv.org/abs/1605.05274)
+  (Radu Grigore, 2016)
 - [2023-03-09](topics/unexpected_turing.md):
   [“`mov` is Turing-complete”](https://web.archive.org/web/20130924014250/http://www.cl.cam.ac.uk/~sd601/papers/mov.pdf)
   (Stephen Dolan, 2013)
