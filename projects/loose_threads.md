@@ -23,6 +23,9 @@
 
 ## Topics
 
+Resources I want to explore further, grouped by topic. This functions
+additionally as a reading list.
+
 - Compiler IRs
   - RVSDG (Regionalized Value State Dependence Graph)
     - [optir](https://github.com/jameysharp/optir): Proof-of-concept RVSDG IR
@@ -30,6 +33,11 @@
       RVSDG utilities
   - History of CPS, SSA, and ANF in the context of the [T programming language](https://paulgraham.com/thist.html)
     [[HN](https://news.ycombinator.com/item?id=36732335)] and a related [thread](https://langdev.stackexchange.com/questions/2079/what-are-the-disadvantages-of-using-cps-form)
+- Language implementation
+  - [Algorithms in Rust for implementing pattern matching](https://github.com/yorickpeterse/pattern-matching-in-rust)
+    by Yorick Peterse (2022-2024)
+  - [Writing a JVM in Rust](https://andreabergia.com/blog/2023/07/i-have-written-a-jvm-in-rust/)
+    series by Andrea Bergia (2023)
 - Computer construction
   - From Nand to Tetris
   - [Nandgame](https://nandgame.com/) (and [r/nandgame_u](https://www.reddit.com/r/nandgame_u))
@@ -48,30 +56,28 @@
     [[PR](https://github.com/bytecodealliance/rfcs/pull/29)] (2023-01-20)
   - [RFC: Implement Wasm GC in Wasmtime](https://github.com/bytecodealliance/rfcs/blob/main/accepted/wasm-gc.md)
     [[PR](https://github.com/bytecodealliance/rfcs/pull/31)] (2023-04-14)
-  - [Extended Numeric Representations in WebAssembly](https://www-old.cs.utah.edu/docs/techreports/2019/pdf/UUCS-19-009.pdf),
+  - [“Extended Numeric Representations in WebAssembly”](https://www-old.cs.utah.edu/docs/techreports/2019/pdf/UUCS-19-009.pdf),
     Bachelor's thesis by Scott Butler, supervised by Matthew Flatt
     (December 2019) [[code](https://github.com/ScottButler87/ExtendedNumerics)]
 - Formal methods
-  - [“What I've Learned About Formal Methods In Half a Year”](https://jakob.space/blog/what-ive-learned-about-formal-methods.html)
+  - [Programming Z3](https://theory.stanford.edu/~nikolaj/programmingz3.html)
+  - [What I've Learned About Formal Methods In Half a Year](https://jakob.space/blog/what-ive-learned-about-formal-methods.html)
     by Jakob Kreuze (2023) [[HN](https://news.ycombinator.com/item?id=35511152)
     describes what the author learned from [CSCI 1710: Logic for Systems](https://csci1710.github.io/)
     (model checking with Alloy) and [CSCI 1951x Formal Proof and Verification](https://browncs1951x.github.io/)
     (formal verification with Lean) at Brown. In the latter, they implemented
-    Scheme in Lean.
+    Scheme in Lean. Resources mentioned:
     - [*The Hitchhiker’s Guide to Logical Verification*](https://lean-forward.github.io/hitchhikers-guide/2024/)
       teaches Lean and is used in Brown CS 1951x. Seems similar to Software
       Foundations.
     - [Lean Game Server](https://adam.math.hhu.de/): games to learn Lean 4
-
-## Books and papers to read
-
-- [The Rust Performance Book](https://nnethercote.github.io/perf-book/)
-  by Nicholas Nethercote
-- [Programming Z3](https://theory.stanford.edu/~nikolaj/programmingz3.html)
-- [The Apollo Guidance Computer: Architecture and Operation](http://www.apolloguidancecomputer.com/)
-  [[HN](https://news.ycombinator.com/item?id=38245884)]
-  - [related videos and talks linked by HN](https://news.ycombinator.com/item?id=38244927)
-- [Algorithms in Rust for implementing pattern matching](https://github.com/yorickpeterse/pattern-matching-in-rust)
+- Computing history
+  - [The Apollo Guidance Computer: Architecture and Operation](http://www.apolloguidancecomputer.com/)
+    [[HN](https://news.ycombinator.com/item?id=38245884)]
+    - [related videos and talks linked by HN](https://news.ycombinator.com/item?id=38244927)
+- Performance
+  - [The Rust Performance Book](https://nnethercote.github.io/perf-book/)
+    by Nicholas Nethercote (2020)
 
 ## Tools and libraries to try
 
@@ -80,11 +86,6 @@
   algorithm in Rust
 - [VSCode LLVM Compiler Explorer](https://github.com/sunxfancy/vscode-llvm):
   exploring LLVM IR and machine IR after each pass
-
-## Articles I have read, but not listed
-
-- [Writing a JVM in Rust](https://andreabergia.com/blog/2023/07/i-have-written-a-jvm-in-rust/)
-  series by Andrea Bergia
 
 ## Other
 
