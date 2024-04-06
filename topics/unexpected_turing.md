@@ -35,7 +35,8 @@ Turing-complete.
   - [4-bit adder](https://github.com/AaronBallman/adder)
     by Aaron Ballman (2013)
 - Coq typeclass resolver: Typeclass instance resolution is an unrestricted proof
-  search.
+  search. Notably, Coq's type system is Turing-complete, but it's language is
+  not—the opposite of typical.
   - [Smallfuck](https://thaliaarchi.github.io/coq-turing-typeclass/)
     by Thalia Archibald (2023)
     [[code](https://github.com/thaliaarchi/coq-turing-typeclass)]
@@ -134,7 +135,7 @@ Turing-complete.
     by Chris Domas (2015), with numerous programs, including [DOOM](https://github.com/xoreaxeaxeax/movfuscator/tree/master/validation/doom)
     [[talk](https://www.youtube.com/watch?v=2VF_wPkiBJY)]
 
-## Other
+## Automata
 
 - [Conway's Game of Life](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life)
   - [Turing machine](http://rendell-attic.org/gol/tm.htm)
@@ -142,20 +143,43 @@ Turing-complete.
   - [Tetris](https://codegolf.stackexchange.com/questions/11880/build-a-working-game-of-tetris-in-conways-game-of-life)
     by PhiNotPi, El'endia Starman, K Zhang, Blue (Muddyfish), Cows quack
     (Kritixi Lithos), Mego, and Quartata (2017)
-- Minecraft
-  - [Minecraft in Minecraft](https://www.youtube.com/watch?v=-BP7DhHTU-I)
-    by sammyuri, Uwerta, and Stack (2022)
-    [[PC Gamer](https://www.pcgamer.com/minecraftception-redstone-pc-chungus/)]
-    [[HN](https://news.ycombinator.com/item?id=36716916)]
-- OpenType font files
-  - [Addition](https://litherum.blogspot.com/2019/03/addition-font.html)
-    by Litherum (2019)
 - [Rule 110](https://en.wikipedia.org/wiki/Rule_110)
   - Cyclic tag system in [“Universality in Elementary Cellular Automata”](https://wpmedia.wolfram.com/uploads/sites/13/2018/02/15-1-1.pdf)
     by Matthew Cook (2004)
   - P-completeness in [“P-completeness of cellular automaton Rule 110”](https://link.springer.com/chapter/10.1007/11786986_13)
     by Turlough Neary and Damien Woods (2006)
     [[preprint](http://services.ini.uzh.ch/~tneary/NearyWoodsBCRI-04-06.pdf)]
+
+## File formats
+
+- OpenType fonts
+  - [Addition](https://litherum.blogspot.com/2019/03/addition-font.html)
+    by Litherum (2019)
+
+## Games
+
+- Dwarf Fortress
+- Magic: The Gathering
+  - [Magic Turing Machine](https://www.toothycat.net/~hologram/Turing/)
+    by Alex Churchill (2012) embeds a Turing machine in Magic, Wolfram's (2,3)
+    universal Turing machine in [versions 1–4](https://www.toothycat.net/~hologram/Turing/Future.html)
+    and [Yurii Rogozhin's](https://www.sciencedirect.com/science/article/pii/S0304397596000771)
+    (2,18) universal Turing machine in version 5. Cory Doctorow [reported](https://boingboing.net/2012/09/12/magic-the-gathering.html)
+    on it.
+  - [“Magic: The Gathering is Turing Complete”](https://arxiv.org/abs/1904.09828)
+    by Alex Churchill, Stella Biderman, and Austin Herrick (2019) embeds
+    Rogozhin's (2,18) universal Turing machine in the game, such that the first
+    player is guaranteed to win if and only if the Turing machine halts. Unlike
+    the previous designs by the first author, players are not required to make
+    particular choices.
+  - [I Built a COMPUTER in Magic: The Gathering](https://www.youtube.com/watch?v=pdmODVYPDLA)
+    by Because Science (2019) demonstrates the Turing machine of the paper in
+    gameplay
+- Minecraft
+  - [Minecraft in Minecraft](https://www.youtube.com/watch?v=-BP7DhHTU-I)
+    by sammyuri, Uwerta, and Stack (2022)
+    [[PC Gamer](https://www.pcgamer.com/minecraftception-redstone-pc-chungus/)]
+    [[HN](https://news.ycombinator.com/item?id=36716916)]
 - Terraria
   - [Computerraria](https://github.com/misprit7/computerraria): a fully
     compliant 32-bit RISC-V computer
@@ -174,8 +198,8 @@ Turing-complete.
 - [”Accidentally Turing-Complete”](http://beza1e1.tuxen.de/articles/accidentally_turing_complete.html)
   by Andreas Zwinkau (2021)
 - [“Java Generics are Turing Complete”](https://arxiv.org/abs/1605.05274)
-  by Radu Grigore (2016) mentions several other undecidable type systems in §9
-  Related Work
+  by Radu Grigore (2016) mentions several other undecidable type systems in
+  section 9 Related Work
 
 ## Not Turing-complete
 
