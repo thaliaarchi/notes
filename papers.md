@@ -5,11 +5,14 @@ projects.
 
 ## 2024
 
+- [2024-04-06](topics/short_paper_notes.md#verified-compilation-of-sel4):
+  [“Translation Validation for a Verified OS Kernel”](https://sci-hub.st/10.1145/2491956.2462183)
+  (Thomas Sewell, Magnus Myreen, and Gerwin Klein, PLDI 2013)
 - 2024-04-05:
   [“Magic: The Gathering is Turing Complete”](https://arxiv.org/abs/1904.09828)
   (Alex Churchill, Stella Biderman, and Austin Herrick, 2019)
 - 2024-04-04:
-  [“Impact of Economics on Compiler Optimization”](https://sci-hub.se/10.1145/376656.376751)
+  [“Impact of Economics on Compiler Optimization”](https://sci-hub.st/10.1145/376656.376751)
   (Arch D. Robison, 2001), discussed in a [thread](https://mastodon.social/@regehr/111096553132093803)
   by John Regehr
 
