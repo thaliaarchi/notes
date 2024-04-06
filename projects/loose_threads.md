@@ -26,30 +26,32 @@
 Resources I want to explore further, grouped by topic. This functions
 additionally as a reading list.
 
-- Compiler IRs
-  - RVSDG (Regionalized Value State Dependence Graph)
-    - [optir](https://github.com/jameysharp/optir): Proof-of-concept RVSDG IR
-    - [numba-rvsdg](https://github.com/numba/numba-rvsdg): Numba-compatible
-      RVSDG utilities
-  - History of CPS, SSA, and ANF in the context of the [T programming language](https://paulgraham.com/thist.html)
-    [[HN](https://news.ycombinator.com/item?id=36732335)] and a related [thread](https://langdev.stackexchange.com/questions/2079/what-are-the-disadvantages-of-using-cps-form)
-- Language implementation
-  - [Algorithms in Rust for implementing pattern matching](https://github.com/yorickpeterse/pattern-matching-in-rust)
-    by Yorick Peterse (2022-2024)
-  - [Writing a JVM in Rust](https://andreabergia.com/blog/2023/07/i-have-written-a-jvm-in-rust/)
-    series by Andrea Bergia (2023)
-- Computer construction
-  - From Nand to Tetris
-  - [Nandgame](https://nandgame.com/) (and [r/nandgame_u](https://www.reddit.com/r/nandgame_u))
-  - [MHRD](https://steamcommunity.com/app/576030): game to design CPU in
-    hardware description language
-  - [Bitwise](https://github.com/pervognsen/bitwise): series to build a hardware
-    and software stack from scratch
-- Garbage collection
-  - [Boehm–Demers–Weiser GC](https://www.hboehm.info/gc/)
-    - Wasmtime considered it for use as a general-purpose GC for WebAssembly,
-      until that goal was [removed](https://github.com/bytecodealliance/rfcs/commit/b678bf4796851e19ebc41c88c90f76cd0ecd9fb1)
-      from the roadmap
+- Compiler and language design
+  - Language server
+  - Front-end
+    - [Algorithms in Rust for implementing pattern matching](https://github.com/yorickpeterse/pattern-matching-in-rust)
+      by Yorick Peterse (2022-2024)
+  - IR
+    - RVSDG (Regionalized Value State Dependence Graph)
+      - [optir](https://github.com/jameysharp/optir): Proof-of-concept RVSDG IR
+      - [numba-rvsdg](https://github.com/numba/numba-rvsdg): Numba-compatible
+        RVSDG utilities
+    - History of CPS, SSA, and ANF in the context of the [T programming language](https://paulgraham.com/thist.html)
+      [[HN](https://news.ycombinator.com/item?id=36732335)] and a related [thread](https://langdev.stackexchange.com/questions/2079/what-are-the-disadvantages-of-using-cps-form)
+  - Runtime
+    - [Writing a JVM in Rust](https://andreabergia.com/blog/2023/07/i-have-written-a-jvm-in-rust/)
+      series by Andrea Bergia (2023)
+    - [Boehm–Demers–Weiser GC](https://www.hboehm.info/gc/)
+      - Wasmtime considered it for use as a general-purpose GC for WebAssembly,
+        until that goal was [removed](https://github.com/bytecodealliance/rfcs/commit/b678bf4796851e19ebc41c88c90f76cd0ecd9fb1)
+        from the roadmap
+  - Hardware
+    - From Nand to Tetris
+    - [Nandgame](https://nandgame.com/) (and [r/nandgame_u](https://www.reddit.com/r/nandgame_u))
+    - [MHRD](https://steamcommunity.com/app/576030): game to design CPU in
+      hardware description language
+    - [Bitwise](https://github.com/pervognsen/bitwise): series to build a hardware
+      and software stack from scratch
 - WebAssembly
   - [GC Extension](https://github.com/WebAssembly/gc/blob/main/proposals/gc/Overview.md)
   - [RFC: Add support for the WebAssembly tail calls proposal in Wasmtime](https://github.com/bytecodealliance/rfcs/blob/main/accepted/tail-calls.md)
