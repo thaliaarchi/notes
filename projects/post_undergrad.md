@@ -122,11 +122,7 @@
   - “Collapsing Towers of Interpreters” and “Lightweight Modular Staging”
     - [“Elementary Tutorial on Normalization by Evaluation”](https://okmij.org/ftp/tagless-final/NBE.html)
 - Compiler IRs
-  - Irreducible control flow
-    - [“A study of irreducibility in C programs”](https://sci-hub.st/10.1002/spe.1059)
-      (James Stanier and Des Watson, 2012)
-      [[Reddit](https://www.reddit.com/r/Compilers/comments/og4kts/q_irreducible_control_flow_graph_in_current/)]
-    - [in Graal](https://chrisseaton.com/truffleruby/basic-graal-graphs/#loops)
+  - [Irreducible control flow](../papers.md#todo)
 - Regular expressions
   - Brzozowski derivatives
   - [“Proof-directed program transformation: A functional account of efficient
