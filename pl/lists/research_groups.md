@@ -30,12 +30,29 @@
 - [Deadlines](https://www.cs.utah.edu/graduate/admissions/deadline/)
   - 15 December 2022 for Fall 2023
 - Professors
-  - [John Regehr](https://www.cs.utah.edu/~regehr/)
-    - [“Provably Correct Peephole Optimizations with Alive”](https://users.cs.utah.edu/~regehr/papers/pldi15.pdf)
-      (Nuno P. Lopes, David Menendez, Santosh Nagarakatte, and John Regehr,
-      2015)
-    - Alive2
-      - ae-graphs mentions this
+  - [John Regehr](https://www.cs.utah.edu/~regehr/) [[dblp](https://dblp.org/pid/r/JohnRegehr.html)]
+    - Alive
+      - [“Provably Correct Peephole Optimizations with Alive”](https://users.cs.utah.edu/~regehr/papers/pldi15.pdf)
+        (Nuno P. Lopes, David Menendez, Santosh Nagarakatte, and John Regehr,
+        2015)
+    - Alive2 [[code](https://github.com/AliveToolkit/alive2)]
+      - [“Alive2 Part 2: Tracking miscompilations in LLVM using its own unit tests”](https://blog.regehr.org/archives/1737)
+        (Nuno P. Lopes and John Regehr, 2020) blog post
+      - See mention in ae-graphs
+    - [Souper](../../topics/short_paper_notes.md#souper) [[code](https://github.com/google/souper)]:
+      super-optimizer for LLVM IR using SMT (Z3)
+      - Related: [“Super-optimizing LLVM IR”](https://llvm.org/devmtg/2011-11/Sands_Super-optimizingLLVMIR.pdf)
+        (Duncan Sands, 2011)
+      - [“Let's Work on an LLVM Superoptimizer”](https://blog.regehr.org/archives/1109)
+        (2014) blog post
+      - [“Early Superoptimizer Results”](https://blog.regehr.org/archives/1146)
+        and [“Souper Results 2”](https://blog.regehr.org/archives/1192)
+        (2014) blog posts
+      - [“A Few Synthesizing Superoptimizer Results”](https://blog.regehr.org/archives/1252)
+        (2015)
+    - [“Minotaur: A SIMD-Oriented Synthesizing Superoptimizer”](https://arxiv.org/abs/2306.00229)
+      (Zhengyang Liu, Stefan Mada, and John Regehr, 2023):
+      super-optimizer for SIMD in LLVM IR
     - On why he's in academia (2023) [[thread](https://mastodon.social/@regehr/111096952522176886)]:
       > a big reason I do compiler work from academia instead of industry is
       > that virtually everywhere, compilers are a cost center, not a profit
