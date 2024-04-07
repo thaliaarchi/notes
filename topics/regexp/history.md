@@ -21,18 +21,10 @@
     - Issue #4: not fixed
   - Source trees in “Downloads” are redundant to commits
   - It has no wiki
-- [RE2](https://github.com/google/re2)
-- [Code Search](https://github.com/google/codesearch)
-- [Go `regexp`](https://github.com/golang/go/tree/master/src/regexp)
-  - [`rsc.io/binaryregexp`](https://github.com/rsc/binaryregexp): simple fork of
-    Go `regexp`, changing it to work on Latin1, instead of UTF-8
+- Go `regexp`
   - In the Google TechTalk for the initial release of Go, Rob Pike mentions that
     some packages, including `regexp`, “work fine but are too simple”. I should
     analyze earlier designs of `regexp`, including [at the initial release](https://github.com/golang/go/blob/c90d392ce3d3203e0c32b3f98d1e68c4c2b4c49b/src/pkg/regexp/regexp.go).
-- [pfalcon/re1.5](https://github.com/pfalcon/re1.5): fork of re1 to add features
-  for real-world use. Contains history of re1 migrated to git, with the only
-  difference being that commits with an empty author name in Mercurial use
-  `Unknown`.
 - rsc code for POSIX semantics:
   https://swtch.com/~rsc/regexp/nfa-posix.y.txt
 - rsc code for postfix notation regexp:
@@ -41,12 +33,9 @@
 
 ## Rob Pike
 
-- [kyx0r/pikevm](https://github.com/kyx0r/pikevm): fork of re1.5 with only
-  pikevm
-- [jameysharp/pikevm](https://github.com/jameysharp/pikevm): pikevm
-  implementation in Rust
 - sam
-  - regexp2:
+  - From [“Regular Expression Matching: the Virtual Machine Approach”](https://swtch.com/~rsc/regexp/regexp2.html)
+    by Russ Cox (2009)
     > In a “threaded” implementation like thompsonvm above, we simply add the
     > saved pointer set to the thread state. Rob Pike first used this
     > approach, in the text editor sam.
@@ -59,7 +48,6 @@
     > couple of years after the original implementation.) The technique makes
     > a cameo in a textbook in 1974 but then seems to get lost until its
     > reappearance in sam.
-  - Find this source code!
 - [Rob Pike’s simple C regex matcher in Go](https://benhoyt.com/writings/rob-pike-regex/)
   [[HN](https://news.ycombinator.com/item?id=32434412)]
 
@@ -75,26 +63,8 @@
   > the linker which is jumping into main.
   https://news.ycombinator.com/item?id=27506134
 
-## Plan 9
-
-- [libregexp9 ported to Unix](https://9fans.github.io/plan9port/unix/)
-  > Libregexp9 is a port of Plan 9's Unicode-capable regular expression
-  > library. It is small and simple and provides the traditional extended
-  > regular expressions (without modern complications like {} and various \x
-  > character classes). It supports Unicode via wide character or UTF-8
-  > encoding.
-  - https://9fans.github.io/plan9port/man/man3/regexp.html
-  - https://9fans.github.io/plan9port/man/man7/regexp.html
-  - https://github.com/9fans/plan9port/tree/master/src/libregexp
-  - https://9fans.github.io/usr/local/plan9/src/libregexp/
-- Plan 9 [grep](https://github.com/9fans/plan9port/tree/master/src/cmd/grep)
-- Plan 9 regexp should be somewhere in here:
-  https://github.com/plan9foundation/plan9/search?q=regexp
-- [Fork of regexp9](https://github.com/tylov/regexp9)
-
 ## Others
 
-- [Rust `regex`](https://github.com/rust-lang/regex) by Andrew Gallant
 - [Doug McIlroy's regex](https://github.com/arnoldrobbins/mcilroy-regex)
   - Includes contributions [from Russ Cox](https://github.com/arnoldrobbins/mcilroy-regex/commits?author=rsc)
   - Features (see Background.txt):
