@@ -77,6 +77,8 @@ additionally as a reading list.
   - Rust
     - [Tree Borrows](https://perso.crans.org/vanille/treebor/)
       by Neven Villani (2023)
+    - [Prusti](https://www.pm.inf.ethz.ch/research/prusti.html) [[src](https://github.com/viperproject/prusti-dev)]:
+      automated static program verifier for Rust, built at ETHZ
   - Haskell
     - Resources for [reading GHC Core](https://stackoverflow.com/questions/6121146/reading-ghc-core)
   - Idris
@@ -112,8 +114,9 @@ additionally as a reading list.
     - [Chris Lattner on the origins of Swift](https://oleb.net/2019/chris-lattner-swift-origins/)
       (2019)
 - Bootstrapping
-  - [Milestone — MesCC builds TinyCC and fun C errors for everyone](https://ekaitz.elenq.tech/bootstrapGcc8.html)
-    [[HN](https://news.ycombinator.com/item?id=38079381)]
+  - [GNU Mes](https://www.gnu.org/software/mes/manual/mes.html)
+    - [Milestone — MesCC builds TinyCC and fun C errors for everyone](https://ekaitz.elenq.tech/bootstrapGcc8.html)
+      [[HN](https://news.ycombinator.com/item?id=38079381)]
 - Performance
   - [The Rust Performance Book](https://nnethercote.github.io/perf-book/)
     by Nicholas Nethercote (2020)
