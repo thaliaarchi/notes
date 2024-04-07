@@ -65,6 +65,9 @@ additionally as a reading list.
     - [“Extended Numeric Representations in WebAssembly”](https://www-old.cs.utah.edu/docs/techreports/2019/pdf/UUCS-19-009.pdf),
       Bachelor's thesis by Scott Butler, supervised by Matthew Flatt
       (December 2019) [[code](https://github.com/ScottButler87/ExtendedNumerics)]
+  - Rust
+    - [Tree Borrows](https://perso.crans.org/vanille/treebor/)
+      by Neven Villani (2023)
   - Haskell
     - Resources for [reading GHC Core](https://stackoverflow.com/questions/6121146/reading-ghc-core)
   - Idris
@@ -83,6 +86,10 @@ additionally as a reading list.
     - [Lean Game Server](https://adam.math.hhu.de/): games to learn Lean 4
   - [General purpose programming in Lean](https://proofassistants.stackexchange.com/questions/1093/can-the-language-of-proof-assistants-be-used-for-general-purpose-programming/1102#1102)
     (and briefly other proof assistants)
+  - [“Pancake: Verified Systems Programming Made Sweeter”](https://trustworthy.systems/publications/papers/Pohjola_STWSNUMSMNH_23.abstract)
+    (Johannes Åman Pohjola, Hira Taqdees Syeda, Miki Tanaka, Krishnan Winter,
+    Gordon Sau, Ben Nott, Tiana Tsang Ung, Craig McLaughlin, Remy Seassau,
+    Magnus Myreen, Michael Norrish, and Gernot Heiser, PLOS 2023)
 - Computing history
   - [The Apollo Guidance Computer: Architecture and Operation](http://www.apolloguidancecomputer.com/)
     [[HN](https://news.ycombinator.com/item?id=38245884)]
@@ -101,6 +108,8 @@ additionally as a reading list.
 - Performance
   - [The Rust Performance Book](https://nnethercote.github.io/perf-book/)
     by Nicholas Nethercote (2020)
+  - [One Hundred Thousand Lines of Rust](https://matklad.github.io/2021/09/05/Rust100k.html)
+    blog series by Alex Kladov (2021) [[discussion](https://old.reddit.com/r/rust/comments/lto0qa/blog_post_delete_cargo_integration_tests/)]
 - Systems
   - [Shadow](https://goose.icu/introducing-shadow/): novel browser engine in JS
     [[HN](https://news.ycombinator.com/item?id=38043033)]
@@ -110,8 +119,17 @@ additionally as a reading list.
 - [insta](https://github.com/mitsuhiko/insta): snapshot testing for Rust
 - [Gxhash](https://github.com/ogxd/gxhash): fast non-cryptograph hashing
   algorithm in Rust
+- [self_cell](https://github.com/Voultapher/self_cell): self-referential structs
+  in Rust
 - [VSCode LLVM Compiler Explorer](https://github.com/sunxfancy/vscode-llvm):
   exploring LLVM IR and machine IR after each pass
+
+### Developments to follow
+
+- [ipnsort](https://github.com/Voultapher/sort-research-rs/tree/main/ipnsort)
+  is a sorting algorithm by Lukas Bergdoll, which performs at the top of
+  benchmarks for unstable sorts, passes all [safety and correctness criteria](https://github.com/Voultapher/sort-research-rs/blob/main/writeup/sort_safety/text.md),
+  and is designed as the new Rust `slice::sort_unstable` (as mentioned on [HN](https://news.ycombinator.com/item?id=37783270))
 
 ## Other
 
