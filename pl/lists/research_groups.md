@@ -100,6 +100,10 @@
 - [University of Washington Programming Languages and Software Engineering](https://github.com/uwplse):
   [egg](https://egraphs-good.github.io/), [Herbie](https://herbie.uwplse.org/),
   and [Ruler](https://github.com/uwplse/ruler)
+  - [Zachary Tatlock](https://ztatlock.net/):
+    > My expertise is rooted in formal verification, especially of compilers. As
+    > my students develop their own research vision, we branch out across
+    > diverse domains.
 
 ## UC Berkeley
 
@@ -139,6 +143,8 @@ https://css.csail.mit.edu/stack/
       (2011)
     - [“Idris—Systems Programming Meets Full Dependent Types”](https://research-portal.st-andrews.ac.uk/en/publications/idris-systems-programming-meets-full-dependent-types)
       (2011)
+      - Did Idris achieve the goal of bridging systems programming and dependent
+        types as claimed by the title?
     - [“Programming in Idris: a Tutorial”](https://research-portal.st-andrews.ac.uk/en/publications/programming-in-idris-a-tutorial)
       (2012)
   - [“From Whitespace to Idris”](https://serokell.io/blog/from-whitespace-to-idris)

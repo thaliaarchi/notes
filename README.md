@@ -143,6 +143,7 @@ A notebook on compilers, programming languages, and other topics.
 - [Tree-sitter](topics/tree-sitter.md)
 - [Trusting Trust](topics/trusting_trust.md)
 - [Unexpectedly Turing-complete](topics/unexpected_turing.md)
+- [Version control systems](topics/vcs.md)
 
 ## Whitespace
 
