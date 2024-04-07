@@ -145,10 +145,10 @@ A notebook on compilers, programming languages, and other topics.
   - [Regular expression implementations](topics/regexp/engines.md)
 - [Short notes on papers](topics/short_paper_notes.md)
 - [Souper](topics/souper.md)
-- [Tools for VCSes other than Git](topics/vcs.md)
 - [Tree-sitter](topics/tree-sitter.md)
 - [Trusting Trust](topics/trusting_trust.md)
 - [Unexpectedly Turing-complete](topics/unexpected_turing.md)
+- [Version control systems](topics/vcs.md)
 
 ## Whitespace
 

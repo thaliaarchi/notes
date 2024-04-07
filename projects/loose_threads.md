@@ -28,6 +28,9 @@ additionally as a reading list.
 
 - Compiler and language design
   - Language server
+    - [Embedded languages](https://code.visualstudio.com/api/language-extensions/embedded-languages)
+      and [injection grammars](https://code.visualstudio.com/api/language-extensions/syntax-highlight-guide#injection-grammars)
+      in VS Code
   - Front-end
     - [Algorithms in Rust for implementing pattern matching](https://github.com/yorickpeterse/pattern-matching-in-rust)
       by Yorick Peterse (2022-2024)
@@ -52,15 +55,20 @@ additionally as a reading list.
       hardware description language
     - [Bitwise](https://github.com/pervognsen/bitwise): series to build a hardware
       and software stack from scratch
-- WebAssembly
-  - [GC Extension](https://github.com/WebAssembly/gc/blob/main/proposals/gc/Overview.md)
-  - [RFC: Add support for the WebAssembly tail calls proposal in Wasmtime](https://github.com/bytecodealliance/rfcs/blob/main/accepted/tail-calls.md)
-    [[PR](https://github.com/bytecodealliance/rfcs/pull/29)] (2023-01-20)
-  - [RFC: Implement Wasm GC in Wasmtime](https://github.com/bytecodealliance/rfcs/blob/main/accepted/wasm-gc.md)
-    [[PR](https://github.com/bytecodealliance/rfcs/pull/31)] (2023-04-14)
-  - [“Extended Numeric Representations in WebAssembly”](https://www-old.cs.utah.edu/docs/techreports/2019/pdf/UUCS-19-009.pdf),
-    Bachelor's thesis by Scott Butler, supervised by Matthew Flatt
-    (December 2019) [[code](https://github.com/ScottButler87/ExtendedNumerics)]
+- Languages
+  - WebAssembly
+    - [GC Extension](https://github.com/WebAssembly/gc/blob/main/proposals/gc/Overview.md)
+    - [RFC: Add support for the WebAssembly tail calls proposal in Wasmtime](https://github.com/bytecodealliance/rfcs/blob/main/accepted/tail-calls.md)
+      [[PR](https://github.com/bytecodealliance/rfcs/pull/29)] (2023-01-20)
+    - [RFC: Implement Wasm GC in Wasmtime](https://github.com/bytecodealliance/rfcs/blob/main/accepted/wasm-gc.md)
+      [[PR](https://github.com/bytecodealliance/rfcs/pull/31)] (2023-04-14)
+    - [“Extended Numeric Representations in WebAssembly”](https://www-old.cs.utah.edu/docs/techreports/2019/pdf/UUCS-19-009.pdf),
+      Bachelor's thesis by Scott Butler, supervised by Matthew Flatt
+      (December 2019) [[code](https://github.com/ScottButler87/ExtendedNumerics)]
+  - Haskell
+    - Resources for [reading GHC Core](https://stackoverflow.com/questions/6121146/reading-ghc-core)
+  - Idris
+    - Read the papers by [Edwin Brady](../pl/lists/research_groups.md#st-andrews)
 - Formal methods
   - [Programming Z3](https://theory.stanford.edu/~nikolaj/programmingz3.html)
   - [What I've Learned About Formal Methods In Half a Year](https://jakob.space/blog/what-ive-learned-about-formal-methods.html)
@@ -73,13 +81,24 @@ additionally as a reading list.
       teaches Lean and is used in Brown CS 1951x. Seems similar to Software
       Foundations.
     - [Lean Game Server](https://adam.math.hhu.de/): games to learn Lean 4
+  - [General purpose programming in Lean](https://proofassistants.stackexchange.com/questions/1093/can-the-language-of-proof-assistants-be-used-for-general-purpose-programming/1102#1102)
+    (and briefly other proof assistants)
 - Computing history
   - [The Apollo Guidance Computer: Architecture and Operation](http://www.apolloguidancecomputer.com/)
     [[HN](https://news.ycombinator.com/item?id=38245884)]
     - [related videos and talks linked by HN](https://news.ycombinator.com/item?id=38244927)
+  - [A Personal History of APL](https://ed-thelen.org/comp-hist/APL-hist.html)
+    by Michael S. Montalbano (1982)
+  - Proceedings of the History of Programming Languages conference
+- Bootstrapping
+  - [Milestone — MesCC builds TinyCC and fun C errors for everyone](https://ekaitz.elenq.tech/bootstrapGcc8.html)
+    [[HN](https://news.ycombinator.com/item?id=38079381)]
 - Performance
   - [The Rust Performance Book](https://nnethercote.github.io/perf-book/)
     by Nicholas Nethercote (2020)
+- Systems
+  - [Shadow](https://goose.icu/introducing-shadow/): novel browser engine in JS
+    [[HN](https://news.ycombinator.com/item?id=38043033)]
 
 ## Tools and libraries to try
 

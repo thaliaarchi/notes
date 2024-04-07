@@ -5,6 +5,9 @@ projects.
 
 ## 2024
 
+- 2024-04-06:
+  [“Why Programming Languages Matter”](https://www.youtube.com/watch?v=JqYCt9rTG8g)
+  (Andrew Black, 2023)
 - [2024-04-06](topics/short_paper_notes.md#verified-compilation-of-sel4):
   [“Translation Validation for a Verified OS Kernel”](https://sci-hub.st/10.1145/2491956.2462183)
   (Thomas Sewell, Magnus Myreen, and Gerwin Klein, PLDI 2013)
