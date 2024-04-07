@@ -2,7 +2,7 @@
 
 [“Guided Equality Saturation”](https://thok.eu/publications/2024/popl.pdf)
 by Thomas Koehler, Andrés Goens, Siddharth Bhat, Tobias Grosser, Phil Trinder,
-and Michel Steuwer, 2024
+and Michel Steuwer, POPL 2024
 
 This paper is incredibly cool.
 

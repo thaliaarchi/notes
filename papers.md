@@ -18,6 +18,13 @@ projects.
   [“Impact of Economics on Compiler Optimization”](https://sci-hub.st/10.1145/376656.376751)
   (Arch D. Robison, 2001), discussed in a [thread](https://mastodon.social/@regehr/111096553132093803)
   by John Regehr
+- 2024-03-01:
+  [“Colored E-Graph: Equality Reasoning with Conditions”](https://arxiv.org/abs/2305.19203)
+  (Eytan Singher and Shachar Itzhaky, 2023)
+- [2024-03-21](logic/e-graphs/guided_eqsat.md):
+  [“Guided Equality Saturation”](https://thok.eu/publications/2024/popl.pdf)
+  (Thomas Koehler, Andrés Goens, Siddharth Bhat, Tobias Grosser, Phil Trinder,
+  and Michel Steuwer, POPL 2024)
 
 ## 2023
 
@@ -60,6 +67,9 @@ projects.
 - [2023-08-26](compilers/hotspot/sea_of_nodes.md):
   [“The Sea of Nodes and the HotSpot JIT”](https://www.youtube.com/watch?v=9epgZ-e6DUU)
   (Cliff Click, 2020)
+- 2023-07-25:
+  [“A computability perspective on self-modifying programs”](https://inria.hal.science/inria-00433472/document)
+  (Guillaume Bonfante, Jean-Yves Marion, and Daniel Reynaud, 2009)
 - [2023-05-29](topics/tree-sitter.md):
   [“Tree-sitter - a new parsing system for programming tools”](https://www.youtube.com/watch?v=Jes3bD6P0To)
   (Max Brunsfeld, 2018)
@@ -266,6 +276,10 @@ projects.
     Mossenböck, 2015)
   - [“Taming Control Flow: A Structured Approach to Eliminating Goto Statements”](https://sci-hub.st/10.1109/ICCL.1994.288377)
     (Ana Erosa and Laurie Hendren. 1994)
+  - [“A study of irreducibility in C programs”](https://sci-hub.st/10.1002/spe.1059)
+    (James Stanier and Des Watson, 2012)
+    [[Reddit](https://www.reddit.com/r/Compilers/comments/og4kts/q_irreducible_control_flow_graph_in_current/)]
+  - Irreducible control flow [in Graal](https://chrisseaton.com/truffleruby/basic-graal-graphs/#loops)
 - E-graphs
   - [“Better Together: Unifying Datalog and Equality Saturation”](https://www.mwillsey.com/papers/egglog)
     (Yihong Zhang, Remy Wang, Oliver Flatt, David Cao, Philip Zucker, Eli

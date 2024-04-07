@@ -90,6 +90,11 @@ additionally as a reading list.
   - [A Personal History of APL](https://ed-thelen.org/comp-hist/APL-hist.html)
     by Michael S. Montalbano (1982)
   - Proceedings of the History of Programming Languages conference
+  - Chris Lattner
+    - [Lessons from LLVM: An SC21 Fireside Chat with Chris Lattner](https://www.hpcwire.com/2021/12/27/lessons-from-llvm-an-sc21-fireside-chat-with-chris-lattner/)
+      (2021)
+    - [Chris Lattner on the origins of Swift](https://oleb.net/2019/chris-lattner-swift-origins/)
+      (2019)
 - Bootstrapping
   - [Milestone — MesCC builds TinyCC and fun C errors for everyone](https://ekaitz.elenq.tech/bootstrapGcc8.html)
     [[HN](https://news.ycombinator.com/item?id=38079381)]

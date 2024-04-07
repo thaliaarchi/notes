@@ -4,9 +4,43 @@
 - Double my list
 - Email some researchers (a month before applying)
 - Matt Might's [HOWTO: Get into grad school for science, engineering, math and computer science](https://matt.might.net/articles/how-to-apply-and-get-in-to-graduate-school-in-science-mathematics-engineering-or-computer-science/)
+  - Advice on GPA
 - Letter of recommendation
   - [Shriram Krishnamurthi's advice](https://cs.brown.edu/~sk/Memos/Reco-From-Me/),
     which Kimball follows
+- A [timeline](https://www.scribbr.com/graduate-school/when-to-apply/) of when
+  to apply:
+  - March
+    - List graduate programs to apply for
+    - Sign up and begin studying for necessary standardized tests
+  - April
+    - Continue studying
+    - Begin asking for recommendation letters
+  - May
+    - Take any standardized tests for the first time
+  - June
+    - Follow up on recommendation letters
+    - Look into potential sources of funding (unnecessary?)
+  - July
+    - Request transcripts
+    - Retake failed standardized exams, if needed
+  - August
+    - Begin writing statement of purpose and personal statement
+  - September
+    - Edit personal statement and keep in touch with your recommenders
+  - October
+    - Retake any final exams you're not happy with
+  - November
+    - Perfect statement of purpose
+  - December
+    - Send final reminders to recommenders
+    - Finish applications
+  - January
+    - Complete FAFSA, if I need loans
+  - Late February–April
+    - Hear back from graduate schools and go for visits
+    - Plan finances and apply for loans if necessary
+    - Pick a school
 
 ## HPI - Universität Potsdam
 
@@ -142,8 +176,8 @@ https://css.csail.mit.edu/stack/
 ## Northeastern
 
 - [CS 4410/6410: Compiler Design](https://courses.ccs.neu.edu/cs4410/)
-- Northeastern University’s College of Computer and Information Science, advised
-  by Matthias Felleisen
+- Northeastern University College of Computer and Information Science
+  - Matthias Felleisen
 
 ## St Andrews
 
@@ -169,7 +203,10 @@ https://css.csail.mit.edu/stack/
 
 ## Unsorted
 
-- [Neel Krishnaswami](https://www.cl.cam.ac.uk/~nk480/)
+- University of Cambridge
+  - [Neel Krishnaswami](https://www.cl.cam.ac.uk/~nk480/)
+    - [“Integrating Dependent and Linear Types”](https://www.cl.cam.ac.uk/~nk480/dlnl-paper.pdf)
+      (Neelakantan R. Krishnaswami, Cecilia Pradic, and Nick Benton, POPL 2015)
 - [MPI-SWS](https://plv.mpi-sws.org/rustbelt/)
   - [“A Kripke Logical Relation Between ML and Assembly”](https://people.mpi-sws.org/~dreyer/papers/lrmlasm/main.pdf)
     (Chung-Kil Hur and Derek Dreyer, 2011)
@@ -178,3 +215,10 @@ https://css.csail.mit.edu/stack/
   - [Nadia Polikarpova](https://cseweb.ucsd.edu/~npolikarpova/)
 - Harvard
   - [Nada Amin](https://namin.seas.harvard.edu/) [[GitHub](https://github.com/namin)]
+    - Collapsing Towers
+- Purdue
+  - [Tiark Rompf](https://www.cs.purdue.edu/people/faculty/rompf.html)
+    - Collapsing Towers
+- [“Guided Equality Saturation”](https://thok.eu/publications/2024/popl.pdf)
+  authors: Thomas Koehler, Andrés Goens, Siddharth Bhat, Tobias Grosser, Phil
+  Trinder, and Michel Steuwer
