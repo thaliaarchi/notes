@@ -14,10 +14,19 @@
     implementation of JavaScript in Java, from [fall 1997](https://web.mit.edu/javascript/doc/rhino/history.html),
     when a version of Netscape entirely in Java was in the works
 - Blog
-  - [Zola](https://www.getzola.org/)
-  - [Eleventy](https://www.11ty.dev/)
-  - [Jekyll vs Hugo vs Gatsby vs Next vs Zola vs Eleventy](https://mtm.dev/static)
-  - [Simplified Saaze](https://jamstack.org/generators/simplified-saaze/)
+  - Engine
+    - [Zola](https://www.getzola.org/)
+    - [Eleventy](https://www.11ty.dev/)
+    - [Jekyll vs Hugo vs Gatsby vs Next vs Zola vs Eleventy](https://mtm.dev/static)
+    - [Simplified Saaze](https://jamstack.org/generators/simplified-saaze/)
+  - Hosting
+    - GitHub Pages: [custom domains](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/about-custom-domains-and-github-pages)
+    - [Codeberg Pages](https://docs.codeberg.org/codeberg-pages/)
+    - [pages.gay](https://pages.gay/)
+  - Notes inspiration
+    - [Philip Zucker](https://www.philipzucker.com/notes/) [[git](https://github.com/philzook58/philzook58.github.io)]
+    - [Andy Matuschak](https://notes.andymatuschak.org/About_these_notes)
+    - [Nikita Voloboev](https://wiki.nikiv.dev/) [[git](https://github.com/nikitavoloboev/knowledge)]
 - Contributing to egglog
   - Interesting issues: [Egglog interface from rust](https://github.com/egraphs-good/egglog/issues/232)
 
