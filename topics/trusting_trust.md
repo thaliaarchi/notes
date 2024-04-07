@@ -10,14 +10,17 @@ source. He also discusses quines, compiler bootstrapping, and the layers of
 trust in software. It's an easy, 3-page paper, well worth a read.
 
 Ken has confirmed that he actually [carried out](https://niconiconi.neocities.org/posts/ken-thompson-really-did-launch-his-trusting-trust-trojan-attack-in-real-life/)
-[[HN](https://news.ycombinator.com/item?id=33008519)] this attack internally and
-that it was [discovered and fixed](https://www.tuhs.org/pipermail/tuhs/2021-September/024486.html)
-[[HN](https://news.ycombinator.com/item?id=36389660)] by someone in the PWB
-department, who was confused why the compiler binary grew by one byte on every
-compilation. Russ Cox asked Ken for a copy of the backdoor source code and
-[describes](https://research.swtch.com/nih) [[HN](https://news.ycombinator.com/item?id=38020792)
-in detail how it works, providing a Research Unix Sixth Edition
-[emulator he wrote in Go](https://research.swtch.com/v6/) to try it.
+[[HN](https://news.ycombinator.com/item?id=33008519)] this attack internally. It
+was [discovered](https://www.tuhs.org/pipermail/tuhs/2021-September/024486.html)
+[[HN](https://news.ycombinator.com/item?id=36389660)], when someone in the PWB
+department noticed that the compiler binary grew one byte every time it compiled
+itself, so they debugged and recompiled it from assembly, inadvertently breaking
+the chain. The bug was that a string constant from the backdoor was mishandled
+and grew by a single NUL byte each time, making it [not reproducible](https://go.dev/blog/rebuild).
+Russ Cox asked Ken for a copy of the backdoor source code and [describes](https://research.swtch.com/nih)
+[[HN](https://news.ycombinator.com/item?id=38020792) in detail how it works with
+a Research Unix Sixth Edition [emulator he wrote in Go](https://research.swtch.com/v6/)
+to try it.
 
 ### Conventions
 

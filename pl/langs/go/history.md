@@ -106,6 +106,8 @@ motivated by the translation to Go, introduced for 64-bit x86 systems in
 [Go 1.7](https://go.dev/doc/go1.7#compiler), and completed for all architectures
 in [Go 1.8](https://go.dev/doc/go1.8#compiler).
 
+Go 1.21.0 was the first release with [fully reproducible builds](https://go.dev/blog/rebuild).
+
 ## Possible influence of xoc, an extension-oriented compiler
 
 Russ Cox, Tom Bergan, Austin Clements, Frans Kaashoek, and Eddie Kohler built

@@ -74,6 +74,14 @@ several implementations.
   - [CRlibm.jl](https://github.com/JuliaIntervals/CRlibm.jl) wraps it for Julia
     and says that CRlibm is state-of-the-art
 
+## Go
+
+Go uses a [softfloat](https://github.com/golang/go/blob/master/src/runtime/softfloat64.go)
+implementation by default for ARMv5, and it can be enabled for
+MIPS (since [Go 1.10](https://go.dev/doc/go1.10#ports) [[issue](https://go.dev/issues/18162)]),
+386 (since [Go 1.16](https://go.dev/doc/go1.16#386) [[issue](https://go.dev/issues/40255)]),
+and ARM (since [Go 1.22](https://go.dev/doc/go1.22#arm) [[issue](https://go.dev/issues/61588)]).
+
 ## simple-soft-float
 
 [simple-soft-float](https://salsa.debian.org/Kazan-team/simple-soft-float) is
