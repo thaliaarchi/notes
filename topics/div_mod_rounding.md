@@ -10,10 +10,10 @@ additional languages can be found on the Wikipedia article for [modulo](https://
 - C++: `/` `%`
 - Coq:
   [`Z.quot` `Z.rem` `Z.quotrem` `Infix "÷"`](https://coq.inria.fr/library/Coq.ZArith.BinIntDef.html#lab1087)
-- Go: [`/` `%`](https://golang.org/ref/spec#Integer_operators)
-  [`big.Int.Quo`](https://golang.org/pkg/math/big/#Int.Quo)
-  [`big.Int.Rem`](https://golang.org/pkg/math/big/#Int.Rem)
-  [`big.Int.QuoRem`](https://golang.org/pkg/math/big/#Int.QuoRem)
+- Go: [`/` `%`](https://go.dev/ref/spec#Integer_operators)
+  [`big.Int.Quo`](https://go.dev/pkg/math/big/#Int.Quo)
+  [`big.Int.Rem`](https://go.dev/pkg/math/big/#Int.Rem)
+  [`big.Int.QuoRem`](https://go.dev/pkg/math/big/#Int.QuoRem)
 - GMP: [`mpz_tdiv_q` `mpz_tdiv_r` `mpz_tdiv_qr`](https://gmplib.org/manual/Integer-Division)
 - Haskell: [`quot`](https://hackage.haskell.org/package/base/docs/Prelude.html#v:quot)
   [`rem`](https://hackage.haskell.org/package/base/docs/Prelude.html#v:rem)
@@ -50,9 +50,9 @@ additional languages can be found on the Wikipedia article for [modulo](https://
 
 ## Euclidean
 
-- Go: [`big.Int.Div`](https://golang.org/pkg/math/big/#Int.Div)
-  [`big.Int.Mod`](https://golang.org/pkg/math/big/#Int.Mod)
-  [`big.Int.DivMod`](https://golang.org/pkg/math/big/#Int.DivMod)
+- Go: [`big.Int.Div`](https://go.dev/pkg/math/big/#Int.Div)
+  [`big.Int.Mod`](https://go.dev/pkg/math/big/#Int.Mod)
+  [`big.Int.DivMod`](https://go.dev/pkg/math/big/#Int.DivMod)
 - Rug (Rust): [`div_euc`](https://docs.rs/rug/latest/rug/ops/trait.DivRounding.html#tymethod.div_euc)
   [`rem_euc`](https://docs.rs/rug/latest/rug/ops/trait.RemRounding.html#tymethod.rem_euc)
   [`div_rem_euc`](https://docs.rs/rug/latest/rug/struct.Integer.html#method.div_rem_euc)
