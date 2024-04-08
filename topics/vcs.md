@@ -2,6 +2,8 @@
 
 ## Import and export
 
+- BitKeeper [fast-export](https://www.bitkeeper.org/man/fast-export.html)
+  and [fast-import](https://www.bitkeeper.org/man/fast-import.html)
 - [Darcs convert](https://darcs.net/Using/Convert)
 - [Fossil import and export](https://fossil-scm.org/home/doc/trunk/www/inout.wiki)
 - [cvs2gitdump](https://github.com/yasuoka/cvs2gitdump): code from it is used by

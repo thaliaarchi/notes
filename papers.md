@@ -5,6 +5,13 @@ projects.
 
 ## 2024
 
+- 2024-04-07:
+  [“Tracing Back the History of Commits in Low-tech Reviewing Environments: A
+  case study of the Linux kernel”](https://sci-hub.st/10.1145/2652524.2652542)
+  (Yujuan Jiang, Bram Adams, Foutse Khomh, and Daniel M. Germán, ESEM 2014)
+- 2024-04-07:
+  [“A Dataset of the Activity of the `git` *Super-repository* of Linux in 2012”](https://github.com/dmgerman/papers/blob/master/2015/conferences/2015_msr_data_linux_superrepo/2015_msr_data_linux_superrepo.pdf)
+  (Daniel M. Germán, Bram Adams, and Ahmed E. Hassan, MSR 2015)
 - 2024-04-06:
   [“Why Programming Languages Matter”](https://www.youtube.com/watch?v=JqYCt9rTG8g)
   (Andrew Black, 2023)
@@ -25,6 +32,9 @@ projects.
   [“Guided Equality Saturation”](https://thok.eu/publications/2024/popl.pdf)
   (Thomas Koehler, Andrés Goens, Siddharth Bhat, Tobias Grosser, Phil Trinder,
   and Michel Steuwer, POPL 2024)
+- 2024-03-02:
+  [“Merge-Tree: Visualizing the integration of commits into Linux”](https://sci-hub.st/10.1002/smr.1936)
+  (Evan Wilde and Daniel M. Germán, VISSOFT 2016)
 
 ## 2023
 
