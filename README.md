@@ -121,6 +121,7 @@ A notebook on compilers, programming languages, and other topics.
 - Compiler optimizations
   - [Compiler optimization patterns](topics/optimizations/patterns.md)
   - [Tail-call optimization](topics/optimizations/tail_calls.md)
+- [Computability](topics/computability.md)
 - [Data structures](topics/data_structures.md)
 - [Easter eggs](topics/easter_eggs.md)
 - [Error handling](topics/errors.md)
@@ -132,7 +133,6 @@ A notebook on compilers, programming languages, and other topics.
 - [Language server design](topics/language_server.md)
 - [List of ciphers](topics/ciphers.md)
 - [Minecraft decompilation](topics/minecraft_decompilation.md)
-- [Minimal computing models](topics/minimal_computing_models.md)
 - [Nand to Tetris](topics/nand2tetris/README.md)
 - [QR code art](topics/qr.md)
 - Regular expressions

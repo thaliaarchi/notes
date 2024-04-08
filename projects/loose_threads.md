@@ -138,14 +138,6 @@ additionally as a reading list.
       (2021)
     - [Chris Lattner on the origins of Swift](https://oleb.net/2019/chris-lattner-swift-origins/)
       (2019)
-- Computability
-  - [Eigenratio](https://esolangs.org/wiki/Eigenratio)
-    - [Eigenratios of Self-Interpreters](https://eigenratios.blogspot.com/)
-  - [Wolfram's (2,3) Turing machine](https://en.wikipedia.org/wiki/Wolfram%27s_2-state_3-symbol_Turing_machine)
-  - [Bitwise Cyclic Tag](https://esolangs.org/wiki/Bitwise_Cyclic_Tag)
-  - [Beaver](https://github.com/eterevsky/beaver): a solver in Rust to find
-    the shortest Brainfuck program for which termination cannot be determined
-    and the longest-running terminating programs for various lengths
 - Bootstrapping
   - Rust
     - [mrustc](https://github.com/thepowersgang/mrustc)
