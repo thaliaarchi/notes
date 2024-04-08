@@ -1,4 +1,4 @@
-# Reading list
+# Reading list by date
 
 Papers I have read and conference talks I have watched for research and
 projects.
@@ -8,10 +8,11 @@ projects.
 - 2024-04-07:
   [“Tracing Back the History of Commits in Low-tech Reviewing Environments: A
   case study of the Linux kernel”](https://sci-hub.st/10.1145/2652524.2652542)
-  (Yujuan Jiang, Bram Adams, Foutse Khomh, and Daniel M. Germán, ESEM 2014)
+  (Yujuan Jiang, Bram Adams, Foutse Khomh, and [Daniel M. Germán][dmgerman],
+  ESEM 2014)
 - 2024-04-07:
   [“A Dataset of the Activity of the `git` *Super-repository* of Linux in 2012”](https://github.com/dmgerman/papers/blob/master/2015/conferences/2015_msr_data_linux_superrepo/2015_msr_data_linux_superrepo.pdf)
-  (Daniel M. Germán, Bram Adams, and Ahmed E. Hassan, MSR 2015)
+  ([Daniel M. Germán][dmgerman], Bram Adams, and Ahmed E. Hassan, MSR 2015)
 - 2024-04-06:
   [“Why Programming Languages Matter”](https://www.youtube.com/watch?v=JqYCt9rTG8g)
   (Andrew Black, 2023)
@@ -34,7 +35,7 @@ projects.
   and Michel Steuwer, POPL 2024)
 - 2024-03-02:
   [“Merge-Tree: Visualizing the integration of commits into Linux”](https://sci-hub.st/10.1002/smr.1936)
-  (Evan Wilde and Daniel M. Germán, VISSOFT 2016)
+  (Evan Wilde and [Daniel M. Germán][dmgerman], VISSOFT 2016)
 
 ## 2023
 
@@ -76,7 +77,7 @@ projects.
   (Chris Fallin, 2023)
 - [2023-08-26](compilers/hotspot/sea_of_nodes.md):
   [“The Sea of Nodes and the HotSpot JIT”](https://www.youtube.com/watch?v=9epgZ-e6DUU)
-  (Cliff Click, 2020)
+  ([Cliff Click][cliffc], 2020)
 - 2023-07-25:
   [“A computability perspective on self-modifying programs”](https://inria.hal.science/inria-00433472/document)
   (Guillaume Bonfante, Jean-Yves Marion, and Daniel Reynaud, 2009)
@@ -236,17 +237,17 @@ projects.
     - GraalVM 2016+
   - HotSpot C2 / Sea of nodes
     - [“From Graphs to Quads: An Intermediate Representation's Journey”](https://www.researchgate.net/publication/2746343_From_Quads_to_Graphs_An_Intermediate_Representation's_Journey)
-      ([Cliff Click](https://dblp.org/pid/39/4499.html), 1993)
+      ([Cliff Click][cliffc], 1993)
     - [“Global Code Motion / Global Value Numbering”](https://dl.acm.org/doi/10.1145/207110.207154)
-      (Cliff Click, 1995)
+      ([Cliff Click][cliffc], 1995)
     - [“A Simple Graph-Based Intermediate Representation”](https://dl.acm.org/doi/10.1145/202529.202534)
-      (Cliff Click and Michael Paleczny, 1995)
+      ([Cliff Click][cliffc] and Michael Paleczny, 1995)
     - [“Combining Analyses, Combining Optimizations”](https://www.researchgate.net/publication/2394127_Combining_Analyses_Combining_Optimizations)
-      Thesis (Cliff Click, 1995)
+      Thesis ([Cliff Click][cliffc], 1995)
     - [“Combining Analyses, Combining Optimizations“](https://dl.acm.org/doi/10.1145/201059.201061)
-      (Cliff Click and Keith D. Cooper, 1995)
+      ([Cliff Click][cliffc] and Keith D. Cooper, 1995)
     - [“The Java HotSpot™ Server Compiler”](https://www.usenix.org/conference/jvm-01/java-hotspot%E2%84%A2-server-compiler)
-      (Michael Paleczny, Christopher Vick, and Cliff Click, 2001)
+      (Michael Paleczny, Christopher Vick, and [Cliff Click][cliffc], 2001)
   - Haskell / G-machine
     - [“Implementing lazy functional languages on stock hardware: the Spineless
       Tagless G-machine”](https://www.microsoft.com/en-us/research/publication/implementing-lazy-functional-languages-on-stock-hardware-the-spineless-tagless-g-machine/)
@@ -311,3 +312,6 @@ projects.
 - History
   - [“JavaScript: The First 20 Years”](https://dl.acm.org/doi/10.1145/3386327)
     (Allen Wirfs-Brock and Brendan Eich, 2020)
+
+[cliffc]: https://dblp.org/pid/39/4499.html
+[dmgerman]: https://github.com/dmgerman/papers
