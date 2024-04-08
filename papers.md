@@ -5,6 +5,9 @@ projects.
 
 ## 2024
 
+- [2024-04-07](topics/regexp/thompson.md):
+  [“Regular Expression Search Algorithm”](https://dl.acm.org/doi/10.1145/363347.363387)
+  (Ken Thompson, 1968)
 - 2024-04-07:
   [“Tracing Back the History of Commits in Low-tech Reviewing Environments: A
   case study of the Linux kernel”](https://sci-hub.st/10.1145/2652524.2652542)
@@ -309,6 +312,12 @@ projects.
     (Max Willsey, Chandrakana Nandi, Yisu Remy Wang, Oliver Flatt, Zachary
     Tatlock, and Pavel Panchekha, POPL 2021)
     [[arXiv](https://arxiv.org/abs/2004.03082)]
+- Regular expressions
+  - [“Derivatives of regular expressions”](https://dl.acm.org/doi/10.1145/321239.321249)
+    (Janusz A. Brzozowski, 1964)
+  - [“Proof-directed program transformation: A functional account of efficient
+    regular expression matching”](https://www.cambridge.org/core/services/aop-cambridge-core/content/view/454BB5CD9B0B056FA91957F2F9CC3EC5/S0956796820000295a.pdf)
+    (Andrzej Filinski, 2021)
 - History
   - [“JavaScript: The First 20 Years”](https://dl.acm.org/doi/10.1145/3386327)
     (Allen Wirfs-Brock and Brendan Eich, 2020)

@@ -106,7 +106,9 @@
 
   Author: Ken Thompson
 
-  Introduced Thompson's construction [[history][rsc-history]], [[attribution](https://swtch.com/~rsc/regexp/regexp2.html#attrib)]
+  [“Regular Expression Search Algorithm”](./thompson.md) by Ken Thompson (1968)
+  introduced Thompson's construction and it was implemented in QED [[history][rsc-history]],
+  [[attribution](https://swtch.com/~rsc/regexp/regexp2.html#attrib)]
 
 - re1 [[src](https://code.google.com/archive/p/re1/)] [[blog](https://swtch.com/~rsc/regexp/regexp2.html)]
 
@@ -151,6 +153,12 @@
   First appeared in Fourth Edition Unix
 
 More are listed in Wikipedia's [Comparison of regular expression engines](https://en.wikipedia.org/wiki/Comparison_of_regular_expression_engines).
+
+## Other
+
+- Mike French's `myrex` [[src](https://github.com/mike-french/myrex)]
+  [[HN](https://news.ycombinator.com/item?id=37098229)]: converts regexp via NFA
+  to an Elixir process network
 
 
 [rsc-history]: https://swtch.com/~rsc/regexp/regexp1.html#History
