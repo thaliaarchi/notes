@@ -50,6 +50,8 @@
     - [Philip Zucker](https://www.philipzucker.com/notes/) [[git](https://github.com/philzook58/philzook58.github.io)]
     - [Andy Matuschak](https://notes.andymatuschak.org/About_these_notes)
     - [Nikita Voloboev](https://wiki.nikiv.dev/) [[git](https://github.com/nikitavoloboev/knowledge)]
+- Forge
+  - [Software Forge Performance Index](https://forgeperf.org/)
 - Contributing to egglog
   - Interesting issues: [Egglog interface from rust](https://github.com/egraphs-good/egglog/issues/232)
 
@@ -136,7 +138,21 @@ additionally as a reading list.
       (2021)
     - [Chris Lattner on the origins of Swift](https://oleb.net/2019/chris-lattner-swift-origins/)
       (2019)
+- Computability
+  - [Eigenratio](https://esolangs.org/wiki/Eigenratio)
+    - [Eigenratios of Self-Interpreters](https://eigenratios.blogspot.com/)
+  - [Wolfram's (2,3) Turing machine](https://en.wikipedia.org/wiki/Wolfram%27s_2-state_3-symbol_Turing_machine)
+  - [Bitwise Cyclic Tag](https://esolangs.org/wiki/Bitwise_Cyclic_Tag)
+  - [Beaver](https://github.com/eterevsky/beaver): a solver in Rust to find
+    the shortest Brainfuck program for which termination cannot be determined
+    and the longest-running terminating programs for various lengths
 - Bootstrapping
+  - Rust
+    - [mrustc](https://github.com/thepowersgang/mrustc)
+      - [Bootstrapping Rust](https://guix.gnu.org/blog/2018/bootstrapping-rust/)
+        by Danny Milosavljevic (2018)
+    - [Bootstrapping](https://rustc-dev-guide.rust-lang.org/building/bootstrapping/what-bootstrapping-does.html)
+      in the Rust Compiler Development Guide
   - [GNU Mes](https://www.gnu.org/software/mes/manual/mes.html)
     - [Milestone — MesCC builds TinyCC and fun C errors for everyone](https://ekaitz.elenq.tech/bootstrapGcc8.html)
       [[HN](https://news.ycombinator.com/item?id=38079381)]
@@ -151,11 +167,14 @@ additionally as a reading list.
 
 ## Tools and libraries to try
 
-- [insta](https://github.com/mitsuhiko/insta): snapshot testing for Rust
-- [Gxhash](https://github.com/ogxd/gxhash): fast non-cryptograph hashing
-  algorithm in Rust
-- [self_cell](https://github.com/Voultapher/self_cell): self-referential structs
-  in Rust
+- Rust
+  - [cross](https://github.com/cross-rs/cross): cross-compilation and
+    cross-testing of crates
+  - [Gxhash](https://github.com/ogxd/gxhash): fast non-cryptograph hashing
+    algorithm
+  - [insta](https://github.com/mitsuhiko/insta): snapshot testing
+  - [self_cell](https://github.com/Voultapher/self_cell): self-referential
+    structs
 - [VSCode LLVM Compiler Explorer](https://github.com/sunxfancy/vscode-llvm):
   exploring LLVM IR and machine IR after each pass
 
