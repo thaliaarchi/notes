@@ -131,6 +131,7 @@ A notebook on compilers, programming languages, and other topics.
 - [Integer division and modulo rounding](topics/div_mod_rounding.md)
 - [Language server design](topics/language_server.md)
 - [List of ciphers](topics/ciphers.md)
+- [Minecraft decompilation](topics/minecraft_decompilation.md)
 - [Minimal computing models](topics/minimal_computing_models.md)
 - [Nand to Tetris](topics/nand2tetris/README.md)
 - [QR code art](topics/qr.md)
