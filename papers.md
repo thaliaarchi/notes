@@ -5,6 +5,9 @@ projects.
 
 ## 2024
 
+- 2024-04-08:
+  [“The future vision of Ruby Parser”](https://rubykaigi.org/2023/presentations/spikeolaf.html)
+  (Yuichiro Kaneko, 2023)
 - [2024-04-07](topics/regexp/thompson.md):
   [“Regular Expression Search Algorithm”](https://dl.acm.org/doi/10.1145/363347.363387)
   (Ken Thompson, 1968)
