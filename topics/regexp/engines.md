@@ -95,7 +95,7 @@
 - PCRE (Perl Compatible Regular Expressions) [[src](https://github.com/PCRE2Project/pcre2)]
   [[Wikipedia](https://en.wikipedia.org/wiki/Perl_Compatible_Regular_Expressions)]
 
-- Perl
+- Perl [[docs](https://perldoc.perl.org/perlre)]
 
 - Plan 9 `grep` [[src](https://github.com/plan9foundation/plan9/tree/main/sys/src/cmd/grep)]
   [docs [grep(1)](https://github.com/plan9foundation/plan9/blob/main/sys/man/1/grep)]
@@ -172,7 +172,7 @@
   - jameysharp/pikevm [[src](https://github.com/jameysharp/pikevm)]: pikevm
     implementation in Rust
 
-- RE2 [[src](https://github.com/google/re2)]
+- RE2 [[src](https://github.com/google/re2)] [[syntax](https://github.com/google/re2/wiki/Syntax)]
 
 - Ruby
 
@@ -216,13 +216,19 @@
 
   First appeared in Fourth Edition Unix
 
-More are listed in Wikipedia's [Comparison of regular expression engines](https://en.wikipedia.org/wiki/Comparison_of_regular_expression_engines).
+- Unix `sed` [[Wikipedia](https://en.wikipedia.org/wiki/Sed)]
 
 ## Other
 
 - Mike French's `myrex` [[src](https://github.com/mike-french/myrex)]
   [[HN](https://news.ycombinator.com/item?id=37098229)]: converts regexp via NFA
   to an Elixir process network
+
+## TODO
+
+- Wikipedia [Regular expression](https://en.wikipedia.org/wiki/Regular_expression)
+  describes history and POSIX and Perl standards
+- Wikipedia [Comparison of regular expression engines](https://en.wikipedia.org/wiki/Comparison_of_regular_expression_engines)
 
 
 [rsc-history]: https://swtch.com/~rsc/regexp/regexp1.html#History

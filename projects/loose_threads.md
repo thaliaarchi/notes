@@ -52,8 +52,12 @@
     - [Nikita Voloboev](https://wiki.nikiv.dev/) [[git](https://github.com/nikitavoloboev/knowledge)]
 - Forge
   - [Software Forge Performance Index](https://forgeperf.org/)
+- Contributing to jq
+  - [gojq#86 ER: basic TCO](https://github.com/itchyny/gojq/issues/86)
+  - [jq#2707 `reduce` performance is poor](https://github.com/jqlang/jq/issues/2707)
 - Contributing to egglog
   - Interesting issues: [Egglog interface from rust](https://github.com/egraphs-good/egglog/issues/232)
+- Finish Bitwuzla bindings
 
 ## Topics
 
@@ -162,11 +166,18 @@ additionally as a reading list.
 - Rust
   - [cross](https://github.com/cross-rs/cross): cross-compilation and
     cross-testing of crates
+  - [cxx](https://github.com/dtolnay/cxx): safe interop between Rust and C++
   - [Gxhash](https://github.com/ogxd/gxhash): fast non-cryptograph hashing
     algorithm
   - [insta](https://github.com/mitsuhiko/insta): snapshot testing
   - [self_cell](https://github.com/Voultapher/self_cell): self-referential
     structs
+- [Ryu](https://github.com/ulfjack/ryu): IEEE-754 fast and accurate string
+  formatting
+  - [dtolnay/ryu](https://github.com/dtolnay/ryu): Rust port
+    - Boa [Ryū-js](https://github.com/boa-dev/ryu-js): adaptation for
+      JavaScript engine
+- [Dash](https://kapeli.com/dash): offline API documentation browser for macOS
 - [VSCode LLVM Compiler Explorer](https://github.com/sunxfancy/vscode-llvm):
   exploring LLVM IR and machine IR after each pass
 
