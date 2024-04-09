@@ -57,8 +57,8 @@
   - IIPC [urlcanon](https://github.com/iipc/urlcanon): Python URL parser,
     browser-style URL canonicalizer, and SSURT (improved SURT).
 - Source of IA projects:
-  - IA [Heritrix](https://github.com/internetarchive/heritrix3) [[API docs](http://crawler.archive.org/apidocs/overview-summary.html)]:
-    IA's web crawler.
+  - IA [Heritrix](https://github.com/internetarchive/heritrix3) [[API docs](http://crawler.archive.org/apidocs/overview-summary.html)]
+    [[Wikipedia](https://en.wikipedia.org/wiki/Heritrix)]: IA's web crawler.
   - [webrecorder/pywb](https://github.com/webrecorder/pywb) [[docs](https://pywb.readthedocs.io/en/latest/)]:
     Provides the basic functionality of a Wayback Machine.
   - IIPC [OpenWayback](https://github.com/iipc/openwayback) [[source](https://netpreserve.org/web-archiving/openwayback/)
@@ -82,3 +82,19 @@
     Small reader for WARC files using nom.
   - [rust_warc](https://crates.io/crates/rust_warc) [[source](https://crates.io/crates/rust_warc)]:
     Small reader for WARC files.
+
+## Other archives
+
+- ArchiveTeam
+  - [icka](https://github.com/osm/icka): IRCCloud keep-alive, for ArchiveTeam
+    IRC channels.
+- Archive-It
+  - [Web Archiving Systems API (WASAPI)](https://support.archive-it.org/hc/en-us/articles/360015225051-Find-and-download-your-WARC-files-with-WASAPI):
+    Querying and downloading WARCs from Archive-It.
+  - [grab-site](https://github.com/ArchiveTeam/grab-site): Web crawler to
+    recursively crawl a site interactively with a dashboard from a URL and write
+    WARCs, using a fork of wpull.
+  - [Wpull](https://github.com/ArchiveTeam/wpull): Wget-compatible (remake) web
+    crawler and downloader.
+- [Time Travel](https://timetravel.mementoweb.org/): Find mementos in IA,
+  Archive-It, the British Library, archive.today, GitHub, and more.

@@ -10,9 +10,10 @@ document.
 ## Mappings
 
 - Feather (1.3-1.13.2): Supported by linkie-core.
-- Intermediary
+- [Intermediary](https://github.com/FabricMC/intermediary)
 - Legacy Yarn (1.3-1.13.2): Supported by linkie-core.
-- MCP (ModCoderPack) (1.8+): Supported by SuperSrg as `mcp` and by linkie-core.
+- MCP (ModCoderPack) (1.8+): [Their site](http://www.modcoderpack.com/) has
+  downloads for 1.7.10–1.12. Supported by SuperSrg as `mcp` and by linkie-core.
 - Mojang (1.14.4+): Supported by linkie-core.
 - [Parchment](https://parchmentmc.org/): Based on Mojang's mappings.
 - Plasma (Beta 1.7.3): Supported by linkie-core.
@@ -86,5 +87,5 @@ document.
   - [Fabric CFR](https://github.com/fabricmc/cfr)
 - Fernflower: asset and code decompiler
   - [Vineflower](https://github.com/Vineflower/vineflower): fork of Fernflower
-- [Procyon Java Decompiler](https://github.com/mstrobel/procyon)
+- [Procyon Java Decompiler](https://github.com/mstrobel/procyon/wiki/Java-Decompiler)
 - [JD-GUI](https://github.com/java-decompiler/jd-gui): Java decompiler GUI

@@ -3,11 +3,7 @@
 ## Projects
 
 - Computing history
-  - Plan 9
-    - Plan 9 [kernel sources](https://9p.io/sources/extra/9hist/) have a version
-      history using per-file deltas with ed scripts
-    - The source tree was snapshotted daily and archived with the [Venti](https://9p.io/sys/doc/venti/venti.html)
-      network storage system
+  - [Plan 9](../topics/plan9.md)
   - Pre-Git Linux kernel
     - [Initial Git commit](https://github.com/torvalds/linux/commit/1da177e4c3f41524e886b7f1b8a0c1fc7321cac2):
       Linux 2.6.12-rc2.
@@ -52,6 +48,7 @@
     - [Nikita Voloboev](https://wiki.nikiv.dev/) [[git](https://github.com/nikitavoloboev/knowledge)]
 - Forge
   - [Software Forge Performance Index](https://forgeperf.org/)
+- PLDI 2024?
 - Contributing to jq
   - [gojq#86 ER: basic TCO](https://github.com/itchyny/gojq/issues/86)
   - [jq#2707 `reduce` performance is poor](https://github.com/jqlang/jq/issues/2707)
