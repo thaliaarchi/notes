@@ -129,6 +129,7 @@ A notebook on compilers, programming languages, and other topics.
   - [Boolean algebra with floating-point numbers](topics/floating-point/boolean_algebra.md)
   - [Software floating point libraries](topics/floating-point/softfloat.md)
 - [Futamura projections](topics/futamura.md)
+- [History of Plan 9](topics/plan9.md)
 - [Integer division and modulo rounding](topics/div_mod_rounding.md)
 - [Language server design](topics/language_server.md)
 - [List of ciphers](topics/ciphers.md)
