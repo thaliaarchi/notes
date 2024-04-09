@@ -4,7 +4,8 @@ The Forge Community Wiki has an excellent coverage of the background of mappings
 and deobfuscation in the [Toolchain](https://forge.gemwire.uk/wiki/Toolchain)
 page. [phase/MinecraftMappings](https://github.com/phase/MinecraftMappings) and
 [MinecraftDecompiler](https://github.com/MaxPixelStudios/MinecraftDecompiler)
-have good cross-mapping coverage.
+have good cross-mapping coverage. Vineflower has an excellent [architecture](https://github.com/Vineflower/vineflower/blob/master/ARCHITECTURE.md)
+document.
 
 ## Mappings
 
@@ -13,10 +14,9 @@ have good cross-mapping coverage.
 - Legacy Yarn (1.3-1.13.2): Supported by linkie-core.
 - MCP (ModCoderPack) (1.8+): Supported by SuperSrg as `mcp` and by linkie-core.
 - Mojang (1.14.4+): Supported by linkie-core.
+- [Parchment](https://parchmentmc.org/): Based on Mojang's mappings.
 - Plasma (Beta 1.7.3): Supported by linkie-core.
 - [Quilt Mappings](https://github.com/QuiltMC/quilt-mappings): 1.17+
-  - [Quilt Loom](https://github.com/QuiltMC/quilt-loom): Plugin to simplify use
-    of Quilt Mappings
 - [Quilt hashed mappings](https://github.com/QuiltMC/mappings-hasher): Creates a
   hashed version of a mapping to avoid license issues and provide package rename
   stability.
@@ -31,6 +31,9 @@ have good cross-mapping coverage.
 
 ### Mappings tools
 
+- Fabric Loom [[docs](https://fabricmc.net/wiki/documentation:fabric_loom)]
+  - [Quilt Loom](https://github.com/QuiltMC/quilt-loom): Plugin to simplify use
+    of Quilt Mappings
 - [SuperSrg](https://github.com/Techcable/SuperSrg): SRG mappings. Supports
   `srg`, `mcp`, `spigot`, and `obf`.
 - [DecompilerMC](https://github.com/hube12/DecompilerMC): Converts Mojang

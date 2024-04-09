@@ -139,6 +139,11 @@
 - [For Doctorate, Master's is required at time of admission](https://ethz.ch/en/doctorate/registration-admission.html)
 - [Deadlines](https://ethz.ch/en/studies/master/application/dates.html)
   - International Bachelor's degrees: 1 November - 15 December 2022
+- Ralf Jung
+  - [Rustlantis](https://github.com/cbeuw/rustlantis)
+    - “Semantic fuzzing of the Rust compiler and interpreter” Master's Thesis by
+      [Andy Wang](https://github.com/cbeuw), advised by Ralf Jung (2023)
+      [[discussion](https://www.reddit.com/r/rust/comments/185h4a6/rustlantis_a_fuzzer_for_the_rust_compiler_that/)]
 
 ## Institute of Science and Technology Austria (ISTA)
 

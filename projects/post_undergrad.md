@@ -86,6 +86,9 @@
     [Spring 2017](https://www.seas.upenn.edu/~cis3410/17sp/),
     [Spring 2015](https://www.seas.upenn.edu/~cis3410/15sp/),
     [Spring 2013](https://www.seas.upenn.edu/~cis3410/13sp/)
+- KAIST [CS420: Compiler Design](https://github.com/kaist-cp/cs420)
+  - [KECC: KAIST Educational C Compiler](https://github.com/kaist-cp/kecc-public):
+    C compiler written in Rust
 - (Repeat) CMU [Computer Systems: A Programmer's Perspective](https://csapp.cs.cmu.edu/)
 - *Software Foundations*
   - To start: Merge my SF work from as a student and TA, to use as a base.
