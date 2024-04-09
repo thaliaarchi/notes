@@ -9,16 +9,60 @@
 
 - ECMAScript `RegExp`
 
-  - JavaScript `RegExp`
+  - JavaScript `RegExp` [[list](https://test262.fyi/)]
+
     - V8 Irregexp
-      - Gecko Irregexp [[src](https://github.com/mozilla/gecko-dev/tree/master/js/src/irregexp)]
+      - SpiderMonkey Irregexp [[src](https://github.com/mozilla/gecko-dev/tree/master/js/src/irregexp)]
+
+        SpiderMonkey switched from YARR to Irregexp [in 2014](https://bugzilla.mozilla.org/show_bug.cgi?id=976446).
+
+      - Node.js Irregexp [[src](https://github.com/nodejs/node/tree/main/deps/v8/src/regexp)]
+
+    - JavaScriptCore YARR [src [engine](https://github.com/WebKit/WebKit/tree/main/Source/JavaScriptCore/yarr),
+      [object](https://github.com/WebKit/WebKit/blob/main/Source/JavaScriptCore/runtime/RegExp.h)]
+
+      A [post on performance improvements](https://webkit.org/blog/8685/introducing-the-jetstream-2-benchmark-suite/)
+      describes some of its architecture.
+
+      - SpiderMonkey YARR (formerly)
+      - Samsung YARR [[src](https://github.com/Samsung/yarr)]: YARR extracted as
+        a library (unknown if modified)
+
+    - Hermes [src [engine](https://github.com/facebook/hermes/tree/main/lib/Regex),
+      [object c](https://github.com/facebook/hermes/blob/main/lib/VM/JSLib/RegExp.cpp),
+      [object h](https://github.com/facebook/hermes/blob/main/include/hermes/VM/JSRegExp.h)]
+      [[docs](https://github.com/facebook/hermes/blob/main/doc/RegExp.md)]
+    - QuickJS libregexp [src [c](https://github.com/bellard/quickjs/blob/master/libregexp.c),
+      [h](https://github.com/bellard/quickjs/blob/master/libregexp.h),
+      [opcodes](https://github.com/bellard/quickjs/blob/master/libregexp-opcode.h)]
+
+      Author: Fabrice Bellard
+
+      - QuickJS NG [src [c](https://github.com/quickjs-ng/quickjs/blob/master/libregexp.c),
+        [h](https://github.com/quickjs-ng/quickjs/blob/master/libregexp.h),
+        [opcodes](https://github.com/quickjs-ng/quickjs/blob/master/libregexp-opcode.h)]
+
     - SerenityOS LibJS [[src](https://github.com/SerenityOS/serenity/blob/master/Userland/Libraries/LibJS/Runtime/RegExpPrototype.cpp)]
-    - XRegExp [[src](https://github.com/slevithan/xregexp)]: extended parsing
+    - XS [[src](https://github.com/Moddable-OpenSource/moddable/blob/public/xs/sources/xsRegExp.c)]
+    - Rhino [[src](https://github.com/mozilla/rhino/tree/master/src/org/mozilla/javascript/regexp)]
+    - Nashorn JDK and Joni engines [[src](https://github.com/openjdk/nashorn/tree/main/src/org.openjdk.nashorn/share/classes/org/openjdk/nashorn/internal/runtime/regexp)]:
+    - `reress` [[src](https://github.com/ridiculousfish/regress)]
+      - Boa [[src](https://github.com/boa-dev/boa/blob/main/core/engine/src/builtins/regexp/mod.rs)]:
+        implemented with `reress`
+    - Kiesel [[src](https://codeberg.org/kiesel-js/kiesel/src/branch/main/src/builtins/reg_exp.zig)]
+    - porffor Rhemyn [[src](https://github.com/CanadaHonk/porffor/tree/main/rhemyn)]
+    - engine262 [src [parser](https://github.com/engine262/engine262/tree/main/src/parser/RegExpParser.mts),
+      [prototype](https://github.com/engine262/engine262/tree/main/src/intrinsics/RegExpPrototype.mts)]
+    - ChakraCore [src [parser](https://github.com/chakra-core/ChakraCore/blob/master/lib/Parser/RegexParser.cpp),
+      [compiler](https://github.com/chakra-core/ChakraCore/blob/master/lib/Parser/RegexCompileTime.cpp),
+      [runtime](https://github.com/chakra-core/ChakraCore/blob/master/lib/Parser/RegexRuntime.cpp)]
   - ActionScript 3 `RegExp`
     - Ruffle: `RegExp` compatibility in Ruffle and other emulators is tracked in
       [issue #14651](https://github.com/ruffle-rs/ruffle/issues/14651)
     - avmplus
     - Shumway
+  - XRegExp [[src](https://github.com/slevithan/xregexp)]: extended parsing for
+    JavaScript `RegExp`
 
 - Go `regexp` [[src](https://github.com/golang/go/tree/master/src/regexp)]
   [[docs](https://pkg.go.dev/regexp)]
@@ -42,6 +86,11 @@
   - `dlclark/regexp2` [[src](https://github.com/dlclark/regexp2)]: port of .NET
     `System.Text.RegularExpressions` to Go, which has RE2 and ECMAScript
     compatibility modes
+
+- Oniguruma
+
+  - Joni [[src](https://github.com/jruby/joni)]: Java port of Oniguruma
+    - JRuby Joni [src [object](https://github.com/jruby/jruby/blob/master/core/src/main/java/org/jruby/RubyRegexp.java)]
 
 - PCRE (Perl Compatible Regular Expressions) [[src](https://github.com/PCRE2Project/pcre2)]
   [[Wikipedia](https://en.wikipedia.org/wiki/Perl_Compatible_Regular_Expressions)]
@@ -125,6 +174,15 @@
 
 - RE2 [[src](https://github.com/google/re2)]
 
+- Ruby
+
+  - Prism [src [c](https://github.com/ruby/prism/blob/main/src/regexp.c),
+    [h](https://github.com/ruby/prism/blob/main/include/prism/regexp.h)]:
+    universal parser for Ruby syntax, including regexp literals. Introduced in
+    [Ruby 3.3.0](https://www.ruby-lang.org/en/news/2023/12/25/ruby-3-3-0-released/).
+    - CRuby Prism [src [c](https://github.com/ruby/ruby/blob/master/prism/regexp.c),
+      [h](https://github.com/ruby/ruby/blob/master/prism/regexp.h)]
+
 - Rust `regex` [[src](https://github.com/rust-lang/regex)]
   [[docs](https://docs.rs/regex/latest/regex/)]
 
@@ -133,6 +191,12 @@
   Author: Henry Spencer
 
   Introduced backtracking widely [[history][rsc-history]]
+
+- Truffle TRegex [[src](https://github.com/oracle/graal/tree/master/regex)]
+
+  - GraalJS [src [object](https://github.com/oracle/graaljs/tree/master/graal-js/src/com.oracle.truffle.js/src/com/oracle/truffle/js/runtime/builtins/JSRegExp.java),
+    [prototype](https://github.com/oracle/graaljs/tree/master/graal-js/src/com.oracle.truffle.js/src/com/oracle/truffle/js/builtins/RegExpPrototypeBuiltins.java),
+    more]
 
 - Unicode Regular Expressions [[standard](https://www.unicode.org/reports/tr18/)]
 
