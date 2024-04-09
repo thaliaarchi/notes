@@ -79,6 +79,11 @@ additionally as a reading list.
         RVSDG utilities
     - History of CPS, SSA, and ANF in the context of the [T programming language](https://paulgraham.com/thist.html)
       [[HN](https://news.ycombinator.com/item?id=36732335)] and a related [thread](https://langdev.stackexchange.com/questions/2079/what-are-the-disadvantages-of-using-cps-form)
+    - [*Modern Compiler Implementation in Java, ML, or C*](https://www.cs.princeton.edu/~appel/modern/)
+      by Andrew W. Appel (1998): [covers](../topics/short_paper_notes.md) SSA
+      form and its rationale, structural properties, and calculation, efficient
+      calculation of dominance frontiers, various optimizations with SSA, and
+      CPS and ANF relative to SSA
   - Runtime
     - [Writing a JVM in Rust](https://andreabergia.com/blog/2023/07/i-have-written-a-jvm-in-rust/)
       series by Andrea Bergia (2023)

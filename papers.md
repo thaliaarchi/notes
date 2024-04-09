@@ -5,6 +5,9 @@ projects.
 
 ## 2024
 
+- [2024-04-08](topics/short_paper_notes.md#ssa-is-functional-programming):
+  [“SSA is Functional Programming”](https://dl.acm.org/doi/abs/10.1145/278283.278285)
+  (Andrew W. Appel, 1998)
 - 2024-04-08:
   [“The future vision of Ruby Parser”](https://rubykaigi.org/2023/presentations/spikeolaf.html)
   (Yuichiro Kaneko, 2023)
