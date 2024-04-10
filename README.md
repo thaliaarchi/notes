@@ -137,7 +137,7 @@ A notebook on compilers, programming languages, and other topics.
 - [Nand to Tetris](topics/nand2tetris/README.md)
 - [QR code art](topics/qr.md)
 - Regular expressions
-  - [AS3 `RegExp` syntax incompatibilities in Ruffle](topics/regexp/actionscript.md)
+  - [ActionScript 3 `RegExp`](topics/regexp/actionscript.md)
   - [Exploration of representing specialized string-searching](topics/regexp/algorithms.md)
   - [Grammar for Rust `regex`](topics/regexp/rust_regex.bnf)
   - [Pike–Levenshtein: Regular expressions with an edit distance](topics/regexp/pike-levenshtein.md)
