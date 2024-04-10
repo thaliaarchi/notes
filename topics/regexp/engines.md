@@ -56,11 +56,7 @@
     - ChakraCore [src [parser](https://github.com/chakra-core/ChakraCore/blob/master/lib/Parser/RegexParser.cpp),
       [compiler](https://github.com/chakra-core/ChakraCore/blob/master/lib/Parser/RegexCompileTime.cpp),
       [runtime](https://github.com/chakra-core/ChakraCore/blob/master/lib/Parser/RegexRuntime.cpp)]
-  - ActionScript 3 `RegExp`
-    - Ruffle: `RegExp` compatibility in Ruffle and other emulators is tracked in
-      [issue #14651](https://github.com/ruffle-rs/ruffle/issues/14651)
-    - avmplus
-    - Shumway
+  - [ActionScript 3 `RegExp`](./actionscript.md)
   - XRegExp [[src](https://github.com/slevithan/xregexp)]: extended parsing for
     JavaScript `RegExp`
 
@@ -223,6 +219,9 @@
 - Mike French's `myrex` [[src](https://github.com/mike-french/myrex)]
   [[HN](https://news.ycombinator.com/item?id=37098229)]: converts regexp via NFA
   to an Elixir process network
+- `fancy_regex` [[src](https://github.com/fancy-regex/fancy-regex)]
+  [[docs](https://docs.rs/fancy-regex/latest/fancy_regex/)]: hybrid NFA and
+  backtracking engine, that delegates to Rust `regex` when possible
 
 ## TODO
 
