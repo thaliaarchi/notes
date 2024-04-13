@@ -5,6 +5,10 @@ projects.
 
 ## 2024
 
+- 2024-04-12:
+  [“On the Feasibility of Stealthily Introducing Vulnerabilities in Open-Source
+  Software via Hypocrite Commits”](https://linuxreviews.org/images/d/d9/OpenSourceInsecurity.pdf)
+  (Qiushi Wu and [Kangjie Lu](https://www-users.cse.umn.edu/~kjlu/misc), 2020)
 - [2024-04-08](topics/short_paper_notes.md#ssa-is-functional-programming):
   [“SSA is Functional Programming”](https://dl.acm.org/doi/abs/10.1145/278283.278285)
   (Andrew W. Appel, 1998)
