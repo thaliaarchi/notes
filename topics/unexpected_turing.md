@@ -158,6 +158,23 @@ Turing-complete.
 
 ## Games
 
+- Doom
+  - [counter.wad](https://www.doomworld.com/idgames/levels/doom2/Ports/a-c/counter)
+    by fraggle (2006) is an in-game 4-bit binary ripple carry adder circuit
+    using voodoo dolls and conveyor belts [[video](https://www.youtube.com/watch?v=pvji3DJNnqE)].
+  - [Half-adder](https://calabi-yau.space/blog/doom.html)
+    by Jared Candelaria (2021) is an in-game half-adder circuit using lifts and
+    teleporters [[video](https://www.youtube.com/watch?v=qB9R3L5FZ3Q)].
+  - [Doom-in-Doom](https://www.youtube.com/watch?v=c6hnQ1RKhbo)
+    by kgsws (2022) uses a code execution exploit to run Chocolate Doom in Doom
+    2 on DOS [[code](https://github.com/kgsws/doom-in-doom)].
+  - [conway.wad](https://www.doomworld.com/forum/topic/131881-conways-game-of-life-in-boom/)
+    by Piotr Wieczore (2022) is an in-game simulator for Conway's Game of Life,
+    using scrollers, teleporters and floor movement [[code](https://github.com/pwiecz/conway.wad)].
+  - [Adding Machine](https://blog.otterstack.com/posts/202212-doom-calculator/)
+    by Danny Spencer (2022) is an in-game calculator that adds 2-digit decimal
+    numbers with a display, using a BDD encoding of logic as monsters, doors,
+    teleporters, and switches [[code](https://github.com/nukep/doom-calculator)].
 - Dwarf Fortress
 - Magic: The Gathering
   - [Magic Turing Machine](https://www.toothycat.net/~hologram/Turing/)
@@ -180,6 +197,10 @@ Turing-complete.
     by sammyuri, Uwerta, and Stack (2022)
     [[PC Gamer](https://www.pcgamer.com/minecraftception-redstone-pc-chungus/)]
     [[HN](https://news.ycombinator.com/item?id=36716916)]
+- Rollercoaster Tycoon
+  - [A calculator made from rollercoasters in Rollercoaster Tycoon 2](https://www.youtube.com/watch?v=RQGa0DPwes0)
+    by Marcel Vos (2016) is a calculator, which can add and multiply
+    single-digit decimal numbers.
 - Terraria
   - [Computerraria](https://github.com/misprit7/computerraria): a fully
     compliant 32-bit RISC-V computer
@@ -189,6 +210,13 @@ Turing-complete.
   - [Tetris in Tetris](https://meatfighter.com/tetromino-computer/)
     by Mike Birken (2023)
     [[HN](https://news.ycombinator.com/item?id=34309725)]
+
+## Other
+
+- Excel
+  - [Excel 16-Bit CPU](https://www.youtube.com/watch?v=5rg7xvTJ8SU)
+    by Inkbox (2024) is a CPU in Excel with programs compiled from Excel-ASM16
+    assembly [[code](https://github.com/InkboxSoftware/excelCPU)]
 
 ## Lists
 
