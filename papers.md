@@ -82,7 +82,7 @@ projects.
   (Matthias Grimmer, Thomas Würthinger, Andreas Wöß, and Hanspeter Mossenböck,
   2014)
 - 2023-09-12:
-  [“Control Flow Analysis in Scheme”](https://www.ccs.neu.edu/home/shivers/papers/pldi88.pdf)
+  [“Control Flow Analysis in Scheme”](https://www.khoury.northeastern.edu/home/shivers/papers/pldi88.pdf)
   (Olin Shivers, 1988)
 - [2023-08-29](compilers/cranelift/ae-graphs.md):
   [“ægraphs: Acyclic E-graphs for Efficient Optimization in a Production
