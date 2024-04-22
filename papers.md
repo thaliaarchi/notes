@@ -5,6 +5,10 @@ projects.
 
 ## 2024
 
+- 2024-04-22:
+  [*The UNIX-HATERS Handbook*](https://simson.net/ref/ugh.pdf)
+  (Simson Garfinkel, Daniel Weise, and Steven Strassmann, 1994)
+  [[HN](https://news.ycombinator.com/item?id=40110729)]
 - 2024-04-12:
   [“On the Feasibility of Stealthily Introducing Vulnerabilities in Open-Source
   Software via Hypocrite Commits”](https://linuxreviews.org/images/d/d9/OpenSourceInsecurity.pdf)

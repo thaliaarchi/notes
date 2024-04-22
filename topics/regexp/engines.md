@@ -170,6 +170,14 @@
 
 - RE2 [[src](https://github.com/google/re2)] [[syntax](https://github.com/google/re2/wiki/Syntax)]
 
+- `rn` [[Wikipedia](https://en.wikipedia.org/wiki/Rn_(newsreader))]
+
+  Author: Larry Wall
+
+  `rn` used regular expressions in kill files to match email subjects. It was
+  first released in 1984, while Perl was in 1987, so its engine was likely
+  influential.
+
 - Ruby
 
   - Prism [src [c](https://github.com/ruby/prism/blob/main/src/regexp.c),
@@ -181,6 +189,8 @@
 
 - Rust `regex` [[src](https://github.com/rust-lang/regex)]
   [[docs](https://docs.rs/regex/latest/regex/)]
+
+- Shell globs
 
 - Spencer's library [[algorithm](https://swtch.com/~rsc/regexp/regexp2.html#backtrack)]
 
