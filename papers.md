@@ -5,6 +5,10 @@ projects.
 
 ## 2024
 
+- 2024-04-23:
+  [“Having it both ways: Larry Wall, Perl and the technology and culture of the
+  early web”](https://www.tandfonline.com/doi/full/10.1080/24701475.2018.1495810)
+  (Michael Stevenson, 2018)
 - 2024-04-22:
   [*The UNIX-HATERS Handbook*](https://simson.net/ref/ugh.pdf)
   (Simson Garfinkel, Daniel Weise, and Steven Strassmann, 1994)
