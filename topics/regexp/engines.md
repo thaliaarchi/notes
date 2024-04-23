@@ -73,6 +73,8 @@
 
   - Scala.js
 
+  Author: Rob Pike
+
 - McIlroy's `regex` [[src](https://github.com/arnoldrobbins/mcilroy-regex)]
 
   Author: Doug McIlroy
@@ -129,6 +131,9 @@
 
   - SerenityOS LibRegex [[src](https://github.com/SerenityOS/serenity/tree/master/Userland/Libraries/LibRegex)]
 
+- *The Practice of Programming* [[book](https://archive.org/details/practiceofprogra0000kern)]
+  [[analysis](https://www.cs.princeton.edu/courses/archive/spr09/cos333/beautiful.html)]
+
 - Python `re` (Secret Labs' Regular Expression Engine, SRE) [src [py](https://github.com/python/cpython/tree/main/Lib/re),
   [c](https://github.com/python/cpython/tree/main/Modules/_sre)]
 
@@ -170,13 +175,27 @@
 
 - RE2 [[src](https://github.com/google/re2)] [[syntax](https://github.com/google/re2/wiki/Syntax)]
 
-- `rn` [[Wikipedia](https://en.wikipedia.org/wiki/Rn_(newsreader))]
+- `rn` [[site](https://web.archive.org/web/19970401040656/http://www.academ.com/academ/rn.html)]
+  [[history](https://web.archive.org/web/20140227213900/http://www.faqs.org:80/faqs/usenet/software/part1)]
+  [[Wikipedia](https://en.wikipedia.org/wiki/Rn_(newsreader))]
 
   Author: Larry Wall
 
-  `rn` used regular expressions in kill files to match email subjects. It was
-  first released in 1984, while Perl was in 1987, so its engine was likely
-  influential.
+  `rn` used regular expressions for searching and in kill files to match email
+  subjects. It was first released in 1984, while Perl was in 1987, so its engine
+  was likely influential.
+
+  - rrn [[Wikipedia](https://en.wikipedia.org/wiki/Rn_(newsreader))]
+
+  - trn [[src](https://sourceforge.net/projects/trn/)] [[site](https://trn.sourceforge.net/)]
+    [[usage](https://kb.iu.edu/d/abxg)] [[FreeBSD Ports](https://ports.freebsd.org/cgi/ports.cgi?query=trn&stype=all&sektion=news)]
+    [[Void Linux package](https://github.com/void-linux/void-packages/blob/master/srcpkgs/trn/template)]
+
+    Author: Wayne Davison
+
+    Engine in `search.c`.
+
+  - strn [[Wikipedia](https://en.wikipedia.org/wiki/Rn_(newsreader))]
 
 - Ruby
 
@@ -191,6 +210,20 @@
   [[docs](https://docs.rs/regex/latest/regex/)]
 
 - Shell globs
+
+- S-Lang `SLRegexp` [[src](https://www.jedsoft.org/snapshots/)] [[docs](https://www.jedsoft.org/slang/doc/html/slang-22.html)]
+
+  Author: John E. Davis
+
+  `SLRegexp` is used by `slrn` and `slsh`, among other parts of S-Lang. I have
+  not determined whether `slrn` is a port of `rn` to S-Lang, a reimplementation,
+  or completely unrelated. `src/slregexp.c` seems unrelated to in `search.c` in
+  `trn`.
+
+  - `slrn` [src [JED](https://www.jedsoft.org/snapshots/), [GitHub](https://github.com/jedsoft/slrn),
+    [SourceForge](https://sourceforge.net/projects/slrn/)] [[site](https://web.archive.org/web/20140924103420/http://www.slrn.org/index.html)]
+    [[FreeBSD Ports](https://ports.freebsd.org/cgi/ports.cgi?query=slrn&stype=all&sektion=news)]
+  - S-Lang `slsh` glob: converts globs to `SLRegexp`
 
 - Spencer's library [[algorithm](https://swtch.com/~rsc/regexp/regexp2.html#backtrack)]
 
@@ -229,6 +262,7 @@
 - Mike French's `myrex` [[src](https://github.com/mike-french/myrex)]
   [[HN](https://news.ycombinator.com/item?id=37098229)]: converts regexp via NFA
   to an Elixir process network
+
 - `fancy_regex` [[src](https://github.com/fancy-regex/fancy-regex)]
   [[docs](https://docs.rs/fancy-regex/latest/fancy_regex/)]: hybrid NFA and
   backtracking engine, that delegates to Rust `regex` when possible

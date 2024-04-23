@@ -13,6 +13,9 @@ projects.
   [*The UNIX-HATERS Handbook*](https://simson.net/ref/ugh.pdf)
   (Simson Garfinkel, Daniel Weise, and Steven Strassmann, 1994)
   [[HN](https://news.ycombinator.com/item?id=40110729)]
+- 2024-04-21:
+  [“A Regular Expression Matcher”](https://www.cs.princeton.edu/courses/archive/spr09/cos333/beautiful.html)
+  (Rob Pike and Brian Kernighan, 2007)
 - 2024-04-12:
   [“On the Feasibility of Stealthily Introducing Vulnerabilities in Open-Source
   Software via Hypocrite Commits”](https://linuxreviews.org/images/d/d9/OpenSourceInsecurity.pdf)
