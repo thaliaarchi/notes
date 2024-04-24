@@ -160,6 +160,7 @@
     > My expertise is rooted in formal verification, especially of compilers. As
     > my students develop their own research vision, we branch out across
     > diverse domains.
+- [Applications](https://www.cs.washington.edu/academics/phd/admissions/how-to-apply)
 
 ## UC Berkeley
 
