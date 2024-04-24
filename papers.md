@@ -5,6 +5,10 @@ projects.
 
 ## 2024
 
+- [2024-04-24](compilers/ir/ssa_cps.md#kelsey-1995):
+  [“A Correspondence between Continuation Passing Style and Static Single
+  Assignment Form”](https://mumble.net/~kelsey/papers/cps-ssa.ps.gz)
+  (Richard A. Kelsey, 1995)
 - 2024-04-23:
   [“Having it both ways: Larry Wall, Perl and the technology and culture of the
   early web”](https://www.tandfonline.com/doi/full/10.1080/24701475.2018.1495810)
@@ -20,7 +24,7 @@ projects.
   [“On the Feasibility of Stealthily Introducing Vulnerabilities in Open-Source
   Software via Hypocrite Commits”](https://linuxreviews.org/images/d/d9/OpenSourceInsecurity.pdf)
   (Qiushi Wu and [Kangjie Lu](https://www-users.cse.umn.edu/~kjlu/misc), 2020)
-- [2024-04-08](topics/short_paper_notes.md#ssa-is-functional-programming):
+- [2024-04-08](compilers/ir/ssa_cps.md#appel-1998):
   [“SSA is Functional Programming”](https://dl.acm.org/doi/abs/10.1145/278283.278285)
   (Andrew W. Appel, 1998)
 - 2024-04-08:
@@ -194,6 +198,18 @@ projects.
 
 ## 2020
 
+- 2020-12-18:
+  [US 2009/0185789 A1: “Recordng medium, reproduction apparatus, recording
+  method, reproducing method, program, and integrated circuit”](https://patents.google.com/patent/US20090185789/da)
+  (Joseph McCrossan, Tomoyuki Okada, and Tomoki Ogawa, 2009), i.e., Presentation
+  Graphic Stream specification for Blu-ray subtitles
+- 2020-12-18:
+  [US 7,912,305 B1: “Method for run-length encoding of a bitmap data stream”](https://patents.google.com/patent/US7912305)
+  (Dirk Gandolph, Jobst Horentrup, Axel Kochale, Ralf Ostermann, and Hartmut
+  Peters, 2011), i.e., run-length encoding specification for Blu-ray subtitles
+- 2020-11-20:
+  [“Unbounded Spigot Algorithms for the Digits of Pi”](https://www.cs.ox.ac.uk/people/jeremy.gibbons/publications/spigot.pdf)
+  (Jeremy Gibbons, 2005)
 - [2020-10-08](compilers/llvm/devmtg_2020-10/posters.md#enzyme-high-performance-automatic-differentiation-of-llvm):
   [“Enzyme: High-Performance Automatic Differentiation of LLVM”](https://d1keuthy5s86c8.cloudfront.net/static/ems/upload/files/Enzyme_llvmdev.pdf)
   (William Moses and Valentin Churavy, 2020)
@@ -218,12 +234,26 @@ projects.
 - [2020-10-05](compilers/llvm/devmtg_2020-10/undef_and_poison.md):
   [“Undef and Poison: Present and Future”](https://www.youtube.com/watch?v=ZMaZH3YYJqY)
   (Juneyoung Lee, 2020)
+- 2020-09-11:
+  [“A Correspondence between Continuation Passing Style and Static Single
+  Assignment Form”](https://mumble.net/~kelsey/papers/cps-ssa.ps.gz)
+  (Richard A. Kelsey, 1995)
+- 2020-06-05:
+  [“JavaScript: The First 20 Years”](https://zenodo.org/records/3707008)
+  (Allen Wirfs-Brock and Brendan Eich, 2020)
 
 ## 2019
 
 - 2019-11-06:
   [“MLIR: Multi-Level Intermediate Representation for Compiler Infrastructure”](https://llvm.org/devmtg/2019-04/talks.html#Keynote_1)
   (Tatiana Shpeisman and Chris Lattner, 2019)
+- 2019-10-21:
+  [“Effects of Computer Programming on Young Children's Cognition”](https://www.researchgate.net/profile/Douglas-Clements-2/publication/232539181_Effects_of_Computer_Programming_on_Young_Children%27s_Cognition/links/0c96053626d4ec684a000000/Effects-of-Computer-Programming-on-Young-Childrens-Cognition.pdf)
+  (Douglas H. Clements and Dominic F. Gullo, 1984)
+- 2019-10-19:
+  [“Efficient and scalable trie-based algorithms for computing set containment
+  relations”](https://sci-hub.st/10.1109/ICDE.2015.7113293)
+  (Yongming Luo, George H. L. Fletcher, Jan Hidders, and Paul De Bra, 2015)
 
 ## 2018
 
@@ -302,6 +332,12 @@ projects.
     (Oliver Bračevac, Guannan Wei, Songlin Jia, Supun Abeysinghe, Yuxuan Jiang,
     Yuyan Bao, and Tiark Rompf, 2023)
     [[OOPSLA 2023](https://2023.splashcon.org/track/splash-2023-oopsla)]
+  - SSA
+    - “Efficiently computing static single assignment form and the control
+      dependence graph” (Ron Cytron, Jeanne Ferrante, Barry K. Rosen, Mark N.
+      Wegman, and F. Kenneth Zadeck, 1991) describes a translation algorithm,
+      which converts programs into SSA and minimizes phi-functions (cited by
+      [Kelsey 1995](compilers/ir/ssa_cps.md#kelsey-1995)).
   - CPS
     - [“Control Flow Analysis in Scheme”](https://www.khoury.northeastern.edu/home/shivers/papers/pldi88.pdf)
       (Olin Shivers, PLDI 1988)
