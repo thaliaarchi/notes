@@ -50,6 +50,10 @@ projects.
   [“Impact of Economics on Compiler Optimization”](https://sci-hub.st/10.1145/376656.376751)
   (Arch D. Robison, 2001), discussed in a [thread](https://mastodon.social/@regehr/111096553132093803)
   by John Regehr
+- 2024-03-16:
+  [“if … then … else had to be invented!”](https://github.com/e-n-f/if-then-else/blob/master/if-then-else.md)
+  (Erica Fischer, 2019)
+  [[video](https://www.youtube.com/watch?v=4A94JsWTXXw)]
 - 2024-03-01:
   [“Colored E-Graph: Equality Reasoning with Conditions”](https://arxiv.org/abs/2305.19203)
   (Eytan Singher and Shachar Itzhaky, 2023)
