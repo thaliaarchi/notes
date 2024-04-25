@@ -118,7 +118,11 @@ additionally as a reading list.
   - Idris
     - Read the papers by [Edwin Brady](../pl/lists/research_groups.md#st-andrews)
 - Formal methods
-  - [Programming Z3](https://theory.stanford.edu/~nikolaj/programmingz3.html)
+  - [*Programming Z3*](https://theory.stanford.edu/~nikolaj/programmingz3.html)
+    (Nikolaj Bjørner, Leonardo de Moura, Lev Nachmanson, and Christoph
+    Wintersteiger, 2018) [[git](https://github.com/Z3Prover/doc/tree/master/programmingz3)]
+  - [“Bitwuzla”](https://link.springer.com/chapter/10.1007/978-3-031-37703-7_1)
+    (Aina Niemetz and Mathias Preiner, 2023)
   - [What I've Learned About Formal Methods In Half a Year](https://jakob.space/blog/what-ive-learned-about-formal-methods.html)
     by Jakob Kreuze (2023) [[HN](https://news.ycombinator.com/item?id=35511152)
     describes what the author learned from [CSCI 1710: Logic for Systems](https://csci1710.github.io/)
