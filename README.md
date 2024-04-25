@@ -150,7 +150,9 @@ A notebook on compilers, programming languages, and other topics.
 - [Tree-sitter](topics/tree-sitter.md)
 - [Trusting Trust](topics/trusting_trust.md)
 - [Unexpectedly Turing-complete](topics/unexpected_turing.md)
-- [Version control systems](topics/vcs.md)
+- Version control systems
+  - [List of version control systems](topics/vcs/history.md)
+  - [VCS import and export](topics/vcs/import_export.md)
 
 ## Whitespace
 

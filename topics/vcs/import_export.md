@@ -1,6 +1,4 @@
-# Version control systems
-
-## Import and export
+# VCS import and export
 
 - BitKeeper [fast-export](https://www.bitkeeper.org/man/fast-export.html)
   and [fast-import](https://www.bitkeeper.org/man/fast-import.html)
