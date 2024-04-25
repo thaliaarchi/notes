@@ -42,10 +42,13 @@
     - GitHub Pages: [custom domains](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/about-custom-domains-and-github-pages)
     - [Codeberg Pages](https://docs.codeberg.org/codeberg-pages/)
     - [pages.gay](https://pages.gay/)
-  - Notes inspiration
-    - [Philip Zucker](https://www.philipzucker.com/notes/) [[git](https://github.com/philzook58/philzook58.github.io)]
-    - [Andy Matuschak](https://notes.andymatuschak.org/About_these_notes)
-    - [Nikita Voloboev](https://wiki.nikiv.dev/) [[git](https://github.com/nikitavoloboev/knowledge)]
+  - Inspiration
+    - Philip Zucker: [notes](https://www.philipzucker.com/notes/) [[git](https://github.com/philzook58/philzook58.github.io)]
+    - Andy Matuschak: [notes](https://notes.andymatuschak.org/About_these_notes)
+    - Nikita Voloboev: [notes](https://wiki.nikiv.dev/) [[git](https://github.com/nikitavoloboev/knowledge)]
+    - June McEnroe: [Git forge](https://git.causal.agency/), `man`-style
+      [project list](https://causal.agency/)
+    - Greg Rosenblatt: [CV](https://www.gregrosenblatt.com/)
 - Forge
   - [Software Forge Performance Index](https://forgeperf.org/)
 - PLDI 2024?
