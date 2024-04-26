@@ -145,6 +145,7 @@ A notebook on compilers, programming languages, and other topics.
   - [Recross ideas](topics/regexp/recross_ideas.md)
   - [Regular expression engine history](topics/regexp/history.md)
   - [Regular expression implementations](topics/regexp/engines.md)
+  - [S-Lang SLregexp and SLsearch](topics/regexp/slang.md)
   - [Thompson regular expressions](topics/regexp/thompson.md)
 - [Short notes on papers](topics/short_paper_notes.md)
 - [Tree-sitter](topics/tree-sitter.md)
