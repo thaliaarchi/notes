@@ -2,6 +2,9 @@
 
 - awk
 
+- [Brief text editor](./text_editors.md#brief) [[site](https://briefeditor.com/)]
+  [[Wikipedia](https://en.wikipedia.org/wiki/Brief_(text_editor))]
+
 - Code Search [[src](https://github.com/google/codesearch)]
 
   Background in [“Regular Expression Matching with a Trigram Index—or—How Google
