@@ -146,6 +146,7 @@ A notebook on compilers, programming languages, and other topics.
   - [Regular expression engine history](topics/regexp/history.md)
   - [Regular expression implementations](topics/regexp/engines.md)
   - [S-Lang SLregexp and SLsearch](topics/regexp/slang.md)
+  - [Text editors](topics/regexp/text_editors.md)
   - [Thompson regular expressions](topics/regexp/thompson.md)
 - [Short notes on papers](topics/short_paper_notes.md)
 - [Tree-sitter](topics/tree-sitter.md)
