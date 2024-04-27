@@ -5,6 +5,8 @@
 - [Brief text editor](./text_editors.md#brief) [[site](https://briefeditor.com/)]
   [[Wikipedia](https://en.wikipedia.org/wiki/Brief_(text_editor))]
 
+  - [CRiSP text editor](./text_editors.md#crisp): clone of Brief
+
 - Code Search [[src](https://github.com/google/codesearch)]
 
   Background in [“Regular Expression Matching with a Trigram Index—or—How Google
@@ -259,6 +261,9 @@
   First appeared in Fourth Edition Unix
 
 - Unix `sed` [[Wikipedia](https://en.wikipedia.org/wiki/Sed)]
+
+- [Zeus IDE](./text_editors.md#zeus): uses Unix-style (which?), although it is a
+  clone of Brief
 
 ## Other
 
