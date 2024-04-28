@@ -39,6 +39,13 @@ Versions:
 
 ## ed
 
+## Elvis
+
+History: [[Wikipedia](https://en.wikipedia.org/wiki/Elvis_(text_editor))]
+
+Elvis is an enhanced clone of vi. It has syntax highlighting, so should have
+regular expressions.
+
 ## QED
 
 ## QEdit
@@ -49,13 +56,16 @@ Versions:
 
 Zeus has regexp search and replace, but [uses Unix-style](https://www.zeusedit.com/faq.html),
 which is different from the original Brief. [Zeus Lite](https://www.zeusedit.com/lite/index.html)
-still has search and replace with regexps. It is closed-source.
+still has search and replace with regexps.
+
+Although is closed-source, the source for versions 1.04 and 2.15 is available.
+CTAGS.C is taken from Elvis and changes to it are annotated.
 
 Versions:
-- [Zeus for Windows 1.04](https://archive.org/details/ZEUSV105_ZIP) (exe and maybe source)
-- [Zeus for Windows 2.15](https://archive.org/details/ZEUSV215_ZIP) (exe and maybe source)
+- [Zeus for Windows 1.04](https://archive.org/details/ZEUSV105_ZIP) (exe and source)
+- [Zeus for Windows 2.15](https://archive.org/details/ZEUSV215_ZIP) (exe and source)
 - [Zeus for WIN32 2.15](https://archive.org/details/ZE32V215_ZIP)
-  [[alt](https://archive.org/details/ZE32V215.ZIP)] (exe and maybe source):
+  [[alt](https://archive.org/details/ZE32V215.ZIP)] (exe and source):
   the two ZIPs have bit-identical contents, but are not bit-identical themselves
 - [Zeus 3.00](https://archive.org/details/ze32v300_zip) (exe)
 - [Zeus 3.20](https://archive.org/details/ze32v320_zip) (exe)
