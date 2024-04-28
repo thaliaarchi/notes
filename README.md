@@ -102,7 +102,7 @@ A notebook on compilers, programming languages, and other topics.
 - [Detecting esolang polyglots](projects/esolang_detect.md)
 - [GHC decompilation](projects/ghc_decompile.md)
 - [Loose threads](projects/loose_threads.md)
-- [Personal git forge](projects/personal_git_forge.md)
+- [Personal code forge](projects/forge.md)
 - [Post-undergrad projects](projects/post_undergrad.md)
 - [Project genesis](projects/project_genesis.md)
 - [Requesting a list of all Git commits from a forge](projects/git_ls_remote_orphans.md)
