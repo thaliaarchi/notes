@@ -52,8 +52,15 @@ which is different from the original Brief. [Zeus Lite](https://www.zeusedit.com
 still has search and replace with regexps. It is closed-source.
 
 Versions:
-- [Zeus 2.15](https://archive.org/details/ZEUSV215_ZIP) (exe and maybe source)
+- [Zeus for Windows 1.04](https://archive.org/details/ZEUSV105_ZIP) (exe and maybe source)
+- [Zeus for Windows 2.15](https://archive.org/details/ZEUSV215_ZIP) (exe and maybe source)
+- [Zeus for WIN32 2.15](https://archive.org/details/ZE32V215_ZIP)
+  [[alt](https://archive.org/details/ZE32V215.ZIP)] (exe and maybe source):
+  the two ZIPs have bit-identical contents, but are not bit-identical themselves
+- [Zeus 3.00](https://archive.org/details/ze32v300_zip) (exe)
+- [Zeus 3.20](https://archive.org/details/ze32v320_zip) (exe)
 - [Zeus 3.30](https://archive.org/details/ze32v330_zip) (exe)
+- [Zeus for Windows 3.40](https://archive.org/details/ze32v340_zip) (exe)
 - [Zeus 3.99b](https://web.archive.org/web/20240427112542/https://www.zeusedit.com/z300/ze64v399b.zip)
   (exe, 64-bit installer)
 - [Zeus 3.99b](https://web.archive.org/web/20240427112704/https://www.zeusedit.com/z300/ze32v399b.zip)
@@ -74,3 +81,21 @@ Selected [changelog](https://www.zeusedit.com/whatsnew.html):
 
 As of [2012-07-29](https://www.zeusedit.com/phpBB3/viewtopic.php?p=9833#p9833),
 the latest beta “now does 0-9 and A-Z sub expressions”.
+
+## TODO
+
+Investigate whether these editors contained regular expression engines. They are
+likely dead ends, but are among many editor search results in the
+[DEMU Collection Unsorted](https://archive.org/search?query=subject%3A%22DEMU+Collection+Unsorted%22+editor),
+which is what Zeus is archived in.
+
+- [Hex-editor 1.02](https://archive.org/details/hdced102_zip)
+- [Hex Workshop 3.02](https://archive.org/details/hw32v302_zip)
+- [Maruo editor 3.01](https://archive.org/details/maruo301_zip)
+- [Pc editor 2.5](https://archive.org/details/pcedi250_zip)
+- [Personal Editor 32 1.0.5.0](https://archive.org/details/pe321050_zip),
+  [v1.0.80](https://archive.org/details/pe321080_zip)
+- [Quick Editor 1.8](https://archive.org/details/qiked18_zip),
+  [v2.2c](https://archive.org/details/qiked22c_zip)
+- [Roger's Postscript Text editor 4.4](https://archive.org/details/ROPS3244_ZIP)
+- [The Hex Editor 1.5](https://archive.org/details/hexun15_zip)
