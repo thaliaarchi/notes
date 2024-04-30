@@ -140,6 +140,7 @@ A notebook on compilers, programming languages, and other topics.
   - [ActionScript 3 `RegExp`](topics/regexp/actionscript.md)
   - [Exploration of representing specialized string-searching](topics/regexp/algorithms.md)
   - [Grammar for Rust `regex`](topics/regexp/rust_regex.bnf)
+  - [grep implementations](topics/regexp/greps.md)
   - [Pike–Levenshtein: Regular expressions with an edit distance](topics/regexp/pike-levenshtein.md)
   - [Polymorphic automata for string- and AP-matching](topics/regexp/polymorphic_automata.md)
   - [Recross ideas](topics/regexp/recross_ideas.md)
