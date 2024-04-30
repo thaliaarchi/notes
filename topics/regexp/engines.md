@@ -274,6 +274,27 @@
 - Mattias Wadman's `libfa` [[src](https://github.com/wader/libfa)]: automata
   library in c to determinize, minimize, and translate regexps
 
+  Author: Mattias Wadman
+
+  > many many years ago i worked at a network equipment company and did my
+  > unfinished master thesis about using software and hardware DFA:s for flow
+  > classification. We wanted to use it do fancy QoE for tv/phone traffic but
+  > customer wanted to block file sharing 🙂 anyway it never ended up being
+  > used. but! years later i manged to convince my boss to open source most of
+  > the library code i wrote, can be found here https://github.com/wader/libfa
+  >
+  > main idea was to be able to do a union of FA:s and while
+  > determinize/minimize distinguish and keep track of original FA:s accepting
+  > states
+  >
+  > Aug 14, 2015 i asked for permission to open source it, was ok:ed Nov 18,
+  > 2015.
+  >
+  > the thesis has the date July 2, 2010 on the front page, not sure what that
+  > means 🙂
+  >
+  > so i maybe started working on the code early 2010 or so
+
 - Mike French's `myrex` [[src](https://github.com/mike-french/myrex)]
   [[HN](https://news.ycombinator.com/item?id=37098229)]: converts regexp via NFA
   to an Elixir process network
@@ -281,6 +302,10 @@
 - `fancy_regex` [[src](https://github.com/fancy-regex/fancy-regex)]
   [[docs](https://docs.rs/fancy-regex/latest/fancy_regex/)]: hybrid NFA and
   backtracking engine, that delegates to Rust `regex` when possible
+
+## Papers
+
+- [Tagged DFA](https://en.wikipedia.org/wiki/Tagged_Deterministic_Finite_Automaton)
 
 ## TODO
 
