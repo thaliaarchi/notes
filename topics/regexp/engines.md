@@ -271,6 +271,9 @@
 
 ## Other
 
+- Mattias Wadman's `libfa` [[src](https://github.com/wader/libfa)]: automata
+  library in c to determinize, minimize, and translate regexps
+
 - Mike French's `myrex` [[src](https://github.com/mike-french/myrex)]
   [[HN](https://news.ycombinator.com/item?id=37098229)]: converts regexp via NFA
   to an Elixir process network
