@@ -73,6 +73,10 @@
   - `rsc.io/binaryregexp` [[src](https://github.com/rsc/binaryregexp)]: simple
     fork of Go `regexp`, changing it to work on Latin1, instead of UTF-8
 
+- I-Regexp [[rfc](https://www.rfc-editor.org/rfc/rfc9485.html)]
+
+  RFC 9485 I-Regexp: An Interoperable Regular Expression Format
+
 - Java `java.util.regex` [docs [1.4.2][java-1.4.2], [5.0][java-5.0], [6][java-6],
   [7][java-7], [8][java-8], [9][java-9], [10][java-10], [11][java-11],
   [12][java-12], [13][java-13], [14][java-14], [15][java-15], [16][java-16],

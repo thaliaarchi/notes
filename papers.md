@@ -5,6 +5,9 @@ projects.
 
 ## 2024
 
+- 2024-05-03:
+  [RFC 9485 “I-Regexp: An Interoperable Regular Expression Format”](https://www.rfc-editor.org/rfc/rfc9485.html)
+  (Carsten Bormann and Tim Bray, 2023)
 - [2024-04-24](compilers/ir/ssa_cps.md#kelsey-1995):
   [“A Correspondence between Continuation Passing Style and Static Single
   Assignment Form”](https://mumble.net/~kelsey/papers/cps-ssa.ps.gz)
