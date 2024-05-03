@@ -184,6 +184,10 @@
 
 - RE2 [[src](https://github.com/google/re2)] [[syntax](https://github.com/google/re2/wiki/Syntax)]
 
+- I-Regexp [[rfc](https://www.rfc-editor.org/rfc/rfc9485.html)]
+
+  RFC 9485 I-Regexp: An Interoperable Regular Expression Format
+
 - `rn` [[site](https://web.archive.org/web/19970401040656/http://www.academ.com/academ/rn.html)]
   [[history](https://web.archive.org/web/20140227213900/http://www.faqs.org:80/faqs/usenet/software/part1)]
   [[Wikipedia](https://en.wikipedia.org/wiki/Rn_(newsreader))]
