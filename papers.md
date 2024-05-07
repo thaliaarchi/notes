@@ -160,7 +160,7 @@ projects.
   Oleksandr Zinenko, 2021)
 - [2022-07-19](logic/adapton/miniAdapton.md):
   [“miniAdapton: A Minimal Implementation of Incremental Computation in Scheme”](https://arxiv.org/abs/1609.05337)
-  (Dakota Fisher, Mathew Hammer, William Byrd, and Matthew Might, 2016)
+  (Dakota Fisher, Mathew Hammer, William Byrd, and [Matt Might][might], 2016)
 - [2022-07-19](logic/adapton/pldi2014.md):
   [“Adapton: Composable, Demand-Driven Incremental Computation”](http://matthewhammer.org/adapton/adapton-pldi2014.pdf)
   (Matthew Hammer, Khoo Yit Phang, Michael Hicks, and Jeffrey Foster, 2014)
@@ -237,6 +237,19 @@ projects.
 - [2020-10-05](compilers/llvm/devmtg_2020-10/undef_and_poison.md):
   [“Undef and Poison: Present and Future”](https://www.youtube.com/watch?v=ZMaZH3YYJqY)
   (Juneyoung Lee, 2020)
+- 2020-09-28:
+  [“Improving Flow Analyses via ΓCFA: Abstract Garbage Collection and Counting”](https://matt.might.net/papers/might2006gcfa.pdf)
+  ([Matt Might][might] and Olin Shivers, ICFP 2006)
+- [2020-09-28](topics/short_paper_notes.md#abstracting-abstract-machines):
+  [“Abstracting Abstract Machines”](https://matt.might.net/papers/vanhorn2010abstract.pdf)
+  (David Van Horn and [Matt Might][might], ICFP 2010)
+- [2020-09-28](topics/short_paper_notes.md#cesk-machine):
+  [“Writing an interpreter, CESK-style”](https://matt.might.net/articles/cesk-machines/)
+  ([Matt Might][might], 2012)
+- [2020-09-20](topics/short_paper_notes.md#go-concurrency-bugs):
+  [“Understanding Real-World Concurrency Bugs in Go”](https://sci-hub.st/10.1145/3297858.3304069)
+  (Tengfei Tu, Xiaoyu Liu, Linhai Song, and Yiying Zhang, ASLLOS 2019)
+  [[dataset](https://github.com/system-pclub/go-concurrency-bugs)]
 - 2020-09-11:
   [“A Correspondence between Continuation Passing Style and Static Single
   Assignment Form”](https://mumble.net/~kelsey/papers/cps-ssa.ps.gz)
@@ -388,3 +401,4 @@ projects.
 
 [cliffc]: https://dblp.org/pid/39/4499.html
 [dmgerman]: https://github.com/dmgerman/papers
+[might]: https://matt.might.net/

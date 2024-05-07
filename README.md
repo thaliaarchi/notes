@@ -76,7 +76,6 @@ A notebook on compilers, programming languages, and other topics.
   - [Programming language alphabet challenge](pl/lists/alphabet_challenge.md)
   - [PL groups at universities](pl/lists/research_groups.md)
   - [Programming languages I know](pl/lists/languages_i_know.md)
-- [Paper notes](pl/papers.md)
 
 ## Logic
 
