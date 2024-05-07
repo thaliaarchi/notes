@@ -1,5 +1,63 @@
 # Short notes on papers
 
+## Abstracting Abstract Machines
+
+[“Abstracting Abstract Machines”](https://matt.might.net/papers/vanhorn2010abstract.pdf)
+(David Van Horn and Matt Might, ICFP 2010)
+
+> With no recursive structure in the state-space, an abstract machine becomes
+> eligible for conversion into an abstract interpreter through a simple
+> structural abstraction.
+
+Values in the heap can refer to other values in the heap, thus being recursively
+defined. This doesn't mean that the heap itself is recursive, or by extension,
+the store? The heap is just a flat address space, so I don't think it would be
+recursive.
+
+## CESK machine
+
+[“Writing an interpreter, CESK-style”](https://matt.might.net/articles/cesk-machines/)
+(Matt Might, 2012)
+
+> The CESK machine is a state-machine in which each state has four components: a
+> (C)ontrol component, an (E)nvironment, a (S)tore and a (K)ontinuation. One
+> might imagine these respectively as the instruction pointer, the local
+> variables, the heap and the stack.
+
+...
+
+> ```bnf
+> lam ::= (λ (var1 ... varN) exp)
+>
+> aexp ::= lam
+>       |  var
+>       |  #t  |  #f
+>       |  integer
+>       |  (prim aexp1 ... aexpN)
+>
+> cexp ::= (aexp0 aexp1 ... aexpN)
+>       |  (if aexp exp exp)
+>       |  (call/cc aexp)
+>       |  (set! var aexp)
+>       |  (letrec ((var1 aexp1) ... (varN aexpN)) exp)
+>
+> exp ::= aexp
+>      |  cexp
+>      |  (let ((var exp)) exp)
+>
+> prim ::= +  |  -  |  *  |  =
+> ```
+
+Is `call/cc` like Whitespace `jmp` as opposed to Whitespace `call`?
+
+## Go concurrency bugs
+
+There are only two publicly available Go concurrency bug detectors.
+
+Two orthogonal dimensions measured:
+- cause: bugs categorized by misuse of shared memory or message passing
+- behavior: blocking or non-blocking bugs
+
 ## Souper
 
 TODO: Read it
