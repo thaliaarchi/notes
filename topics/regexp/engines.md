@@ -251,6 +251,10 @@
 
   Introduced backtracking widely [[history][rsc-history]]
 
+  Sources:
+  - [NightOwl 001 - 1990](http://annex.retroarchive.org/cdrom/nightowl-001/005A/REGEXP.ZIP)
+  - [NightOwl 004 - 1991](http://annex.retroarchive.org/cdrom/nightowl-004/005A/REGEXP.ZIP)
+
 - Truffle TRegex [[src](https://github.com/oracle/graal/tree/master/regex)]
 
   - GraalJS [src [object](https://github.com/oracle/graaljs/tree/master/graal-js/src/com.oracle.truffle.js/src/com/oracle/truffle/js/runtime/builtins/JSRegExp.java),
@@ -279,7 +283,7 @@
 
   - [SED15](http://cd.textfiles.com/simtel/DISK1/DISC2/TEXTUTIL/SED15.ZIP) and
     [SED15X](http://cd.textfiles.com/simtel/DISK1/DISC2/TEXTUTIL/SED15X.ZIP)
-    in the Simtel MSDOS Archive may be useful
+    in the Simtel MSDOS Archive and SED15 in [NightOwl 008 - 1993](http://annex.retroarchive.org/cdrom/nightowl-008/)
 
 - [Zeus IDE](./text_editors.md#zeus): uses Unix-style (which?), although it is a
   clone of Brief
