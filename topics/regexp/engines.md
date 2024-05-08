@@ -7,6 +7,8 @@
 
   - [CRiSP text editor](./text_editors.md#crisp): clone of Brief
 
+- BSD grep
+
 - Code Search [[src](https://github.com/google/codesearch)]
 
   Background in [“Regular Expression Matching with a Trigram Index—or—How Google
@@ -74,6 +76,21 @@
   - XRegExp [[src](https://github.com/slevithan/xregexp)]: extended parsing for
     JavaScript `RegExp`
 
+- exrex [[src](https://github.com/asciimoo/exrex)]
+
+  Author: Adam Tauber (2012)
+
+  Generates all or random matching strings to a regexp.
+
+  TODO: Evaluate its similar projects.
+
+- GNU `grep`
+
+  Author: Mike Haertel
+
+  Mike described strategies GNU `grep` uses for efficient matching in a message
+  to the FreeBSD mailing list, [“why GNU grep is fast”](https://lists.freebsd.org/pipermail/freebsd-current/2010-August/019310.html).
+
 - Go `regexp` [[src](https://github.com/golang/go/tree/master/src/regexp)]
   [[docs](https://pkg.go.dev/regexp)]
 
@@ -83,6 +100,13 @@
 - I-Regexp [[rfc](https://www.rfc-editor.org/rfc/rfc9485.html)]
 
   RFC 9485 I-Regexp: An Interoperable Regular Expression Format
+
+- ICgrep [[site](https://web.archive.org/web/20220115035806/http://international-characters.com/icgrep)]
+  [[architecture](https://coursys.sfu.ca/2021su-cmpt-489-x1/pages/icgrepIntro)]
+
+  [Mirror](https://www.popowich.net/icgrep/)(?)
+
+  Andrew Gallant says ICgrep implements (most of?) UTS #18 level 2 [[HN](https://news.ycombinator.com/item?id=32435303#32445174)].
 
 - Java `java.util.regex` [docs [1.4.2][java-1.4.2], [5.0][java-5.0], [6][java-6],
   [7][java-7], [8][java-8], [9][java-9], [10][java-10], [11][java-11],
@@ -152,7 +176,17 @@
   - SerenityOS LibRegex [[src](https://github.com/SerenityOS/serenity/tree/master/Userland/Libraries/LibRegex)]
 
 - *The Practice of Programming* [[book](https://archive.org/details/practiceofprogra0000kern)]
-  [[analysis](https://www.cs.princeton.edu/courses/archive/spr09/cos333/beautiful.html)]
+  [[exegesis](https://www.cs.princeton.edu/courses/archive/spr09/cos333/beautiful.html)]
+
+  Author: Rob Pike
+
+  - Ben Hoyt ported it to Go in [“Rob Pike’s simple C regex matcher in Go”](https://benhoyt.com/writings/rob-pike-regex/)
+    (2022) [[code](https://github.com/benhoyt/repike/tree/master)] [[HN](https://news.ycombinator.com/item?id=32434412)]
+    - A commenter patched it to make the runtime runtime
+      *O(len(pattern) \* len(text))* instead of exponential by memoizing
+      failures [[HN](https://news.ycombinator.com/item?id=32434412#32436442)]
+  - Shaya Potter ported it [to Java](https://github.com/sjpotter/regex) (2016)
+    and [to Go](https://github.com/sjpotter/regex-go) (2019)
 
 - Python `re` (Secret Labs' Regular Expression Engine, SRE) [src [py](https://github.com/python/cpython/tree/main/Lib/re),
   [c](https://github.com/python/cpython/tree/main/Modules/_sre)]
@@ -180,6 +214,9 @@
   introduced Thompson's construction and it was implemented in QED [[history][rsc-history]],
   [[attribution](https://swtch.com/~rsc/regexp/regexp2.html#attrib)]
 
+  Patent [US3568156A Text matching algorithm](https://patents.google.com/patent/US3568156A/en)
+  [[HN](https://news.ycombinator.com/item?id=33566557)]
+
 - re1 [[src](https://code.google.com/archive/p/re1/)] [[blog](https://swtch.com/~rsc/regexp/regexp2.html)]
 
   Author: Russ Cox
@@ -194,6 +231,16 @@
     implementation in Rust
 
 - RE2 [[src](https://github.com/google/re2)] [[syntax](https://github.com/google/re2/wiki/Syntax)]
+
+- Redis `stringmatchlen` [[src](https://github.com/redis/redis/blob/0e1de78fca849c135fd00cd85b5b87920e46e50d/src/util.c#L57)]
+
+  Author: Salvatore Sanfilippo
+
+  After Salvatore [mentioned `stringmatchlen`](https://news.ycombinator.com/item?id=32436743)
+  on Hacker News, a commenter demonstrated that it has exponential time
+  complexity for pathological patterns, which (seems to have) led to
+  [CVE-2022-36021](https://nvd.nist.gov/vuln/detail/CVE-2022-36021) being
+  reported and [fixed](https://github.com/redis/redis/commit/dcbfcb916ca1a269b3feef86ee86835294758f84).
 
 - `rn` [[site](https://web.archive.org/web/19970401040656/http://www.academ.com/academ/rn.html)]
   [[history](https://web.archive.org/web/20140227213900/http://www.faqs.org:80/faqs/usenet/software/part1)]
@@ -229,6 +276,10 @@
 - Rust `regex` [[src](https://github.com/rust-lang/regex)]
   [[docs](https://docs.rs/regex/latest/regex/)]
 
+  Author: Andrew Gallant
+
+  - `ripgrep` [[src](https://github.com/BurntSushi/ripgrep)]
+
 - Shell globs
 
 - S-Lang `SLRegexp` [[src](https://www.jedsoft.org/snapshots/)] [[docs](https://www.jedsoft.org/slang/doc/html/slang-22.html)]
@@ -261,8 +312,6 @@
     [prototype](https://github.com/oracle/graaljs/tree/master/graal-js/src/com.oracle.truffle.js/src/com/oracle/truffle/js/builtins/RegExpPrototypeBuiltins.java),
     more]
 
-- Unicode Regular Expressions [[standard](https://www.unicode.org/reports/tr18/)]
-
 - Unix `ed` [[history][rsc-history]]
 
   Author: Ken Thompson
@@ -284,6 +333,12 @@
   - [SED15](http://cd.textfiles.com/simtel/DISK1/DISC2/TEXTUTIL/SED15.ZIP) and
     [SED15X](http://cd.textfiles.com/simtel/DISK1/DISC2/TEXTUTIL/SED15X.ZIP)
     in the Simtel MSDOS Archive and SED15 in [NightOwl 008 - 1993](http://annex.retroarchive.org/cdrom/nightowl-008/)
+
+- UTS #18: Unicode Regular Expressions [[standard](https://www.unicode.org/reports/tr18/)]
+
+  Andrew Gallant has [discussed](https://news.ycombinator.com/item?id=32435303#32445174)
+  why implementing UTS #18 level 2 is difficult and has rarely been done (e.g.,
+  by ICgrep).
 
 - [Zeus IDE](./text_editors.md#zeus): uses Unix-style (which?), although it is a
   clone of Brief
@@ -322,15 +377,65 @@
   [[docs](https://docs.rs/fancy-regex/latest/fancy_regex/)]: hybrid NFA and
   backtracking engine, that delegates to Rust `regex` when possible
 
+- Sri Panyam's [tlex](https://github.com/panyam/tlex): used Russ Cox's “Regular
+  Expression Matching Can Be Simple And Fast” article as a reference [[HN](https://news.ycombinator.com/item?id=32435472)]
+
+- Reini Urban's matcher for Asterisk [[src archive](https://github.com/rurban/asterisk-matcher)]
+  [[HN](https://news.ycombinator.com/item?id=32435404)]
+
+  Author: Reini Urban (2003)
+
+  > 2003 I added a dynamic regular expression matcher to asterisk,
+  > which has a weird synatx, but otherwise the matcher looked fine.
+  >
+  > In the end it was removed from CVS before a release without me
+  > noticing because the variable capturing was not thread-safe. Would
+  > have been trivial to fix.
+
+  TODO: Archive it from CVS
+
+  Influenced by Steffen Offermann's [`xstrcmp.c`](https://web.archive.org/web/20000829114643/http://www.cs.umu.se/~isak/Snippets/xstrcmp.c)
+  (1991) from the Snippets Collection.
+
+  - rurban/tiny-matcher [[src](https://github.com/rurban/tiny-matcher)] [[HN](https://news.ycombinator.com/item?id=32435404)]:
+    extends it
+
+- tiny-regex-c [[src](https://github.com/kokke/tiny-regex-c)]
+
+  > Design is inspired by Rob Pike's regex-code for the book "Beautiful Code"
+  > [available online here](http://www.cs.princeton.edu/courses/archive/spr09/cos333/beautiful.html).
+  >
+  > Supports a subset of the syntax and semantics of the Python standard library
+  > implementation (the `re`-module).
+
+  Formally verified using KLEE.
+
+  - rurban/tiny-regex-c [[src](https://github.com/rurban/tiny-regex-c)]
+
 ## Papers
 
 - [Tagged DFA](https://en.wikipedia.org/wiki/Tagged_Deterministic_Finite_Automaton)
+
+## Benchmarks
+
+- Mario Juárez's [Languages Regex Benchmark](https://github.com/mariomka/regex-benchmark)
+- Andrew Gallant's [rebar](https://github.com/BurntSushi/rebar)
+- [regex-redux](https://benchmarksgame-team.pages.debian.net/benchmarksgame/performance/regexredux.html)
+  in the Computer Language Benchmarks Game
 
 ## TODO
 
 - Wikipedia [Regular expression](https://en.wikipedia.org/wiki/Regular_expression)
   describes history and POSIX and Perl standards
 - Wikipedia [Comparison of regular expression engines](https://en.wikipedia.org/wiki/Comparison_of_regular_expression_engines)
+- A [discussion](https://news.ycombinator.com/item?id=33566557) on Thompson's
+  patent has many leads
+  - Glushkov automata [[HN](https://news.ycombinator.com/item?id=33567087)]
+- A [discussion](https://news.ycombinator.com/item?id=32435303#32445174) on why
+  intersection and complement are difficult to implement efficiently with large
+  alphabets (Unicode)
+- Xerox Research Europe's xfst [[HN](https://news.ycombinator.com/item?id=32434705)]
+  [[demo](https://dsacl3-2018.github.io/xfst-demo/)]
 
 
 [rsc-history]: https://swtch.com/~rsc/regexp/regexp1.html#History

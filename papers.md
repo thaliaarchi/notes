@@ -92,6 +92,10 @@ projects.
 - 2023-10-15:
   [“Arbitrary precision arithmetic using continued fractions”](https://www.microsoft.com/en-us/research/publication/arbitrary-precision-arithmetic-using-continued-fractions/)
   (Simon Peyton Jones, 1984)
+- 2023-10-09:
+  [“The algorithm for precision medicine”](https://www.youtube.com/watch?v=tRt1Rxru3T0#t=7h29m55s)
+  ([Matt Might][might], ICFP 2023)
+  [[HN](https://news.ycombinator.com/item?id=37814662)]
 - 2023-10-06:
   [“Parsing distfix operators”](https://dl.acm.org/doi/10.1145/5657.5659)
   (Simon Peyton Jones, 1986)

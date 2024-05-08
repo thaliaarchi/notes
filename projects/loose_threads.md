@@ -49,6 +49,8 @@
     - June McEnroe: [Git forge](https://git.causal.agency/), `man`-style
       [project list](https://causal.agency/)
     - Greg Rosenblatt: [CV](https://www.gregrosenblatt.com/)
+    - Robin Schroer: [blog](https://blog.sulami.xyz/) [[generator](https://github.com/sulami/blog)]
+    - Chris Wellons: [blog](https://nullprogram.com/) [[git](https://github.com/skeeto/skeeto.github.com)]
 - Forge
   - [Software Forge Performance Index](https://forgeperf.org/)
 - PLDI 2024?

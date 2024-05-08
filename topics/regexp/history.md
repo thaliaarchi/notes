@@ -5,6 +5,8 @@
 - Posts
   - [“Regular Expression Matching Can Be Simple And Fast”](https://swtch.com/~rsc/regexp/regexp1.html)
     (January 2007)
+    - Andrew Gallant [translated](https://github.com/BurntSushi/rsc-regexp) the
+      Thompson NFA to Rust
   - [“Regular Expression Matching: the Virtual Machine Approach”](https://swtch.com/~rsc/regexp/regexp2.html)
     (December 2009)
   - [“Regular Expression Matching in the Wild”](https://swtch.com/~rsc/regexp/regexp3.html)
@@ -48,14 +50,11 @@
     > couple of years after the original implementation.) The technique makes
     > a cameo in a textbook in 1974 but then seems to get lost until its
     > reappearance in sam.
-- [Rob Pike’s simple C regex matcher in Go](https://benhoyt.com/writings/rob-pike-regex/)
-  [[HN](https://news.ycombinator.com/item?id=32434412)]
 
 ## Ken Thompson
 
 - [grep](https://en.wikipedia.org/wiki/Grep)
   - fgrep (not by him) uses the Aho–Corasick string-matching algorithm
-- [Patent](https://patents.google.com/patent/US3568156A/en) [[HN](https://news.ycombinator.com/item?id=33566557)]
 - > Ken Thompson wrote a regex engine which compiled (at runtime) regexes into
   > data structures containing executable machine code, and invoked them (from C
   > source) by jumping into the data i.e. treating its location as a function
