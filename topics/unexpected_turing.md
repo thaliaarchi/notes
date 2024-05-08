@@ -1,7 +1,9 @@
 # Unexpectedly Turing-complete
 
-Various subsets programming languages or systems that are unintentionally
-Turing-complete.
+This is a collection of systems, such as restricted subsets of programming
+languages or games, that are Turing-complete, but may not be expected. I have
+included programs that prove Turing-completeness by construction, but also other
+interesting programs for fun and demonstration.
 
 ## Subsets of programming languages
 
@@ -141,7 +143,7 @@ Domain-specific languages that are Turing complete.
 
 - awk
 - jq
-  - [bf.jq](https://github.com/MakeNowJust/bf.jq)
+  - [bf.jq](https://github.com/MakeNowJust/bf.jq): Brainfuck interpreter
     by TSUYUSATO Kitsune (2014)
   - [JSON formatter](https://itchyny.medium.com/json-formatter-written-in-jq-b716c281afd7)
     by itchyny (2019)
@@ -154,7 +156,7 @@ Domain-specific languages that are Turing complete.
 - sed
   - [dc.sed](https://catonmat.net/ftp/sed/dc.sed): an arbitrary-precision RPN
     calculator by Greg Ubben (1995) [[reference](https://catonmat.net/proof-that-sed-is-turing-complete)]
-  - [“Implementation of a Turing Machine as Sed Script”](https://catonmat.net/ftp/sed/turing.txt)
+  - [turing.sed](https://catonmat.net/ftp/sed/turing.txt): Turing machine
     by Christophe Blaess (2001) [[src](https://catonmat.net/ftp/sed/turing.sed)]
     [[reference](https://catonmat.net/proof-that-sed-is-turing-complete)]
   - [SedSokoban](https://aurelio.net/projects/sedsokoban/): Sokoban game
