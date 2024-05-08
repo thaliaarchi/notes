@@ -135,6 +135,38 @@ Turing-complete.
     by Chris Domas (2015), with numerous programs, including [DOOM](https://github.com/xoreaxeaxeax/movfuscator/tree/master/validation/doom)
     [[talk](https://www.youtube.com/watch?v=2VF_wPkiBJY)]
 
+## DSLs
+
+Domain-specific languages that are Turing complete.
+
+- awk
+- jq
+  - [bf.jq](https://github.com/MakeNowJust/bf.jq)
+    by TSUYUSATO Kitsune (2014)
+  - [JSON formatter](https://itchyny.medium.com/json-formatter-written-in-jq-b716c281afd7)
+    by itchyny (2019)
+  - [bf.jq](https://github.com/itchyny/brainfuck/blob/main/bf.jq): Brainfuck
+    interpreter by itchyny (2019) [[blog](https://itchyny.medium.com/json-formatter-written-in-jq-b716c281afd7)]
+  - [wsjq](https://github.com/thaliaarchi/wsjq): Whitespace interpreter
+    by Thalia Archibald (2021)
+  - [jqjq](https://github.com/wader/jqjq): jq interpreter
+    by Mattias Wadman (2022)
+- sed
+  - [dc.sed](https://catonmat.net/ftp/sed/dc.sed): an arbitrary-precision RPN
+    calculator by Greg Ubben (1995) [[reference](https://catonmat.net/proof-that-sed-is-turing-complete)]
+  - [“Implementation of a Turing Machine as Sed Script”](https://catonmat.net/ftp/sed/turing.txt)
+    by Christophe Blaess (2001) [[src](https://catonmat.net/ftp/sed/turing.sed)]
+    [[reference](https://catonmat.net/proof-that-sed-is-turing-complete)]
+  - [SedSokoban](https://aurelio.net/projects/sedsokoban/): Sokoban game
+    by Aurelio Jargas (2002) [[src](https://github.com/aureliojargas/sokoban.sed)]
+    [[video](https://www.youtube.com/watch?v=bg3x43E-yjo)]
+  - [sedtris](https://github.com/uuner/sedtris): Tetris
+    by Julia Jomantaite (2008)
+  - [Chess](https://github.com/moldabekov/chess-sed) in GNU sed by
+    Margulan Moldabekov (2015) [[HN](https://news.ycombinator.com/item?id=37896854)]
+  - [cube.sed](https://github.com/izabera/cube.sed)
+    by Isabella Bosia (2023): interactive 2x2 and 3x3 Rubik's Cube
+
 ## Automata
 
 - [Conway's Game of Life](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life)
