@@ -287,6 +287,13 @@ projects.
   [“Reflections on Trusting Trust”](https://dl.acm.org/doi/10.1145/358198.358210)
   (Ken Thompson, 1984)
 
+## 2016
+
+- [2016-10-12](https://gist.github.com/thaliaarchi/3973d196275d6f5dfe788b5c87c1b90c):
+  [*CSS Color Module Level 4*](https://www.w3.org/TR/2016/WD-css-color-4-20160705/),
+  W3C Editor's Draft
+  (Tab Atkins Jr. and Chris Lilley, 2016) [[archive](https://web.archive.org/web/20160424165850/https://drafts.csswg.org/css-color/)]
+
 ## TODO
 
 - [“A catalogue of optimizing transformations”](https://www.clear.rice.edu/comp512/Lectures/Papers/1971-allen-catalog.pdf)
