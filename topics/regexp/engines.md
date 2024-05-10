@@ -84,12 +84,58 @@
 
   TODO: Evaluate its similar projects.
 
+- Flex [[Wikipedia](https://en.wikipedia.org/wiki/Flex_(lexical_analyser_generator))]
+
+  - Flex 2.5.2 ported to OpenVMS [src [v20](https://www.digiater.nl/openvms/freeware/v20/flex-2_5_2/),
+    [v30](https://www.digiater.nl/openvms/freeware/v30/flex-2_5_2/),
+    …]
+
+- GNU Bison
+
+  - Bison ported to OpenVMS [src [v20](https://www.digiater.nl/openvms/freeware/v20/bison-a2_3/) (Andrew Consortium Bison A2.3),
+    [v30](https://www.digiater.nl/openvms/freeware/v30/bison-a2_3/) (Andrew Consortium Bison A2.3),
+    …,
+    [v80](https://www.digiater.nl/openvms/freeware/v80/bison/)]
+
+- GNU Emacs [[docs](https://www.gnu.org/software/emacs/manual/html_node/emacs/Regexps.html)]
+  [[emacs](https://www.emacswiki.org/emacs/RegularExpression)]
+
+  - GNU Emacs ported to OpenVMS [src [v10](https://www.digiater.nl/openvms/freeware/v10/emacs/) (Emacs 19.22),
+    [v20](https://www.digiater.nl/openvms/freeware/v20/emacs/) (Emacs 19.22),
+    [v30](https://www.digiater.nl/openvms/freeware/v30/emacsv1928/) (Emacs 19.28),
+    …]
+
+- GNU Gawk [[docs](https://www.gnu.org/software/gawk/manual/html_node/Regexp.html)]
+
+  - GNU Gawk 2.15.6 ported to OpenVMS [src [v20](https://www.digiater.nl/openvms/freeware/v20/gawk-2_15_6/),
+    [v30](https://www.digiater.nl/openvms/freeware/v30/gawk-2_15_6/),
+    …]
+
 - GNU `grep`
 
   Author: Mike Haertel
 
   Mike described strategies GNU `grep` uses for efficient matching in a message
   to the FreeBSD mailing list, [“why GNU grep is fast”](https://lists.freebsd.org/pipermail/freebsd-current/2010-August/019310.html).
+
+  - GNU `grep` 2.0 ported to OpenVMS [src [v20](https://www.digiater.nl/openvms/freeware/v20/grep/),
+    …,
+    [v80](https://www.digiater.nl/openvms/freeware/v80/grep/)]
+
+- GNU `fgrep`
+
+  - GNU `fgrep` 1.1 ported to OpenVMS [src [v20](https://www.digiater.nl/openvms/freeware/v20/fgrep/),
+    …,
+    [v80](https://www.digiater.nl/openvms/freeware/v80/fgrep-1-1/)]
+
+- GNU `sed`
+
+  The version 2.03 `readme` indicates that `sed` uses GNU `rx` and before that
+  GNU `regex`.
+
+  - GNU `sed` ported to OpenVMS [src [v30](https://www.digiater.nl/openvms/freeware/v30/sed-2-05/) (sed 2.05)
+    …,
+    [v80](https://www.digiater.nl/openvms/freeware/v80/sed/) (sed 2.03)]
 
 - Go `regexp` [[src](https://github.com/golang/go/tree/master/src/regexp)]
   [[docs](https://pkg.go.dev/regexp)]
@@ -300,10 +346,17 @@
   or completely unrelated. `src/slregexp.c` seems unrelated to in `search.c` in
   `trn`.
 
+  In `src/slregexp.c`, it states that it implements “ed style regular
+  expressions”.
+
   - `slrn` [src [JED](https://www.jedsoft.org/snapshots/), [GitHub](https://github.com/jedsoft/slrn),
     [SourceForge](https://sourceforge.net/projects/slrn/)] [[site](https://web.archive.org/web/20140924103420/http://www.slrn.org/index.html)]
     [[FreeBSD Ports](https://ports.freebsd.org/cgi/ports.cgi?query=slrn&stype=all&sektion=news)]
   - S-Lang `slsh` glob: converts globs to `SLRegexp`
+  - JED software (e.g., S-Lang, slrn, most) ported to OpenVMS has older versions
+    than available from jedsoft.org [src [v10](https://www.digiater.nl/openvms/freeware/v10/jed097/),
+    [v20](https://www.digiater.nl/openvms/freeware/v20/jed/),
+    …]
 
 - Spencer's library [[algorithm](https://swtch.com/~rsc/regexp/regexp2.html#backtrack)]
 
@@ -337,11 +390,15 @@
 
   First appeared in Fourth Edition Unix
 
+- Unix `lex`
+
 - Unix `sed` [[Wikipedia](https://en.wikipedia.org/wiki/Sed)]
 
   - [SED15](http://cd.textfiles.com/simtel/DISK1/DISC2/TEXTUTIL/SED15.ZIP) and
     [SED15X](http://cd.textfiles.com/simtel/DISK1/DISC2/TEXTUTIL/SED15X.ZIP)
     in the Simtel MSDOS Archive and SED15 in [NightOwl 008 - 1993](http://annex.retroarchive.org/cdrom/nightowl-008/)
+
+- Unix `yacc` [[Wikipedia](https://en.wikipedia.org/wiki/Yacc)]
 
 - UTS #18: Unicode Regular Expressions [[standard](https://www.unicode.org/reports/tr18/)]
 

@@ -56,3 +56,11 @@ describes its benefits over other tar implementations.
   and `archive-zip.c`, used in `git archive`, `git bugreport`, `git diagnose`,
   `git upload-archive`, and `git upload-archive--writer`
 - Go: `archive/tar` and `archive/zip`
+- VMSTAR: in [v10](https://www.digiater.nl/openvms/freeware/v10/vmstar/)
+  [v20](https://www.digiater.nl/openvms/freeware/v20/vmstar/),
+  [v30](https://www.digiater.nl/openvms/freeware/v30/vmstar/),
+  [v40](https://www.digiater.nl/openvms/freeware/v40/vmstar/),
+  [v50](https://www.digiater.nl/openvms/freeware/v50/vmstar/),
+  [v60](https://www.digiater.nl/openvms/freeware/v60/vmstar/),
+  [v70](https://www.digiater.nl/openvms/freeware/v70/vmstar/),
+  [v80](https://www.digiater.nl/openvms/freeware/v80/vmstar/)
