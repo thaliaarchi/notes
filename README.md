@@ -38,8 +38,9 @@ A notebook on compilers, programming languages, and other topics.
 - [QBE](compilers/qbe.md)
 - [CompCert](compilers/compcert.md)
 - Mesa [NIR](compilers/mesa_nir.md)
-- [Coffee Compiler Club 2023-09-08](compilers/coffee_compiler_club_20230908.md)
-- [Coffee Compiler Club 2023-10-06 with Simon Peyton Jones](compilers/coffee_compiler_club_20231006.md)
+- Coffee Compiler Club
+  - [2023-09-08 on Sea of Nodes](compilers/ccc/2023-09-08_sea_of_nodes.md)
+  - [2023-10-06 with Simon Peyton Jones](compilers/ccc/2023-10-06_spj.md)
 
 ## Programming languages
 

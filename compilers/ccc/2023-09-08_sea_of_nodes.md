@@ -1,4 +1,4 @@
-# Coffee Compiler Club 2023-09-08
+# Coffee Compiler Club 2023-09-08 on Sea of Nodes
 
 [Recording](https://www.youtube.com/watch?v=NDkMhB0xQwU)
 
