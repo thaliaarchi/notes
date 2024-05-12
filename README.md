@@ -135,7 +135,7 @@ A notebook on compilers, programming languages, and other topics.
 - [List of ciphers](topics/ciphers.md)
 - [Minecraft decompilation](topics/minecraft_decompilation.md)
 - [Nand to Tetris](topics/nand2tetris/README.md)
-- [QR code art](topics/qr.md)
+- [QR code art](topics/qr_code_art.md)
 - Regular expressions
   - [ActionScript 3 `RegExp`](topics/regexp/actionscript.md)
   - [Exploration of representing specialized string-searching](topics/regexp/algorithms.md)
