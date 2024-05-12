@@ -5,6 +5,10 @@ projects.
 
 ## 2024
 
+- 2024-05-11:
+  [“Light years ahead: How the Apollo Guidance Computer pioneered an era of
+  reliable software”](https://www.youtube.com/watch?v=B1J2RMorJXM)
+  (Robert Willis, 2019)
 - 2024-05-08:
   [RFC 9535 “JSONPath: Query Expressions for JSON”](https://www.rfc-editor.org/rfc/rfc9535.html)
   (Stefan Gössner, Glyn Norminton, and Carsten Bormann, 2024)
