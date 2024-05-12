@@ -74,6 +74,7 @@ interesting programs for fun and demonstration.
     by David Fetter (2009)
   - [Turing machine](https://blog.coelho.net/database/2013/08/17/turing-sql-1.html)
     by Fabien Coelho (2013)
+  - Brainfuck with CTEs by David Archibald (2024, unpublished)
 - Rust type system: A subset of Rust with type parameters, traits,
   multi-parameter traits, and associated types.
   - [Turing machine](https://www.reddit.com/r/rust/comments/2o6yp8/comment/cmkrjz2/)
