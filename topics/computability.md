@@ -1,6 +1,6 @@
 # Computability
 
-## Minimal computing models
+## Minimal computational models
 
 - [Turing machine](https://en.wikipedia.org/wiki/Turing_machine)
   - [Wolfram's (2,3) Turing machine](https://en.wikipedia.org/wiki/Wolfram%27s_2-state_3-symbol_Turing_machine)
@@ -11,8 +11,13 @@
 - [Lambda calculus](https://en.wikipedia.org/wiki/Lambda_calculus)
 - [SKI combinator calculus](https://en.wikipedia.org/wiki/SKI_combinator_calculus)
 - [Iota and Jot](https://en.wikipedia.org/wiki/Iota_and_Jot)
-- [Cyclic tag system](https://en.wikipedia.org/wiki/Tag_system#Cyclic_tag_systems)
-  - [Bitwise Cyclic Tag](https://esolangs.org/wiki/Bitwise_Cyclic_Tag)
+- [Post canonical system](https://esolangs.org/wiki/Post_canonical_system)
+  - [Post normal system](https://esolangs.org/wiki/Post_normal_system)
+    - [Tag system](https://esolangs.org/wiki/Tag_system)
+      - [Cyclic tag system](https://en.wikipedia.org/wiki/Tag_system#Cyclic_tag_systems)
+        [[Esolang](https://esolangs.org/wiki/Cyclic_tag_system)]
+        - [Bitwise Cyclic Tag](https://esolangs.org/wiki/Bitwise_Cyclic_Tag)
+      - [Sequential tag system](https://esolangs.org/wiki/Sequential_tag_system)
 - [Minsky machine](https://esolangs.org/wiki/Minsky_machine)
 - [Markov algorithm](https://en.wikipedia.org/wiki/Markov_algorithm)
 - [μ-recursive functions](https://en.wikipedia.org/wiki/General_recursive_function)
