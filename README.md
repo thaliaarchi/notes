@@ -1,6 +1,7 @@
-# Notes
+# Thalia's notes
 
-A notebook on compilers, programming languages, and other topics.
+A notebook on compilers, programming languages, computing history, and other
+topics.
 
 ## Compilers
 
