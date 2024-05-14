@@ -95,6 +95,7 @@ topics.
   - [ae-graphs (in Cranelift) vs e-graphs](logic/e-graphs/ae-graphs_vs_e-graphs.md)
   - [E-graph literature survey](logic/e-graphs/survey.md)
   - [Guided equality saturation](logic/e-graphs/guided_eqsat.md)
+- [Optimizing Datalog](logic/datalog_opts.md)
 - [Rete Algorithm](logic/rete.md)
 
 ## Projects
