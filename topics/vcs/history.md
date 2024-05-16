@@ -14,6 +14,8 @@
   Code Management System (CMS)
 - [Visual SourceSafe](https://en.wikipedia.org/wiki/Visual_SourceSafe)
 - [Team Foundation Version Control](https://en.wikipedia.org/wiki/Azure_DevOps_Server#TFVC)
+  - [Team Explorer Everywhere](https://github.com/microsoft/team-explorer-everywhere):
+    official TFS plugin for Eclipse works with TFVC
 - [TLIB](https://www.burtonsys.com/)
   - [Reference Manual](https://www.burtonsys.com/tlib_doc.pdf)
   - [TLIB format parser in Python](https://code.activestate.com/recipes/576729-simple-version-control/)
