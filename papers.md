@@ -5,6 +5,9 @@ projects.
 
 ## 2024
 
+- 2024-05-18:
+  [“Incremental Computation with Adapton”](https://vimeo.com/122066659)
+  (Matthew Hammer, 2015)
 - 2024-05-11:
   [“Light years ahead: How the Apollo Guidance Computer pioneered an era of
   reliable software”](https://www.youtube.com/watch?v=B1J2RMorJXM)
