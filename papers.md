@@ -6,6 +6,10 @@ projects.
 ## 2024
 
 - 2024-05-18:
+  [“A Differential Meet-in-the-Middle Attack on the Zip cipher“](https://www.youtube.com/watch?v=iFS25HfTe20)
+  (Mike Stay, DEF CON 2020) [[paper](https://eprint.iacr.org/2020/983)]
+  [[code](https://gitlab.com/pyrofex/breakzip)] [[news](https://www.wired.com/story/quest-to-liberate-bitcoin-from-old-zip-file/)]
+- 2024-05-18:
   [“Incremental Computation with Adapton”](https://vimeo.com/122066659)
   (Matthew Hammer, 2015)
 - 2024-05-11:
