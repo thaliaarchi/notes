@@ -108,7 +108,15 @@ in [Go 1.8](https://go.dev/doc/go1.8#compiler).
 
 Go 1.21.0 was the first release with [fully reproducible builds](https://go.dev/blog/rebuild).
 
-## Possible influence of xoc, an extension-oriented compiler
+## Influences
+
+In [“Go’s History in Code”](https://seh.dev/go-legacy/), showcases code examples
+of patterns common between Newsqueak, Alef, Plan 9 C, Limbo, and Go. It
+demonstrates tokenizing, asynchronous spawning, sending and receiving on
+channels, selecting on multiple channels, unnamed struct members and promotion,
+multiple returns, scoped break and continue, lists and iteration, and modules.
+
+### Possible influence of xoc, an extension-oriented compiler
 
 Russ Cox, Tom Bergan, Austin Clements, Frans Kaashoek, and Eddie Kohler built
 [xoc](https://pdos.csail.mit.edu/archive/xoc/), an extension-oriented compiler,
