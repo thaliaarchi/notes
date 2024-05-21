@@ -5,6 +5,10 @@ projects.
 
 ## 2024
 
+- 2024-05-20:
+  [“GxHash: A High-Throughput, Non-Cryptographic Hashing Algorithm Leveraging
+  Modern CPU Capabilities”](https://github.com/ogxd/gxhash#publication)
+  (Olivier Giniaux, 2023)
 - 2024-05-18:
   [“A Differential Meet-in-the-Middle Attack on the Zip cipher“](https://www.youtube.com/watch?v=iFS25HfTe20)
   (Mike Stay, DEF CON 2020) [[paper](https://eprint.iacr.org/2020/983)]
