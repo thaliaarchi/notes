@@ -119,6 +119,15 @@ additionally as a reading list.
     - Resources for [reading GHC Core](https://stackoverflow.com/questions/6121146/reading-ghc-core)
   - Idris
     - Read the papers by [Edwin Brady](../pl/lists/research_groups.md#st-andrews)
+- [Structured concurrency](https://en.wikipedia.org/wiki/Structured_concurrency)
+  - In [“References are like jumps”](https://without.boats/blog/references-are-like-jumps/)
+    (2024), without.boats briefly discusses how Rust formerly had structured
+    concurrency and its benefits, namely that it eliminates dynamic locking.
+    This article (but not structured concurrency) was followed up on
+    [by Grayden Hoare](https://graydon2.dreamwidth.org/312681.html).
+  - Is structured concurrency as powerful as structured control flow? What
+    patterns are not possible with it (cf. generators with structured control
+    flow).
 - Formal methods
   - [*Programming Z3*](https://theory.stanford.edu/~nikolaj/programmingz3.html)
     (Nikolaj Bjørner, Leonardo de Moura, Lev Nachmanson, and Christoph
