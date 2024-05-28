@@ -5,6 +5,9 @@ projects.
 
 ## 2024
 
+- 2024-05-28:
+  [“Surveilling the Masses with Wi-Fi-Based Positioning Systems”](https://arxiv.org/abs/2405.14975)
+  (Erik Rye and Dave Levin, IEEE S&P 2024)
 - 2024-05-20:
   [“GxHash: A High-Throughput, Non-Cryptographic Hashing Algorithm Leveraging
   Modern CPU Capabilities”](https://github.com/ogxd/gxhash#publication)
