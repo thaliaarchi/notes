@@ -5,6 +5,9 @@ projects.
 
 ## 2024
 
+- 2024-06-16:
+  [“Manifest V3 Unveiled: Navigating the New Era of Browser Extensions”](https://arxiv.org/abs/2404.08310)
+  (Nikolaos Pantelaios, Alexandros Kapravelos, 2024)
 - 2024-05-28:
   [“Surveilling the Masses with Wi-Fi-Based Positioning Systems”](https://arxiv.org/abs/2405.14975)
   (Erik Rye and Dave Levin, IEEE S&P 2024)
