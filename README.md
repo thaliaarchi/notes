@@ -133,6 +133,7 @@ topics.
 - [Futamura projections](topics/futamura.md)
 - [History of Plan 9](topics/plan9.md)
 - [Integer division and modulo rounding](topics/div_mod_rounding.md)
+- [Implementing generators](topics/generators.md)
 - [Language server design](topics/language_server.md)
 - [List of ciphers](topics/ciphers.md)
 - [Minecraft decompilation](topics/minecraft_decompilation.md)
