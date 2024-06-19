@@ -198,17 +198,6 @@ let x = 'block: {
 };
 ```
 
-Then, `Iterator` could be extended to enable return types:
-
-```rust
-trait Iterator {
-    type Item;
-    type Break;
-
-    fn next(&mut self) -> Result<Self::Item, Self::Break>;
-}
-```
-
 In [Bolin](https://bolinlang.com/), in addition to `on complete` (`for`-`else`),
 loops may have `on break` and `on empty`.
 
@@ -222,3 +211,38 @@ on empty { v .= 200 }
 on complete { v .= 300 }
 assert(v == 100)
 ```
+
+However, these patterns relate to the loop, not the iterator it iterates. If
+`Iterator` were be extended to enable return types, it would be:
+
+```rust
+trait Iterator {
+    type Item;
+    type Final;
+
+    fn next(&mut self) -> Result<Self::Item, Self::Final>;
+}
+```
+
+[PEP 255 – Simple Generators](https://peps.python.org/pep-0255/#then-why-not-allow-an-expression-on-return-too),
+records this rationale for why `return` cannot have an expression in a
+generator in Python:
+
+> In Icon, `return expr` means both “I’m done”, and “but I have one final useful
+> value to return too, and this is it”. At the start, and in the absence of
+> compelling uses for `return expr`, it’s simply cleaner to use `yield`
+> exclusively for delivering values.
+
+Icon is dynamically typed, so its generators do not correspond to this
+interface, as the types of the yielded expressions need not match. Having not
+used Icon, though, I do not know whether `return` functions as another `yield`
+when it carries a value, or it produces a final value separately.
+
+Are there any useful patterns that would become possible with generators
+returning a final value?
+
+When combining map and reduce, it can be cheaper to accumulate the reduced value
+while mapping, then emit it when finished. This pattern already can be expressed
+with the existing `Iterator` trait by storing the reduced state in a struct then
+making it accessible with a method. As a bonus, the reduced state could be
+accessed between iterations, instead of just at the end.
