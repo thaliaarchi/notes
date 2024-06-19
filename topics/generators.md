@@ -13,6 +13,18 @@
 
 ## Recursion
 
+To support recursive generators, the call stack needs to be reified. It must be
+heap allocated if the generator escapes.
+
+What about non-tail recursive functions or recursive calls that do not consume
+the entire sequence? Such recursive calls would need to construct a new
+iterator, so it could drive the iteration, but they could reuse the same stack,
+but with a lower bound, to not underflow the sub-frame. If some states are not
+reachable by the sub-iterator and the unused fields are at the tail, the state
+structure could be shrunk without needing code duplication.
+
+### Example
+
 An in-order traversal for a tree as a generator would look like such:
 
 ```rust
@@ -39,8 +51,8 @@ impl<T> Tree<T> {
 }
 ```
 
-To support recursive generators, the call stack needs to be reified. It would
-be desugared to (valid code):
+With the states expressed as an enum and the call stack reified, it would be
+desugared to (valid code):
 
 ```rust
 struct TreeInOrderIter<'a, T> {
