@@ -381,8 +381,7 @@ projects.
   - [“Graph IRs for Impure Higher-Order Languages: Making Aggressive
     Optimizations Affordable with Precise Effect Dependencies”](https://bracevac.org/assets/pdf/oopsla23.pdf)
     (Oliver Bračevac, Guannan Wei, Songlin Jia, Supun Abeysinghe, Yuxuan Jiang,
-    Yuyan Bao, and Tiark Rompf, 2023)
-    [[OOPSLA 2023](https://2023.splashcon.org/track/splash-2023-oopsla)]
+    Yuyan Bao, and Tiark Rompf, [OOPSLA 2023](https://2023.splashcon.org/track/splash-2023-oopsla))
   - SSA
     - “Efficiently computing static single assignment form and the control
       dependence graph” (Ron Cytron, Jeanne Ferrante, Barry K. Rosen, Mark N.
