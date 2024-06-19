@@ -1,0 +1,110 @@
+push n
+    stack.push %s n
+dup
+    stack.guard_force %s 1 .bad_slide
+    stack.guard_len %s 1 .bad_insn
+    %0 = stack.get %s 0
+    stack.push %s %0
+copy i
+    stack.guard_force %s 1 .bad_slide
+    %0 = stack.get_lazy %s i
+    stack.push %s %0
+swap
+    stack.guard_force %s 2 .bad_slide
+    stack.guard_len %s 2 .bad_insn
+    %0 = stack.pop %s
+    %1 = stack.pop %s
+    stack.push %0
+    stack.push %1
+drop
+    stack.guard_force %s 2 .bad_slide
+    stack.guard_len %s 1 .bad_insn
+    %_ = stack.pop %s
+slide i
+    stack.guard_force %s 1 .bad_slide
+    stack.guard_len %s 1 .bad_insn
+    %0 = stack.pop %s
+    stack.drop_lazy %s i
+    stack.push %0
+{add,sub,mul,div,mod}
+    stack.guard_force %s 2 .bad_slide
+    stack.guard_len %s 2 .bad_insn
+    %0 = stack.pop %s
+    %1 = stack.pop %s
+    %2 = int.{add,sub,mul,div,mod}_lazy %1 %0
+    stack.push %2
+store
+    stack.guard_force %s 2 .bad_slide
+    stack.guard_len %s 2 .bad_insn
+    %0 = stack.pop %s
+    %1 = stack.pop %s
+    int.guard_force %0
+    heap.guard_addr_store %0 %1
+retrieve
+    stack.guard_force %s 2 .bad_slide
+    stack.guard_len %s 1 .bad_insn
+    %0 = stack.pop %s
+    %1 = heap.load_lazy %h %0
+    stack.push %s %1
+label l
+    stack.guard_force %s 2 .bad_slide
+call l
+    stack.guard_force %s 2 .bad_slide
+    stack.push %cs l
+    jmp l
+jmp l
+    stack.guard_force %s 2 .bad_slide
+    jmp l
+jz l
+    stack.guard_force %s 2 .bad_slide
+    stack.guard_len %s 1 .bad_insn
+    %0 = stack.pop %s
+    int.guard_force %0
+    br zero %0 l
+jn l
+    stack.guard_force %s 2 .bad_slide
+    stack.guard_len %s 1 .bad_insn
+    %0 = stack.pop %s
+    int.guard_force %0
+    br neg %0 l
+ret
+    stack.guard_force %s 2 .bad_slide
+    stack.guard_len %cs 1 .bad_insn
+    %_ = stack.pop %cs
+end
+    stack.guard_force %s 2 .bad_slide
+    exit
+printc
+    stack.guard_force %s 2 .bad_slide
+    stack.guard_len %s 1 .bad_insn
+    %0 = stack.pop %s
+    int.guard_force %0
+    %1 = int.to_char %0
+    io.print_char stdout %1
+    io.flush stdout
+printi
+    stack.guard_force %s 2 .bad_slide
+    stack.guard_len %s 1 .bad_insn
+    %0 = stack.pop %s
+    int.guard_force %0
+    %1 = int.to_string %0
+    io.print_string stdout %1
+    io.flush stdout
+readc
+    stack.guard_force %s 2 .bad_slide
+    stack.guard_len %s 1 .bad_insn
+    %0 = stack.pop %s
+    %1 = io.read_char stdin
+    %2 = int.from_char_lazy %1
+    int.guard_force %0
+    heap.guard_addr_store %0
+    heap.store %h %0 %2
+readi
+    stack.guard_force %s 2 .bad_slide
+    stack.guard_len %s 1 .bad_insn
+    %0 = stack.pop %s
+    %1 = io.read_line stdin
+    %2 = int.from_string_lazy %1
+    int.guard_force %0
+    heap.guard_addr_store %0
+    heap.store %h %0 %2
