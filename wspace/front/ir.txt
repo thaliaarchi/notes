@@ -70,7 +70,8 @@ jn l
 ret
     stack.guard_force %s 2 .bad_slide
     stack.guard_len %cs 1 .bad_insn
-    %_ = stack.pop %cs
+    %0 = stack.pop %cs
+    jmp_indirect %0
 end
     stack.guard_force %s 2 .bad_slide
     exit
