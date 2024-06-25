@@ -42,6 +42,7 @@ topics.
 - Coffee Compiler Club
   - [2023-09-08 on Sea of Nodes](compilers/ccc/2023-09-08_sea_of_nodes.md)
   - [2023-10-06 with Simon Peyton Jones](compilers/ccc/2023-10-06_spj.md)
+- [Control and data edges in IRs](compilers/ir_edges.md)
 
 ## Programming languages
 
