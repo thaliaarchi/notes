@@ -2,7 +2,7 @@ push n
     stack.push %s n
 dup
     stack.guard_force %s 1 .bad_slide
-    stack.guard_len %s 1 .bad_insn
+    stack.guard_len %s 1 .bad_inst
     %0 = stack.get %s 0
     stack.push %s %0
 copy i
@@ -11,38 +11,38 @@ copy i
     stack.push %s %0
 swap
     stack.guard_force %s 2 .bad_slide
-    stack.guard_len %s 2 .bad_insn
+    stack.guard_len %s 2 .bad_inst
     %0 = stack.pop %s
     %1 = stack.pop %s
-    stack.push %0
-    stack.push %1
+    stack.push %s %0
+    stack.push %s %1
 drop
     stack.guard_force %s 2 .bad_slide
-    stack.guard_len %s 1 .bad_insn
-    %_ = stack.pop %s
+    stack.guard_len %s 1 .bad_inst
+    stack.drop %s
 slide i
     stack.guard_force %s 1 .bad_slide
-    stack.guard_len %s 1 .bad_insn
+    stack.guard_len %s 1 .bad_inst
     %0 = stack.pop %s
     stack.drop_lazy %s i
-    stack.push %0
+    stack.push %s %0
 {add,sub,mul,div,mod}
     stack.guard_force %s 2 .bad_slide
-    stack.guard_len %s 2 .bad_insn
+    stack.guard_len %s 2 .bad_inst
     %0 = stack.pop %s
     %1 = stack.pop %s
     %2 = int.{add,sub,mul,div,mod}_lazy %1 %0
-    stack.push %2
+    stack.push %s %2
 store
     stack.guard_force %s 2 .bad_slide
-    stack.guard_len %s 2 .bad_insn
+    stack.guard_len %s 2 .bad_inst
     %0 = stack.pop %s
     %1 = stack.pop %s
     int.guard_force %0
-    heap.guard_addr_store %0 %1
+    heap.guard_addr_store %h %0
 retrieve
     stack.guard_force %s 2 .bad_slide
-    stack.guard_len %s 1 .bad_insn
+    stack.guard_len %s 1 .bad_inst
     %0 = stack.pop %s
     %1 = heap.load_lazy %h %0
     stack.push %s %1
@@ -51,33 +51,33 @@ label l
 call l
     stack.guard_force %s 2 .bad_slide
     stack.push %cs l
-    jmp l
+    control.jmp l
 jmp l
     stack.guard_force %s 2 .bad_slide
-    jmp l
+    control.jmp l
 jz l
     stack.guard_force %s 2 .bad_slide
-    stack.guard_len %s 1 .bad_insn
+    stack.guard_len %s 1 .bad_inst
     %0 = stack.pop %s
     int.guard_force %0
-    br zero %0 l
+    control.br zero %0 l
 jn l
     stack.guard_force %s 2 .bad_slide
-    stack.guard_len %s 1 .bad_insn
+    stack.guard_len %s 1 .bad_inst
     %0 = stack.pop %s
     int.guard_force %0
-    br neg %0 l
+    control.br neg %0 l
 ret
     stack.guard_force %s 2 .bad_slide
-    stack.guard_len %cs 1 .bad_insn
+    stack.guard_len %cs 1 .bad_inst
     %0 = stack.pop %cs
-    jmp_indirect %0
+    control.jmp_indirect %0
 end
     stack.guard_force %s 2 .bad_slide
-    exit
+    control.exit
 printc
     stack.guard_force %s 2 .bad_slide
-    stack.guard_len %s 1 .bad_insn
+    stack.guard_len %s 1 .bad_inst
     %0 = stack.pop %s
     int.guard_force %0
     %1 = int.to_char %0
@@ -85,7 +85,7 @@ printc
     io.flush stdout
 printi
     stack.guard_force %s 2 .bad_slide
-    stack.guard_len %s 1 .bad_insn
+    stack.guard_len %s 1 .bad_inst
     %0 = stack.pop %s
     int.guard_force %0
     %1 = int.to_string %0
@@ -93,19 +93,56 @@ printi
     io.flush stdout
 readc
     stack.guard_force %s 2 .bad_slide
-    stack.guard_len %s 1 .bad_insn
+    stack.guard_len %s 1 .bad_inst
     %0 = stack.pop %s
     %1 = io.read_char stdin
     %2 = int.from_char_lazy %1
     int.guard_force %0
-    heap.guard_addr_store %0
+    heap.guard_addr_store %h %0
     heap.store %h %0 %2
 readi
     stack.guard_force %s 2 .bad_slide
-    stack.guard_len %s 1 .bad_insn
+    stack.guard_len %s 1 .bad_inst
     %0 = stack.pop %s
     %1 = io.read_line stdin
     %2 = int.from_string_lazy %1
     int.guard_force %0
-    heap.guard_addr_store %0
+    heap.guard_addr_store %h %0
     heap.store %h %0 %2
+
+Lowering from Whitespace uses these instructions:
+
+    stack.push %stack %value
+    %value = stack.get %stack %offset
+    %value = stack.get_lazy %stack %offset
+    %value = stack.pop %stack
+    stack.drop %stack
+    stack.drop_lazy %stack %len
+    stack.guard_force %stack %len @label
+    stack.guard_len %stack %len @label
+
+    heap.store %heap %addr %value
+    %value = heap.load_lazy %heap %addr
+    heap.guard_addr_store %heap %addr
+
+    %value = int.add_lazy %lhs %rhs
+    %value = int.sub_lazy %lhs %rhs
+    %value = int.mul_lazy %lhs %rhs
+    %value = int.div_lazy %lhs %rhs
+    %value = int.mod_lazy %lhs %rhs
+    %value = int.from_char_lazy %char
+    %value = int.from_string_lazy %string
+    %value = int.to_char %char
+    %value = int.to_string %string
+    int.guard_force %value
+
+    control.jmp @label
+    control.jmp_indirect %label_value
+    control.br {neg,zero} %value @label
+    control.exit
+
+    io.print_string %stream %value
+    io.print_char %stream %value
+    %value = io.read_line %stream
+    %value = io.read_char %stream
+    io.flush %stream
