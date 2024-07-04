@@ -38,6 +38,13 @@ as greatly influencing the design of Tree-sitter:
 
 ## Ideas
 
+- Has error recovery
+- Tree is arena-allocated and referenced by ID
+  - Easily serializable
+- Zero-copy
+- Usable as a concrete or abstract syntax tree
+- Parses incrementally
+
 ### Flat AST
 
 AST fork tree. Arena with u32 IDs. Operations: commit, fork, and prune. Each
@@ -48,7 +55,9 @@ with its elements.
 Could fork points converge to start with common nodes?
 
 Since ASTs have span information, each token is unique and no unique table is
-needed. Thus, tokens do not need to be unified between branches.
+needed. Thus, tokens do not need to be unified between branches. However, for
+incremental parsing, a unique table would be useful if not all state can be
+resumed from the AST.
 
 ```rust
 pub struct AstArena { … }
@@ -89,3 +98,13 @@ access.
   Recovery in LR Parsers](http://web.archive.org/web/20240302031213/https://what-when-how.com/compiler-writing/bottom-up-parsing-compiler-writing-part-13/)
   describes several. Max Brunsfield describes error recovery by forking at a
   high level at Strange Loop 2018, but mentions none of those strategies.
+
+## Chumsky
+
+[Why can't error-tolerant parsers also be easy to write?](https://www.jsbarretto.com/blog/parser-combinators-and-error-recovery/),
+Joshua Barretto, 2022
+
+Chumsky is a parser combinator library in Rust built on PEG, which has error
+recovery and emits multiple errors as once. It cannot handle off-side rule
+indentation (and suggests PEG, in general cannot, although Python and Pest can).
+Ambiguity is not analyzed.
