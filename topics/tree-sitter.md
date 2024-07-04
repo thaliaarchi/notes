@@ -18,6 +18,24 @@ valid parse.
 Incremental parsing marks nodes in the old tree, where text was modified, then
 parses the file again, reusing nodes that were not marked.
 
+## Citations
+
+The research papers, that are [cited](https://tree-sitter.github.io/tree-sitter/#underlying-research)
+as greatly influencing the design of Tree-sitter:
+
+- [Practical Algorithms for Incremental Software Development Environments](https://www2.eecs.berkeley.edu/Pubs/TechRpts/1997/CSD-97-946.pdf),
+  Tim A. Wagner, 1998
+- [Context Aware Scanning for Parsing Extensible Languages](https://www-users.cse.umn.edu/~evw/pubs/vanwyk07gpce/vanwyk07gpce.pdf),
+  Eric R. Van Wyk and August C. Schwerdfeger, 2007
+- [Efficient and Flexible Incremental Parsing](https://harmonia.cs.berkeley.edu/papers/twagner-parsing.pdf),
+  Tim A. Wagner and Susan L. Graham, 1998
+- [Incremental Analysis of Real Programming Languages](https://harmonia.cs.berkeley.edu/papers/twagner-glr.pdf),
+  Tim A. Wagner and Susan L. Graham, 1997
+- [Error Detection and Recovery in LR Parsers](http://web.archive.org/web/20240302031213/https://what-when-how.com/compiler-writing/bottom-up-parsing-compiler-writing-part-13/),
+  what-when-how, c. 2012
+- [Error Recovery for LR Parsers](https://apps.dtic.mil/sti/pdfs/ADA043470.pdf),
+  Thomas Julian Pennello, 1977
+
 ## Ideas
 
 ### Flat AST
