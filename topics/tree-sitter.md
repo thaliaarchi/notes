@@ -17,3 +17,41 @@ valid parse.
 
 Incremental parsing marks nodes in the old tree, where text was modified, then
 parses the file again, reusing nodes that were not marked.
+
+## Ideas
+
+### Flat AST
+
+AST fork tree. Arena with u32 IDs. Operations: commit, fork, and prune. Each
+sub-arena in the fork tree starts its IDs just above its parent's last ID. When
+a sub-tree is committed, it is merged into the tree under it, which is extended
+with its elements.
+
+Could fork points converge to start with common nodes?
+
+Since ASTs have span information, each token is unique and no unique table is
+needed. Thus, tokens do not need to be unified between branches.
+
+How does Tree-sitter store its ASTs?
+
+```rust
+pub struct AstArena { … }
+
+impl AstArena {
+    fn new() -> Self;
+    fn edit(&self) -> AstBuilder<'_>;
+}
+
+pub struct AstBuilder<'arena> {
+    children: Vec<AstBuilder<'arena>>,
+}
+
+impl<'arena> AstBuilder<'arena> {
+    fn fork(&self) -> AstBuilder<'arena>;
+    fn commit(&self);
+}
+```
+
+### Variable fidelity
+
+Concrete (`syn` fidelity) vs abstract (compiler fidelity) syntax trees.

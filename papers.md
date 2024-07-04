@@ -5,6 +5,9 @@ projects.
 
 ## 2024
 
+- [2024-07-03](topics/tree-sitter.md#ideas):
+  [“Tree-sitter - a new parsing system for programming tools”](https://www.youtube.com/watch?v=Jes3bD6P0To)
+  (Max Brunsfeld, 2018)
 - 2024-06-16:
   [“Manifest V3 Unveiled: Navigating the New Era of Browser Extensions”](https://arxiv.org/abs/2404.08310)
   (Nikolaos Pantelaios, Alexandros Kapravelos, 2024)
