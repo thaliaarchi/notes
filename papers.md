@@ -5,6 +5,10 @@ projects.
 
 ## 2024
 
+- [2024-07-04](compilers/ir/graph.md#control-flow-and-optimizations):
+  [“A Synthesizing Superoptimizer”](https://arxiv.org/pdf/1711.04422)
+  (Raimondas Sasnauskas, Yang Chen, Peter Collingbourne, Jeroen Ketema, Gratian
+  Lup, Jubi Taneja, and John Regehr, 2018)
 - [2024-07-03](topics/tree-sitter.md#ideas):
   [“Tree-sitter - a new parsing system for programming tools”](https://www.youtube.com/watch?v=Jes3bD6P0To)
   (Max Brunsfeld, 2018)
@@ -391,6 +395,14 @@ projects.
       Wegman, and F. Kenneth Zadeck, 1991) describes a translation algorithm,
       which converts programs into SSA and minimizes phi-functions (cited by
       [Kelsey 1995](compilers/ir/ssa_cps.md#kelsey-1995)).
+    - What is Array SSA? From Wikipedia: [Wikipedia](https://en.wikipedia.org/wiki/Static_single-assignment_form#Open-source):
+      “IBM's open source adaptive Java virtual machine, Jikes RVM, uses extended
+      Array SSA, an extension of SSA that allows analysis of scalars, arrays,
+      and object fields in a unified framework. Extended Array SSA analysis is
+      only enabled at the maximum optimization level, which is applied to the
+      most frequently executed portions of code.”
+      Mailing list post [“Questions about the Array SSA form”](https://sourceforge.net/p/jikesrvm/mailman/jikesrvm-researchers/thread/OFA4A3D863.EBEF48E6-ON85256B8E.0004B52C%40pok.ibm.com/)
+      may be relevant.
   - CPS
     - [“Control Flow Analysis in Scheme”](https://www.khoury.northeastern.edu/home/shivers/papers/pldi88.pdf)
       (Olin Shivers, PLDI 1988)

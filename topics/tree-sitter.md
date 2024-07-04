@@ -2,8 +2,8 @@
 
 ## How Tree-sitter works
 
-[“Tree-sitter - a new parsing system for programming tools”](https://www.youtube.com/watch?v=Jes3bD6P0To)
-by Max Brunsfeld, 2018.
+[Tree-sitter - a new parsing system for programming tools](https://www.youtube.com/watch?v=Jes3bD6P0To),
+Max Brunsfeld, 2018.
 
 Tree-sitter parses without backtracking like LR parsing, but uses a generalized
 form, GLR parsing, which forks the parse stack for every possibility to resolve
@@ -50,8 +50,6 @@ Could fork points converge to start with common nodes?
 Since ASTs have span information, each token is unique and no unique table is
 needed. Thus, tokens do not need to be unified between branches.
 
-How does Tree-sitter store its ASTs?
-
 ```rust
 pub struct AstArena { … }
 
@@ -83,3 +81,11 @@ space savings. [Bracket pair colorization](https://code.visualstudio.com/blogs/2
 in VS Code stores the line and column lengths of nodes, compressed as a single
 integer, (instead of the byte length) and balances the tree for logarithmic
 access.
+
+### Research questions
+
+- How does Tree-sitter store its ASTs?
+- What error recovery strategies does Tree-sitter use? [Error Detection and
+  Recovery in LR Parsers](http://web.archive.org/web/20240302031213/https://what-when-how.com/compiler-writing/bottom-up-parsing-compiler-writing-part-13/)
+  describes several. Max Brunsfield describes error recovery by forking at a
+  high level at Strange Loop 2018, but mentions none of those strategies.
