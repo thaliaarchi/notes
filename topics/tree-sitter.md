@@ -47,11 +47,21 @@ pub struct AstBuilder<'arena> {
 }
 
 impl<'arena> AstBuilder<'arena> {
+    fn push(&self, node: Node) -> NodeId;
     fn fork(&self) -> AstBuilder<'arena>;
-    fn commit(&self);
+    fn commit(self);
 }
 ```
 
 ### Variable fidelity
 
 Concrete (`syn` fidelity) vs abstract (compiler fidelity) syntax trees.
+
+### Spans
+
+Store only lengths of nodes and reconstruct the absolute spans on descent, as
+opposed to storing them directly, for reusability with incremental updates and
+space savings. [Bracket pair colorization](https://code.visualstudio.com/blogs/2021/09/29/bracket-pair-colorization#_the-basic-algorithm)
+in VS Code stores the line and column lengths of nodes, compressed as a single
+integer, (instead of the byte length) and balances the tree for logarithmic
+access.
