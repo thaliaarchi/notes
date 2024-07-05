@@ -98,6 +98,11 @@ access.
   Recovery in LR Parsers](http://web.archive.org/web/20240302031213/https://what-when-how.com/compiler-writing/bottom-up-parsing-compiler-writing-part-13/)
   describes several. Max Brunsfield describes error recovery by forking at a
   high level at Strange Loop 2018, but mentions none of those strategies.
+- Since GLR parsing resembles PikeVM, what optimizations from regular expression
+  searching can be applied to parsing?
+- What about languages that require extra state to parse? Like Ruby
+  disambiguating `/` between division and regular expressions with name
+  resolution or C++ templates needing expansion during parsing.
 
 ## Chumsky
 
