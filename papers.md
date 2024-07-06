@@ -5,6 +5,19 @@ projects.
 
 ## 2024
 
+- 2024-07-05:
+  [“A logical calculus of the ideas immanent in nervous activity”](https://home.csulb.edu/~cwallis/382/readings/482/mccolloch.logical.calculus.ideas.1943.pdf),
+  Warren S. McCulloch and Walter Pitts, Bulletin of Mathematical Biophysics,
+  1943
+- 2024-07-05:
+  [“REC language is a live on IBM1130 simulator”](https://arxiv.org/abs/0905.0737),
+  Ignacio Vega-Paez, Jose Angel Ortega, and Georgina G. Pulido, 2009
+- 2024-07-05:
+  [“LIDA/REC Visual Language for Databases interface PostgreSQL”](https://sci-hub.st/10.1109/ICEEE.2005.1529565),
+  A. Hernández-Montoya and S. V. Chapa-Vergara, 2005
+- 2024-07-05:
+  [“REC and Convert as aids in teaching Automata Theory”](https://delta.cs.cinvestav.mx/~mcintosh/cellularautomata/REC_files/eautom.pdf),
+  Gerardo Cisneros and Harold V. McIntosh, 1989
 - [2024-07-04](compilers/ir/graph.md#control-flow-and-optimizations):
   [“A Synthesizing Superoptimizer”](https://arxiv.org/pdf/1711.04422)
   (Raimondas Sasnauskas, Yang Chen, Peter Collingbourne, Jeroen Ketema, Gratian
