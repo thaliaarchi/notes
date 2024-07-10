@@ -457,6 +457,9 @@ projects.
   - [“Proof-directed program transformation: A functional account of efficient
     regular expression matching”](https://www.cambridge.org/core/services/aop-cambridge-core/content/view/454BB5CD9B0B056FA91957F2F9CC3EC5/S0956796820000295a.pdf)
     (Andrzej Filinski, 2021)
+- Parsing
+  - Parsing papers by [John Aycock](https://cspages.ucalgary.ca/~aycock/),
+    especially on Generalized LR parsing
 - History
   - [“JavaScript: The First 20 Years”](https://dl.acm.org/doi/10.1145/3386327)
     (Allen Wirfs-Brock and Brendan Eich, 2020)
