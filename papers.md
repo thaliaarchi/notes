@@ -5,6 +5,9 @@ projects.
 
 ## 2024
 
+- 2024-07-14:
+  [“Memory Requirements in a Telephone Exchange”](https://archive.org/details/bstj29-3-343),
+  Claude E. Shannon, 1950 [[HN](https://news.ycombinator.com/item?id=40962507)]
 - 2024-07-05:
   [“A logical calculus of the ideas immanent in nervous activity”](https://home.csulb.edu/~cwallis/382/readings/482/mccolloch.logical.calculus.ideas.1943.pdf),
   Warren S. McCulloch and Walter Pitts, Bulletin of Mathematical Biophysics,
