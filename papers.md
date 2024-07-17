@@ -5,6 +5,9 @@ projects.
 
 ## 2024
 
+- 2024-07-17:
+  [“DRAFT: The UNIX Time-Sharing System”](https://www.tuhs.org/Archive/Distributions/Research/McIlroy_v0/UnixEditionZero-OCR.pdf),
+  Dennis M. Ritchie, 1971
 - 2024-07-14:
   [“Memory Requirements in a Telephone Exchange”](https://archive.org/details/bstj29-3-343),
   Claude E. Shannon, 1950 [[HN](https://news.ycombinator.com/item?id=40962507)]
