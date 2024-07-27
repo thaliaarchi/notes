@@ -5,6 +5,9 @@ projects.
 
 ## 2024
 
+- 2024-07-26:
+  [“`cjq`: A Compiler for the jq Programming Language”](https://github.com/jdroob/cjq/blob/main/John_Rubio_MS_Thesis.pdf)
+  John Rubio, 2024, M.S. Thesis
 - 2024-07-17:
   [“DRAFT: The UNIX Time-Sharing System”](https://www.tuhs.org/Archive/Distributions/Research/McIlroy_v0/UnixEditionZero-OCR.pdf),
   Dennis M. Ritchie, 1971
