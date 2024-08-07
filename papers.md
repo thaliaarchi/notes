@@ -110,6 +110,9 @@ projects.
   [“Impact of Economics on Compiler Optimization”](https://sci-hub.st/10.1145/376656.376751)
   (Arch D. Robison, 2001), discussed in a [thread](https://mastodon.social/@regehr/111096553132093803)
   by John Regehr
+- 2024-03-12:
+  [“Formal specification of the jq language”](https://github.com/01mf02/jq-lang-spec/releases/latest/download/spec.pdf)
+  (Michael Färber, 2024)
 - 2024-03-16:
   [“if … then … else had to be invented!”](https://github.com/e-n-f/if-then-else/blob/master/if-then-else.md)
   (Erica Fischer, 2019)
@@ -160,6 +163,9 @@ projects.
   [“An Efficient Approach for Accessing C Data Structures from JavaScript”](https://sci-hub.st/10.1145/2633301.2633302)
   (Matthias Grimmer, Thomas Würthinger, Andreas Wöß, and Hanspeter Mossenböck,
   2014)
+- 2023-09-23:
+  [“Denotational Semantics and a Fast Interpreter for jq”](https://arxiv.org/abs/2302.10576)
+  (Michael Färber, 2023)
 - 2023-09-12:
   [“Control Flow Analysis in Scheme”](https://www.khoury.northeastern.edu/home/shivers/papers/pldi88.pdf)
   (Olin Shivers, 1988)
