@@ -5,6 +5,10 @@ projects.
 
 ## 2024
 
+- 2024-08-07:
+  [“How Can I Academia When My Brain Can't Even? Mental Health in Grad School
+  and Beyond”](https://www.youtube.com/watch?v=9ooa7G7jRd8),
+  Kenny Foner, PLMW 2019 [[publications](http://web.archive.org/web/20210920030538/https://very.science/publications/)]
 - 2024-07-26:
   [“`cjq`: A Compiler for the jq Programming Language”](https://github.com/jdroob/cjq/blob/main/John_Rubio_MS_Thesis.pdf)
   John Rubio, 2024, M.S. Thesis
