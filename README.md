@@ -103,6 +103,7 @@ topics.
 ## Projects
 
 - [Buffered I/O library ideas](projects/bufio_library.md)
+- [Designing a dependently typed systems programming language](projects/dependent_systems_lang.md)
 - [Detecting esolang polyglots](projects/esolang_detect.md)
 - [GHC decompilation](projects/ghc_decompile.md)
 - [Loose threads](projects/loose_threads.md)
