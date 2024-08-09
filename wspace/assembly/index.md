@@ -1,5 +1,6 @@
 # Whitespace assembly
 
+- [An interoperable CST for Whitespace assembly](interop_cst.md)
 - [Parsing any dialect](parsing.md)
 - [Macros](macros.md)
 - [Mnemonics](mnemonics.md)
