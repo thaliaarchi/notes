@@ -158,7 +158,7 @@ topics.
 
 ## Whitespace
 
-- [Assembly](wspace/assembly/index.md)
+- [Assembly](https://github.com/thaliaarchi/omniwsa/blob/main/docs/index.md)
 - Compilation
   - [Front-end](wspace/front/index.md)
   - [Back-end](wspace/back/index.md)
