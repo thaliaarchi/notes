@@ -177,6 +177,8 @@ and [2019 PL winter school](https://web.archive.org/web/20220428153213/http://se
     - Intcode
     - Synacor Challenge
       - [ ] Debugger
+      - [“Reverse-engineering the Synacor Challenge”](https://www.mattkeeter.com/blog/2024-01-28-synacor/index.html)
+        by Matt Keeter (2024)
   - Single-instruction: Subleq
   - Stack-oriented: Piet
   - Trees:
