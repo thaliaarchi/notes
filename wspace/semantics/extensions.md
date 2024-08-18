@@ -6,6 +6,9 @@ these are non-standard, few implementations support them and the syntax is
 conflicting.
 
 - STT: `Invert` (STT), `Shuffle` (STTS)
+- TSLS: `or` (TSLS)
+- TSLT: `not` (TSLT)
+- TSLL: `and` (TSLL)
 - TTL: `x-dump` (TTL)
 - TLSS: `printc` (TLSS), `OutputStack` (TLSSS)
 - TLSL: `x-args` (TLSL)
@@ -13,8 +16,9 @@ conflicting.
 - TLTLT: `x-closefile` (TLTLT)
 - TLTLL: `x-writefile` (TLTLL)
 - TLL: `shell` (TLL)
-- LLS: `PYFN` (LLS), `debug_printstack` (LLSSS), `debug_printheap` (LLSST)
-- LLT: `Trace` (LLT), `eval` (LLT)
+- LLS: `PYFN` (LLS), `debug_printstack` (LLSSS), `debug_printheap` (LLSST),
+  `debugger` (LLS)
+- LLT: `Trace` (LLT), `eval` (LLT), `debugger` alternate encoding (LLT)
 
 ## Burghard
 
@@ -48,6 +52,19 @@ following instructions:
 | `x-readfile`  | TLTLS  |     | file -- ptr code | Read from a file                |
 | `x-writefile` | TLTLL  |     | ch file -- code  | Write to a file                 |
 | `x-closefile` | TLTLT  |     | file --          | Close a file                    |
+
+## voliva
+
+[WSA](https://github.com/voliva/wsa) by Victor Oliva defines the following
+instructions:
+
+| Mnemonic   | Syntax | Arg | Stack       | Description                     |
+| ---------- | ------ | --- | ----------- | ------------------------------- |
+| `or`       | TSLS   |     | x y -- x\|y | Bitwise OR                      |
+| `not`      | TSLT   |     | x -- ~x     | Bitwise complement              |
+| `and`      | TSLL   |     | x y -- x&y  | Bitwise AND                     |
+| `debugger` | LLS    |     | --          | Breakpoint                      |
+| `debugger` | LLT    |     | --          | Breakpoint (alternate encoding) |
 
 ## pywhitespace
 
