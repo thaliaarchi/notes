@@ -18,7 +18,7 @@
     - Nikita Voloboev: [notes](https://wiki.nikiv.dev/) [[git](https://github.com/nikitavoloboev/knowledge)]
     - June McEnroe: [Git forge](https://git.causal.agency/), `man`-style
       [project list](https://causal.agency/)
-    - Greg Rosenblatt: [CV](https://www.gregrosenblatt.com/)
+    - Greg Rosenblatt: [CV](https://www.gregrosenblatt.com/) [[git](https://github.com/gregr/gregr.github.io)]
     - Robin Schroer: [blog](https://blog.sulami.xyz/) [[generator](https://github.com/sulami/blog)]
     - Chris Wellons: [blog](https://nullprogram.com/) [[git](https://github.com/skeeto/skeeto.github.com)]
 - Forge
