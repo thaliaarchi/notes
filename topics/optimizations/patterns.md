@@ -36,3 +36,11 @@ func sum(a, b int) {
   return a
 }
 ```
+
+### SWAR for nibbles
+
+```rust
+x >= 0xa0 || 0x0a <= x && x <= 0x0f
+// ==>
+(if x > 0x0f { x >> 4 } else { x }) >= 0x0a
+```
