@@ -125,6 +125,8 @@ interesting programs for fun and demonstration.
   - [Flappy Bird](https://zackoverflow.dev/writing/flappy-bird-in-type-level-typescript/)
     by Zack Radisic (2023) parses the types in Rust to emit a bytecode, which is
     evaluated by a VM in Zig
+  - [TypeScript Sudoku](https://github.com/gruhn/typescript-sudoku)
+    by Niklas Gruhn (2024) uses type inference to make an interactive Sudoku
 - x86 MMU fault handling
   - [trapcc](https://github.com/jbangert/trapcc): subleq compiler
     by Julian Bangert (2013)
@@ -190,6 +192,9 @@ Domain-specific languages that are Turing complete.
 - OpenType fonts
   - [Addition](https://litherum.blogspot.com/2019/03/addition-font.html)
     by Litherum (2019)
+- HarfBuzz
+  - [llama.ttf](https://fuglede.github.io/llama.ttf/) by Søren Fuglede Jørgensen
+    (2024) is a LLM and inference engine in a HarfBuzz Wasm shaper.
 
 ## Games
 
