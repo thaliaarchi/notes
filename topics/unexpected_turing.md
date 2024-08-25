@@ -246,6 +246,13 @@ Domain-specific languages that are Turing complete.
     by Mike Birken (2023)
     [[HN](https://news.ycombinator.com/item?id=34309725)]
 
+## Information Security
+
+- ROP (Return-Oriented Programming)
+  - [Return-Oriented Programming: Systems, Languages, and Applications](https://doi.org/10.1145/2133375.2133377)
+  - [Microgadgets: size does matter in turing-complete return-oriented programming](https://dl.acm.org/doi/abs/10.5555/2372399.2372409)
+  - [ROPC is an example of a Turing complete ROP compiler](https://github.com/pakt/ropc)
+
 ## Other
 
 - Excel
