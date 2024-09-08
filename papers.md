@@ -5,6 +5,10 @@ projects.
 
 ## 2024
 
+- 2024-09-07:
+  [“Binary Search a Little Simpler & More Generic”](https://julesjacobs.com/notes/binarysearch/binarysearch.pdf),
+  Jules Jacobs, 2020
+  [[follow-up](https://byorgey.wordpress.com/2023/01/01/competitive-programming-in-haskell-better-binary-search/)]
 - 2024-08-07:
   [“How Can I Academia When My Brain Can't Even? Mental Health in Grad School
   and Beyond”](https://www.youtube.com/watch?v=9ooa7G7jRd8),
