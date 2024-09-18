@@ -5,6 +5,9 @@ projects.
 
 ## 2024
 
+- 2024-09-18:
+  [“Flow Diagrams, Turing Machines And Languages With Only Two Formation Rules”](https://dl.acm.org/doi/10.1145/355592.365646),
+  Corrado Böhm and Giuseppe Jacopini, CACM 1966
 - 2024-09-07:
   [“Binary Search a Little Simpler & More Generic”](https://julesjacobs.com/notes/binarysearch/binarysearch.pdf),
   Jules Jacobs, 2020
