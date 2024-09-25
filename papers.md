@@ -5,6 +5,9 @@ projects.
 
 ## 2024
 
+- 2024-09-24:
+  [“Understanding Graal IR”](https://www.youtube.com/watch?v=ypETuCHnmxA),
+  Chris Seaton, VMIL 2020
 - 2024-09-18:
   [“Flow Diagrams, Turing Machines And Languages With Only Two Formation Rules”](https://dl.acm.org/doi/10.1145/355592.365646),
   Corrado Böhm and Giuseppe Jacopini, CACM 1966
