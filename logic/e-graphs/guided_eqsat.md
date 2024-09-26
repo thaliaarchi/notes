@@ -1,7 +1,7 @@
 # Guided equality saturation
 
 [“Guided Equality Saturation”](https://thok.eu/publications/2024/popl.pdf)
-by Thomas Koehler, Andrés Goens, Siddharth Bhat, Tobias Grosser, Phil Trinder,
+by Thomas Kœhler, Andrés Goens, Siddharth Bhat, Tobias Grosser, Phil Trinder,
 and Michel Steuwer, POPL 2024
 
 This paper is incredibly cool.
@@ -30,7 +30,7 @@ looks good and I want to learn it, but it would still be mostly manual.
 
 ## Lightning talk
 
-Thomas Koehler gave a [lightning talk](https://egraphs.org/meeting/2024-03-21-lightning-talks)
+Thomas Kœhler gave a [lightning talk](https://egraphs.org/meeting/2024-03-21-lightning-talks)
 on guided equality saturation at the second EGRAPHS community meeting.
 
 ### Remark
@@ -60,7 +60,7 @@ Can GES be used today?
 > There's also a library implementing sketches for egg that can be used for
 > playing with things: https://github.com/Bastacyclop/egg-sketches
 >
-> (Thomas Koehler)
+> (Thomas Kœhler)
 
 ### Question 3
 
@@ -69,7 +69,7 @@ axioms?
 
 > Sketches don't need to be checked because eqsat will find a rewrite path,
 > proving equality by transitivity -- but the tactic can fail to find a path
-> (Thomas Koehler)
+> (Thomas Kœhler)
 
 Interesting. It feels different from what I’m used to in Coq (modus ponens
 applications of assumptions to the goal) because an invalid assumption would

@@ -136,7 +136,7 @@ projects.
   (Eytan Singher and Shachar Itzhaky, 2023)
 - [2024-03-21](logic/e-graphs/guided_eqsat.md):
   [“Guided Equality Saturation”](https://thok.eu/publications/2024/popl.pdf)
-  (Thomas Koehler, Andrés Goens, Siddharth Bhat, Tobias Grosser, Phil Trinder,
+  (Thomas Kœhler, Andrés Goens, Siddharth Bhat, Tobias Grosser, Phil Trinder,
   and Michel Steuwer, POPL 2024)
 - 2024-03-02:
   [“Merge-Tree: Visualizing the integration of commits into Linux”](https://sci-hub.st/10.1002/smr.1936)

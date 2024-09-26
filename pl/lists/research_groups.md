@@ -226,5 +226,5 @@ https://css.csail.mit.edu/stack/
   - [Tiark Rompf](https://www.cs.purdue.edu/people/faculty/rompf.html)
     - Collapsing Towers
 - [“Guided Equality Saturation”](https://thok.eu/publications/2024/popl.pdf)
-  authors: Thomas Koehler, Andrés Goens, Siddharth Bhat, Tobias Grosser, Phil
+  authors: Thomas Kœhler, Andrés Goens, Siddharth Bhat, Tobias Grosser, Phil
   Trinder, and Michel Steuwer
