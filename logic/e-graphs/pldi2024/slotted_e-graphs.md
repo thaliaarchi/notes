@@ -1,7 +1,11 @@
 # Slotted E-Graphs
 
+Rudi Schneider (TU Berlin), Thomas Kœhler (INRIA), [Michel Steuwer](https://michel.steuwer.info/)
+(TU Berlin)
+
 [[conference](https://pldi24.sigplan.org/details/egraphs-2024-papers/10/Slotted-E-Graphs)]
-[[video (at 02:04:54)](https://www.youtube.com/watch?v=JPA8QwLHNzo&t=7494s)]
+[[video](https://www.youtube.com/watch?v=4Cg365LVbYg&list=PLyrlk8Xaylp4UHRXP0VkuYen9nkn4bczW&index=12)]
+[[live video (at 02:04:54)](https://www.youtube.com/watch?v=JPA8QwLHNzo&t=7494s)]
 [[paper](https://michel.steuwer.info/files/publications/2024/EGRAPHS-2024.pdf)]
 [[implementation](https://github.com/memoryleak47/egraph-sandbox/tree/main/3-miniegg-with-slots)]
 
