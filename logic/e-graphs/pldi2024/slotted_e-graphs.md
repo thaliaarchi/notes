@@ -9,6 +9,10 @@ Rudi Schneider (TU Berlin), Thomas Kœhler (INRIA), [Michel Steuwer](https://mic
 [[paper](https://michel.steuwer.info/files/publications/2024/EGRAPHS-2024.pdf)]
 [[implementation](https://github.com/memoryleak47/egraph-sandbox/tree/main/3-miniegg-with-slots)]
 
+An approach for representing bound variables in e-graphs. In their slotted
+e-graph, e-classes are parameterized by slots abstracting over all free
+variables.
+
 Why not use de Bruijn levels? Then the example given for de Bruijn indices
 doesn't have the same sharing problem:
 
@@ -40,3 +44,32 @@ doesn't depend on a variable. For example, x * 0 depends on x and 0 doesn't.
 with itself. To make it symmetric, e-classes depend on a *set* of parameter
 lists. In that case, {(a, b), (b, a)}. If you call it with any of them, it's the
 same. That parameter set list can be represented nicely as a permutation group.
+
+## Follow-up
+
+Parameter mismatch and symmetry could be handled by the same mechanism. As
+described in the talk, x * 0 has signature (x) and 0 has signature (), so when
+unified, the e-class has signature (). Instead of deleting a variable, the
+signatures are simply unioned in a set: {(), (x)}. This also works with
+symmetry.
+
+As an example, suppose you start with the expression:
+(x + y) * 0
+
+and rules:
+- x * 0 ==> 0
+- x + y ==> y + x
+- (x + y) * z ==> (x * z) + (y * z)
+
+Applying rewrites would yield the e-class of:
+- {0, 0 + 0} with signature ()
+- {(x * 0) + 0} with signature (x)
+- {0 + (y * 0)} with signature (y)
+- {(x + y) * 0, (x * 0) + (y * 0}} with signature (x, y)
+- {(y + x) * 0} with signature (y, x)
+
+In this model, each e-class is partitioned by the unique signatures.
+var-classes?
+
+What about permutation groups? Would that then need to be expanded instead of
+compactly represented (or however they do it)?
