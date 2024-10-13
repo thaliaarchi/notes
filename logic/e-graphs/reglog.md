@@ -22,13 +22,20 @@ instead of anonymous.
 
 ## Regions
 
-Regions would work well in a slotted e-graph: each region has a slot for each
-argument port and they're instantiated with the input ports to the γ-, θ-, λ-,
-δ-, and ϕ-nodes.
-
 By making regions first-class in the e-graph, rewrites can target them
-independently of their parent structural node. With slots, they can be shared
-between structural nodes.
+independently of their parent structural node.
+
+Regions would work well in a slotted e-graph. Each region has a slot for each
+external value used. Slots are ordered, as in slotted e-graphs, by their usage
+ordering within the region, so they can be reused. In RVSDGs, structural nodes
+have implicit edges from their input ports to the argument ports of the
+contained regions, since they have the same ordering. In reglog, each region has
+a slot for each argument port and they're instantiated with the input ports to
+the γ-, θ-, λ-, δ-, and ϕ-nodes.
+
+If a region does not use all RVSDG argument ports or has a different order, then
+it breaks sharing. Slotted e-graphs order slots by the position in the e-class,
+so regions can be shared between structural nodes.
 
 The modeling of their sort may be similar to `UnstableFn`.
 
