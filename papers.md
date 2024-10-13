@@ -5,6 +5,9 @@ projects.
 
 ## 2024
 
+- [2024-10-12](logic/e-graphs/pldi2024/slotted_e-graphs.md):
+  [“Slotted E-Graphs”](https://pldi24.sigplan.org/details/egraphs-2024-papers/10/Slotted-E-Graphs),
+  Rudi Schneider, Thomas Kœhler, [Michel Steuwer][steuwer], PLDI 2024
 - 2024-09-24:
   [“Understanding Graal IR”](https://www.youtube.com/watch?v=ypETuCHnmxA),
   Chris Seaton, VMIL 2020
@@ -137,7 +140,7 @@ projects.
 - [2024-03-21](logic/e-graphs/guided_eqsat.md):
   [“Guided Equality Saturation”](https://thok.eu/publications/2024/popl.pdf)
   (Thomas Kœhler, Andrés Goens, Siddharth Bhat, Tobias Grosser, Phil Trinder,
-  and Michel Steuwer, POPL 2024)
+  and [Michel Steuwer][steuwer], POPL 2024)
 - 2024-03-02:
   [“Merge-Tree: Visualizing the integration of commits into Linux”](https://sci-hub.st/10.1002/smr.1936)
   (Evan Wilde and [Daniel M. Germán][dmgerman], VISSOFT 2016)
@@ -496,3 +499,4 @@ projects.
 [cliffc]: https://dblp.org/pid/39/4499.html
 [dmgerman]: https://github.com/dmgerman/papers
 [might]: https://matt.might.net/
+[steuwer]: https://michel.steuwer.info/

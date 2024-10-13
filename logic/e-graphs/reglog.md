@@ -9,3 +9,10 @@ Do regions need to be a sort like `UnstableFn`? What does optir do for this?
 
 Values, if stored directly, could benefit from heterogeneous widths. Kinda like
 JIT specialization.
+
+Predicates and properties of nodes can probably be stored on the e-class instead
+of the node. In fact, this is already remarked in the [video tutorial](https://www.youtube.com/watch?v=N2RDQGRBrSY):
+`(function lower-bound (Math) Rational :merge (max old new))` is only stored
+once per e-class.
+
+Use [slotted e-graphs](pldi2024/slotted_e-graphs.md).
