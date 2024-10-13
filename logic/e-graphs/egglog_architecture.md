@@ -20,7 +20,43 @@
 - function
 - function::binary_search
 - function::index
-- function::table
+
+### `function::table`
+
+> A table type used to represent functions.
+>
+> Tables are essentially hash table mapping from vectors of values to values,
+> but they make different trade-offs than standard HashMaps or IndexMaps:
+>
+> * Like indexmap, tables preserve insertion order and support lookups based on
+>   vector-like "offsets" in addition to table keys.
+>
+> * Unlike indexmap, these tables support constant-time removals that preserve
+>   insertion order. Removals merely mark entries as "stale."
+>
+> These features come at the cost of needing to periodically rehash the table.
+> These rehashes must be done explicitly because they perturb the integer table
+> offsets that are otherwise stable. We prefer explicit rehashes because
+> column-level indexes use raw offsets into the table, and they need to be
+> rebuilt when a rehash happens.
+>
+> The advantage of these features is that tables can be sorted by "timestamp,"
+> making it efficient to iterate over subsets of a table matching a given
+> timestamp range.
+>
+> Note on rehashing: We will eventually want to keep old/stale entries around to
+> facilitate proofs/provenance. Early testing found that removing this in the
+> "obvious" way (keeping 'vals' around, avoiding `mem::take()`s for stale
+> entries, keeping stale entries out of `table` made some workloads very slow.
+> It's likely that we will have to store these "on the side" or use some sort of
+> persistent data-structure for the entire table.
+
+It's is a form of memoization.
+
+Values in the function table are stored by ID.
+
+What does the timestamp represent? Its sequential, so not physical time. They
+can be transformed to indices via binary search (`Table::transform_range`).
 
 ## `gj`
 
