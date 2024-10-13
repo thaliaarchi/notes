@@ -16,3 +16,8 @@ of the node. In fact, this is already remarked in the [video tutorial](https://w
 once per e-class.
 
 Use [slotted e-graphs](pldi2024/slotted_e-graphs.md).
+
+Optimize rewrite rules like Cranelift and how Philip Zucker [describes](pldi2024/e-graphs_and_automated_reasoning.md#simplification-and-completion).
+
+Make rewrites be named (like Coq or [Twee](pldi2024/e-graphs_and_automated_reasoning.md#union-find-is-ground-atomic-completion)),
+instead of anonymous.

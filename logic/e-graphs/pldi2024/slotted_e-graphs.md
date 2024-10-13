@@ -3,7 +3,7 @@
 Rudi Schneider (TU Berlin), Thomas Kœhler (INRIA), [Michel Steuwer](https://michel.steuwer.info/)
 (TU Berlin)
 
-[[conference](https://pldi24.sigplan.org/details/egraphs-2024-papers/10/Slotted-E-Graphs)]
+[[conference details](https://pldi24.sigplan.org/details/egraphs-2024-papers/10/Slotted-E-Graphs)]
 [[video](https://www.youtube.com/watch?v=4Cg365LVbYg&list=PLyrlk8Xaylp4UHRXP0VkuYen9nkn4bczW&index=12)]
 [[live video (at 02:04:54)](https://www.youtube.com/watch?v=JPA8QwLHNzo&t=7494s)]
 [[paper](https://michel.steuwer.info/files/publications/2024/EGRAPHS-2024.pdf)]

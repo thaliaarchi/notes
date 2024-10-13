@@ -5,6 +5,9 @@ projects.
 
 ## 2024
 
+- [2024-10-12](logic/e-graphs/pldi2024/e-graphs_and_automated_reasoning.md):
+  [“Egraphs and Automated Reasoning: Looking Back to Look Forward”](https://pldi24.sigplan.org/details/egraphs-2024-papers/13/E-graphs-and-Automated-Reasoning-Looking-back-to-look-forward),
+  Philip Zucker, PLDI 2024
 - [2024-10-12](logic/e-graphs/pldi2024/egstra.md):
   [“EGSTRA: E-Graph-Based Structures for Test Suite Reduction and Abstraction”](https://pldi24.sigplan.org/details/egraphs-2024-papers/8/EGSTRA-E-Graph-Based-Strategy-for-Test-Suite-Reduction-and-Abstraction),
   Sabrina Reis, Matthew Sottile, PLDI 2024
