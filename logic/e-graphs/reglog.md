@@ -5,8 +5,6 @@ than my idea of storing which passes construct nodes. See module comment in
 src/function/table.rs. What about merging provenance, since nodes can be
 constructed in multiple ways?
 
-Do regions need to be a sort like `UnstableFn`? What does optir do for this?
-
 Values, if stored directly, could benefit from heterogeneous widths. Kinda like
 JIT specialization.
 
@@ -21,3 +19,17 @@ Optimize rewrite rules like Cranelift and how Philip Zucker [describes](pldi2024
 
 Make rewrites be named (like Coq or [Twee](pldi2024/e-graphs_and_automated_reasoning.md#union-find-is-ground-atomic-completion)),
 instead of anonymous.
+
+## Regions
+
+Regions would work well in a slotted e-graph: each region has a slot for each
+argument port and they're instantiated with the input ports to the γ-, θ-, λ-,
+δ-, and ϕ-nodes.
+
+By making regions first-class in the e-graph, rewrites can target them
+independently of their parent structural node. With slots, they can be shared
+between structural nodes.
+
+The modeling of their sort may be similar to `UnstableFn`.
+
+optir does not have first-class regions.
