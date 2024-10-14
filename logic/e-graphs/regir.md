@@ -1,4 +1,4 @@
-# reglog: egglog + RVSDGs
+# E-Graph and RVSDG design ideas
 
 Provenance/proofs for what rules construct nodes. This would be more general
 than my idea of storing which passes construct nodes. See module comment in
