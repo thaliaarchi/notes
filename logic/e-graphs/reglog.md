@@ -20,6 +20,10 @@ Optimize rewrite rules like Cranelift and how Philip Zucker [describes](pldi2024
 Make rewrites be named (like Coq or [Twee](pldi2024/e-graphs_and_automated_reasoning.md#union-find-is-ground-atomic-completion)),
 instead of anonymous.
 
+Learn how egglog repairs non-canonical IDs in the e-graph. It is problematic
+when a node refers to a non-canonical ID, because then it won't be structurally
+equivalent to a new node referring to the same e-classes.
+
 ## Regions
 
 By making regions first-class in the e-graph, rewrites can target them
