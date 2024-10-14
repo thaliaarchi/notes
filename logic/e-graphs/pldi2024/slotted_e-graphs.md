@@ -86,3 +86,15 @@ compactly represented (or however they do it)?
 What about types? Do var-classes need to be partitioned by sorts in addition to
 arity? Is it possible for a rewrite to map a binding to another type? I don't
 think so, so `var` nodes should be strongly typed.
+
+Terminology: “Signature” is not used in the paper, but I use it for the list of
+slots. “Shape” is an e-node, where its slots are renamed in ascending order
+according to first occurrence in the e-node.
+
+The expression (x * 2) + y with commutative addition and multiplication rules
+forms the following e-class:
+
+- (x, y): {(x * 2) + y, (2 * x) + y}
+- (y, x): {y + (x * 2), y + (2 * x)}
+
+Although the two var-classes have the same arity, they cannot be unified.
