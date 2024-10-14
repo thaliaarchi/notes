@@ -55,29 +55,34 @@ same. That parameter set list can be represented nicely as a permutation group.
 
 ## Follow-up
 
+(Question [asked](https://egraphs.zulipchat.com/#narrow/stream/328977-topic.2Ftheory/topic/Slotted.20E-graphs)
+on Zulip.)
+
 Parameter mismatch and symmetry could be handled by the same mechanism. As
 described in the talk, x * 0 has signature (x) and 0 has signature (), so when
 unified, the e-class has signature (). Instead of deleting a variable, the
-signatures are simply unioned in a set: {(), (x)}. This also works with
-symmetry.
+signatures could be unioned in a set: {(), (x)}. This also works with symmetry.
 
 As an example, suppose you start with the expression:
 (x + y) * 0
 
 and rules:
-- x * 0 ==> 0
-- x + y ==> y + x
-- (x + y) * z ==> (x * z) + (y * z)
+- ?x * 0 ==> 0
+- ?x + ?y ==> ?y + ?x
+- (?x + ?y) * ?z ==> (?x * ?z) + (?y * ?z)
 
 Applying rewrites would yield the e-class of:
-- {0, 0 + 0} with signature ()
-- {(x * 0) + 0} with signature (x)
-- {0 + (y * 0)} with signature (y)
-- {(x + y) * 0, (x * 0) + (y * 0}} with signature (x, y)
-- {(y + x) * 0} with signature (y, x)
+- {0, 0 + 0} with signature {()}
+- {(a * 0) + 0, 0 + (a * 0)} with signatures {(x), (y)}
+- {(a + b) * 0, (a * 0) + (b * 0}} with signatures {(x, y), (y, x)}
 
-In this model, each e-class is partitioned by the unique signatures.
-var-classes?
+In this model, each e-class is partitioned by the unique signatures. Let's
+tentatively call them var-classes. e-nodes then point to var-classes with
+instantiations instead of e-classes.
 
 What about permutation groups? Would that then need to be expanded instead of
 compactly represented (or however they do it)?
+
+What about types? Do var-classes need to be partitioned by sorts in addition to
+arity? Is it possible for a rewrite to map a binding to another type? I don't
+think so, so `var` nodes should be strongly typed.
