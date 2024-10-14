@@ -59,6 +59,18 @@
 - Known for
   - GraalVM: Polyglot Code Finder paper
 
+## TU Berlin
+
+- [Semesters](https://www.tu.berlin/en/studying/applying-and-enrolling/dates-deadlines/):
+  - Summer semester 2024: 1 Apr 2024 – 30 Sep 2024
+  - Winter semester 2024/2025: 1 Oct 2024 – 31 Mar 2025
+  - Summer semester 2025: 1 Apr 2025 – 30 Sep 2025
+- [Deadlines](https://www.tu.berlin/en/studierendensekretariat/applying-enrolling-for-doctoral-studies):
+  - The first step in the enrollment process, registration in their portal is
+    possible during:
+    - Summer semester: 15 Jan – 31 Aug (which year?)
+    - Winter semester: 15 Jul – 28 Feb (which year?)
+
 ## University of Utah - Computer Science
 
 - [Deadlines](https://www.cs.utah.edu/graduate/admissions/deadline/)
