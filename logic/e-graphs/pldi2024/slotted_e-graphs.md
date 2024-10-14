@@ -13,11 +13,19 @@ An approach for representing bound variables in e-graphs. In their slotted
 e-graph, e-classes are parameterized by slots abstracting over all free
 variables.
 
-Why not use de Bruijn levels? Then the example given for de Bruijn indices
-doesn't have the same sharing problem:
+Why not use de Bruijn levels? Then β-reduction the example given for de Bruijn
+indices doesn't have the same sharing problem:
 
-- With de Bruijn indices: λ. (λ. f(%1) %0) arg ==>(beta-reduction) λ. f(%0) arg
-- With de Bruijn levels:  λ. (λ. f(%0) %1) arg ==>(beta-reduction) λ. f(%0) arg
+β-reduction: (λx. M) N ==> M[x := N]
+- λ. (λ. f(%1) %0) arg ==> λ. f(%0) arg (de Bruijn indices)
+- λ. (λ. f(%0) %1) arg ==> λ. f(%0) arg (de Bruijn levels)
+
+η-reduction: λx. M x ==> M when M does not contain x free
+- λ. f(%0) %0 ==> f (both)
+
+η-expansion: M ==> λx. M x
+- λ. f(%0) ==> λ. ((λ. f(%1)) %0) (de Bruijn indices)
+- λ. f(%0) ==> λ. ((λ. f(%0)) %1) (de Bruijn levels)
 
 However, adding or removing binders still breaks sharing.
 
