@@ -24,6 +24,11 @@ Learn how egglog repairs non-canonical IDs in the e-graph. It is problematic
 when a node refers to a non-canonical ID, because then it won't be structurally
 equivalent to a new node referring to the same e-classes.
 
+What are pathological, but usable maximum sizes for an e-graph? I.e., what size
+can I make my `Id`? What about a maximum number of sorts? Since egglog `Vec`,
+`Map`, `Set`, and `UnstableFn` can have dynamic instantiations, it is not a
+static number. I want to add tag bits to `Id` for the sort or slot signature.
+
 ## Regions
 
 By making regions first-class in the e-graph, rewrites can target them
