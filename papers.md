@@ -5,6 +5,11 @@ projects.
 
 ## 2024
 
+- 2024-10-15:
+  [“egg: Fast and Extensible Equality Saturation”](https://dl.acm.org/doi/10.1145/3434304),
+  Max Willsey, Chandrakana Nandi, Yisu Remy Wang, Oliver Flatt, Zachary
+  Tatlock, and Pavel Panchekha, POPL 2021
+  [[arXiv](https://arxiv.org/abs/2004.03082)]
 - [2024-10-12](logic/e-graphs/pldi2024/e-graphs_and_automated_reasoning.md):
   [“Egraphs and Automated Reasoning: Looking Back to Look Forward”](https://pldi24.sigplan.org/details/egraphs-2024-papers/13/E-graphs-and-Automated-Reasoning-Looking-back-to-look-forward),
   Philip Zucker, PLDI 2024
@@ -485,10 +490,6 @@ projects.
   - [“Relational E-matching”](https://arxiv.org/abs/2108.02290)
     (Yihong Zhang, Yisu Remy Wang, Max Willsey, and Zachary Tatlock, 2021)
     [[notes](logic/e-graphs/survey.md)]
-  - [“egg: Fast and Extensible Equality Saturation”](https://dl.acm.org/doi/10.1145/3434304)
-    (Max Willsey, Chandrakana Nandi, Yisu Remy Wang, Oliver Flatt, Zachary
-    Tatlock, and Pavel Panchekha, POPL 2021)
-    [[arXiv](https://arxiv.org/abs/2004.03082)]
 - Regular expressions
   - [“Derivatives of regular expressions”](https://dl.acm.org/doi/10.1145/321239.321249)
     (Janusz A. Brzozowski, 1964)
