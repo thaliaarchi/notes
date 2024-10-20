@@ -5,6 +5,10 @@ projects.
 
 ## 2024
 
+- 2024-10-17:
+  [“Better Together: Unifying Datalog and Equality Saturation”](https://ztatlock.net/pub-2023-pldi-egglog.html),
+  Yihong Zhang, Remy Wang, Oliver Flatt, David Cao, Philip Zucker, Eli
+  Rosenthal, Zachary Tatlock, and Max Willsey, [PLDI 2023](https://pldi23.sigplan.org/details/pldi-2023-pldi/20/Better-Together-Unifying-Datalog-and-Equality-Saturation)
 - 2024-10-15:
   [“egg: Fast and Extensible Equality Saturation”](https://dl.acm.org/doi/10.1145/3434304),
   Max Willsey, Chandrakana Nandi, Yisu Remy Wang, Oliver Flatt, Zachary
@@ -477,10 +481,6 @@ projects.
     [[Reddit](https://www.reddit.com/r/Compilers/comments/og4kts/q_irreducible_control_flow_graph_in_current/)]
   - Irreducible control flow [in Graal](https://chrisseaton.com/truffleruby/basic-graal-graphs/#loops)
 - E-graphs
-  - [“Better Together: Unifying Datalog and Equality Saturation”](https://www.mwillsey.com/papers/egglog)
-    (Yihong Zhang, Remy Wang, Oliver Flatt, David Cao, Philip Zucker, Eli
-    Rosenthal, Zachary Tatlock, and Max Willsey, 2023)
-    [[notes](logic/e-graphs/survey.md)]
   - [“Logging an Egg: Datalog on E-Graphs”](https://github.com/philzook58/egglog0-talk/raw/main/out.pdf)
     (Philip Zucker, 2022)
     [[notes](logic/e-graphs/survey.md)]
