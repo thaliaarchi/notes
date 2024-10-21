@@ -57,6 +57,7 @@ topics.
   - Rust
     - [Converting between Rug and bitvec types](pl/langs/rust/convert_rug_bitvec.md)
     - [Crates and tutorials](pl/langs/rust/rust.md)
+    - [foldhash vs rustc-hash](pl/langs/rust/foldhash_vs_rustc-hash.md)
     - [Rust enum expressivity](pl/langs/rust/enum_expressivity.md)
     - [Rust history](pl/langs/rust/history.md)
     - [Trivia about Rust Types](pl/langs/rust/types_trivia.md)
