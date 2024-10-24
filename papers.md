@@ -5,6 +5,9 @@ projects.
 
 ## 2024
 
+- 2024-10-24:
+  [“Efficient E-matching for SMT Solvers”](https://leodemoura.github.io/files/ematching.pdf),
+  Leonardo de Moura and Nikolaj Bjørner, CADE 2007
 - 2024-10-23:
   [“Designing a Fast, Efficient, Cache-friendly Hash Table, Step by Step”](https://www.youtube.com/watch?v=ncHmEUmJZf4),
   Matt Kulukundis, CppCon 2017
