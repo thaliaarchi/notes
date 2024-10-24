@@ -5,6 +5,9 @@ projects.
 
 ## 2024
 
+- 2024-10-23:
+  [“Designing a Fast, Efficient, Cache-friendly Hash Table, Step by Step”](https://www.youtube.com/watch?v=ncHmEUmJZf4),
+  Matt Kulukundis, CppCon 2017
 - 2024-10-17:
   [“Better Together: Unifying Datalog and Equality Saturation”](https://ztatlock.net/pub-2023-pldi-egglog.html),
   Yihong Zhang, Remy Wang, Oliver Flatt, David Cao, Philip Zucker, Eli
