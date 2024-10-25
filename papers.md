@@ -6,6 +6,9 @@ projects.
 ## 2024
 
 - 2024-10-24:
+  [“Z3: An Efficient SMT Solver”](https://link.springer.com/chapter/10.1007/978-3-540-78800-3_24),
+  Leonardo de Moura and Nikolaj Bjørner, TACAS 2008
+- 2024-10-24:
   [“Efficient E-matching for SMT Solvers”](https://leodemoura.github.io/files/ematching.pdf),
   Leonardo de Moura and Nikolaj Bjørner, CADE 2007
 - 2024-10-23:
