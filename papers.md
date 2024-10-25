@@ -6,6 +6,10 @@ projects.
 ## 2024
 
 - 2024-10-24:
+  [“Relational E-matching”](https://dl.acm.org/doi/10.1145/3498696),
+  Yihong Zhang, Yisu Remy Wang, Max Willsey, and Zachary Tatlock, POPL 2022
+  [[preprint](https://arxiv.org/abs/2108.02290)]
+- 2024-10-24:
   [“Z3: An Efficient SMT Solver”](https://link.springer.com/chapter/10.1007/978-3-540-78800-3_24),
   Leonardo de Moura and Nikolaj Bjørner, TACAS 2008
 - 2024-10-24:
@@ -495,9 +499,6 @@ projects.
     [[notes](logic/e-graphs/survey.md)]
   - [“Your next e-graph framework looks like Datalog”](https://effect.systems/doc/pldi-2022-egraphs/abstract.pdf)
     (Yihong Zhang, 2022)
-    [[notes](logic/e-graphs/survey.md)]
-  - [“Relational E-matching”](https://arxiv.org/abs/2108.02290)
-    (Yihong Zhang, Yisu Remy Wang, Max Willsey, and Zachary Tatlock, 2021)
     [[notes](logic/e-graphs/survey.md)]
 - Regular expressions
   - [“Derivatives of regular expressions”](https://dl.acm.org/doi/10.1145/321239.321249)
