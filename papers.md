@@ -500,6 +500,9 @@ projects.
   - [“Your next e-graph framework looks like Datalog”](https://effect.systems/doc/pldi-2022-egraphs/abstract.pdf)
     (Yihong Zhang, 2022)
     [[notes](logic/e-graphs/survey.md)]
+  - [“Free Join: Unifying Worst-Case Optimal and Traditional Joins”](https://dl.acm.org/doi/10.1145/3589295),
+    Yisu Remy Wang, Max Willsey, Dan Suciu, 2023
+    [[artifact](https://github.com/SIGMOD23p561/free-join/tree/main/gj)]
 - Regular expressions
   - [“Derivatives of regular expressions”](https://dl.acm.org/doi/10.1145/321239.321249)
     (Janusz A. Brzozowski, 1964)
