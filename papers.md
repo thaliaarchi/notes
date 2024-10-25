@@ -6,6 +6,9 @@ projects.
 ## 2024
 
 - 2024-10-24:
+  [“Relational E-matching”](https://dl.acm.org/doi/10.1145/3498696),
+  Yihong Zhang, Yisu Remy Wang, Max Willsey, and Zachary Tatlock, POPL 2022
+- 2024-10-24:
   [“Z3: An Efficient SMT Solver”](https://link.springer.com/chapter/10.1007/978-3-540-78800-3_24),
   Leonardo de Moura and Nikolaj Bjørner, TACAS 2008
 - 2024-10-24:
