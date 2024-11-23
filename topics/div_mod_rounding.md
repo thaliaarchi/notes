@@ -8,7 +8,7 @@ additional languages can be found on the Wikipedia article for [modulo](https://
 
 - C: `/`, `%`
 - C++: `/`, `%`
-- Coq: [`Z.quot`, `Z.rem`, `Z.quotrem`, `Infix "÷"`](https://coq.inria.fr/library/Coq.ZArith.BinIntDef.html#lab1087)
+- Coq: [`Z.quot`, `Z.rem`, `Z.quotrem`, `Infix "÷" : Z_scope`](https://coq.inria.fr/library/Coq.ZArith.BinIntDef.html#lab494)
 - Go:
   [`/`, `%`](https://go.dev/ref/spec#Integer_operators),
   [`big.Int.Quo`](https://go.dev/pkg/math/big/#Int.Quo),
@@ -34,13 +34,23 @@ additional languages can be found on the Wikipedia article for [modulo](https://
   [`div_trunc`](https://docs.rs/rug/latest/rug/ops/trait.DivRounding.html#tymethod.div_trunc),
   [`rem_trunc`](https://docs.rs/rug/latest/rug/ops/trait.RemRounding.html#tymethod.rem_trunc),
   [`div_rem`](https://docs.rs/rug/latest/rug/struct.Integer.html#method.div_rem)
-- Rust: [`/`, `%`](https://doc.rust-lang.org/stable/reference/expressions/operator-expr.html#arithmetic-and-logical-binary-operators)
+- Rust:
+  [`/`, `%`](https://doc.rust-lang.org/stable/reference/expressions/operator-expr.html#arithmetic-and-logical-binary-operators),
+  [`wrapping_div`](https://doc.rust-lang.org/std/primitive.i64.html#method.wrapping_div),
+  [`wrapping_rem`](https://doc.rust-lang.org/std/primitive.i64.html#method.wrapping_rem),
+  [`overflowing_div`](https://doc.rust-lang.org/std/primitive.i64.html#method.overflowing_div),
+  [`overflowing_rem`](https://doc.rust-lang.org/std/primitive.i64.html#method.overflowing_rem),
+  [`checked_div`](https://doc.rust-lang.org/std/primitive.i64.html#method.checked_div),
+  [`checked_rem`](https://doc.rust-lang.org/std/primitive.i64.html#method.checked_rem),
+  [`strict_div`](https://doc.rust-lang.org/std/primitive.i64.html#method.strict_div) (unstable),
+  [`strict_rem`](https://doc.rust-lang.org/std/primitive.i64.html#method.strict_rem) (unstable),
+  [`saturating_div`](https://doc.rust-lang.org/std/primitive.i64.html#method.saturating_div)
 
 ## Floored
 
 - Coq:
-  [`Z.div`, `Z.modulo`, `Z.div_eucl`, `Infix "/"`, `Infix "mod"`](https://coq.inria.fr/library/Coq.ZArith.BinIntDef.html#lab1086),
-  [`N.div`, `N.modulo`, `N.div_eucl`, `Infix "/"`, `Infix "mod"`](https://coq.inria.fr/library/Coq.NArith.BinNatDef.html#N.div_eucl)
+  [`Z.div`, `Z.modulo`, `Z.div_eucl`, `Infix "/" : Z_scope`, `Infix "mod" : Z_scope`](https://coq.inria.fr/library/Coq.ZArith.BinIntDef.html#lab493),
+  [`N.div`, `N.modulo`, `N.div_eucl`, `Infix "/" : N_scope`, `Infix "mod" : N_scope`](https://coq.inria.fr/library/Coq.NArith.BinNatDef.html#N.div_eucl)
 - GMP: [`mpz_fdiv_q`, `mpz_fdiv_r`, `mpz_fdiv_qr`](https://gmplib.org/manual/Integer-Division)
 - Haskell:
   [`div`](https://hackage.haskell.org/package/base/docs/Prelude.html#v:div),
@@ -52,7 +62,7 @@ additional languages can be found on the Wikipedia article for [modulo](https://
   [`div_floor`](https://docs.rs/rug/latest/rug/ops/trait.DivRounding.html#tymethod.div_floor),
   [`rem_floor`](https://docs.rs/rug/latest/rug/ops/trait.RemRounding.html#tymethod.rem_floor),
   [`div_rem_floor`](https://docs.rs/rug/latest/rug/struct.Integer.html#method.div_rem_floor)
-- Rust: [`div_floor`](https://doc.rust-lang.org/std/primitive.i32.html#method.div_floor)
+- Rust: [`div_floor`](https://doc.rust-lang.org/std/primitive.i64.html#method.div_floor)
 
 ## Euclidean
 
@@ -66,8 +76,16 @@ additional languages can be found on the Wikipedia article for [modulo](https://
   [`div_rem_euc`](https://docs.rs/rug/latest/rug/struct.Integer.html#method.div_rem_euc),
   [`mod_u`](https://docs.rs/rug/latest/rug/struct.Integer.html#method.mod_u)
 - Rust:
-  [`div_euclid`](https://doc.rust-lang.org/std/primitive.i32.html#method.div_euclid),
-  [`rem_euclid`](https://doc.rust-lang.org/std/primitive.i32.html#method.rem_euclid)
+  [`div_euclid`](https://doc.rust-lang.org/std/primitive.i64.html#method.div_euclid),
+  [`rem_euclid`](https://doc.rust-lang.org/std/primitive.i64.html#method.rem_euclid),
+  [`wrapping_div_euclid`](https://doc.rust-lang.org/std/primitive.i64.html#method.wrapping_div_euclid),
+  [`wrapping_rem_euclid`](https://doc.rust-lang.org/std/primitive.i64.html#method.wrapping_rem_euclid),
+  [`overflowing_div_euclid`](https://doc.rust-lang.org/std/primitive.i64.html#method.overflowing_div_euclid),
+  [`overflowing_rem_euclid`](https://doc.rust-lang.org/std/primitive.i64.html#method.overflowing_rem_euclid),
+  [`checked_div_euclid`](https://doc.rust-lang.org/std/primitive.i64.html#method.checked_div_euclid),
+  [`checked_rem_euclid`](https://doc.rust-lang.org/std/primitive.i64.html#method.checked_rem_euclid),
+  [`strict_div_euclid`](https://doc.rust-lang.org/std/primitive.i64.html#method.strict_div_euclid) (unstable),
+  [`strict_rem_euclid`](https://doc.rust-lang.org/std/primitive.i64.html#method.strict_rem_euclid) (unstable)
 - SMT-LIB: [`(div Int Int)`, `(mod Int Int)`](https://smtlib.cs.uiowa.edu/theories-Ints.shtml)
 
 ## Ceiling
@@ -75,9 +93,9 @@ additional languages can be found on the Wikipedia article for [modulo](https://
 - GMP: [`mpz_cdiv_q`, `mpz_cdiv_r`, `mpz_cdiv_qr`](https://gmplib.org/manual/Integer-Division)
 - Rug (Rust):
   [`div_ceil`](https://docs.rs/rug/latest/rug/ops/trait.DivRounding.html#tymethod.div_ceil),
-  [`ren_ceil`](https://docs.rs/rug/latest/rug/ops/trait.RemRounding.html#tymethod.rem_ceil),
+  [`rem_ceil`](https://docs.rs/rug/latest/rug/ops/trait.RemRounding.html#tymethod.rem_ceil),
   [`div_rem_ceil`](https://docs.rs/rug/latest/rug/struct.Integer.html#method.div_rem_ceil)
-- Rust: [`div_ceil`](https://doc.rust-lang.org/std/primitive.i32.html#method.div_ceil)
+- Rust: [`div_ceil`](https://doc.rust-lang.org/std/primitive.i64.html#method.div_ceil)
 
 ## Rounding
 
