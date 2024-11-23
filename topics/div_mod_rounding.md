@@ -4,7 +4,7 @@ Programming languages implement division and modulo with various rounding modes.
 Most languages use truncated division by default. More information and
 additional languages can be found on the Wikipedia article for [modulo](https://en.wikipedia.org/wiki/Modulo).
 
-## Truncated
+## Truncated (rounding toward zero)
 
 - C: `/`, `%`
 - C++: `/`, `%`
@@ -47,7 +47,7 @@ additional languages can be found on the Wikipedia article for [modulo](https://
   [`strict_rem`](https://doc.rust-lang.org/std/primitive.i64.html#method.strict_rem) (unstable),
   [`saturating_div`](https://doc.rust-lang.org/std/primitive.i64.html#method.saturating_div)
 
-## Floored
+## Floored (rounding down)
 
 - Coq:
   [`Z.div`, `Z.modulo`, `Z.div_eucl`, `Infix "/" : Z_scope`, `Infix "mod" : Z_scope`](https://coq.inria.fr/library/Coq.ZArith.BinIntDef.html#lab493),
@@ -65,7 +65,7 @@ additional languages can be found on the Wikipedia article for [modulo](https://
   [`div_rem_floor`](https://docs.rs/rug/latest/rug/struct.Integer.html#method.div_rem_floor)
 - Rust: [`div_floor`](https://doc.rust-lang.org/std/primitive.i64.html#method.div_floor)
 
-## Euclidean
+## Euclidean (non-negative remainder)
 
 - Go:
   [`big.Int.Div`](https://go.dev/pkg/math/big/#Int.Div),
@@ -89,7 +89,7 @@ additional languages can be found on the Wikipedia article for [modulo](https://
   [`strict_rem_euclid`](https://doc.rust-lang.org/std/primitive.i64.html#method.strict_rem_euclid) (unstable)
 - SMT-LIB: [`(div Int Int)`, `(mod Int Int)`](https://smtlib.cs.uiowa.edu/theories-Ints.shtml)
 
-## Ceiling
+## Ceiling (rounding up)
 
 - GMP: [`mpz_cdiv_q`, `mpz_cdiv_r`, `mpz_cdiv_qr`](https://gmplib.org/manual/Integer-Division)
 - Rug (Rust):
@@ -98,11 +98,11 @@ additional languages can be found on the Wikipedia article for [modulo](https://
   [`div_rem_ceil`](https://docs.rs/rug/latest/rug/struct.Integer.html#method.div_rem_ceil)
 - Rust: [`div_ceil`](https://doc.rust-lang.org/std/primitive.i64.html#method.div_ceil)
 
-## Rounding
+## Rounding half away from zero
 
 - Rug (Rust): [`div_rem_round`](https://docs.rs/rug/latest/rug/struct.Integer.html#method.div_rem_round)
   (not in GMP)
 
-## Non-negative
+## Non-negative remainder
 
 - GMP: [`mpz_mod`](https://gmplib.org/manual/Integer-Division)
