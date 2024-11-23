@@ -9,6 +9,7 @@ additional languages can be found on the Wikipedia article for [modulo](https://
 - C: `/`, `%`
 - C++: `/`, `%`
 - Coq: [`Z.quot`, `Z.rem`, `Z.quotrem`, `Infix "÷" : Z_scope`](https://coq.inria.fr/library/Coq.ZArith.BinIntDef.html#lab494)
+- egglog: [`/`, `%`](https://github.com/egraphs-good/egglog/blob/main/src/sort/i64.rs)
 - Go:
   [`/`, `%`](https://go.dev/ref/spec#Integer_operators),
   [`big.Int.Quo`](https://go.dev/pkg/math/big/#Int.Quo),
