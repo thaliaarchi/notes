@@ -5,6 +5,9 @@ projects.
 
 ## 2024
 
+- 2024-10-29:
+  [“Graph-Based Algorithms for Boolean Function Manipulation”](https://www.cs.cmu.edu/~bryant/pubdir/ieeetc86.pdf),
+  Randal E. Bryant, 1986
 - 2024-10-24:
   [“Relational E-matching”](https://dl.acm.org/doi/10.1145/3498696),
   Yihong Zhang, Yisu Remy Wang, Max Willsey, and Zachary Tatlock, POPL 2022
@@ -503,6 +506,9 @@ projects.
   - [“Free Join: Unifying Worst-Case Optimal and Traditional Joins”](https://dl.acm.org/doi/10.1145/3589295),
     Yisu Remy Wang, Max Willsey, Dan Suciu, 2023
     [[artifact](https://github.com/SIGMOD23p561/free-join/tree/main/gj)]
+- BDDs
+  - [“The I/O-Complexity of Ordered Binary-Decision Diagram Manipulation”](https://sci-hub.st/10.1007/BFb0015411),
+    Lars Arge, 1995
 - Regular expressions
   - [“Derivatives of regular expressions”](https://dl.acm.org/doi/10.1145/321239.321249)
     (Janusz A. Brzozowski, 1964)
