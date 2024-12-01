@@ -5,6 +5,9 @@ projects.
 
 ## 2024
 
+- 2024-10-30:
+  [“Reduction of OBDDs in linear time”](https://sci-hub.st/10.1016/0020-0190(93)90256-9),
+  Detlef Sieling and Ingo Wegener, 1993
 - 2024-10-29:
   [“Graph-Based Algorithms for Boolean Function Manipulation”](https://www.cs.cmu.edu/~bryant/pubdir/ieeetc86.pdf),
   Randal E. Bryant, 1986
