@@ -17,8 +17,8 @@ conflicting.
 - TLTLL: `x-writefile` (TLTLL)
 - TLL: `shell` (TLL)
 - LLS: `PYFN` (LLS), `debug_printstack` (LLSSS), `debug_printheap` (LLSST),
-  `debugger` (LLS)
-- LLT: `Trace` (LLT), `eval` (LLT), `debugger` alternate encoding (LLT)
+  `dbg` (LLS)
+- LLT: `Trace` (LLT), `eval` (LLT)
 
 ## Burghard
 
@@ -58,13 +58,12 @@ following instructions:
 [WSA](https://github.com/voliva/wsa) by Victor Oliva defines the following
 instructions:
 
-| Mnemonic   | Syntax | Arg | Stack       | Description                     |
-| ---------- | ------ | --- | ----------- | ------------------------------- |
-| `or`       | TSLS   |     | x y -- x\|y | Bitwise OR                      |
-| `not`      | TSLT   |     | x -- ~x     | Bitwise complement              |
-| `and`      | TSLL   |     | x y -- x&y  | Bitwise AND                     |
-| `debugger` | LLS    |     | --          | Breakpoint                      |
-| `debugger` | LLT    |     | --          | Breakpoint (alternate encoding) |
+| Mnemonic | Syntax | Arg | Stack       | Description                     |
+| -------- | ------ | --- | ----------- | ------------------------------- |
+| `or`     | TSLS   |     | x y -- x\|y | Bitwise OR                      |
+| `not`    | TSLT   |     | x -- ~x     | Bitwise complement              |
+| `and`    | TSLL   |     | x y -- x&y  | Bitwise AND                     |
+| `dbg`    | LLS    |     | --          | Breakpoint                      |
 
 ## pywhitespace
 
