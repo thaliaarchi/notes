@@ -54,6 +54,7 @@ topics.
     - [Learning Idris](pl/langs/idris/learning_idris.md)
   - jq
     - [Initial implementations of jq](pl/langs/jq/proto_jq.md)
+    - [The biggest jq programs in the world](pl/langs/jq/biggest_programs.md)
   - Rust
     - [Converting between Rug and bitvec types](pl/langs/rust/convert_rug_bitvec.md)
     - [Crates and tutorials](pl/langs/rust/rust.md)
