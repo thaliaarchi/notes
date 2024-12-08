@@ -12,6 +12,7 @@ profiles of all contributors to jq with at least 10 commits, searching their
 repos for “jq” in the repo description and filtering to jq-language repos. The
 numbers are line counts.
 
+- 4001: <https://github.com/wader/fq> (\*\*.jq)
 - 3129: <https://github.com/wader/jqjq>
 - 882+241+236+49+42: <https://github.com/wader/jq-lsp/blob/master/lsp/lsp.jq>
 - 753: <https://github.com/pkoppstein/JESS/blob/master/JESS.jq>
