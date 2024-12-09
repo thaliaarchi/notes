@@ -5,6 +5,10 @@ projects.
 
 ## 2024
 
+- 2024-12-09:
+  [“wevaling the wasms: AOT JS Compilation (Or: Stuffing a Dynamic Language onto
+  a Very Static Platform)”](https://www.youtube.com/watch?v=_T3s6-C38JI),
+  [Chris Fallin](https://cfallin.org/academics/#invited-talks), 2024
 - 2024-10-30:
   [“Reduction of OBDDs in linear time”](https://sci-hub.st/10.1016/0020-0190(93)90256-9),
   Detlef Sieling and Ingo Wegener, 1993

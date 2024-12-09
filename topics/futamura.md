@@ -74,3 +74,13 @@ Properties of *α*:
     compiler:          α(α, α)(interp)         = α(α, interp)
     object program:    α(α, α)(interp)(s′)     = α(α, interp)(s′)     = α(interp, s′)
     results:           α(α, α)(interp)(s′)(r′) = α(α, interp)(s′)(r′) = α(interp, s′)(r′)
+
+## Implementation
+
+In [“wevaling the wasms: AOT JS Compilation (Or: Stuffing a Dynamic Language
+onto a Very Static Platform)”](https://www.youtube.com/watch?v=_T3s6-C38JI),
+Chris Fallin implements the first Futamura projection an interpreter for the
+SpiderMonkey JavaScript inline cache IR to Wasm, with the JavaScript bytecode as
+constant, producing Wasm code which is a convolution of the interpreter and
+bytecode control flow. Loops in the bytecode fall out of the mapping of contexts
+and values, solving the problem I faced in my live demo with loops.
