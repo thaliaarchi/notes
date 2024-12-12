@@ -39,6 +39,8 @@
     2006) and “How to compile with continuations” (Matt Might)
 - Northeastern [CS 4410/6410: Compiler Design](https://course.ccs.neu.edu/cs4410/)
   - Semesters:
+    [Spring 2025](https://course.ccs.neu.edu/cs4410sp25/),
+    [Spring 2024](https://course.ccs.neu.edu/cs4410sp24/),
     [Spring 2023](https://course.ccs.neu.edu/cs4410sp23/),
     [Spring 2022](https://course.ccs.neu.edu/cs4410sp22/),
     [Spring 2021](https://course.ccs.neu.edu/cs4410sp21/),
