@@ -5,6 +5,9 @@ projects.
 
 ## 2024
 
+- 2024-12-13:
+  [“Word-initial rhotic avoidance: a typological survey”](https://www.glossa-journal.org/article/id/5389/),
+  Laurence Labrune, 2021
 - 2024-12-09:
   [“wevaling the wasms: AOT JS Compilation (Or: Stuffing a Dynamic Language onto
   a Very Static Platform)”](https://www.youtube.com/watch?v=_T3s6-C38JI),
