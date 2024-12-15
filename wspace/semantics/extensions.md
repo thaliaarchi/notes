@@ -19,6 +19,9 @@ conflicting.
 - LLS: `PYFN` (LLS), `debug_printstack` (LLSSS), `debug_printheap` (LLSST),
   `dbg` (LLS)
 - LLT: `Trace` (LLT), `eval` (LLT)
+- XS: `Cast`
+- XT: `Assert`
+- XXX: `Strict`
 
 ## Burghard
 
@@ -52,6 +55,17 @@ following instructions:
 | `x-readfile`  | TLTLS  |     | file -- ptr code | Read from a file                |
 | `x-writefile` | TLTLL  |     | ch file -- code  | Write to a file                 |
 | `x-closefile` | TLTLT  |     | file --          | Close a file                    |
+
+## Nospace (Leah Hirst)
+
+[Nospace](https://github.com/LeahHirst/nospace) by Leah Hirst defines the
+following instructions using the extension X token:
+
+| Mnemonic | Syntax | Arg  | Stack | Description                                    |
+| -------- | ------ | ---- | ----- | ---------------------------------------------- |
+| `Cast`   | XS     | type | --    | Casts the top to a type                        |
+| `Assert` | XT     | type | --    | Asserts that the top is compatible with a type |
+| `Strict` | XXX    |      | --    | Unused                                         |
 
 ## voliva
 
