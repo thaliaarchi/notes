@@ -5,6 +5,9 @@ projects.
 
 ## 2024
 
+- 2024-12-16:
+  [“HOIST: A System for Automatically Deriving Static Analyzers for Embedded Systems”](https://users.cs.utah.edu/~regehr/papers/asplos04/),
+  John Regehr and Alastair Reid, 2004
 - 2024-12-13:
   [“Word-initial rhotic avoidance: a typological survey”](https://www.glossa-journal.org/article/id/5389/),
   Laurence Labrune, 2021
