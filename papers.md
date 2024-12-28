@@ -5,6 +5,9 @@ projects.
 
 ## 2024
 
+- 2024-12-27:
+  [*Nix Pills*](https://nixos.org/guides/nix-pills/),
+  Luca Bruno, 2014–2015
 - 2024-12-16:
   [“HOIST: A System for Automatically Deriving Static Analyzers for Embedded Systems”](https://users.cs.utah.edu/~regehr/papers/asplos04/),
   John Regehr and Alastair Reid, 2004
