@@ -5,6 +5,9 @@ projects.
 
 ## 2024
 
+- 2024-12-28:
+  [“Machine-Assisted Proof”](https://www.ams.org/notices/202501/rnoti-p6.pdf),
+  Terence Tao, 2024
 - 2024-12-27:
   [*Nix Pills*](https://nixos.org/guides/nix-pills/),
   Luca Bruno, 2014–2015
