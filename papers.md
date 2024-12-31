@@ -5,6 +5,9 @@ projects.
 
 ## 2024
 
+- 2024-12-31:
+  [“Historical Oddities & Persistent Itches”](https://www.youtube.com/watch?v=zg8xM0xxFa8),
+  James Gosling, JVM Language Summit 2024
 - 2024-12-28:
   [“Machine-Assisted Proof”](https://www.ams.org/notices/202501/rnoti-p6.pdf),
   Terence Tao, 2024
