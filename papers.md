@@ -3,6 +3,12 @@
 Papers I have read and conference talks I have watched for research and
 projects.
 
+## 2025
+
+- 2025-01-09:
+  [“Inheritance Is the Base Class of Evil”](https://learn.microsoft.com/en-us/shows/goingnative-2013/inheritance-base-class-of-evil),
+  Sean Parent, GoingNative 2013 (referenced in [LLVM Programmer's Manual](https://llvm.org/docs/ProgrammersManual.html#designing-type-hierarchies-and-polymorphic-interfaces))
+
 ## 2024
 
 - 2024-12-31:
