@@ -40,3 +40,7 @@ contents. With the third, the client would request the full tree.
 
 Timestamps should track the times of each file access, since there are
 possibilities for race conditions.
+
+## Server
+
+It could function as an rsync server, replaying transfers from archives.
