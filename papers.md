@@ -5,6 +5,9 @@ projects.
 
 ## 2025
 
+- 2025-01-30:
+  [“Safety vs Performance: A case study of C, C++ and Rust sort implementations”](https://www.youtube.com/watch?v=rZ7QQWKP8Rk),
+  Lukas Bergdoll, 2025
 - 2025-01-09:
   [“Inheritance Is the Base Class of Evil”](https://learn.microsoft.com/en-us/shows/goingnative-2013/inheritance-base-class-of-evil),
   Sean Parent, GoingNative 2013 (referenced in [LLVM Programmer's Manual](https://llvm.org/docs/ProgrammersManual.html#designing-type-hierarchies-and-polymorphic-interfaces))
