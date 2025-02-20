@@ -5,6 +5,9 @@ projects.
 
 ## 2025
 
+- 2025-02-19:
+  [“How Badly Do We Want Correct Compilers?”](https://www.youtube.com/watch?v=tMYYrR-hazI),
+  John Regehr, 2023
 - 2025-01-30:
   [“Safety vs Performance: A case study of C, C++ and Rust sort implementations”](https://www.youtube.com/watch?v=rZ7QQWKP8Rk),
   Lukas Bergdoll, 2025
