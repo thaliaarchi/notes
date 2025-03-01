@@ -5,6 +5,9 @@ projects.
 
 ## 2025
 
+- 2025-02-28:
+  [“Deadlock and Resource Leak Free Languages”](https://www.youtube.com/watch?v=cUUPdE5cz-Q),
+  Jules Jacobs, 2025
 - 2025-02-19:
   [“How Badly Do We Want Correct Compilers?”](https://www.youtube.com/watch?v=tMYYrR-hazI),
   John Regehr, 2023

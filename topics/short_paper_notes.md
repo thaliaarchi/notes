@@ -100,3 +100,18 @@ As the verification is just for seL4, they're willing to make adjustments to the
 seL4 source to fit the requirements of the proof or to respond to changes in
 gcc, whereas a verified compiler team usually does not write the software
 compiled with it.
+
+## Lazy copy on alias
+
+[“Deadlock and Resource Leak Free Languages”](https://www.youtube.com/watch?v=cUUPdE5cz-Q),
+Jules Jacobs, 2025
+
+In Rust, when aliasing xor mutability is violated, the program doesn't
+typecheck. A more “Pythonic” strategy could be to make a copy if needed. This
+changes the semantics of the language. Lazy copy on alias or copy on write.
+
+```rust
+let y : Vec<Vec<i32>> = …;
+foo(&y[i], &mut y[j]); // ok!
+// copy at run-time if i==j
+```
