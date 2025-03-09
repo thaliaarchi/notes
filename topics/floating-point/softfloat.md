@@ -107,6 +107,7 @@ great reference and has excellent tests.
   formats.
 - [jenska/float](https://github.com/jenska/float) implements 80-bit extended
   floats in Go and is derived from Berkeley SoftFloat.
+- Cornell CS 3410: [Assignment 2: Minifloat](https://www.cs.cornell.edu/courses/cs3410/2025sp/assignments/minifloat/instructions.html)
 
 ## Tests and benchmarks
 
