@@ -14,6 +14,7 @@
 
 - [The Architecture of Open Source Applications: LLVM](https://www.aosabook.org/en/llvm.html)
 - [LLVM for Grad Students](https://www.cs.cornell.edu/~asampson/blog/llvm.html)
+  - [Rust Follow-along for “LLVM for Grad Students”](https://www.ethanuppal.com/blog/3-12-35-llvm-pass-in-rust.html)
 - [A Tourist’s Guide to the LLVM Source Code](https://blog.regehr.org/archives/1453)
 - [LLVM Framework and Infrastructure Tutorial](https://llvm.org/pubs/2004-09-22-LCPCLLVMTutorial.html)
 - [EuroLLVM 2019 MLIR Keynote](https://llvm.org/devmtg/2019-04/talks.html#Keynote_1)
